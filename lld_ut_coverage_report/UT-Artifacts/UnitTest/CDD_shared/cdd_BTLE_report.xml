@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="32" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:17:39" time="0.004" name="AllTests">
+  <testsuite name="GTestClass_cdd_BTLE" tests="32" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="Cdd_BTLE_Control_Init" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_Init function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_Cyclic_BTLE_Reset_requested" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_Cyclic function check when BTLE reset is requested."/>
+<property name="Test_Step_0" value="cyclic function is called when ctrl state is IDLE =&gt; nothing happen"/>
+<property name="Test_Step_1" value="BTLE reset is requested"/>
+<property name="Test_Step_2" value="BTLE control state will pass to BTLE_CTRL_STATE_RESET_DELAY."/>
+<property name="Test_Step_3" value="BTLE control state will pass to IDLE state after BTLE reset delay time is expired"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_Cyclic_BTLE_Enter_bootloader_requested" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_Cyclic function check when BTLE enter bootloader state is requested."/>
+<property name="Test_Step_0" value="BTLE enter bootloader state is requested"/>
+<property name="Test_Step_1" value="BTLE control state will pass to BTLE_CTRL_STATE_ENTER_BOOTLOADER_RESET_DELAY."/>
+<property name="Test_Step_2" value="BTLE control state will pass to BTLE_CTRL_STATE_ENTER_BOOTLOADER_BOOT_DELAY after BTLE reset delay time is expired"/>
+<property name="Test_Step_3" value="BTLE control state will pass to BTLE_CTRL_STATE_PING_BOOTLOADER after BTLE boot delay time is expired"/>
+<property name="Test_Step_4" value="BTLE control state will pass to BTLE_CTRL_STATE_WAIT_FOR_PING_RESP after BTLE boot delay time is expired"/>
+<property name="Test_Step_5" value="BTLE control state will pass to BTLE_CTRL_STATE_PING_BOOTLOADER if BTLE bl response is received befor response timeout is expired"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_Cyclic_BTLE_start_app_requested" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_Cyclic function check when BTLE start app state is requested."/>
+<property name="Test_Step_0" value="BTLE start app state is requested"/>
+<property name="Test_Step_1" value="BTLE control state will wait for read momory."/>
+<property name="Test_Step_2" value="BTLE control state will pass to BTLE_CTRL_STATE_EXEC_APP if BTLE bl response is received befor response timeout is expired"/>
+<property name="Test_Step_3" value="BTLE control state will pass to BTLE_CTRL_STATE_WAIT_FOR_EXEC_RESP if BTLE bl response is OK"/>
+<property name="Test_Step_4" value="BTLE control state will pass to application state if BTLE bl response is received befor response timeout is expired"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_Cyclic_BTLE_start_unlock_proc_requested" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_Cyclic function check when BTLE start unlock procedure state is requested."/>
+<property name="Test_Step_0" value="BTLE start unlock proc state is requested"/>
+<property name="Test_Step_1" value="BTLE control state will wait for flash security response."/>
+<property name="Test_Step_2" value="BTLE control state will pass to check if flash is secured if BTLE bl response is received befor response timeout is expired =&gt; if flash is not secured, finish : control state is unlock."/>
+<property name="Test_Step_3" value="BTLE start unlock proc state is requested"/>
+<property name="Test_Step_4" value="BTLE control state will wait for flash security response."/>
+<property name="Test_Step_5" value="BTLE control state will pass to check if flash is secured if BTLE bl response is received befor response timeout is expired =&gt; if flash is secured, finish : control state is check key access."/>
+<property name="Test_Step_6" value="BTLE control state will wait for key access response."/>
+<property name="Test_Step_7" value="BTLE control state will pass to check key set if BTLE bl response is received befor response timeout is expired"/>
+<property name="Test_Step_8" value="BTLE control state will wait for key set response."/>
+<property name="Test_Step_9" value="BTLE control state will pass to diasable flash security if BTLE bl response is received befor response timeout is expired"/>
+<property name="Test_Step_10" value="BTLE control state will wait for diasable flash security response."/>
+<property name="Test_Step_11" value="BTLE control state will pass to diasable flash security if BTLE bl response is received befor response timeout is expired"/>
+<property name="Test_Step_12" value="cyclic function is called when ctrl state is unlocked =&gt; nothing change"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_voConfigureSleep" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_voConfigureSleep function check"/>
+<property name="Expected_0" value="nothing expected : nothing happens inside the function"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_voConfigureWake" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_voConfigureWake function check"/>
+<property name="Expected_0" value="nothing expected : nothing happens inside the function"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Control_voStartDtmApp" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Control_voStartDtmApp function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_init" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_init function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_cyclic_state_read_ack" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_cyclic function check"/>
+<property name="Test_Step_0" value="a data packet is to be send, the btleBL state is moved to read ack state."/>
+<property name="Test_Step_1" value="move btleBL state to read ack state."/>
+<property name="Test_Step_2" value="a command packet is to be send, the btleBL state is moved to read ack state."/>
+<property name="Test_Step_3" value="move btleBL state to read ack state."/>
+<property name="Test_Step_4" value="a command packet is to be send, the btleBL state is moved to read ack state."/>
+<property name="Test_Step_5" value="move btleBL state to read ack state."/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_cyclic_state_READ_RESP_PACKET" status="run" time="0.001" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_cyclic function check, when acive state is READ_RESP_PACKET and move to success state"/>
+<property name="Test_Step_0" value="btleBL_cyclic_state is READ_RESP_PACKET"/>
+<property name="Test_Step_1" value="move btleBL state to success state."/>
+<property name="Test_Step_2" value="move btleBL state from success state to idle."/>
+<property name="Test_Step_3" value="btleBL state remains at IDLE state if there is no request."/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_cyclic_state_READ_RESP_PACKET_2" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_cyclic function check, when acive state is READ_RESP_PACKET and move to E_BTLE_BL_STATE_READ_DATA_PACKET"/>
+<property name="Test_Step_0" value="btleBL_cyclic_state is READ_RESP_PACKET"/>
+<property name="Test_Step_1" value="move btleBL state to E_BTLE_BL_STATE_READ_DATA_PACKET."/>
+<property name="Test_Step_2" value="move btleBL state to E_BTLE_BL_STATE_ERROR when received packet is not data."/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_cyclic_state_read_ack_2" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_cyclic function check, when acive state is read_ack and move to WRITE_DATA_PACKET"/>
+<property name="Test_Step_0" value="a data packet is to be send, the btleBL state is moved to read ack state."/>
+<property name="Test_Step_1" value="move btleBL state to read ack state."/>
+<property name="Test_Step_2" value="btleBL state move back to ack state after data is written succesfully."/>
+<property name="Test_Step_3" value="a packet is received with invalid crc  =&gt; btleBL_sendAckAbort is called."/>
+<property name="Test_Step_4" value="a Nak packet is received  =&gt; nothing happens."/>
+<property name="Test_Step_5" value="a ack abort packet is received  =&gt; nothing happens."/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_cyclic_state_read_ack_3" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_cyclic function check"/>
+<property name="Test_Step_0" value="move btleBL state to read ack state."/>
+<property name="Test_Step_1" value="move btleBL state to E_BTLE_BL_STATE_WRITE_DATA_PACKET."/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_cyclic_state_read_ack_4" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_cyclic function check"/>
+<property name="Test_Step_0" value="move btleBL state to read ack state."/>
+<property name="Test_Step_1" value="a ping response is received."/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_sendNak" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_sendNak function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_writeFlash" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_writeFlash function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_enterDSM" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_enterDSM function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_eraseFlash" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_eraseFlash function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_disableVerifyWrites" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_disableVerifyWrites function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_getCurrentAppVersion" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_getCurrentAppVersion function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_getBootloaderVersion" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_getBootloaderVersion function check"/>
+</properties>
+    </testcase>
+    <testcase name="btleBL_generateCrc32" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="btleBL_generateCrc32 function check"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Init" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Init function check"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic" status="run" time="0.001" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : frame is sent but nothing os received."/>
+<property name="Test_Step_0" value="initiate communication by sending a UTP frame."/>
+<property name="Test_Step_1" value="the main function is executed cyclically: tx state machine waits for ack and rx state machine did not receive a frame for 70ms =&gt; the frame is sent again 3 times =&gt; the Tx state machine is reseted."/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_2" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : frame is sent but nothing os received."/>
+<property name="Test_Step_0" value="initiate communication by sending a UTP frame."/>
+<property name="Test_Step_1" value="the main function is executed cyclically: tx state machine waits for ack and rx state machine receive a frame before 70ms =&gt; the Rx SM pass to ack frame"/>
+<property name="Test_Step_2" value="the main function is executed cyclically: ACK frame ID doesn&apos;t match transmitted frame ID =&gt; reset Rx state machine to idle"/>
+<property name="Test_Step_3" value="the main function is executed cyclically: tx state machine waits for ack and rx state machine receive a frame before 70ms =&gt; the Rx SM pass to ack frame"/>
+<property name="Test_Step_4" value="the main function is executed cyclically: ACK frame ID do match transmitted frame ID =&gt; reset Rx state machine to idle and inform TX state machine that a valid ACK frame was received"/>
+<property name="Test_Step_5" value="initiate communication by sending a UTP frame."/>
+<property name="Test_Step_6" value="the main function is executed cyclically: tx state machine waits for ack and rx state machine receive a frame before 70ms =&gt; the Rx SM pass to read data frame header"/>
+<property name="Test_Step_7" value="the main function is executed cyclically: data frame header is not received during Rx timeout : Rx SM is timeout error and then reseted."/>
+<property name="Test_Step_8" value="the main function is executed cyclically: data frame header is received, but Data frame length is corrupted =&gt; Rx SM state is length corrupt"/>
+<property name="Test_Step_9" value="the main function is executed cyclically: data frame header is received, Data frame length is correct =&gt; Rx SM state is read data frame payload"/>
+<property name="Test_Step_10" value="the main function is executed cyclically: data frame header is received, but payload is not received =&gt; Rx SM state is timeout error"/>
+<property name="Test_Step_11" value="the main function is executed cyclically: data frame header is received,  payload is  received =&gt; Rx SM state is read CRC"/>
+<property name="Test_Step_12" value="the main function is executed cyclically: data frame payload is received, but CRC is not received =&gt; Rx SM state is timeout error"/>
+<property name="Test_Step_13" value="initiate againcommunication by sending a UTP frame."/>
+<property name="Test_Step_14" value="the main function is executed cyclically: CRC is incorrect =&gt; Rx SM state is mismatch CRC"/>
+<property name="Test_Step_15" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_3" status="run" time="0.001" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : receied frame is on channel id trace ( debug log level to be traced)."/>
+<property name="Test_Step_0" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_4" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : receied frame is on channel id trace ( Info log level to be traced)."/>
+<property name="Test_Step_0" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_5" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : receied frame is on channel id trace ( warning log level to be traced)."/>
+<property name="Test_Step_0" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_6" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : receied frame is on channel id trace ( error log level to be traced)."/>
+<property name="Test_Step_0" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_7" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : receied frame is on diagnostic control channel."/>
+<property name="Test_Step_0" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_UTP_Cyclic_8" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="CDD_BTLE_UTP_Cyclic function check : receied frame is on application data channel."/>
+<property name="Test_Step_0" value="the main function is executed cyclically: CRC is correct =&gt; send ACK with success Code"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

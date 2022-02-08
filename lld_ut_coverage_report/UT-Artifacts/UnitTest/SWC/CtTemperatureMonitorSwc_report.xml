@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="21" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:07:52" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_CtTemperatureMonitorSwc" tests="21" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="CtTemperatureMonitorSwc_Cyclic2s" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0007_V001,LLD_ID_CtTemperatureMonitorSwc_0008_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_Cyclic2s"/>
+<property name="Test_Step_0" value="Temperature is not available"/>
+<property name="Test_Step_1" value="Temperature is available, Determine min temperature and Send rstp message with internal temperature to NAD"/>
+<property name="Test_Step_2" value="Temperature is available, Determine max temperature and Send rstp message with internal temperature to NAD"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_Cyclic_100ms" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0005_V001,LLD_ID_CtTemperatureMonitorSwc_0006_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_Cyclic_100ms"/>
+<property name="Test_Step_0" value="Rte_Call_IoHwAb_TemperatureAdc_IoHwAb_TemperatureAdc_TEMP_getRaw returns E_OK and fullBufferReached returns TRUE"/>
+<property name="Test_Step_1" value="Rte_Call_IoHwAb_TemperatureAdc_IoHwAb_TemperatureAdc_TEMP_getRaw returns E_OK and fullBufferReached returns FALSE"/>
+<property name="Test_Step_2" value="Rte_Call_IoHwAb_TemperatureAdc_IoHwAb_TemperatureAdc_TEMP_getRaw returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_Init" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0017_V001,LLD_ID_CtTemperatureMonitorSwc_0018_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_Init : Get data from OTP"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_RSTP_Channel_Reset" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0024_V001,LLD_ID_CtTemperatureMonitorSwc_0025_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_RSTP_Channel_Reset"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_RoutineControl_ResetOfAdaptionValues" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0019_V001,LLD_ID_CtTemperatureMonitorSwc_0020_V001,LLD_ID_CtTemperatureMonitorSwc_0021_V001,LLD_ID_CtTemperatureMonitorSwc_0022_V001,LLD_ID_CtTemperatureMonitorSwc_0023_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_RoutineControl_ResetOfAdaptionValues"/>
+<property name="Test_Step_0" value="internalTemperature == TEMPERATURE_NOT_AVAILABLE =&gt; Reset adaptation values"/>
+<property name="Test_Step_1" value="internalTemperature != TEMPERATURE_NOT_AVAILABLE =&gt; SET minInternalTemperature = internalTemperature and maxInternalTemperature = internalTemperature"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_258b_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0031_V001,LLD_ID_CtTemperatureMonitorSwc_0032_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_258b_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_258b_ReadData" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0033_V001,LLD_ID_CtTemperatureMonitorSwc_0034_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_258b_ReadData"/>
+<property name="Test_Step_0" value="(fTemperature &gt;= MIN_TEMPERATURE_MWB_RANGE) and (fTemperature &lt;= MAX_TEMPERATURE_M WB_RANGE)"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_258b_ReadDataLength" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0035_V001,LLD_ID_CtTemperatureMonitorSwc_0036_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_258b_ReadDataLength"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_258c_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0037_V001,LLD_ID_CtTemperatureMonitorSwc_0038_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_258c_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_258c_ReadData" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0039_V001,LLD_ID_CtTemperatureMonitorSwc_0040_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_258c_ReadData"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_258c_ReadDataLength" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0041_V001,LLD_ID_CtTemperatureMonitorSwc_0042_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_258c_ReadDataLength"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_28d_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0043_V001,LLD_ID_CtTemperatureMonitorSwc_0044_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_28d_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_28d_ReadData" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0045_V001,LLD_ID_CtTemperatureMonitorSwc_0046_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_28d_ReadData"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_28d_ReadDataLength" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0047_V001,LLD_ID_CtTemperatureMonitorSwc_0048_V001,LLD_ID_CtTemperatureMonitorSwc_0049_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_28d_ReadDataLength"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_TemperatureMonitor_GetTemperature" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0050_V001,LLD_ID_CtTemperatureMonitorSwc_0051_V001,LLD_ID_CtTemperatureMonitorSwc_0052_V001,LLD_ID_CtTemperatureMonitorSwc_0053_V001"/>
+<property name="Description" value="Checking the function Pi_TemperatureMonitor_GetTemperature"/>
+<property name="Test_Step_0" value="internalTemperature == TEMPERATURE_NOT_AVAILABLE"/>
+<property name="Test_Step_1" value="internalTemperature != TEMPERATURE_NOT_AVAILABLE"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_TemperatureMonitor_GetTemperatureState" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0054_V001,LLD_ID_CtTemperatureMonitorSwc_0055_V001"/>
+<property name="Description" value="Checking thee function Pi_TemperatureMonitor_GetTemperatureState"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_ConvertTemperature" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0003_V001,LLD_ID_CtTemperatureMonitorSwc_0004_V001"/>
+<property name="Description" value="Checking thee function CtTemperatureMonitorSwc_ConvertTemperature"/>
+<property name="Test_Step_0" value="factor == ZERO"/>
+<property name="Test_Step_1" value="factor == TENTH"/>
+<property name="Test_Step_2" value="Default case"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_SendRstpMessage" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0026_V001,LLD_ID_CtTemperatureMonitorSwc_0027_V001,LLD_ID_CtTemperatureMonitorSwc_0028_V001,LLD_ID_CtTemperatureMonitorSwc_0029_V001,LLD_ID_CtTemperatureMonitorSwc_0030_V001"/>
+<property name="Description" value="Checking thee function CtTemperatureMonitorSwc_SendRstpMessage"/>
+<property name="Test_Step_0" value="rstpChannelReset == FALSE and internalTemperature == oldInternalTemperature"/>
+<property name="Test_Step_1" value="rstpChannelReset == TRUE and internalTemperature == oldInternalTemperature"/>
+<property name="Test_Step_2" value="rstpChannelReset == FALSE and internalTemperature != oldInternalTemperature"/>
+</properties>
+    </testcase>
+    <testcase name="ConvertToMwbFormat" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0001_V001,LLD_ID_CtTemperatureMonitorSwc_0002_V001"/>
+<property name="Description" value="Checking the function ConvertToMwbFormat if temperature is less than MIN_TEMPERATURE_MWB_RANGE or greater than MAX_TEMPERATURE_MWB_RANGE"/>
+<property name="Test_Step_0" value="fTemperature &gt; MAX_TEMPERATURE_MWB_RANGE"/>
+<property name="Test_Step_1" value="fTemperature &lt; MIN_TEMPERATURE_MWB_RANGE"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_DetermineMinMaxTemperature" status="run" time="0.001" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0011_V001,LLD_ID_CtTemperatureMonitorSwc_0012_V001,LLD_ID_CtTemperatureMonitorSwc_0013_V001,LLD_ID_CtTemperatureMonitorSwc_0014_V001,LLD_ID_CtTemperatureMonitorSwc_0015_V001,LLD_ID_CtTemperatureMonitorSwc_0016_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_DetermineMinMaxTemperature"/>
+<property name="Test_Step_0" value="(NvmTemperature.minInternalTemperature == NVM_MIN_TEMPERARTURE_DEFAULT) and (NvmTemperature.maxInternalTemperature == NVM_MAX_TEMPERARTURE_DEFAULT)"/>
+<property name="Test_Step_1" value="(NvmTemperature.minInternalTemperature == 0) and (NvmTemperature.maxInternalTemperature == 0)"/>
+<property name="Test_Step_2" value="(NvmTemperature.minInternalTemperature == NVM_MIN_TEMPERARTURE_MIN) and (NvmTemperature.maxInternalTemperature &gt; NVM_MAX_TEMPERARTURE_MAX)"/>
+<property name="Test_Step_3" value="(NvmTemperature.minInternalTemperature &lt; NVM_MIN_TEMPERARTURE_MIN) and (NvmTemperature.maxInternalTemperature == NVM_MAX_TEMPERARTURE_MAX)"/>
+<property name="Test_Step_4" value="(NvmTemperature.minInternalTemperature &gt;= NVM_MIN_TEMPERARTURE_MIN) and (NvmTemperature.maxInternalTemperature &lt;= NVM_MAX_TEMPERARTURE_MAX)"/>
+<property name="Test_Step_5" value="Max temperature : fTemperature &gt; fTemperatureMax"/>
+<property name="Test_Step_6" value="Min temperature : fTemperature &lt; fTemperatureMin"/>
+</properties>
+    </testcase>
+    <testcase name="CtTemperatureMonitorSwc_DetermineDtc" status="run" time="0" classname="GTestClass_CtTemperatureMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtTemperatureMonitorSwc_0009_V001,LLD_ID_CtTemperatureMonitorSwc_0010_V001"/>
+<property name="Description" value="Checking the function CtTemperatureMonitorSwc_DetermineDtc"/>
+<property name="Test_Step_0" value="fTemperature &gt; MAX_TEMPERATURE_DTC"/>
+<property name="Test_Step_1" value="fTemperature &lt; MIN_TEMPERATURE_DTC"/>
+<property name="Test_Step_2" value="fTemperature == MAX_TEMPERATURE_DTC"/>
+<property name="Test_Step_3" value="fTemperature == MIN_TEMPERATURE_DTC"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:55:52" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_DiagSessionControl" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="SessionControl_ChangeIndication" status="run" time="0" classname="GTestClass_CtDiagnosticServices_DiagSessionControl">
+<properties>
+<property name="Test_Step_0" value="Check if the session changed to default"/>
+<property name="Test_Step_1" value="Check if the session changed to EXTENDED_SESSION "/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

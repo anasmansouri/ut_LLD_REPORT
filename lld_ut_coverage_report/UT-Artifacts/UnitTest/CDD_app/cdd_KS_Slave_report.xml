@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="35" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:14:45" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_cdd_KS_Slave" tests="35" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="cbox_NvM_ReadBlock" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function cbox_NvM_ReadBlock"/>
+</properties>
+    </testcase>
+    <testcase name="cbox_NvM_WriteBlock" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function cbox_NvM_WriteBlock"/>
+</properties>
+    </testcase>
+    <testcase name="cbox_NvM_GetErrorStatus" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function cbox_NvM_GetErrorStatus"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KS_Slave_init" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Cdd_KS_Slave_init"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_KS_Slave_0015_V001,LLD_ID_Cdd_KS_Slave_0016_V001"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KS_DcmMainReadDataConfig" status="run" time="0.001" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Cdd_KS_DcmMainReadDataConfig"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KS_Slave_cyclic" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Cdd_KS_Slave_cyclic"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_KS_Slave_0001_V001,LLD_ID_Cdd_KS_Slave_0002_V001,LLD_ID_Cdd_KS_Slave_0003_V001,LLD_ID_Cdd_KS_Slave_0004_V001,LLD_ID_Cdd_KS_Slave_0005_V001,LLD_ID_Cdd_KS_Slave_0006_V001,LLD_ID_Cdd_KS_Slave_0007_V001,LLD_ID_Cdd_KS_Slave_0008_V001,LLD_ID_Cdd_KS_Slave_0009_V001,LLD_ID_Cdd_KS_Slave_0010_V001,LLD_ID_Cdd_KS_Slave_0011_V001,LLD_ID_Cdd_KS_Slave_0012_V001,LLD_ID_Cdd_KS_Slave_0013_V001,LLD_ID_Cdd_KS_Slave_0014_V001"/>
+<property name="Test_Step_0" value="KsInitState==KS_INIT"/>
+<property name="Test_Step_1" value="KsInitState==KS_NO_HSM"/>
+<property name="Test_Step_2" value="KsInitState==KS_WAIT_FOR_HSM and HSM.HSM2HTS.B.HSM_INIT==1"/>
+<property name="Test_Step_3" value="KsInitState==KS_WAIT_FOR_HSM and HSM.HSM2HTS.B.HSM_INIT==0"/>
+<property name="Test_Step_4" value="KsInitState==KS_ONLINE"/>
+<property name="Test_Step_5" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="cbox_Dem_ReportErrorStatusKS_error" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function cbox_Dem_ReportErrorStatus"/>
+<property name="Test_Step_0" value="EventId == KsDtcStartKey"/>
+<property name="Test_Step_1" value="EventId == KsDtcGfaKey"/>
+<property name="Test_Step_2" value="EventId == KsDtcSEcuKey and m_bVTSHWSupport==FALSE"/>
+<property name="Test_Step_3" value="EventId == KsDtcSEcuKey and m_bVTSHWSupport==TRUE"/>
+<property name="Test_Step_4" value="EventId == KsDtcEcIncrement"/>
+<property name="Test_Step_5" value="EventId == KsDtcIkaFailed"/>
+<property name="Test_Step_6" value="EventId == KsDtcOtherError and prevEventStatus != EventStatus"/>
+<property name="Test_Step_7" value="EventId == KsDtcOtherError and prevEventStatus == EventStatus"/>
+<property name="Test_Step_8" value="EventId == KsDtcFazitStringVerificationFailed"/>
+<property name="Test_Step_9" value="Defalut Case"/>
+</properties>
+    </testcase>
+    <testcase name="cbox_Dem_ReportErrorStatus_other_errors" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function cbox_Dem_ReportErrorStatus"/>
+<property name="Test_Step_0" value="EventId == KsDtcOtherError and prevEventStatus != EventStatus"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_NadService_StartEncoding" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_NadService_StartEncoding"/>
+</properties>
+    </testcase>
+    <testcase name="testing_the_initialization_of_RSTP_response_message_sending_depending_on_encryption_result" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_NadService_SendResponse"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_NadService_ResetChannel" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_NadService_ResetChannel"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_NadServiceUpdate" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_NadServiceUpdate"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_NadService_Request_parmDataPtr_different_to_NULL" status="run" time="0.001" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_NadService_Request"/>
+<property name="Test_Step_0" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESCOMPANDVEHSPEC_ID == messageID"/>
+<property name="Test_Step_1" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESCOMPSPEC_ID == messageID"/>
+<property name="Test_Step_2" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESGFAENCRYPT_ID == messageID"/>
+<property name="Test_Step_3" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_RESPONSE_KS_AESGFAENCRYPT_ID == messageID"/>
+<property name="Test_Step_4" value="KS_NAD_ENCRYPTION_BUSY_AESCOMPANDVEHSPEC == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESCOMPANDVEHSPEC_ID == messageID"/>
+<property name="Test_Step_5" value="KS_NAD_ENCRYPTION_BUSY_AESCOMPANDVEHSPEC == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESCOMPSPEC_ID == messageID"/>
+<property name="Test_Step_6" value="KS_NAD_ENCRYPTION_BUSY_AESCOMPANDVEHSPEC == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESGFAENCRYPT_ID == messageID"/>
+<property name="Test_Step_7" value="KS_NAD_ENCRYPTION_BUSY_AESCOMPANDVEHSPEC == ksNadEncryptionState and KS_RSTP_APP_RESPONSE_KS_AESGFAENCRYPT_ID == messageID"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_NadService_Request_parmDataPtr_equal_to_NULL" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_NadService_Request"/>
+<property name="Test_Step_0" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESCOMPANDVEHSPEC_ID == messageID"/>
+<property name="Test_Step_1" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESCOMPSPEC_ID == messageID"/>
+<property name="Test_Step_2" value="KS_NAD_ENCRYPTION_IDLE == ksNadEncryptionState and KS_RSTP_APP_REQUEST_KS_AESGFAENCRYPT_ID == messageID"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoDatCsmCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoDatCsmCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoDiagCsmCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoDiagCsmCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoAuthCsmCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoAuthCsmCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoNvmCsmCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoNvmCsmCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoKeyExtractCsmCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoKeyExtractCsmCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoCsmRandomCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoCsmRandomCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoRandomSeedCallback" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoRandomSeedCallback"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoEncryptDat" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoEncryptDat"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoEncryptDiag" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoEncryptDiag"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoEncryptAuth" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoEncryptAuth"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoEncryptNvm" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoEncryptNvm"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoDecryptNvm" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoDecryptNvm"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoDecryptDiag" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoDecryptDiag"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoEncryptDiagWithRamKey" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test of the function Ks_ImoEncryptDiagWithRamKey"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoRandomNumberGenerate" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoRandomNumberGenerate"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoIsRandomNumberGeneratorInitialized" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoIsRandomNumberGeneratorInitialized"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoKeyStateUpdate" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoKeyStateUpdate"/>
+<property name="Test_Step_0" value="ks_imo_keyUpdateState=KS_IMO_KEY_UPDATE_STATE_IDLE"/>
+<property name="Test_Step_1" value="ks_imo_keyUpdateState=KS_IMO_KEY_UPDATE_STATE_START"/>
+<property name="Test_Step_2" value="ks_imo_keyUpdateState=KS_IMO_KEY_UPDATE_STATE_UPDATE"/>
+<property name="Test_Step_3" value="ks_imo_keyUpdateState=KS_IMO_KEY_UPDATE_STATE_FINISH"/>
+<property name="Test_Step_4" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoKeyUpdateStart" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoKeyUpdateStart"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoPlainKeyStateUpdate" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoPlainKeyStateUpdate"/>
+<property name="Test_Step_0" value="ks_imo_PlainKeyUpdateState == KS_IMO_KEY_UPDATE_STATE_IDLE"/>
+<property name="Test_Step_1" value="ks_imo_PlainKeyUpdateState == KS_IMO_KEY_UPDATE_STATE_START"/>
+<property name="Test_Step_2" value="ks_imo_PlainKeyUpdateState == KS_IMO_KEY_UPDATE_STATE_UPDATE"/>
+<property name="Test_Step_3" value="ks_imo_PlainKeyUpdateState == KS_IMO_KEY_UPDATE_STATE_FINISH"/>
+<property name="Test_Step_4" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoPlainKeyUpdateStart" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoPlainKeyUpdateStart"/>
+</properties>
+    </testcase>
+    <testcase name="Ks_ImoUpdate" status="run" time="0" classname="GTestClass_cdd_KS_Slave">
+<properties>
+<property name="Description" value="Test the function Ks_ImoUpdate"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

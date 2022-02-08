@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="12" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:14:20" time="1.642" name="AllTests">
+  <testsuite name="GTestClass_cdd_KnockoutMonitor" tests="12" failures="0" disabled="0" errors="0" time="1.642">
+    <testcase name="Cdd_KnockoutMonitor_Cyclic_10ms" status="run" time="0.001" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test Cdd_KnockoutMonitor_Cyclic_10ms function"/>
+<property name="Test_Step_0" value="NmStateNew is NM_STATE_UNINIT"/>
+<property name="Test_Step_1" value="NmStateNew is NOT  NM_STATE_UNINIT"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_KnockoutMonitor_NADAwakeTimerElapsed" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test CDD_KnockoutMonitor_NADAwakeTimerElapsed function"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_KnockoutMonitor_NADKnockoutTimerElapsed" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test CDD_KnockoutMonitor_NADKnockoutTimerElapsed function"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_KnockoutMonitor_NADTimerStatus" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test CDD_KnockoutMonitor_NADTimerStatus function"/>
+<property name="Test_Step_0" value="NADTimer = DT_NADTimerType_AwakeTimer"/>
+<property name="Test_Step_1" value="NADTimer = DT_NADTimerType_KnockoutTimer"/>
+<property name="Test_Step_2" value="NADTimer = DT_NADTimerType_None"/>
+<property name="Test_Step_3" value="default case"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GetActiveTimer_GetActiveTimer" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test Cdd_GetActiveTimer_GetActiveTimer function"/>
+<property name="Test_Step_0" value="NAD awake timer is not active and status is E_OK"/>
+<property name="Test_Step_1" value="NAD awake timer is active and status is E_OK"/>
+<property name="Test_Step_2" value="NAD awake timer is active and status is E_NOT_OK "/>
+<property name="Test_Step_3" value="NAD awake timer is not active and status is E_NOT_OK "/>
+<property name="Test_Step_4" value="in the first call of Cdd_Timer_GetActive NAD awake timer is not active and status is E_OK , in the second call  NAD awake timer will be active and status will take E_OK  "/>
+</properties>
+    </testcase>
+    <testcase name="CDD_KnockoutMonitor_StopNADTimer" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test CDD_KnockoutMonitor_StopNADTimer function"/>
+<property name="Test_Step_0" value="Cdd_Timer_Stop always return E_OK"/>
+<property name="Test_Step_1" value="we have some trouble in stoping the NAD awake timer"/>
+<property name="Test_Step_2" value="we have some trouble in stoping the NAD knockout timer"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_KnockoutMonitor_UpdateNADTimer" status="run" time="1.575" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test CDD_KnockoutMonitor_StopNADTimer function"/>
+<property name="Test_Step_0" value="NADTimer equal to DT_NADTimerType_None"/>
+<property name="Test_Step_1" value="NADTimer equal to DT_NADTimerType_AwakeTimer"/>
+<property name="Test_Step_2" value="NADTimer equal to DT_NADTimerType_KnockoutTimer"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_KnockoutMonitor_convertMinutesToMicroSeconds" status="run" time="0.066" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="CDD_KnockoutMonitor_convertMinutesToMicroSeconds function Negative Test "/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KnockoutMonitor_EcuM_KillAllRUNRequests" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test Cdd_KnockoutMonitor_EcuM_KillAllRUNRequests function"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KnockoutMonitor_EcuM_ReleaseRUN" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test Cdd_KnockoutMonitor_EcuM_ReleaseRUN function"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KnockoutMonitor_EcuM_ComM_ReleaseRUN" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test Cdd_KnockoutMonitor_EcuM_ComM_ReleaseRUN function"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_KnockoutMonitor_EcuM_ReleasePOST_RUN" status="run" time="0" classname="GTestClass_cdd_KnockoutMonitor">
+<properties>
+<property name="Description" value="Test Cdd_KnockoutMonitor_EcuM_ReleasePOST_RUN function"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

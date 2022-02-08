@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:15:07" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_cdd_PadKeepControl" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="Cdd_PadKeepControl_SetPads" status="run" time="0.001" classname="GTestClass_cdd_PadKeepControl">
+<properties>
+<property name="Description" value="Cdd_PadKeepControl_SetPads function test"/>
+<property name="Test_Step_0" value="Setting pads when hardware variant is C1"/>
+<property name="Expected_1" value="external function are called, nothing expected"/>
+<property name="Test_Step_2" value="Setting pads when hardware variant is not C1"/>
+<property name="Expected_3" value="external function are called, nothing expected"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

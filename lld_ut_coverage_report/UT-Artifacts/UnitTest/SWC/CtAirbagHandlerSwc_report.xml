@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="27" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:50:25" time="0.005" name="AllTests">
+  <testsuite name="GTestClass_CtAirbagHandlerSwc" tests="27" failures="0" disabled="0" errors="0" time="0.005">
+    <testcase name="CtAirbagHandlerSwc_CtAirbagHandlerCAN_A01Status" status="run" time="0.001" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check the proper mapping CAN message Airbag_01 Status"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_30, SW_AIRBAG_HNDLR_39, SW_AIRBAG_HNDLR_43"/>
+<property name="Test_Step_0" value="1. Handle CAN signal Airbag_1 received NOT_OK "/>
+<property name="Test_Step_1" value="2. ABH_RSTP_PARAM_ID_AB_ANFORDERUNG_ECALL and ABH_RSTP_PARAM_ID_EA_ECALL_ANF called the first time. Default value 0xFF, init value 0x00"/>
+<property name="Test_Step_2" value="3. Nothing changes, no message is sent"/>
+<property name="Test_Step_3" value="4. Check signal status with active Systemfehler"/>
+<property name="Test_Step_4" value="5. Check signal status with active Diagnose"/>
+<property name="Test_Step_5" value="6. Check signal status with active Stellgliedtest"/>
+<property name="Test_Step_6" value="7. Check signal status with active Anzeige_Fussg"/>
+<property name="Test_Step_7" value="8. Check signal status with active Diagnose and Stellgliedtest."/>
+<property name="Expected_8" value="Invalid CAN and PWM reports resulting in calls to RSTPMsg functions."/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_CtAirbagHandlerCAN_A01Intensity" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check the proper mapping CAN message Airbag_01 Intensity"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_29, SW_AIRBAG_HNDLR_39, SW_AIRBAG_HNDLR_41"/>
+<property name="Test_Step_0" value="1. Check intensity signal NO CRASH"/>
+<property name="Test_Step_1" value="2. Check intensity signal level 1"/>
+<property name="Test_Step_2" value="3. Check intensity signal level 2-Stellglied"/>
+<property name="Test_Step_3" value="4. Check intensity signal level 2-Colorado"/>
+<property name="Test_Step_4" value="5. Check intensity signal level 3-VWAudiStellglied"/>
+<property name="Test_Step_5" value="6. Check intensity signal level 3-PAG"/>
+<property name="Test_Step_6" value="7. Check intensity signal level 3"/>
+<property name="Expected_7" value="Invalid CAN and PWM reports resulting in calls to RSTPMsg functions."/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_CtAirbagHandlerCAN_A01Ocurrence" status="run" time="0.001" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check the proper mapping CAN message Airbag_01 Occurrence"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_29, SW_AIRBAG_HNDLR_31, SW_AIRBAG_HNDLR_32, SW_AIRBAG_HNDLR_33, SW_AIRBAG_HNDLR_34, SW_AIRBAG_HNDLR_35, SW_AIRBAG_HNDLR_39"/>
+<property name="Test_Step_0" value="1. Check occurrence signal NONE"/>
+<property name="Test_Step_1" value="2. Check occurrence signal FRONT CRASH"/>
+<property name="Test_Step_2" value="3. Check occurrence signal SF CRASH"/>
+<property name="Test_Step_3" value="4. Check occurrence signal SF CRASH &amp; SB_Crash"/>
+<property name="Test_Step_4" value="5. Check occurrence signal SB CRASH"/>
+<property name="Test_Step_5" value="6. Check occurrence signal HECK CRASH"/>
+<property name="Test_Step_6" value="7. Check occurrence signal ROLLOVER CRASH"/>
+<property name="Test_Step_7" value="8. Check occurrence signal with several crash values: ROLLOVER CRASH and SB CRASH"/>
+<property name="Test_Step_8" value="9. Test can buffer state at wait and buffer count is 1"/>
+<property name="Expected_9" value="Invalid CAN and PWM reports resulting in calls to RSTPMsg functions."/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_CtAirbagHandlerCAN_A02" status="run" time="0.001" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check the proper mapping CAN message Airbag_02"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_61, SW_AIRBAG_HNDLR_62, SW_AIRBAG_HNDLR_63"/>
+<property name="Test_Step_0" value="1. Check the mapping when Anforderung_eCall changes"/>
+<property name="Test_Step_1" value="2. Check the mapping when Anforderung_eCall changes"/>
+<property name="Test_Step_2" value="3. Not changes in Anforderung_eCall and EA_eCall_Anf "/>
+<property name="Expected_3" value="Invalid CAN and PWM reports resulting in calls to RSTPMsg functions."/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_PWMSignal_Init" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="PWM Signal Test. Check that the PWM signal AIRBAG_IN is properly read and handledto determine the PWMCrashLevel output signal. Dependency on the Coding State is also checked"/>
+<property name="Test_Step_0" value="1.Check that when PwmCodingState is NotInstalled(0x00) the PWM measurements are ignored"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_81SW_AIRBAG_HNDLR_14SW_AIRBAG_HNDLR_21"/>
+<property name="Test_Step_1" value="2.Check that after startup, measurement will start after 500ms if PwmCodingState is Installed(0x01)"/>
+<property name="Expected_2" value=""/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_PWMSignal_Processing_in_tolerance" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="PWM Signal processing Test with Perion in tolerance range. Check that the PWM signal AIRBAG_IN is properly read and handled to determine the PWMCrashLevel output signal."/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_19SW_AIRBAG_HNDLR_13SW_AIRBAG_HNDLR_5SW_AIRBAG_HNDLR_11"/>
+<property name="Test_Step_0" value="1. Check mapping for upper Boundaries in every range Tlow = 25ms, 45ms, 65ms, 85ms"/>
+<property name="Test_Step_1" value="2. Check mapping for lower Boundaries in every range Tlow = 15ms, 35ms, 55ms, 75ms"/>
+<property name="Test_Step_2" value="3. Check mapping for invalid Tlow values. Tlow = 10ms, 30ms, 50ms, 70ms, 90ms"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_PWMSignal_Processing_OutOf_Tolerance" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check mapping for a PWM period read out of the specified tolerance range (95ms &gt;= Tperiod &lt;= 105ms). PWMCrashLevel must return INVALID"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_8SW_AIRBAG_HNDLR_38"/>
+<property name="Test_Step_0" value="1. Check mapping for period &lt; 95 ms"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_PWMSignal_Processing_RSTP_Routing" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check that RSTP message is sent to NAD when RSTP is initialized and crash level or status bits change.Check at the same time the debouncing of the PWM crash level"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_40SW_AIRBAG_HNDLR_44SW_AIRBAG_HNDLR_44SW_AIRBAG_HNDLR_18SW_AIRBAG_HNDLR_143"/>
+<property name="Test_Step_0" value="1. Check that crash level is debounced (by default 1 cycle)"/>
+<property name="Test_Step_1" value="2. Check that RSTP message is sent when crash Level Signal changes"/>
+<property name="Test_Step_2" value="3. Check that RSTP message is sent when crash Signal Status changes"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_PWMSignal_Processing_Continous_PWMSig" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check that Continuous High and Low Level of the PWM Signal are detected for posterior DTC evaluation and lead toPWMCrashLevel = Invalid"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_24SW_AIRBAG_HNDLR_25"/>
+<property name="Test_Step_0" value="1. Check that Crash Level is returned with PWM_HIGH when PWM Signal has 100% duty cycle"/>
+<property name="Test_Step_1" value="2. Check that Crash Level is returned with PWM_LOW when PWM Signal has 0% duty cycle"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_PWMSignal_Processing_No_MeasurementUpdate" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check that when no measurement update is retrieved from the BSW for one complete period, the PWM result is ABH_PULSE_WIDTH_LOW or ABH_PULSE_WIDTH_HIGHdepending on the current Pin value read"/>
+<property name="Test_Step_0" value="1. Check the crash level is returned with invalid"/>
+<property name="Test_Step_1" value="2. Check that Crash Level is returned with PWM_LOW when measurement not updated since last call for a whole period and current Pin value is 0"/>
+<property name="Test_Step_2" value="3. Check that Crash Level is returned with PWM_HIGH when measurement not updated since last call for a whole period and current Pin value is 1"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerSwc_Extra_RTE_Runnables" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc" />
+    <testcase name="CyclicMessageCheck" status="run" time="0.001" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Cycic message check"/>
+<property name="Tested_LLD_IDs" value="-"/>
+</properties>
+    </testcase>
+    <testcase name="CheckCrashlevelState" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check crash level state "/>
+<property name="Tested_LLD_IDs" value="-"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC1" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (ungltiger Zustand) is set to prefailed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_23"/>
+<property name="Test_Step_0" value="A Valid AIRBAG_IN (Crash Level) Signal is received during Clamp15 is Off"/>
+<property name="Expected_1" value="One DTC is set to prefailed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC2" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (ungltiger Zustand) is set to prepassed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_82"/>
+<property name="Test_Step_0" value="A Valid AIRBAG_IN (Crash Level) Signal is received during Clamp15 is On and DTC was set before"/>
+<property name="Expected_1" value="DTC is set to prepassed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC3" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (Pegel High) is set to prefailed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_24"/>
+<property name="Test_Step_0" value="A HIGH AIRBAG_IN (100% Duty Cycle) Signal is received during Clamp15 is On"/>
+<property name="Expected_1" value="DTC is set to prefailed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC4" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (Pegel High) is set to prepassed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_83"/>
+<property name="Test_Step_0" value="A Valid AIRBAG_IN (Crash Level) Signal is received during Clamp15 is On and DTC was set before"/>
+<property name="Expected_1" value="DTC is set to prepassed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC5" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (Pegel Low) is set to prefailed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_25"/>
+<property name="Test_Step_0" value="A LOW AIRBAG_IN (0% Duty Cycle) Signal is received during Clamp15 is On"/>
+<property name="Expected_1" value="DTC is set to prefailed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC6" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (Pegel Low) is set to prepassed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_84"/>
+<property name="Test_Step_0" value="A Valid AIRBAG_IN (Crash Level) Signal is received during Clamp15 is On and DTC was set before"/>
+<property name="Expected_1" value="DTC is set to prepassed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC7" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (auerhalb der Toleranz) is set to prefailed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_25"/>
+<property name="Test_Step_0" value="A INVALID AIRBAG_IN (Crash Level) Signal is received during Clamp15 is On"/>
+<property name="Expected_1" value="DTC is set to prefailed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC8" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="The DTC Airbag PWM (Pegel Low) is set to prepassed"/>
+<property name="Tested_LLD_IDs" value="SW_AIRBAG_HNDLR_84"/>
+<property name="Test_Step_0" value="A Valid AIRBAG_IN (Crash Level) Signal is received during Clamp15 is On and DTC was set before"/>
+<property name="Expected_1" value="DTC is set to prepassed"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC9" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="An error occurs and failure condition changes"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="An error occurs for the first cycle which forces a DTC, DTC Threshold mechanism is started"/>
+<property name="Test_Step_1" value="Function is called enough times to store the DTC"/>
+<property name="Expected_2" value="DTC condition is recognized, after ABH_PWM_COUNTER_MAX cycles DTC is set"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC10" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check that KL15 changes are updated for the application"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="1.check case when KL15 is OFF"/>
+<property name="Test_Step_1" value="2. check case when KL15 is ON"/>
+<property name="Test_Step_2" value="3. test again, check case when KL15 is ON"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC11" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check when PWM crash level unknown "/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Clear the errors"/>
+</properties>
+    </testcase>
+    <testcase name="CtAirbagHandlerPWMDTC_TC12" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check When the coding is not installed "/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Clear the errors"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_Receive_Callback" status="run" time="0.001" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check that KL15 changes are updated for the application"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="1. PWM Crash Message"/>
+<property name="Test_Step_1" value="2. CAN Crash Message"/>
+<property name="Test_Step_2" value="3. dummy message"/>
+<property name="Expected_3" value=""/>
+</properties>
+    </testcase>
+    <testcase name="getCrashInfo" status="run" time="0" classname="GTestClass_CtAirbagHandlerSwc">
+<properties>
+<property name="Description" value="Check that Crash Info "/>
+<property name="Tested_LLD_IDs" value="-"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

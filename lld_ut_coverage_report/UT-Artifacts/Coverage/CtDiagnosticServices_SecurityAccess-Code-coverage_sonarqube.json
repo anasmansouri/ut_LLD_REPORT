@@ -1,0 +1,702 @@
+{
+    "files":  [
+                  {
+                      "file":  "application/source/SWC/CtDiagnosticServices_SecurityAccess.c",
+                      "lines":  [
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  14
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  15
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  19
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  20
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  24
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  26
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  27
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  32
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  37
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  41
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  44
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  46
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  50
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  51
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  109
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  110
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  124
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  125
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  128
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  157
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  161
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  163
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  168
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  169
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  170
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  172
+                                    },
+                                    {
+                                        "branches":  [
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         },
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         }
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  174
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  175
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  177
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  179
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  180
+                                    },
+                                    {
+                                        "branches":  [
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         },
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         }
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  182
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  183
+                                    },
+                                    {
+                                        "branches":  [
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         },
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         }
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  185
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  186
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  188
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  190
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  191
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  192
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  193
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  194
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  195
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  196
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  198
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  199
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  200
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  201
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  202
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  206
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  207
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  244
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  1,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  248
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  250
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  255
+                                    },
+                                    {
+                                        "branches":  [
+                                                         {
+                                                             "count":  1,
+                                                             "fallthrough":  true,
+                                                             "throw":  false
+                                                         },
+                                                         {
+                                                             "count":  0,
+                                                             "fallthrough":  false,
+                                                             "throw":  false
+                                                         }
+                                                     ],
+                                        "count":  1,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  257
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  258
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  1,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  260
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  261
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  262
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  1,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  264
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  265
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  1,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  267
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  268
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  1,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  269
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  270
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  274
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  275
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  276
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  279
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  280
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  284
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  285
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  286
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  288
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  289
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  false,
+                                        "line_number":  291
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  292
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  293
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  297
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  298
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  302
+                                    },
+                                    {
+                                        "branches":  [
+
+                                                     ],
+                                        "count":  0,
+                                        "gcovr/noncode":  true,
+                                        "line_number":  303
+                                    }
+                                ]
+                  }
+              ],
+    "gcovr/format_version":  0.1
+}

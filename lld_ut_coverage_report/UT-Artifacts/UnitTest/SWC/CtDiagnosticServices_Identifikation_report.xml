@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="74" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:57:06" time="0.007" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_Identifikation" tests="74" failures="0" disabled="0" errors="0" time="0.007">
+    <testcase name="Test_CtDiagnosticServices_Identifikation_Init" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Identifikation Init"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtDiagnosticServices_Identifikation_Cyclic_100ms" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Identifikation cyclic 100ms"/>
+<property name="Test_Step_0" value="Set Diag_bIsOdxFileInfoCheckDone TRUE"/>
+<property name="Expected_1" value="Nothing happens"/>
+<property name="Test_Step_2" value="Set OdxNameError and OdxVersionError to NOT OK"/>
+<property name="Expected_3" value="Nothing happens"/>
+<property name="Test_Step_4" value="Set OdxVersionError to NOT OK"/>
+<property name="Expected_5" value="Nothing happens"/>
+<property name="Test_Step_6" value="Set OdxNameError and OdxVersionError to OK and No compatiability found"/>
+<property name="Test_Step_7" value="Set OdxNameError and OdxVersionError to OK and compatiability found OdxFileIdentBlock"/>
+<property name="Test_Step_8" value="Set OdxNameError and OdxVersionError to OK and compatiability found OdxFileVersionRomBlock"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ASAMODXFileIdentifier_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF19E"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_ASAMODXFileIdentifier_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ASAMODXFileIdentifier_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF19E"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ASAMODXFileVersion_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1A2"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_ASAMODXFileVersion_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ASAMODXFileVersion_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1A2"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ActiveDiagnosisSession_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation" />
+    <testcase name="Test_DidServices_ID_ActiveDiagnosisSession_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Return and output Data of UDS DID F186 [ActiveDiagnosisSession]"/>
+<property name="Test_Step_0" value="1. Testing Ranges For Diagnosis Sessions [0x00]"/>
+<property name="Test_Step_1" value="2. Testing Ranges For Diagnosis Sessions [0x7F]"/>
+<property name="Test_Step_2" value="3. Testing Ranges For Diagnosis Sessions [0xFF]"/>
+<property name="Test_Step_3" value="4. Testing NOK return from DCM "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_AutoSarStandardApplSwIdent_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test AutoSar Standard Application software Identifiation ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_AutoSarStandardApplSwIdent_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test AutoSar Standard Application software Identifiation Read Data"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_AutoSarStandardApplSwIdent_ReadDataLength" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test AutoSar Standard Application software Identifiation Read Data Length"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_BootloaderTpBlockSize_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0x040F"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwSwBlkLockValue_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_BootloaderTpBlockSize_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Bootloader Tp block size condition check write"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_BootloaderTpBlockSize_ReadData_TC1" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0x0410"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+<property name="Expected_1" value="Function Outputs always 0xFU"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_BootloaderTpBlockSize_WriteData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test Bootloader Tp Block write data"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ECUProgrammingInformation_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1DF"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_ECUProgrammingInformation_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ECUProgrammingInformation_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1DF"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_FdsProjectData_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1D5"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_FdsProjectData_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1D5"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_Fingerprint_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF15B"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_Fingerprint_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_Fingerprint_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF15B"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ProgrammingDate_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test condition check read of DID 0xF199 - Not implemented"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ProgrammingDate_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test condition check write of DID 0xF199 "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ProgrammingDate_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test read data of DID 0xF199 - Not implemented "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_ProgrammingDate_WriteData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test write data of DID 0xF199 "/>
+<property name="Test_Step_0" value="1. Test write data with null buffer and data length &apos;0&apos;"/>
+<property name="Test_Step_1" value="2. Test write data with filled data buffer and Diag_enuFingerprintFlag is NO_FINGERPRINT"/>
+<property name="Test_Step_2" value="3. Test write data with filled data buffer and Diag_enuFingerprintFlag is SERIAL_NUM_AQUIRED"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_RepairShopCodeOrTesterSN_ConditionCheckRead" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test condition check read of DID 0xF198 - Not implemented"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_RepairShopCodeOrTesterSN_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test condition check write of DID 0xF198 "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_RepairShopCodeOrTesterSN_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test read data of DID 0xF198 - Not implemented "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_RepairShopCodeOrTesterSN_WriteData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test write data of DID 0xF198 "/>
+<property name="Test_Step_0" value="1. Test write data with null buffer and data length &apos;0&apos;"/>
+<property name="Test_Step_1" value="2. Test write data with filled data buffer and Diag_enuFingerprintFlag is NO_FINGERPRINT"/>
+<property name="Test_Step_2" value="3. Test write data with filled data buffer and Diag_enuFingerprintFlag is SERIAL_NUM_AQUIRED"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_SubSystemIdentification_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test condition check read of DID 0x2A30 "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_SubSystemIdentification_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test read data of DID 0x2A30 "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VWApplicationDataIdentification_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Test_Step_0" value="Call DidServices_ID_VWApplicationDataIdentification_ConditionCheckRead() and verify the results"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VWApplicationDataIdentification_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify read data of UDS command: VWApplicationDataIdentification."/>
+<property name="Test_Step_0" value="1. Call DidServices_ID_VWApplicationDataIdentification_ReadData() and verify the results"/>
+<property name="Test_Step_1" value="2. Verify result."/>
+<property name="Expected_2" value="Read data of function matched expected data."/>
+<property name="Expected_3" value="Function returns RTE_E_DidServices_ID_VWApplicationDataIdentification_E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VWCodingDate_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF17B"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VWCodingDate_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VWCodingDate_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF17B"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VWCodingRepairShopCodeOrSerialNumber_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1A5"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VWCodingRepairShopCodeOrSerialNumber_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VWCodingRepairShopCodeOrSerialNumber_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1A5"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VehicleEquipmentCodeAndPRNumberCombination_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1A4"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VehicleEquipmentCodeAndPRNumberCombination_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VehicleEquipmentCodeAndPRNumberCombination_ConditionCheckWrite" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check write of DID 0xF1A4"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VehicleEquipmentCodeAndPRNumberCombination_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1A4"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VehicleEquipmentCodeAndPRNumberCombination_WriteData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test write data of DID 0xF1A4"/>
+<property name="Test_Step_0" value="1. NvM write job is not started"/>
+<property name="Test_Step_1" value="2. NvM write job is pending"/>
+<property name="Test_Step_2" value="3. NvM write job is notified as success"/>
+<property name="Test_Step_3" value="4. NvM write job is notified as failure"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VehicleIdentificationNumber_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF190"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VehicleIdentificationNumber_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF190"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwCalibRepairShopOrSN_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF19A"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwCalibRepairShopOrSN_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwCalibRepairShopOrSN_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF19A"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwCalibrationDate_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF19B"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwCalibrationDate_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwCalibrationDate_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF19B"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwDatasetProgrammingDate_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1A9"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwDatasetProgrammingDate_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwDatasetProgrammingDate_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1A9"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwDatasetRepairShopOrTesterSN_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1A8"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwDatasetRepairShopOrTesterSN_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwDatasetRepairShopOrTesterSN_ReadData_TC1" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF1A8"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwEcuHardwareNumber_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF191"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwEcuHardwareNumber_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF191"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwEcuHardwareVersionNumber_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation" />
+    <testcase name="Test_DidServices_ID_VwEcuHardwareVersionNumber_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify read data of UDS command: VwEcuHardwareVersionNumber."/>
+<property name="Test_Step_0" value="1. Call DidServices_ID_VwEcuHardwareVersionNumber_ReadData()"/>
+<property name="Test_Step_1" value="2. Verify result."/>
+<property name="Expected_2" value="Read data of function matched expected data."/>
+<property name="Expected_3" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwFAZITIdentificationString_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation" />
+    <testcase name="Test_DidServices_ID_VwFAZITIdentificationString_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify read data of UDS command: VwFAZITIdentificationString."/>
+<property name="Test_Step_0" value="1. Call DidServices_ID_VwFAZITIdentificationString_ReadData()"/>
+<property name="Test_Step_1" value="2. Verify result."/>
+<property name="Expected_2" value="Read data of function matched expected data."/>
+<property name="Expected_3" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwLogicalSoftwareBlockVersion_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF1AB"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwLogicalSoftwareBlockVersion_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwLogicalSoftwareBlockVersion_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Read data of DID 0xF1AB"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSoftwareVersionNumber_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwSoftwareVersionNumber_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSoftwareVersionNumber_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify read data of UDS command: VwSoftwareVersionNumber."/>
+<property name="Test_Step_0" value="1. Call DidServices_ID_VwSoftwareVersionNumber_ReadData()"/>
+<property name="Test_Step_1" value="2. Verify result."/>
+<property name="Expected_2" value="Read data of function matched expected data."/>
+<property name="Expected_3" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSparePartNumber_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+<property name="Expected_1" value="Function returns RTE_E_DidServices_ID_VwSoftwareVersionNumber_E_PENDING"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSparePartNumber_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify read data of UDS command: VwSparePartNumber."/>
+<property name="Test_Step_0" value="1. Call DidServices_ID_VwSparePartNumber_ReadData()"/>
+<property name="Test_Step_1" value="2. Verify result."/>
+<property name="Expected_2" value="Read data of function matched expected data."/>
+<property name="Expected_3" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSwBlkLockValue_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0x040F"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwSwBlkLockValue_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xFF, 0xFF bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSwBlkLockValue_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0x040F"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSwBlkProgAttemptsCounter_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0x0407"/>
+<property name="Expected_0" value="Function returns RTE_E_DidServices_ID_VwSwBlkProgAttemptsCounter_E_PENDING"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSwBlkProgAttemptsCounter_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0x0407"/>
+<property name="Test_Step_0" value="1. Test data saved in Ram blocks are output from function"/>
+<property name="Expected_1" value="Function returns RTE_E_OK"/>
+<property name="Expected_2" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSystemNameOrEngineType_ConditionCheckRead_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF197"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwSystemNameOrEngineType_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify Read data of DID 0xF197"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwWorkshopSystemName_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Test the Condition Check by DID 0xF197"/>
+<property name="Expected_0" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_VwWorkshopSystemName_ReadData_TC1" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify read data of UDS command: VwWorkshopSystemName."/>
+<property name="Test_Step_0" value="1. Call DidServices_ID_VwWorkshopSystemName_ReadData()"/>
+<property name="Test_Step_1" value="2. Verify result."/>
+<property name="Expected_2" value="Read data of function matched expected data."/>
+<property name="Expected_3" value="Function returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_RAMFingerprint_getFingerprint" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify output the Order validity of F198 and F199 "/>
+<property name="Test_Step_0" value="1. Finger print is invalid "/>
+<property name="Test_Step_1" value="2. Finger print is valid  and data set download order is invalid"/>
+<property name="Test_Step_2" value="3. Finger print is valid  and data set download order is valid"/>
+</properties>
+    </testcase>
+    <testcase name="Test_Pi_ProgAttempts_GetAllSwLogicalBlksMaxProgAttempts" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify the All SW Logical Blocks max Program Attempts by 0x040F "/>
+<property name="Test_Step_0" value="1. Test the VW software block lock value is FALSE"/>
+<property name="Expected_1" value="Function returns RTE_E_DidServices_ID_VwSoftwareVersionNumber_E_PENDING"/>
+<property name="Test_Step_2" value="2. Test the VW software block lock value is TRUE"/>
+<property name="Expected_3" value="Function returns RTE_E_Pi_ProgAttempts_E_OK"/>
+<property name="Expected_4" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+<property name="Test_Step_5" value=" Test data if error is present in NVRam - the data must have default value"/>
+<property name="Expected_6" value="Function returns RTE_E_Pi_ProgAttempts_E_OK"/>
+<property name="Expected_7" value="Function Outputs successive 0xFF, 0xFF bytes to Buffer"/>
+</properties>
+    </testcase>
+    <testcase name="Test_Pi_ProgAttempts_GetAllSwLogicalBlksPrgAttempts" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Identifikation">
+<properties>
+<property name="Description" value="Verify the All SW Logical Blocks Program Attempts by 0x0407 "/>
+<property name="Test_Step_0" value="1. Test the VW software block program attempt counter is FALSE"/>
+<property name="Expected_1" value="Function returns RTE_E_DidServices_ID_VwSoftwareVersionNumber_E_PENDING"/>
+<property name="Test_Step_2" value="2. Test the VW software block program attempt counter is TRUE "/>
+<property name="Test_Step_3" value=" Test data saved in Ram blocks are output from function"/>
+<property name="Expected_4" value="Function returns RTE_E_Pi_ProgAttempts_E_OK"/>
+<property name="Expected_5" value="Function Outputs successive 0xAA, 0xBB bytes to Buffer"/>
+<property name="Test_Step_6" value=" Test data if error is present in NVRam - the data must have default value"/>
+<property name="Expected_7" value="Function returns RTE_E_Pi_ProgAttempts_E_OK"/>
+<property name="Expected_8" value="Function Outputs successive 0x00, 0x00 bytes to Buffer"/>
+<property name="Expected_9" value="Function Outputs successive 0x00, 0x00 bytes to Buffer"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

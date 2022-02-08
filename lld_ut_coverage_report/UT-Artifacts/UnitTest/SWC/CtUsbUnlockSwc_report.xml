@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:08:14" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtUsbUnlockSwc" tests="7" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="DevMsgUpdate_msg_active" status="run" time="0" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="DevMsgUpdate msg active"/>
+</properties>
+    </testcase>
+    <testcase name="DevMsgUpdate_msg_not_active" status="run" time="0" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="DevMsgUpdate msg not active"/>
+</properties>
+    </testcase>
+    <testcase name="CtUsbUnlockSwc_Init" status="run" time="0" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="CtUsbUnlockSwc_Init"/>
+<property name="Test_Step_0" value="vtsImoAvailable == True"/>
+<property name="Test_Step_1" value="developmentSwVersion and OEM_IDENTIFICATION.strVersion are equal"/>
+<property name="Test_Step_2" value="developmentSwVersion and OEM_IDENTIFICATION.strVersion are not equal"/>
+</properties>
+    </testcase>
+    <testcase name="CtUsbUnlockSwc__Cyclic_10ms" status="run" time="0" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="CtUsbUnlockSwc__Cyclic_10ms"/>
+<property name="Test_Step_0" value="UnlockData.bIsKeyUpdated IS FALSE"/>
+<property name="Test_Step_1" value="UnlockData.bIsKeyUpdated IS TRUE"/>
+<property name="Test_Step_2" value="UnlockData.bIsBtleKeyUpdated IS TRUE and Rte_Call_BTLE_Unlock_Unlock return RTE_E_OK"/>
+<property name="Test_Step_3" value="UnlockData.bIsBtleKeyUpdated IS TRUE and Rte_Call_BTLE_Unlock_Unlock return RTE_E_INVALID"/>
+<property name="Test_Step_4" value="UnlockData.bIsBtleKeyUpdated IS TRUE and Rte_Call_BTLE_Unlock_Unlock return 2U"/>
+<property name="Test_Step_5" value="UnlockData.bIsBtleKeyUpdated IS FALSE"/>
+<property name="Test_Step_6" value="noVtsImoAndDevSwPresent IS TRUE"/>
+<property name="Test_Step_7" value="noVtsImoAndDevSwPresent IS FALSE  , ksXcpState = TRUE and devMsgXcpState = DEV_MSG_ACTIVE"/>
+<property name="Test_Step_8" value="noVtsImoAndDevSwPresent IS FALSE  , ksXcpState = TRUE and devMsgXcpState = DEV_MSG_NOT_ACTIVE"/>
+<property name="Test_Step_9" value="noVtsImoAndDevSwPresent IS FALSE , immoMemAccessAllowance = FALSE"/>
+<property name="Test_Step_10" value="noVtsImoAndDevSwPresent IS FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="CtUsbUnlockSwc_KsLockState" status="run" time="0" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="CtUsbUnlockSwc_KsLockState"/>
+<property name="Test_Step_0" value=" state is true"/>
+<property name="Test_Step_1" value=" state is false"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtUsbUnlockSwc_ReceiveCallback_RSTP_Callback_u8MsgId_equal_USB_UNLOCK_STATUS_MSG_ID" status="run" time="0.001" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="RSTP_CtUsbUnlockSwc_ReceiveCallback_RSTP_Callback"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtUsbUnlockSwc_ReceiveCallback_RSTP_Callback_u8MsgId_not_equal_USB_UNLOCK_STATUS_MSG_ID" status="run" time="0" classname="GTestClass_CtUsbUnlockSwc">
+<properties>
+<property name="Description" value="RSTP_CtUsbUnlockSwc_ReceiveCallback_RSTP_Callback"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

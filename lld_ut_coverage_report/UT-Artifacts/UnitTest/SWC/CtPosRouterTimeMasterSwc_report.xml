@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:05:15" time="0.005" name="AllTests">
+  <testsuite name="GTestClass_CtPosRouterTimeMasterSwc" tests="8" failures="0" disabled="0" errors="0" time="0.005">
+    <testcase name="CtPosRouterTimeMasterSwc_Cyclic_10ms_InitState" status="run" time="0.001" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value=" CtPosRouterTimeMasterSwc_Cyclic_10ms function check in initial state, nothing shoulb be changed"/>
+</properties>
+    </testcase>
+    <testcase name="CtPosRouterTimeMasterSwc_RSTP_DR_Callback" status="run" time="0" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value=" CtPosRouterTimeMasterSwc_RSTP_DR_Callback function check "/>
+<property name="Test_Step_0" value="receiving Not supported or unused message IDs"/>
+<property name="Test_Step_1" value="GNSS_DR_MSG Message is received"/>
+</properties>
+    </testcase>
+    <testcase name="CtPosRouterTimeMasterSwc_RSTP_Callback" status="run" time="0.002" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value=" CtPosRouterTimeMasterSwc_RSTP_Callback function check "/>
+<property name="Test_Step_0" value="receiving Not supported or unused message IDs"/>
+<property name="Test_Step_1" value="GNSS_01 Message is received"/>
+<property name="Test_Step_2" value="GNSS_01 Message is received and MasterStateMachine is P_MODE"/>
+<property name="Test_Step_3" value="GNSS_01 Message is received and MasterStateMachine is T_MODE"/>
+<property name="Test_Step_4" value="GNSS_02 Message is received"/>
+<property name="Test_Step_5" value="GNSS_03 Message is received"/>
+<property name="Test_Step_6" value="GNSS_04 Message is received"/>
+<property name="Test_Step_7" value="GNSS_05 Message is received"/>
+<property name="Test_Step_8" value="GNSS_05 Message is received, GPS is internal, system is alive"/>
+<property name="Test_Step_9" value="GNSS_06 Message is received"/>
+</properties>
+    </testcase>
+    <testcase name="CtPosRouterTimeMasterSwc_Cyclic_10ms" status="run" time="0.001" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value=" CtPosRouterTimeMasterSwc_Cyclic_10ms function check "/>
+</properties>
+    </testcase>
+    <testcase name="CtPosRouterTimeMasterSwc_Init" status="run" time="0" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value=" CtPosRouterTimeMasterSwc_Init function check "/>
+</properties>
+    </testcase>
+    <testcase name="CtPosRouterTimeMaster_UtcTransmit_1sec" status="run" time="0" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value="CtPosRouterTimeMaster_UtcTransmit_1sec function check."/>
+<property name="Test_Step_0" value="fail to get correct UtcTime"/>
+<property name="Test_Step_1" value="fail to get correct UtcTime"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtPosRouterTimeMasterSwc_Channel_Reset_Operation" status="run" time="0.001" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value="RSTP_CtPosRouterTimeMasterSwc_Channel_Reset_Operation function check."/>
+</properties>
+    </testcase>
+    <testcase name="Ct_PosRouterTimeMaster_Receive_NavData_02" status="run" time="0" classname="GTestClass_CtPosRouterTimeMasterSwc">
+<properties>
+<property name="Description" value="Ct_PosRouterTimeMaster_Receive_NavData_02 function check."/>
+<property name="Test_Step_0" value="negative response while reading coding"/>
+<property name="Test_Step_1" value="Should not use UTC from CAN when GPS_EXTERNAL is not coded"/>
+<property name="Test_Step_2" value="external GPS is coded and ND is initialised "/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

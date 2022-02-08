@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="52" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:19:38" time="0.004" name="AllTests">
+  <testsuite name="GTestClass_rstp" tests="52" failures="0" disabled="0" errors="0" time="0.004">
+    <testcase name="RSTP_Init" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_Init"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_Reset" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_Reset"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_MainFunction" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_MainFunction"/>
+<property name="Test_Step_0" value="rstp_current.state == RSTP_STATE_INIT"/>
+<property name="Test_Step_1" value="rstp_current.state == RSTP_STATE_RESET_REQ"/>
+<property name="Test_Step_2" value="rstp_current.state == RSTP_STATE_RESET"/>
+<property name="Test_Step_3" value="rstp_current.state == RSTP_STATE_READY"/>
+<property name="Test_Step_4" value="Default case"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CheckValidation" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_CheckValidation"/>
+<property name="Test_Step_0" value="RSTP_STATE_READY == rstp_current.state"/>
+<property name="Test_Step_1" value="RSTP_STATE_READY != rstp_current.state"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_TransmitData" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_TransmitData"/>
+<property name="Test_Step_0" value="(buffer != NULL_PTR) &amp;&amp; (length &gt;= RSTP_MIN_DATA_LENGTH) &amp;&amp; (length &lt;= RSTP_MAX_DATA_LENGTH)"/>
+<property name="Test_Step_1" value="(buffer != NULL_PTR) &amp;&amp; (length &lt; RSTP_MIN_DATA_LENGTH)"/>
+<property name="Test_Step_2" value="(buffer != NULL_PTR) &amp;&amp; (length &gt; RSTP_MAX_DATA_LENGTH)"/>
+<property name="Test_Step_3" value="(buffer == NULL_PTR)"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_ReportError0" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_ReportError0"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_ReportError1" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_ReportError1"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_ReportError2" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_ReportError2"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_ReportError3" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_ReportError3"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_Receive" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_Receive"/>
+<property name="Test_Step_0" value="(ch == RSTP_BYTE_SOF) &amp;&amp; (rstp_current.rx.state == RSTP_RXSTATE_SOF)"/>
+<property name="Test_Step_1" value="(ch == RSTP_BYTE_SOF) &amp;&amp; (rstp_current.rx.state == RSTP_RXSTATE_JUNK)"/>
+<property name="Test_Step_2" value="(ch == RSTP_BYTE_SOF) &amp;&amp; (rstp_current.rx.state != RSTP_RXSTATE_SOF) &amp;&amp; (rstp_current.rx.state != RSTP_RXSTATE_JUNK)"/>
+<property name="Test_Step_3" value="(ch == RSTP_BYTE_ESCAPE) &amp;&amp; (rstp_current.rx.state == RSTP_RXSTATE_SOF)"/>
+<property name="Test_Step_4" value="(ch == RSTP_BYTE_ESCAPE) &amp;&amp; (rstp_current.rx.state == RSTP_RXSTATE_JUNK)"/>
+<property name="Test_Step_5" value="(ch == RSTP_BYTE_ESCAPE) &amp;&amp; (rstp_current.rx.state != RSTP_RXSTATE_SOF) &amp;&amp; (rstp_current.rx.state != RSTP_RXSTATE_JUNK)"/>
+<property name="Test_Step_6" value="(ch != RSTP_BYTE_ESCAPE) &amp;&amp; (rstp_current.rx.escape == TRUE)"/>
+<property name="Test_Step_7" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_INIT)"/>
+<property name="Test_Step_8" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_INIT_ACK)"/>
+<property name="Test_Step_9" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA)"/>
+<property name="Test_Step_10" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_SDATA)"/>
+<property name="Test_Step_11" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATAN)"/>
+<property name="Test_Step_12" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_CHANNEL_RESET)"/>
+<property name="Test_Step_13" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_ACK)"/>
+<property name="Test_Step_14" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_NACK)"/>
+<property name="Test_Step_15" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC)"/>
+<property name="Test_Step_16" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_TYPE) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC + 1)"/>
+<property name="Test_Step_17" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_CHANNEL_RESET) &amp;&amp; (ch &gt;= RSTP_MIN_CH_RST_LENGTH) &amp;&amp; (ch &lt;= RSTP_RX_BUFFER_SIZE)"/>
+<property name="Test_Step_18" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_CHANNEL_RESET) &amp;&amp; (ch &lt; RSTP_MIN_CH_RST_LENGTH)"/>
+<property name="Test_Step_19" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_CHANNEL_RESET) &amp;&amp; (ch &gt; RSTP_RX_BUFFER_SIZE)"/>
+<property name="Test_Step_20" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_NACK) &amp;&amp; (ch &gt;= RSTP_MIN_CH_RST_LENGTH) &amp;&amp; (ch &lt;= RSTP_RX_BUFFER_SIZE)"/>
+<property name="Test_Step_21" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_NACK) &amp;&amp; (ch &lt; RSTP_MIN_CH_RST_LENGTH)"/>
+<property name="Test_Step_22" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_NACK) &amp;&amp; (ch &gt; RSTP_RX_BUFFER_SIZE)"/>
+<property name="Test_Step_23" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC) &amp;&amp; (ch &gt;= RSTP_MIN_CH_RST_LENGTH) &amp;&amp; (ch &lt;= RSTP_RX_BUFFER_SIZE)"/>
+<property name="Test_Step_24" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC) &amp;&amp; (ch &lt; RSTP_MIN_CH_RST_LENGTH)"/>
+<property name="Test_Step_25" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC) &amp;&amp; (ch &gt; RSTP_RX_BUFFER_SIZE)"/>
+<property name="Test_Step_26" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA)"/>
+<property name="Test_Step_27" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATAN)"/>
+<property name="Test_Step_28" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_SDATA)"/>
+<property name="Test_Step_29" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_ACK)"/>
+<property name="Test_Step_30" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_INIT)"/>
+<property name="Test_Step_31" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_INIT_ACK)"/>
+<property name="Test_Step_32" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_INIT_ACK + 1 )"/>
+<property name="Test_Step_33" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_LENGTH) &amp;&amp; (rstp_current.rx.type == RSTP_FRAME_TYPE_INIT_ACK + 1 )"/>
+<property name="Test_Step_34" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_DATA) &amp;&amp; (rstp_current.rx.data_index &lt; rstp_current.rx.data_len)"/>
+<property name="Test_Step_35" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_DATA) &amp;&amp; (rstp_current.rx.data_index == rstp_current.rx.data_len)"/>
+<property name="Test_Step_36" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_DATANC) &amp;&amp; (rstp_current.rx.data_index == rstp_current.rx.data_len)"/>
+<property name="Test_Step_37" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_JUNK)"/>
+<property name="Test_Step_38" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state == rstp_rx_state_e(7))"/>
+<property name="Test_Step_39" value="(rstp_current.rx.escape == FALSE) &amp;&amp; (rstp_current.rx.state ==RSTP_RXSTATE_CRC) &amp;&amp; (rstp_current.rx.crc_rcv  == rstp_current.rx.crc)"/>
+</properties>
+    </testcase>
+    <testcase name="rstp_receive_dispatch" status="run" time="0.001" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function rstp_receive_dispatch"/>
+<property name="Test_Step_0" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_INIT) &amp;&amp; (rstp_current.state == RSTP_STATE_READY)"/>
+<property name="Test_Step_1" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_INIT) &amp;&amp; (rstp_current.state == RSTP_STATE_IDLE)"/>
+<property name="Test_Step_2" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_INIT) &amp;&amp; (rstp_current.state == RSTP_STATE_IDLE)"/>
+<property name="Test_Step_3" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_INIT_ACK) &amp;&amp; (rstp_current.state == RSTP_STATE_READY)"/>
+<property name="Test_Step_4" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_INIT_ACK) &amp;&amp; (rstp_current.state == RSTP_STATE_INIT)"/>
+<property name="Test_Step_5" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC) &amp;&amp; (rstp_current.state == RSTP_STATE_READY)"/>
+<property name="Test_Step_6" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_DATANC) &amp;&amp; (rstp_current.state == RSTP_STATE_INIT)"/>
+<property name="Test_Step_7" value="(rstp_current.rx.type == RSTP_FRAME_TYPE_DATA_NACK)"/>
+<property name="Test_Step_8" value="Default case"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_LOGCMD_Rstp" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_LOGCMD_Rstp"/>
+<property name="Test_Step_0" value="Check if the current logging level is showing"/>
+<property name="Test_Step_1" value="Check if logging of RSTP debug info is disabled"/>
+<property name="Test_Step_2" value="Check if cylic logging of RSTP debug info is enabled"/>
+<property name="Test_Step_3" value="Check if immediate logging of RSTP debug info is enabled"/>
+<property name="Test_Step_4" value="Check the invalid cases"/>
+<property name="Test_Step_5" value="arg is a null ptr"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPATFW_Set" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPATFW_Set"/>
+<property name="Test_Step_0" value="ATFW mode enabled"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPATFW_Get" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPATFW_Get"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPATFW_Receive" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPATFW_Receive"/>
+<property name="Test_Step_0" value="(length == 0) &amp;&amp; (buffer[0] &lt; RSTP_ATFW_NR_OF_COMMANDS)"/>
+<property name="Test_Step_1" value="(length - 1) &lt; rstp_atfw_cmd_param_count[buffer[0]]"/>
+<property name="Test_Step_2" value="(buffer[0] == RSTP_ATFW_CMD_ENABLE) &amp;&amp; (buffer[1] == 0x01)"/>
+<property name="Test_Step_3" value="(buffer[0] == RSTP_ATFW_CMD_ENABLE) &amp;&amp; (buffer[1] == 0x00)"/>
+<property name="Test_Step_4" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_DISABLE_ACK)"/>
+<property name="Test_Step_5" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_ENABLE_ACK)"/>
+<property name="Test_Step_6" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_ENABLE_WATCHDOG)"/>
+<property name="Test_Step_7" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_SIM_KEY)"/>
+<property name="Test_Step_8" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_SIM_TIME_KEY)"/>
+<property name="Test_Step_9" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_NVM_TEST)"/>
+<property name="Test_Step_10" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_ECU_RESET)"/>
+<property name="Test_Step_11" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_ECHO)"/>
+<property name="Test_Step_12" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_DEBUG_LOG)"/>
+<property name="Test_Step_13" value="(Enabling ATFW mode) &amp;&amp; (buffer[0] == RSTP_ATFW_CMD_INVALID)"/>
+<property name="Test_Step_14" value="Disabling ATFW mode"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPATFW_ReportError" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPATFW_ReportError"/>
+<property name="Test_Step_0" value="rstp_atfw_enabled is TRUE"/>
+<property name="Test_Step_1" value="rstp_debug.log == RSTP_DBG_LOG_DIRECT"/>
+<property name="Test_Step_2" value="rstp_debug.log == RSTP_DBG_LOG_CYCLIC"/>
+</properties>
+    </testcase>
+    <testcase name="rstp_atfw_report_atfw_error" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function rstp_atfw_report_atfw_error"/>
+<property name="Test_Step_0" value="rstp_atfw_enabled is FALSE"/>
+<property name="Test_Step_1" value="rstp_debug.log == RSTP_DBG_LOG_DIRECT"/>
+<property name="Test_Step_2" value="rstp_debug.log == RSTP_DBG_LOG_CYCLIC"/>
+<property name="Test_Step_3" value="rstp_debug.log = RSTP_DBG_LOG_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_LOGCMD_Atfw" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTP_LOGCMD_Atfw"/>
+<property name="Test_Step_0" value="arg is not null"/>
+<property name="Test_Step_1" value="arg is null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_AddUINT8" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function GTestClass_rstp"/>
+<property name="Test_Step_0" value="rstp_msg_tx_buffer_idx &lt;= (RSTP_MSG_TX_BUFFER_SIZE - RSTP_MSG_TX_BUFFER_SPACE_UINT8)"/>
+<property name="Test_Step_1" value="rstp_msg_tx_buffer_idx &gt; (RSTP_MSG_TX_BUFFER_SIZE - RSTP_MSG_TX_BUFFER_SPACE_UINT8)"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_AddUINT16" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_AddUINT16"/>
+<property name="Test_Step_0" value="rstp_msg_tx_buffer_idx &lt;= (RSTP_MSG_TX_BUFFER_SIZE - RSTP_MSG_TX_BUFFER_SPACE_UINT16)"/>
+<property name="Test_Step_1" value="rstp_msg_tx_buffer_idx &gt; (RSTP_MSG_TX_BUFFER_SIZE - RSTP_MSG_TX_BUFFER_SPACE_UINT16)"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_AddUINT32" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_AddUINT32"/>
+<property name="Test_Step_0" value="(length &lt; RSTP_MSG_TX_BUFFER_SIZE) &amp;&amp; (rstp_msg_tx_buffer_idx &lt; (RSTP_MSG_TX_BUFFER_SIZE - length))"/>
+<property name="Test_Step_1" value="(length &gt;= RSTP_MSG_TX_BUFFER_SIZE) &amp;&amp; (rstp_msg_tx_buffer_idx &lt; (RSTP_MSG_TX_BUFFER_SIZE - length))"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_AddUINT64" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_AddUINT64"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_AddVarLen" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_AddVarLen"/>
+<property name="Test_Step_0" value="length &gt;= RSTP_MSG_TX_PARA_MAX_LEN_2B"/>
+<property name="Test_Step_1" value="length &lt; RSTP_MSG_TX_PARA_MAX_LEN_2B"/>
+<property name="Test_Step_2" value="(size &lt; RSTP_MSG_TX_BUFFER_SIZE) &amp;&amp; (rstp_msg_tx_buffer_idx &lt; (RSTP_MSG_TX_BUFFER_SIZE - size))"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_TransmitUINT8" status="run" time="0.001" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_TransmitUINT8"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_TransmitUINT8 should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_TransmitUINT8 should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_TransmitUINT16" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_TransmitUINT16"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_TransmitUINT16 should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_TransmitUINT16 should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_TransmitUINT32" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_TransmitUINT32"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_TransmitUINT32 should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_TransmitUINT32 should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_TransmitUINT64" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_TransmitUINT64"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_TransmitUINT64 should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_TransmitUINT64 should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_TransmitVarLen" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_TransmitVarLen"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_TransmitVarLen should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_TransmitVarLen should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_TransmitNoCRC" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_TransmitNoCRC"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_TransmitNoCRC should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_TransmitNoCRC should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_Transmit" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_Transmit"/>
+<property name="Test_Step_0" value="Check if the transmitted message was accpeted by RSTP, the RSTPMsg_Transmit should returns E_OK"/>
+<property name="Test_Step_1" value="Check if the transmitted message was not accpeted by RSTP, the RSTPMsg_Transmit should returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetMessageID" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetMessageID"/>
+<property name="Test_Step_0" value="Pointer to the received message is not null : Get the message ID"/>
+<property name="Test_Step_1" value="Pointer to the received message is null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetMessageID_swc" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetMessageID_swc"/>
+<property name="Test_Step_0" value=" message ID is not NULL"/>
+<property name="Test_Step_1" value=" message ID is NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetParameterByIdUINT8" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetParameterByIdUINT8"/>
+<property name="Test_Step_0" value="data_ptr is not null"/>
+<property name="Test_Step_1" value="data_ptr is null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetParameterByIdUINT16" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetParameterByIdUINT16"/>
+<property name="Test_Step_0" value="data_ptr is not null"/>
+<property name="Test_Step_1" value="data_ptr is null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetParameterByIdUINT32" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetParameterByIdUINT32"/>
+<property name="Test_Step_0" value="data_ptr is not null"/>
+<property name="Test_Step_1" value="data_ptr is null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetParameterByIdUINT64" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetParameterByIdUINT64"/>
+<property name="Test_Step_0" value="data_ptr is not null"/>
+<property name="Test_Step_1" value="data_ptr is null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetParameterByIdVarLen" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetParameterByIdVarLen"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPMsg_GetParameterByIdVarLen_swc" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPMsg_GetParameterByIdVarLen_swc"/>
+<property name="Test_Step_0" value="data start index is not null"/>
+<property name="Test_Step_1" value="data start index is null"/>
+</properties>
+    </testcase>
+    <testcase name="rstp_msg_get_parameter_by_id" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function rstp_msg_get_parameter_by_id"/>
+</properties>
+    </testcase>
+    <testcase name="rstp_msg_release_resource" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function rstp_msg_release_resource in case of rstp_msg_resource is false"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_ReceiveTask" status="run" time="0.001" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the cyclic function RSTPData_ReceiveTask"/>
+<property name="Test_Step_0" value="Sending ACKs on double frames and disabling only occurs on DATA channels"/>
+<property name="Test_Step_1" value="Enabling only occurs on DATA channels"/>
+<property name="Test_Step_2" value="&#x09;Check if rstp_channel_current[i].rx.sdata_counter == 127, the ACK sequence number should be written into the data buffer"/>
+</properties>
+    </testcase>
+    <testcase name="rstp_data_receive_check" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the cyclic function rstp_data_receive_check"/>
+<property name="Test_Step_0" value="i &gt;= RSTP_CH_IDX_INVALID"/>
+<property name="Test_Step_1" value="i &lt; RSTP_CH_IDX_INVALID &amp;&amp; length &lt;= 2"/>
+<property name="Test_Step_2" value="length &gt; 2 &amp;&amp; rstp_channel_config[i].type != channel_type"/>
+<property name="Test_Step_3" value="rstp_channel_config[i].type == channel_type &amp;&amp; rstp_channel_config[i].rx.callback == NULL_PTR"/>
+<property name="Test_Step_4" value="rstp_channel_config[i].rx.callback != NULL_PTR"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_TransmitTask" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_TransmitTask"/>
+<property name="Test_Step_0" value="Updating timeout counters for all used buffers"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Receive_RSTP_FRAME_TYPE_DATA_ACK" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_Receive in the frame DATA ACK"/>
+<property name="Test_Step_0" value="buffer is null pointer"/>
+<property name="Test_Step_1" value="buffer is not null &amp;&amp; frame type equal to RSTP_FRAME_TYPE_DATA_ACK &amp;&amp; ((length &amp; 0x0001) == 0) &amp;&amp; (length &gt;= 2)"/>
+<property name="Test_Step_2" value="(length &amp; 0x0001) != 0 || length &lt; 2"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Receive_RSTP_FRAME_TYPE_SDATA" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_Receive in the frame SDATA"/>
+<property name="Test_Step_0" value="rstp_data_receive_check returns TRUE &amp;&amp; re_ACK double frames"/>
+<property name="Test_Step_1" value="rstp_data_receive_check returns TRUE &amp;&amp; Sequence number is different from the expected"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Receive_RSTP_FRAME_TYPE_DATA" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_Receive in the frame DATA"/>
+<property name="Test_Step_0" value="rstp_data_receive_check returns TRUE &amp;&amp; re_ACK double frames"/>
+<property name="Test_Step_1" value="rstp_data_receive_check returns FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Receive_RSTP_FRAME_TYPE_DATAN" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_Receive in the frame DATAN"/>
+<property name="Test_Step_0" value="rstp_data_receive_check returns TRUE &amp;&amp; read_idx != write_idx"/>
+<property name="Test_Step_1" value="rstp_data_receive_check returns TRUE &amp;&amp; read_idx == write_idx"/>
+<property name="Test_Step_2" value="rstp_data_receive_check returns FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Receive_RSTP_FRAME_TYPE_CHANNEL_RESET" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_Receive in the frame CHANNEL_RESET"/>
+<property name="Test_Step_0" value="Check if the request for a channel which is actually is received"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Receive_RSTP_FRAME_TYPE_INIT" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Using a not allowed frame type : RSTP_FRAME_TYPE_INIT"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_Transmit" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_Transmit"/>
+<property name="Test_Step_0" value="read_idx == write_idx"/>
+<property name="Test_Step_1" value="read_idx != write_idx &amp;&amp; rstp_channel_config[i].type == RSTP_FRAME_TYPE_DATAN"/>
+<property name="Test_Step_2" value="read_idx != write_idx &amp;&amp; rstp_channel_config[i].type == RSTP_FRAME_TYPE_DATA"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_DisableAckTx" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_DisableAckTx"/>
+<property name="Test_Step_0" value="rstp_channel_map[channel_id] &lt; RSTP_CH_IDX_INVALID &amp;&amp; rstp_channel_config[rstp_channel_map[channel_id]].type == RSTP_FRAME_TYPE_DATA"/>
+<property name="Test_Step_1" value="rstp_channel_map[channel_id] &lt; RSTP_CH_IDX_INVALID &amp;&amp; rstp_channel_config[rstp_channel_map[channel_id]].type != RSTP_FRAME_TYPE_DATA"/>
+<property name="Test_Step_2" value="rstp_channel_map[channel_id] &gt; RSTP_CH_IDX_INVALID"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPData_isBufferFull" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Checking the function RSTPData_isBufferFull"/>
+<property name="Test_Step_0" value="read_idx == write_idx"/>
+<property name="Test_Step_1" value="read_idx != write_idx"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

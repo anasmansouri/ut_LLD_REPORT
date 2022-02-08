@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="15" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:49:52" time="0.253" name="AllTests">
+  <testsuite name="GTestClass_EcuM_Callout_Stubs" tests="15" failures="0" disabled="0" errors="0" time="0.253">
+    <testcase name="EcuM_GenerateRamHash" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_GenerateRamHash"/>
+<property name="Expected_0" value="Not yet implemented : nothing to expect"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_CheckRamHash" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_CheckRamHash"/>
+<property name="Expected_0" value="Not yet implemented : nothing to expect"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_AL_SwitchOff" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_AL_SwitchOff"/>
+<property name="Expected_0" value="Not yet implemented : nothing to expect"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_AL_DriverInitZero" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_AL_DriverInitZero"/>
+<property name="Expected_0" value="Nothing to expect"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_ModifyDefaultAppMode" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_ModifyDefaultAppMode"/>
+<property name="Expected_0" value="Not yet implemented : nothing to expect"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_EnableWakeupSources" status="run" time="0.001" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_EnableWakeupSources"/>
+<property name="Test_Step_0" value="The IcuChannel_CAN_RX channel should be made wake-up capable"/>
+<property name="Test_Step_1" value="The KL15_WAKE channel should have edge detection enabled and should be made wake-up capable"/>
+<property name="Test_Step_2" value="The RTC channel should have edge detection enabled and should be made wake-up capable"/>
+<property name="Test_Step_3" value="The NAD_WAKE_UC channel should have edge detection enabled and should be made wake-up capable"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_DisableWakeupSources" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_DisableWakeupSources"/>
+<property name="Test_Step_0" value="Disable wakeup for IcuChannel_CAN_RX"/>
+<property name="Test_Step_1" value="Disable wakeup for IcuChannel_KL15_WAKE"/>
+<property name="Test_Step_2" value="Disable wakeup for IcuChannel_BTLE"/>
+<property name="Test_Step_3" value="Disable wakeup for IcuChannel RTC"/>
+<property name="Test_Step_4" value="Disable wakeup for IcuChannel_NAD_WAKE_UC"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_StartWakeupSources" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_StartWakeupSources"/>
+<property name="Test_Step_0" value="Start WakeupSource via CANSM (Network ID 0)"/>
+<property name="Test_Step_1" value="we can&apos;t start wakeupSource via CANSM"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_StopWakeupSources" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_StopWakeupSources"/>
+<property name="Test_Step_0" value="Stop WakeupSource via CANSM (Network ID 0)"/>
+<property name="Test_Step_1" value="we can&apos;t stop wakeupSource via CANSM"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_CheckWakeup" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_CheckWakeup"/>
+<property name="Test_Step_0" value="On Kl15 wakeup check if the KL15 wake line is LOW "/>
+<property name="Test_Step_1" value="On Kl15 wakeup check if the KL15 wake line is LOW and set an EcuM_ECUM_WKSOURCE_KL15 wakeup event"/>
+<property name="Test_Step_2" value="On CCAN wakeup check if CCAN was enabled and caused the wakeup "/>
+<property name="Test_Step_3" value="On CCAN wakeup check if CCAN was enabled and caused the wakeup and set an EcuM_ECUM_WKSOURCE_KL15 wakeup event"/>
+<property name="Test_Step_4" value="On BTLE wakeup check if BTLE was enabled and caused the wakeup"/>
+<property name="Test_Step_5" value="On BTLE wakeup check if BTLE was enabled and caused the wakeup set an EcuM_ECUM_WKSOURCE_BTLE wakeup event"/>
+<property name="Test_Step_6" value="NAD_WAKE_UC wake line is High  and the flag from wakeup unit is not set "/>
+<property name="Test_Step_7" value="NAD_WAKE_UC wake line is LOW  and the flag from wakeup unit is not set "/>
+<property name="Test_Step_8" value="NAD_WAKE_UC wake line is HIGHT and the flag from wakeup unit is not set "/>
+<property name="Test_Step_9" value="NAD_WAKE_UC wake line is LOW and the flag from wakeup unit is set "/>
+<property name="Test_Step_10" value="RTC wakeup check fail "/>
+<property name="Test_Step_11" value="RTC wakeup check success but the RTC is not enabled"/>
+<property name="Test_Step_12" value="RTC wakeup check success and the RTC is enabled"/>
+<property name="Test_Step_13" value="WakeupSource != EcuM_ECUM_WKSOURCE_POWER"/>
+<property name="Test_Step_14" value="WakeupSource == EcuM_ECUM_WKSOURCE_POWER"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_McuSetMode" status="run" time="0.251" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_McuSetMode"/>
+<property name="Test_Step_0" value="Powerstate == STATE_CBOX_FULL_OFF and there is a wakeup not processed by us "/>
+<property name="Test_Step_1" value="Powerstate != STATE_CBOX_FULL_OFF and there is a wakeup not processed by us "/>
+<property name="Test_Step_2" value="Powerstate != STATE_CBOX_FULL_OFF and there is a wakeup not processed by us "/>
+<property name="Test_Step_3" value="Powerstate != STATE_CBOX_FULL_OFF and there is a wakeup not processed by us "/>
+<property name="Test_Step_4" value="Powerstate != STATE_CBOX_FULL_OFF and there is a wakeup not processed by us "/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_CheckValidation" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_CheckValidation"/>
+<property name="Expected_0" value="dummy function | Nothing to expect "/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_OnFailedNvmWriteAllJobReaction" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_OnFailedNvmWriteAllJobReaction"/>
+<property name="Expected_0" value="nothing to expect | Nothing to expect "/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_Appl_SelectBootTarget" status="run" time="0.001" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_Appl_SelectBootTarget"/>
+</properties>
+    </testcase>
+    <testcase name="EcuM_Appl_GetBootTarget" status="run" time="0" classname="GTestClass_EcuM_Callout_Stubs">
+<properties>
+<property name="Description" value="test EcuM_Appl_GetBootTarget"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

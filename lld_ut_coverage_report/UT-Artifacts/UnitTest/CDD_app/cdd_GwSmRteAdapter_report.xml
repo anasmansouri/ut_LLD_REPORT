@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="60" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:13:51" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_cdd_GwSmRteAdapter" tests="52" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="Cdd_GwSmRteAdapter_1s" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_1s function check"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmRteAdapter_can_pass_BTLE_EcuM_wakeup_reason_to_RTE" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test that the CDD GwSmRteAdapter can correctly pass the wakeup source from the EcuM to the RTE for wakeup reason BTLE"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmRteAdapter_can_pass_OTHER_EcuM_wakeup_reasons_to_RTE" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test that the CDD GwSmRteAdapter can correctly pass the wakeup source from the EcuM to the RTE for other wakeup reasons"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmRteAdapter_logs_error_when_RTE_write_fails" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test that the CDD GwSmRteAdapter logs an error when the RTE write fails"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_BT_Tx_Command_send" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_CS_BT_Tx_Command_send function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_BT_Tx_Command_send_2" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_CS_BT_Tx_Command_send function check with null pointers inputs"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_ComboChip_Tx_Command_send" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_ComboChip_Tx_Command_send function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_01" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_01 function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_02" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_02 function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_03" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_03 function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_04" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_04 function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_05" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_05 function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_06" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_GNSS_SignalUpdate_GNSS_Route_GNSS_06 function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_Play_Protection_Active" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value=" Cdd_GwSmRteAdapter_CS_Play_Protection_Active function check is passing return value to input "/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_CS_RouteMessages_Tx_Command_send" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_CS_RouteMessages_Tx_Command_send function check"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmRteAdapter_can_update_play_protection_threshold" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test that the CDD GwSmRteAdapter can update the play protection threshold with the value from Adaptions"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmRteAdapter_TimeService_Read_us_counts_correctly" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test that the CDD GwSmRteAdapter TimeService_Read_us correctly converts from ms to us and wraps around"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_ClearPrestoredFreezeFrame" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_ClearPrestoredFreezeFrame function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetDTCOfEvent" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetDTCOfEvent function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetEventFailed" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetEventFailed function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetEventStatus" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetEventTested" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetEventTested function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetFaultDetectionCounter" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_GetFaultDetectionCounter function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_PrestoreFreezeFrame" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_PrestoreFreezeFrame function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_ResetEventStatus" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_ResetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_SetEventStatus" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_SetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_SetEventStatus_2" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Implausible_080002_SetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_ClearPrestoredFreezeFrame" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_ClearPrestoredFreezeFrame function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetDTCOfEvent" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetDTCOfEvent function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetEventFailed" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetEventFailed function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetEventStatus" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetEventTested" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetEventTested function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetFaultDetectionCounter" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_GetFaultDetectionCounter function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_PrestoreFreezeFrame" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_PrestoreFreezeFrame function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_ResetEventStatus" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_ResetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_SetEventStatus" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_SetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_SetEventStatus_2" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_FSP_Data_Set_Invalid_080001_SetEventStatus function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_Init" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test that the GwSmRteAdapter correctly handles the Init function"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmRteAdapter_GNSS_HandleDataUpdated" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmRteAdapter_GNSS_HandleDataUpdated function check "/>
+</properties>
+    </testcase>
+    <testcase name="GwSmRSTP_RouteMessages_Rx_Notification_notify" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="GwSmRSTP_RouteMessages_Rx_Notification_notify function check"/>
+</properties>
+    </testcase>
+    <testcase name="GwSmRSTP_BLEHoloride_Rx_Notification_notify" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="GwSmRSTP_BLEHoloride_Rx_Notification_notify function check"/>
+</properties>
+    </testcase>
+    <testcase name="GwSmRSTP_BLEHoloride_Rx_Notification_notify__the_received_generic_RSTP_message_is_NULL" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="the received generic RSTP message is NULL"/>
+</properties>
+    </testcase>
+    <testcase name="Start_testing_here_for_GwSmDiag" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Test The cyclic tasks of GwmSmRteAdapter"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmCom_SetGnss01Data" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmCom_SetGnss01Data function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmCom_SetGnss02Data" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmCom_SetGnss02Data function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmCom_SetGnss03Data" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmCom_SetGnss03Data function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmCom_SetGnss04Data" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmCom_SetGnss04Data function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmCom_SetGnss05Data" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmCom_SetGnss05Data function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmCom_SetGnss06Data" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="Cdd_GwSmCom_SetGnss06Data function check"/>
+</properties>
+    </testcase>
+    <testcase name="checkAndPropergateGnssDataToGwSm" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="checkAndPropergateGnssDataToGwSm function check"/>
+</properties>
+    </testcase>
+    <testcase name="checkAndPropergateGnssDataToGwSm_2" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="checkAndPropergateGnssDataToGwSm function check with inconsistent gnss data"/>
+</properties>
+    </testcase>
+    <testcase name="checkAndPropergateGnssDataToGwSm_3" status="run" time="0" classname="GTestClass_cdd_GwSmRteAdapter">
+<properties>
+<property name="Description" value="checkAndPropergateGnssDataToGwSm function check with incomplet gnss data"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="GTestClass_cdd_GwSmBtle" tests="8" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="cdd_GwSmBlte_play_protection_not_active" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Test that the play protection is not active"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmBlte_play_protection_active_after_5_BTLE_wakeups_with_kl15_off" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Test that the play protection is activated after 5 wakeups by BTLE with KL15 switched off"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmBlte_play_protection_resets_when_kl15_on" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Test that activated play protection is deactivated when KL15 switched on"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmBlte_play_protection_cannot_be_activated_when_kl15_on" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Test that play protection cannot be activated when KL15 switched on"/>
+</properties>
+    </testcase>
+    <testcase name="cdd_GwSmBlte_play_protection_counter_resets_when_kl15_on" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Test that play protection counter is reset when KL15 switched on for a brief moment"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmBtle_ChipResetRequest" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Cdd_GwSmBtle_ChipResetRequest function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmBtle_UtpRxNotificationNotify" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Cdd_GwSmBtle_UtpRxNotificationNotify function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GwSmBtle_UtpRxNotificationNotif_2" status="run" time="0" classname="GTestClass_cdd_GwSmBtle">
+<properties>
+<property name="Description" value="Cdd_GwSmBtle_UtpRxNotificationNotify function check"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:11:38" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_cdd_CanMsgUpdateNAD" tests="6" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="Cdd_CanMsgUpdateNAD_Init" status="run" time="0" classname="GTestClass_cdd_CanMsgUpdateNAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_CanMsgUpdateNAD_0020_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0021_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0022_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0023_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0024_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0025_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0026_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0027_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0028_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0029_V001"/>
+<property name="Description" value="Checking the function Cdd_CanMsgUpdateNAD_Init"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanMsgUpdateNAD_Cyclic_10ms" status="run" time="0.001" classname="GTestClass_cdd_CanMsgUpdateNAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_CanMsgUpdateNAD_0001_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0002_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0003_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0004_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0005_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0006_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0007_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0008_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0009_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0010_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0011_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0012_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0013_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0014_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0015_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0016_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0017_V001"/>
+<property name="Description" value="Checking the function Cdd_CanMsgUpdateNAD_Cyclic_10ms"/>
+<property name="Test_Step_0" value="isUpdatedNM==TRUE"/>
+<property name="Test_Step_1" value="isUpdatedKN==TRUE"/>
+<property name="Test_Step_2" value="EthFrameCycleTime &lt;= u8Tick &amp;&amp; boDoSend==TRUE &amp;&amp; Cdd_CanMsgUpdateResetChannelReceived==TRUE &amp;&amp; RSTPMsg_TransmitVarLen returns E_NOT_OK"/>
+<property name="Test_Step_3" value="EthFrameCycleTime &lt;= u8Tick &amp;&amp; boDoSend==TRUE &amp;&amp; Cdd_CanMsgUpdateResetChannelReceived==TRUE &amp;&amp; RSTPMsg_TransmitVarLen returns E_OK &amp;&amp; sSuppress_NM_Pdus==TRUE"/>
+<property name="Test_Step_4" value="EthFrameCycleTime &lt;= u8Tick &amp;&amp; boDoSend==TRUE &amp;&amp; Cdd_CanMsgUpdateResetChannelReceived==TRUE &amp;&amp; RSTPMsg_TransmitVarLen returns E_OK &amp;&amp; sSuppress_NM_Pdus==FALSE"/>
+<property name="Test_Step_5" value="EthFrameCycleTime &lt;= u8Tick &amp;&amp; boDoSend==TRUE &amp;&amp; Cdd_CanMsgUpdateResetChannelReceived==False"/>
+<property name="Test_Step_6" value="EthFrameCycleTime &lt;= u8Tick &amp;&amp; boDoSend==FALSE &amp;&amp; Cdd_CanMsgUpdateResetChannelReceived==TRUE"/>
+<property name="Test_Step_7" value="EthFrameCycleTime &gt; u8Tick &amp;&amp; boDoSend==TRUE &amp;&amp; Cdd_CanMsgUpdateResetChannelReceived==TRUE"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanMsgUpdateNAD_UpdateKN" status="run" time="0" classname="GTestClass_cdd_CanMsgUpdateNAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_CanMsgUpdateNAD_0030_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0031_V001"/>
+<property name="Description" value="Checkinf the function Cdd_CanMsgUpdateNAD_UpdateKN"/>
+<property name="Test_Step_0" value="dataPtr!=NULL &amp;&amp; length==sizeof(PDU_CAN_KN_Sekundaer_F0.R)/sizeof(PDU_CAN_KN_Sekundaer_F0.R[0])"/>
+<property name="Test_Step_1" value="dataPtr!=NULL &amp;&amp; length==0U"/>
+<property name="Test_Step_2" value="dataPtr==NULL &amp;&amp; length==sizeof(PDU_CAN_KN_Sekundaer_F0.R)/sizeof(PDU_CAN_KN_Sekundaer_F0.R[0]"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanMsgUpdateNAD_UpdateNM" status="run" time="0" classname="GTestClass_cdd_CanMsgUpdateNAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_CanMsgUpdateNAD_0032_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0033_V001"/>
+<property name="Description" value="Checking the function Cdd_CanMsgUpdateNAD_UpdateNM"/>
+<property name="Test_Step_0" value="dataPtr!=NULL &amp;&amp; length==sizeof(PDU_CAN_NM_Sekundaer_F0.R)/sizeof(PDU_CAN_NM_Sekundaer_F0.R[0])"/>
+<property name="Test_Step_1" value="dataPtr!=NULL &amp;&amp; length==0U"/>
+<property name="Test_Step_2" value="dataPtr==NULL &amp;&amp; length==sizeof(PDU_CAN_NM_Sekundaer_F0.R)/sizeof(PDU_CAN_NM_Sekundaer_F0.R[0])"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanMsgUpdateResetChannel" status="run" time="0" classname="GTestClass_cdd_CanMsgUpdateNAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_CanMsgUpdateNAD_0034_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0035_V001"/>
+<property name="Description" value="Checking the function Cdd_CanMsgUpdateResetChannel"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanMsgUpdateNAD_Enable" status="run" time="0" classname="GTestClass_cdd_CanMsgUpdateNAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_CanMsgUpdateNAD_0018_V001,LLD_ID_Cdd_CanMsgUpdateNAD_0019_V001"/>
+<property name="Description" value="Checking the function Cdd_CanMsgUpdateNAD_Enable"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

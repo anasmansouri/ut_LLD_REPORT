@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="36" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:02:43" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtImmobilizerSwc" tests="36" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="CtImmobilizerSwc_Cyclic_10ms" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="CtImmobilizerSwc_Cyclic_10ms function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+    <testcase name="CtImmobilizerSwc_Init" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value=" function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+    <testcase name="CtImmobilizerSwc_checkIfIMOisAvailable" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="CtImmobilizerSwc_checkIfIMOisAvailable function check"/>
+</properties>
+    </testcase>
+    <testcase name="CtImmobilizer_ORU_01_Status" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="CtImmobilizer_ORU_01_Status function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2e1_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2e1_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2e1_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2e1_ConditionCheckWrite function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2e1_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2e1_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2e1_WriteData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2e1_WriteData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2f6_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2f6_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2f6_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2f6_ConditionCheckWrite function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2f6_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2f6_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2f6_ReadDataLength" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2f6_ReadDataLength function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Adaptation_2f6_WriteData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_2f6_WriteData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2e0_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2e0_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2e0_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2e0_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ed_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ed_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ed_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ed_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ed_ReadDataLength" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ed_ReadDataLength function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ee_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ee_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ee_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ee_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ef_ConditionCheckRead" status="run" time="0.001" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ef_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ef_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ef_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2f9_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2f9_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2f9_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2f9_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ff_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ff_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ff_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ff_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ff_ReadDataLength" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_2ff_ReadDataLength function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_ef90_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_ef90_ConditionCheckRead function check"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasVDidServices_ID_MeasValue_ef90_ReadDataalue_2ff_ReadData" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_ef90_ReadData function check"/>
+</properties>
+    </testcase>
+    <testcase name="Immo_AuthReqACK_ImoS_ImoIf_bReqAuthSndOK_VW" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Immo_AuthReqACK_ImoS_ImoIf_bReqAuthSndOK_VW function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+    <testcase name="Immo_Response_Authentication" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Immo_Response_Authentication function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_ImmoInterface_GetVehicleIdentificationNumber" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Pi_ImmoInterface_GetVehicleIdentificationNumber function check"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_ImmoInterface_ImoG_Imo_blnhUpd_VW" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Pi_ImmoInterface_ImoG_Imo_blnhUpd_VW function check"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_ImmoInterface_ImoS_ImoIf_bTrigAuthUpd_VW" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Pi_ImmoInterface_ImoS_ImoIf_bTrigAuthUpd_VW function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_MemAccesAuthorization_GetMemAccessAllowance" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Pi_MemAccesAuthorization_GetMemAccessAllowance function check"/>
+</properties>
+    </testcase>
+    <testcase name="Runnable_Dummy" status="run" time="0" classname="GTestClass_CtImmobilizerSwc">
+<properties>
+<property name="Description" value="Runnable_Dummy function check"/>
+<property name="Expected_0" value="empty function declaration; nothing to be expected"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

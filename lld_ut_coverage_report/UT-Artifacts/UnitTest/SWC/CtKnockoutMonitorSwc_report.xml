@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="26" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:03:31" time="1.062" name="AllTests">
+  <testsuite name="GTestClass_CtKnockoutMonitorSwc" tests="26" failures="0" disabled="0" errors="0" time="1.062">
+    <testcase name="KO_Timer_elapsing_for_CMP_KO" status="run" time="1.06" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="check that the KO timer elapsed and KO is performed."/>
+<property name="Test_Step_0" value="Save Initiale Value of CMP KO counter."/>
+<property name="Test_Step_1" value="Test initialisation: knockoutTmr is set to RESET_VALUE."/>
+<property name="Test_Step_2" value="Test initialisation: knockoutTmr value is not received from adaption=&gt; keep the reset value."/>
+<property name="Test_Step_3" value="Main cyclic function is executed cyclically =&gt; bus knockout is handled (static function handleBusKnockoutis called) =&gt; the KO timer is elapsing."/>
+<property name="Test_Step_4" value="If the KO timer elapsed correctly, the correspending flag should be set, the KO counter should be incremented, and the KO timer value should be set to retry value."/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_Cyclic_10ms" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0001_V001,LLD_ID_CtKnockoutMonitorSwc_0002_V001,LLD_ID_CtKnockoutMonitorSwc_0003_V001,LLD_ID_CtKnockoutMonitorSwc_0004_V001"/>
+<property name="Description" value="RSTPApp_Task_trriger_count_check test"/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_Init" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0005_V001,LLD_ID_CtKnockoutMonitorSwc_0006_V001,LLD_ID_CtKnockoutMonitorSwc_0007_V001,LLD_ID_CtKnockoutMonitorSwc_0008_V001"/>
+<property name="Description" value="CtKnockoutMonitorSwc_Init test"/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_NADTimerStatus" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0009_V001,LLD_ID_CtKnockoutMonitorSwc_0010_V001,LLD_ID_CtKnockoutMonitorSwc_0011_V001,LLD_ID_CtKnockoutMonitorSwc_0012_V001"/>
+<property name="Description" value="CtKnockoutMonitorSwc_NADTimerStatus test"/>
+<property name="Test_Step_0" value="check whether the given timer has elapsed"/>
+<property name="Test_Step_1" value="check whether the given timer has not elapsed"/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_StopNADTimer" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0017_V001,LLD_ID_CtKnockoutMonitorSwc_0018_V001"/>
+<property name="Description" value="CtKnockoutMonitorSwc_StopNADTimer test"/>
+<property name="Test_Step_0" value="nad timer stoped succefelly"/>
+<property name="Test_Step_1" value="failed to stop timer"/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_UpdateNADTimer" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0019_V001,LLD_ID_CtKnockoutMonitorSwc_0020_V001"/>
+<property name="Description" value="CtKnockoutMonitorSwc_UpdateNADTimer test"/>
+<property name="Test_Step_0" value="Nad knockout not allowed"/>
+<property name="Test_Step_1" value="Nad knockout allowed"/>
+<property name="Test_Step_2" value="can&apos;t get the Companion knockout time for Diagnostic Services"/>
+<property name="Test_Step_3" value="Can&apos;t start the knockout timer"/>
+<property name="Test_Step_4" value="Knockout timer started successfully"/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_newNmState" status="run" time="0.001" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0013_V001,LLD_ID_CtKnockoutMonitorSwc_0014_V001"/>
+<property name="Description" value="CtKnockoutMonitorSwc_newNmState test"/>
+</properties>
+    </testcase>
+    <testcase name="CtKnockoutMonitorSwc_newState" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0015_V001,LLD_ID_CtKnockoutMonitorSwc_0016_V001"/>
+<property name="Description" value="CtKnockoutMonitorSwc_newState test"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ca_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0021_V001,LLD_ID_CtKnockoutMonitorSwc_0022_V001"/>
+<property name="Description" value="DidServices_ID_MeasValue_2ca_ConditionCheckRead test"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2ca_ReadData" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0023_V001,LLD_ID_CtKnockoutMonitorSwc_0024_V001"/>
+<property name="Description" value="DidServices_ID_MeasValue_2ca_ReadData test"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_CtKnockoutMonitorSwc_ActiveTime_GetActiveTimer" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0025_V001,LLD_ID_CtKnockoutMonitorSwc_0026_V001"/>
+<property name="Description" value="Pi_CtKnockoutMonitorSwc_ActiveTime_GetActiveTimer test"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_KnockoutMonitor_NADKnockoutAllowed_KnockoutMonitor_NADKnockoutAllowed" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKnockoutMonitorSwc_0027_V001,LLD_ID_CtKnockoutMonitorSwc_0028_V001"/>
+<property name="Description" value="Pi_KnockoutMonitor_NADKnockoutAllowed_KnockoutMonitor_NADKnockoutAllowed test"/>
+</properties>
+    </testcase>
+    <testcase name="decrementTimers" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="decrementTimers test"/>
+</properties>
+    </testcase>
+    <testcase name="handleKnockoutCounter" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="handleKnockoutCounter test"/>
+</properties>
+    </testcase>
+    <testcase name="cleanAllUsers" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="cleanAllUsers test"/>
+</properties>
+    </testcase>
+    <testcase name="performTheKnockout" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="performTheKnockout test"/>
+</properties>
+    </testcase>
+    <testcase name="handleBusKnockout_test_0" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="handleBusKnockout test"/>
+</properties>
+    </testcase>
+    <testcase name="handleBusKnockout_test_1" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="handleBusKnockout test"/>
+</properties>
+    </testcase>
+    <testcase name="handleBusKnockout_test_3" status="run" time="0.001" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="handleBusKnockout test 3 "/>
+</properties>
+    </testcase>
+    <testcase name="handleBusKnockout_test_4" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="handleBusKnockout test 4 "/>
+</properties>
+    </testcase>
+    <testcase name="handleCompanionKnockout" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="handleCompanionKnockout test"/>
+</properties>
+    </testcase>
+    <testcase name="logKnockoutConditions" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="logKnockoutConditions test"/>
+<property name="Test_Step_0" value="KL15 state dosen&apos;t change"/>
+<property name="Test_Step_1" value="KL15 state changed "/>
+</properties>
+    </testcase>
+    <testcase name="KL15_FallingEdge" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="KL15_FallingEdge test"/>
+</properties>
+    </testcase>
+    <testcase name="busKnockoutTimerStartCondition" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="busKnockoutTimerStartCondition test"/>
+</properties>
+    </testcase>
+    <testcase name="vehicleSafetyFunctions_DiagKO_329" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="vehicleSafetyFunctions_DiagKO_329 test"/>
+</properties>
+    </testcase>
+    <testcase name="cleanAllUsers_2" status="run" time="0" classname="GTestClass_CtKnockoutMonitorSwc">
+<properties>
+<property name="Description" value="check that all users types are released correctly, when more than one user type is set."/>
+<property name="Test_Step_0" value="SET all user types for every user."/>
+<property name="Test_Step_1" value="check that all users types are released"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

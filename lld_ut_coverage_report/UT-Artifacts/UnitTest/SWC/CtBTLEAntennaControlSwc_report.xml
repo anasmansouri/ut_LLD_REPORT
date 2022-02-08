@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:52:44" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtBTLEAntennaControlSwc" tests="8" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="CtBTLEAntennaControlSwc_Cyclic10ms" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="CtBTLEAntennaControlSwc_Cyclic10ms"/>
+<property name="Test_Step_0" value="Current state is STATE_I and tickCounter != 0"/>
+<property name="Test_Step_1" value="Current state is STATE_I and tickCounter == 0"/>
+<property name="Test_Step_2" value="Current state is STATE_II  and BTLE_Antenna.MovAvrFilter.hasEnoughSamples == FALSE"/>
+<property name="Test_Step_3" value="Current state is STATE_II  and BTLE_Antenna.MovAvrFilter.hasEnoughSamples == TRUE"/>
+<property name="Test_Step_4" value="Current state is STATE_III  and tickCounter != 0"/>
+<property name="Test_Step_5" value="Current state is STATE_III  and tickCounter == 0"/>
+<property name="Test_Step_6" value="Current state is STATE_IV and BTLE_Antenna.MovAvrFilter.hasEnoughSamples = FALSE"/>
+<property name="Test_Step_7" value="Current state is STATE_IV and BTLE_Antenna.MovAvrFilter.hasEnoughSamples = TRUE"/>
+<property name="Test_Step_8" value="Current state is undefined"/>
+</properties>
+    </testcase>
+    <testcase name="CtBTLEAntennaControlSwc_Init" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="CtBTLEAntennaControlSwc_Init"/>
+<property name="Test_Step_0" value=" Coding not installed "/>
+<property name="Test_Step_1" value=" Failed to read HW VERSION "/>
+<property name="Test_Step_2" value=" HW VERSION readed correctly "/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_800_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_800_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_800_ReadData" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="DidServices_ID_MeasValue_800_ReadData"/>
+<property name="Test_Step_0" value="antennsa state == BTLE_ANTENNA_STATE_OK"/>
+<property name="Test_Step_1" value="antennsa state == BTLE_ANTENNA_STATE_BROKENLINE"/>
+<property name="Test_Step_2" value="antennsa state == BTLE_ANTENNA_STATE_SHORTTOGROUND"/>
+<property name="Test_Step_3" value="antennsa state == BTLE_ANTENNA_STATE_SHORTTOPOWER"/>
+<property name="Test_Step_4" value="antennsa state == BTLE_ANTENNA_STATE_INIT"/>
+<property name="Test_Step_5" value="antennsa state is out of range"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_BTLEAntennaConnectionStatus_GetStatus" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="Pi_BTLEAntennaConnectionStatus_GetStatus"/>
+</properties>
+    </testcase>
+    <testcase name="perform_BTLE_VoltMeasure" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="perform_BTLE_VoltMeasure"/>
+<property name="Test_Step_0" value="reading voltage failed"/>
+<property name="Test_Step_1" value="voltage readed successfuly"/>
+</properties>
+    </testcase>
+    <testcase name="Check_BTLE_ShortPositive" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="Check_BTLE_ShortPositive"/>
+<property name="Test_Step_0" value="BTLE ANTENNA VOLTAGE EN LOW == BTLE_VOLTAGE_ON_LIMIT"/>
+<property name="Test_Step_1" value="BTLE ANTENNA VOLTAGE EN LOW bigger than BTLE_VOLTAGE_ON_LIMIT"/>
+<property name="Test_Step_2" value="BTLE_Antenna-&gt;antennaState != BTLE_ANTENNA_STATE_SHORTTOPOWER"/>
+<property name="Test_Step_3" value="TRUE == boMaintainDTCs"/>
+</properties>
+    </testcase>
+    <testcase name="Check_BTLE_Diag" status="run" time="0" classname="GTestClass_CtBTLEAntennaControlSwc">
+<properties>
+<property name="Description" value="Check_BTLE_Diag"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

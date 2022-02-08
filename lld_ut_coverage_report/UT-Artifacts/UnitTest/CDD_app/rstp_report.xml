@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="57" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:17:15" time="0.005" name="AllTests">
+  <testsuite name="GTestClass_rstp" tests="57" failures="0" disabled="0" errors="0" time="0.005">
+    <testcase name="RSTPApp_Task" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="test rstp app task "/>
+<property name="Test_Step_0" value="watchdog disabled via console or debugger "/>
+<property name="Test_Step_1" value="watchdog disabled from the code"/>
+<property name="Test_Step_2" value="watchdog period counter is less than watchdog request period"/>
+<property name="Test_Step_3" value="watchdog period counter equal to watchdog request period"/>
+<property name="Test_Step_4" value="Transmit watchdog request is not handled correctly"/>
+<property name="Test_Step_5" value="watchdog response time counter "/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_Task_trriger_count_check" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="Trigger count test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_Reset_TEST" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="test RSTPAPP_RESET"/>
+<property name="Test_Step_6" value="watchdog enabled "/>
+<property name="Test_Step_7" value="Watchdog disabled"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_HighPrioDataEcho" status="run" time="0" classname="GTestClass_rstp" />
+    <testcase name="RSTPApp_HightPrioDataNEcho_test" status="run" time="0" classname="GTestClass_rstp" />
+    <testcase name="RSTPApp_LowPrioDataEcho_test" status="run" time="0" classname="GTestClass_rstp" />
+    <testcase name="RSTPApp_LowPrioDataNEcho_test" status="run" time="0" classname="GTestClass_rstp" />
+    <testcase name="RSTPApp_GetWatchdog_test" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_8" value="Watchdog is enabled"/>
+<property name="Test_Step_9" value="Watchdog is disabled"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_EmergencyCall" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="EMERGENCY CALL TEST"/>
+<property name="Test_Step_10" value="Buffer is a null value "/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_EmergencyCall_buffer_not_null" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_11" value="Buffer is not null "/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_Bap" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPAPP Bap test"/>
+<property name="Test_Step_12" value="NULL BUFFER "/>
+<property name="Test_Step_13" value="BUFFER IS NOT NULL and and the the Bap msg is received correctly"/>
+<property name="Test_Step_14" value="BUFFER IS NOT NULL and and the the Bap msg is not received correctly"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_AsSocketAdapter" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_15" value="NULL BUFFER "/>
+<property name="Test_Step_16" value="buffer is not null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_PowerManagement" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_17" value="NULL BUFFER "/>
+<property name="Test_Step_18" value="buffer is not null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_Audio" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_19" value="NULL BUFFER"/>
+<property name="Test_Step_20" value="buffer is not null"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_RsTpUdsReceive" status="run" time="0.001" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_21" value="bufferPtr == NULL  and length == 0"/>
+<property name="Test_Step_22" value="bufferPtr == NULL and length != 0"/>
+<property name="Test_Step_23" value="bufferPtr == NULL and length != 0"/>
+<property name="Test_Step_24" value="bufferPtr != NULL and length != 0"/>
+<property name="Test_Step_25" value="bufferPtr != NULL and length != 0 RSTP_UDS_RSTPApp_Receive return E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_RsTpUdsReceiveAlt" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Test_Step_26" value="bufferPtr == NULL  and length == 0"/>
+<property name="Test_Step_27" value="bufferPtr == NULL and length != 0"/>
+<property name="Test_Step_28" value="bufferPtr == NULL and length != 0"/>
+<property name="Test_Step_29" value="bufferPtr != NULL and length != 0"/>
+<property name="Test_Step_30" value="bufferPtr != NULL and length != 0 RSTP_UDS_RSTPApp_Receive return E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_returnCurrentState" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_returnCurrentState"/>
+<property name="Test_Step_31" value="rstp_state = RSTP_STATE_INVALID"/>
+<property name="Test_Step_32" value="rstp_state = RSTP_STATE_READY"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagCoding" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTP App diag coding test"/>
+<property name="Test_Step_33" value="length and the rstp app diag coding request length doesn&apos;t match"/>
+<property name="Test_Step_34" value="length and the rstp app diag coding request length are equal"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagMesswerte" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_DiagMesswerte test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagAdaptation" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_DiagAdaptation test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagDTC" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_DiagAdaptation test"/>
+<property name="Test_Step_35" value="BUFFER IS NULL"/>
+<property name="Test_Step_36" value="BUFFER IS NOT NULL and length != RSTP_APP_DIAGDTC_REQUEST_LENGTH"/>
+<property name="Test_Step_37" value="BUFFER IS NOT NULL and length = RSTP_APP_DIAGDTC_REQUEST_LENGTH"/>
+<property name="Test_Step_38" value="BUFFER IS NOT NULL and length = RSTP_APP_DIAGDTC_REQUEST_LENGTH"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagIoControl" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_DiagIoControl test"/>
+<property name="Test_Step_39" value="BUFFER IS NULL"/>
+<property name="Test_Step_40" value="BUFFER IS NOT NULL"/>
+<property name="Test_Step_41" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagDataSets" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_DiagDataSets test"/>
+<property name="Test_Step_42" value="BUFFER IS NULL"/>
+<property name="Test_Step_43" value="BUFFER IS NOT NULL"/>
+<property name="Test_Step_44" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_DiagRoutineControl" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_DiagRoutineControl test"/>
+<property name="Test_Step_45" value="BUFFER IS NULL"/>
+<property name="Test_Step_46" value="BUFFER IS NOT NULL"/>
+<property name="Test_Step_47" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_AirbagHandler" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_AirbagHandler test"/>
+<property name="Test_Step_48" value="BUFFER IS NULL"/>
+<property name="Test_Step_49" value="BUFFER IS NOT NULL"/>
+<property name="Test_Step_50" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_Debug" status="run" time="0.001" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_Debug test"/>
+<property name="Test_Step_51" value="BUFFER IS NULL"/>
+<property name="Test_Step_52" value="BUFFER IS NOT NULL"/>
+<property name="Test_Step_53" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_TimeSync" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_TimeSync test"/>
+<property name="Test_Step_54" value="BUFFER IS NULL"/>
+<property name="Test_Step_55" value="BUFFER IS NOT NULL and message id equal to RSTP_APP_QUERYCMPTIME_MSG_ID"/>
+<property name="Test_Step_56" value="BUFFER IS NOT NULL and message id is not equal to RSTP_APP_QUERYCMPTIME_MSG_ID"/>
+<property name="Test_Step_57" value="Trasmit succeeded"/>
+<property name="Test_Step_58" value="Transmit fails"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_GNSS" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_GNSS test"/>
+<property name="Test_Step_59" value="BUFFER IS NULL"/>
+<property name="Test_Step_60" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_GNSS_DR" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_GNSS_DR test"/>
+<property name="Test_Step_61" value="BUFFER IS NULL"/>
+<property name="Test_Step_62" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_SWDL" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_SWDL test"/>
+<property name="Test_Step_63" value="BUFFER IS NULL"/>
+<property name="Test_Step_64" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_KsAccess" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_KsAccess test"/>
+<property name="Test_Step_65" value="BUFFER IS NULL"/>
+<property name="Test_Step_66" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_RouteHoloride" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_RouteHoloride test"/>
+<property name="Test_Step_67" value="BUFFER IS NULL"/>
+<property name="Test_Step_68" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_BLEHoloride" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_BLEHoloride test"/>
+<property name="Test_Step_69" value="BUFFER IS NULL"/>
+<property name="Test_Step_70" value="BUFFER IS NOT NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_AirbagHandler" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_AirbagHandler test"/>
+<property name="Test_Step_71" value="BUFFER IS NULL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_Timesync" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_Timesync test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_Bap" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_Bap test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_PowerManagement" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_PowerManagement test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_CarSensorData" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_CarSensorData test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_V2XSensorData" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_V2XSensorData test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_NavPosData" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_NavPosData test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_ValSignalRouter" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_ValSignalRouter test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_DiagDTC" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_DiagDTC test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_Uds" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_Uds test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_KsAccess" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_KsAccess test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_InputOutputControl" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_InputOutputControl test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_RoutineControl" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_RoutineControl test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_AsSocketAdapter" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_AsSocketAdapter test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_DiagMeasurementValuesNAD" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_DiagMeasurementValuesNAD test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_DiagAdaptions" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_DiagAdaptions test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_ResetChannel_DiagCoding" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_ResetChannel_DiagCoding test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_CtVtsWrapSwc_GetRstpData" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_CtVtsWrapSwc_GetRstpData test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_WDG_CTRL" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="disable rstp watchdog via the UART console "/>
+<property name="Test_Step_72" value="arg is a NULL PTR"/>
+<property name="Test_Step_73" value="arg equal to off"/>
+<property name="Test_Step_74" value="arg equal to on"/>
+<property name="Test_Step_75" value="arg is out of range"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPApp_Watchdog" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPApp_Watchdog test"/>
+<property name="Test_Step_76" value="watchdog is disabled"/>
+<property name="Test_Step_77" value="watchdog is enabled and response has an incorrect length "/>
+<property name="Test_Step_78" value="watchdog is enabled and the length of the response is correct , but it is not a watchdog response"/>
+<property name="Test_Step_79" value="watchdog is enabled and the length of the response is correct , but we can&apos;t get parameter by id "/>
+<property name="Test_Step_80" value="watchdog is enabled and the length of the response is correct and rstp app wtdg nad counter == nad_counter"/>
+<property name="Test_Step_81" value="watchdog is enabled and the length of the response is correct rstp app wtdg nad counter != nad_counter"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPService_ChannelMonitor" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPService_ChannelMonitor test"/>
+<property name="Test_Step_82" value="Msg should not be monitored"/>
+<property name="Test_Step_83" value="Msg should be monitored and the numbers of received msgs since last check is ZERO"/>
+<property name="Test_Step_84" value="Msg should be monitored and the numbers of received msgs since last check is not zero "/>
+<property name="Test_Step_85" value="Msg should be monitored and the numbers of received msgs since last check is not zero "/>
+</properties>
+    </testcase>
+    <testcase name="RSTPService_Monitor_RxChannel" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPService_Monitor_RxChannel test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPService_RxCallback" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPService_RxCallback test"/>
+</properties>
+    </testcase>
+    <testcase name="RSTPService_Monitor_RxChannel_Reset" status="run" time="0" classname="GTestClass_rstp">
+<properties>
+<property name="Description" value="RSTPService_Monitor_RxChannel_Reset test"/>
+<property name="Test_Step_86" value="channle not implemented"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

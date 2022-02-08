@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="24" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:03:08" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_CtKeyPanelSwc" tests="24" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="CtKeyPanelSwc_CAN_Dimming_01_State_GetState" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="CtKeyPanelSwc_Cyclic" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="CtKeyPanelSwc_Init" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="CtKeyPanelSwc_RSTP_Receive_Callback" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Test_Step_0" value="Rte_Call_RSTP_CtKeyPanelSwc_ReceiveData_RSTPMsg_GetMessageID return RTE_E_NEVER_RECEIVED"/>
+<property name="Test_Step_1" value="msgId equal to RSTP_MSG_ID_ECALL_SWITCH_LED"/>
+<property name="Test_Step_2" value="msgId equal to RSTP_MSG_ID_ECALL_SWITCH_LED"/>
+<property name="Test_Step_3" value="msgId is not equal to RSTP_MSG_ID_ECALL_SWITCH_LED"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_1827_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="DidServices_ID_MeasValue_1827_ReadData" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="DidServices_ID_MeasValue_2c97_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="DidServices_ID_MeasValue_2c97_ReadData" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Test_Step_0" value="iluminationValueCan = CxFE_Init"/>
+<property name="Test_Step_1" value="iluminationValueCan = CxFF_Fehler"/>
+<property name="Test_Step_2" value="convert CAN to MW scale"/>
+<property name="Test_Step_3" value="busStateDimmung01 is not equal to DIMMUNG_01_ONLINE"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_2c97_ReadDataLength" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="PiGpioKeypanelStatus_IsKeypanelConnected" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="keyHandling_Init" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="Key handling initialisation"/>
+<property name="Test_Step_0" value="CAN , LIN and GPI are not allowed"/>
+<property name="Test_Step_1" value="CAN key panel allowed"/>
+<property name="Test_Step_2" value="GPIO key panel allowed"/>
+<property name="Test_Step_3" value="LIN key panel allowed"/>
+</properties>
+    </testcase>
+    <testcase name="keyHandling_Cyclic" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Test_Step_0" value="CAN key panel Enabeled : Cx1_button_pressed"/>
+<property name="Test_Step_1" value="CAN key panel Enabeled : Cx0_button_released"/>
+<property name="Test_Step_2" value="CAN key panel Enabeled : canKey state unrecognized"/>
+<property name="Test_Step_3" value="LIN key panel Enabeled "/>
+<property name="Test_Step_4" value="LIN and CAN key panel are not Enabeled "/>
+</properties>
+    </testcase>
+    <testcase name="keyHandling_simulateKey" status="run" time="0" classname="GTestClass_CtKeyPanelSwc" />
+    <testcase name="getPressedKey" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="get the pressed Key TEST"/>
+<property name="Test_Step_0" value="CAN key panel enabled"/>
+<property name="Test_Step_1" value="LIN key panel enabled"/>
+</properties>
+    </testcase>
+    <testcase name="keyHandling_CanCyclic" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="keyHandling_CanCyclic TEST"/>
+<property name="Test_Step_0" value="problem in reading the key status Ecall can message"/>
+</properties>
+    </testcase>
+    <testcase name="DetermineMwbCan" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="DetermineMwbCan TEST"/>
+</properties>
+    </testcase>
+    <testcase name="keyRouting_Cylic" status="run" time="0.001" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Test_Step_0" value="lastPressedKey == EMERGENCY and currentPressedKey == NOT_PRESSED"/>
+<property name="Test_Step_1" value="lastPressedKey == SERVICE and currentPressedKey == NOT_PRESSED"/>
+<property name="Test_Step_2" value="lastPressedKey == INFORMATION and currentPressedKey == NOT_PRESSED"/>
+<property name="Test_Step_3" value="lastPressedKey == UNDEFINED and currentPressedKey == NOT_PRESSED"/>
+<property name="Test_Step_4" value="lastPressedKey == UNDEFINED and currentPressedKey == NOT_PRESSED"/>
+<property name="Test_Step_5" value="lastPressedKey == EMERGENCY and currentPressedKey == INFORMATION"/>
+<property name="Test_Step_6" value="lastPressedKey == EMERGENCY and currentPressedKey == INFORMATION"/>
+<property name="Test_Step_7" value="lastPressedKey == EMERGENCY and currentPressedKey == INFORMATION"/>
+</properties>
+    </testcase>
+    <testcase name="keyRouting_sendRSTPMessage" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Test_Step_0" value="key == EMERGENCY"/>
+<property name="Test_Step_1" value="key == SERVICE"/>
+<property name="Test_Step_2" value="key == INFORMATION"/>
+<property name="Test_Step_3" value="key is not known"/>
+<property name="Test_Step_4" value="key is not known"/>
+</properties>
+    </testcase>
+    <testcase name="keyRouting_accumulatedTime" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="Calculate the accumulatedTime  when restantTime &gt; time "/>
+</properties>
+    </testcase>
+    <testcase name="keyRouting_setAccumulatedTime" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="ICT test tool is enabled "/>
+<property name="Test_Step_0" value="RSTPATFW_GET return 0"/>
+<property name="Test_Step_1" value="RSTPATFW_GET return 1"/>
+</properties>
+    </testcase>
+    <testcase name="SetLedStateOnCan" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="ledState equal to STATE_LED_ON "/>
+<property name="Test_Step_0" value="led color is RED"/>
+</properties>
+    </testcase>
+    <testcase name="ledControlCan_Cyclic_10ms" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="led status is received correctly "/>
+</properties>
+    </testcase>
+    <testcase name="ConvertLedRstpToCan" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="ConvertLedRstpToCan TEST "/>
+<property name="Test_Step_0" value="led status rstp equal to RSTP_LED_GREEN"/>
+<property name="Test_Step_1" value="led status rstp equal to RSTP_LED_GREEN_0_5_HZ"/>
+<property name="Test_Step_2" value="led status rstp equal to RSTP_LED_GREEN_1_0_HZ"/>
+<property name="Test_Step_3" value="led status rstp equal to RSTP_LED_RED"/>
+<property name="Test_Step_4" value="led status rstp equal to RSTP_LED_RED_0_5_HZ"/>
+<property name="Test_Step_5" value="led status rstp equal to RSTP_LED_RED_1_0_HZ"/>
+<property name="Test_Step_6" value="led status rstp equal to RSTP_LED_MODE_DIALING"/>
+<property name="Test_Step_7" value="led status rstp equal to RSTP_LED_MODE_TRANSMITTING"/>
+<property name="Test_Step_8" value="led status rstp equal to RSTP_LED_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="HandleLedInterval" status="run" time="0" classname="GTestClass_CtKeyPanelSwc">
+<properties>
+<property name="Description" value="handl led interval Test "/>
+<property name="Test_Step_0" value="eCallLedConditions.LedStatusCan equal to LED_INTERVAL_1"/>
+<property name="Test_Step_1" value="eCallLedConditions.LedStatusCan equal to LED_INTERVAL_2"/>
+<property name="Test_Step_2" value="eCallLedConditions.LedStatusCan equal to LED_INTERVAL_3"/>
+<property name="Test_Step_3" value="eCallLedConditions.LedStatusCan equal to LED_ON"/>
+<property name="Test_Step_4" value="eCallLedConditions.LedStatusCan equal to LED_OFF"/>
+<property name="Test_Step_5" value="eCallLedConditions.LedStatusCan equal to LED_UNKNOWN"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="24" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:59:28" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_RoutineControl" tests="24" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="Reset_Of_NAD_and_CMP" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Reset required for NAD and CMP"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_181, SW_DIAG_ROUTINE_CNTRL_185"/>
+<property name="Test_Step_0" value="Test the behaviour of routines, when CMP reset is required"/>
+<property name="Test_Step_1" value="Test the behaviour of routines, when NAD reset is required"/>
+<property name="Expected_2" value="If NAD or CMP is reset, all routines should be aborted"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x366_Ruecksetzen_Anpassungen" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 0366 Ruecksetzen aller Anpassungen"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_33, SW_DIAG_ROUTINE_CNTRL_124, SW_DIAG_ROUTINE_CNTRL_125, SW_DIAG_ROUTINE_CNTRL_166, SW_DIAG_ROUTINE_CNTRL_126, SW_DIAG_ROUTINE_CNTRL_156, SW_DIAG_ROUTINE_CNTRL_127, SW_DIAG_ROUTINE_CNTRL_183, SW_DIAG_ROUTINE_CNTRL_184, SW_DIAG_ROUTINE_CNTRL_179"/>
+<property name="Test_Step_0" value="Check Routine Control Status NOT_ACTIVE with Start Request"/>
+<property name="Test_Step_1" value="Check Routine Control Status TERMINATED_BY_ECU"/>
+<property name="Test_Step_2" value="Check Routine Control Status ROUTINE_PENDING with response timeout"/>
+<property name="Test_Step_3" value="Check Routine Control Status ROUTINE_PENDING with negative response"/>
+<property name="Test_Step_4" value="Check Routine Control Status ROUTINE_PENDING with positive response"/>
+<property name="Test_Step_5" value="Check Routine Control Status ACTIVE and Routine stop request"/>
+<property name="Test_Step_6" value="Check Routine Control Status ACTIVE and Routine has ended normally"/>
+<property name="Test_Step_7" value="Check Routine Control Status ACTIVE and Routine is pending"/>
+<property name="Test_Step_8" value="Check Routine Control Status ACTIVE and Routine is ended with an error"/>
+<property name="Test_Step_9" value="Check Routine Control Status ROUTINE_ABORTED and should be stopped"/>
+<property name="Test_Step_10" value="Check Routine Control Status ACTIVE and Routine stop request when KL15 off"/>
+<property name="Test_Step_11" value="Routine 0x366 Request Results"/>
+<property name="Test_Step_12" value="Routine 0x366 StartRoutine"/>
+<property name="Test_Step_13" value="Routine 0x366 StopRoutine"/>
+<property name="Expected_14" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x30C" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 030C "/>
+<property name="Tested_LLD_IDs" value="_"/>
+<property name="Test_Step_0" value="Check Routine Control Status NOT_ACTIVE with Start Request"/>
+<property name="Test_Step_1" value="Check Routine Control Status TERMINATED_BY_ECU"/>
+<property name="Test_Step_2" value="Check Routine Control Status ROUTINE_PENDING with response timeout"/>
+<property name="Test_Step_3" value="Check Routine Control Status ROUTINE_PENDING with negative response"/>
+<property name="Test_Step_4" value="Check Routine Control Status ROUTINE_PENDING with positive response"/>
+<property name="Test_Step_5" value="Check Routine Control Status ACTIVE and Routine stop request"/>
+<property name="Test_Step_6" value="Check Routine Control Status ROUTINE_ABORTED and should be stopped"/>
+<property name="Test_Step_7" value="Routine 0x30C Request Results"/>
+<property name="Test_Step_8" value="Routine 0x30C StartRoutine"/>
+<property name="Test_Step_9" value="Routine 0x30C StopRoutine"/>
+<property name="Expected_10" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x317_Ruecksetzen_Lernwerte" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 0317 Ruecksetzen aller Lernwerte"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_33, SW_DIAG_ROUTINE_CNTRL_124, SW_DIAG_ROUTINE_CNTRL_125, SW_DIAG_ROUTINE_CNTRL_166, SW_DIAG_ROUTINE_CNTRL_126, SW_DIAG_ROUTINE_CNTRL_156, SW_DIAG_ROUTINE_CNTRL_127, SW_DIAG_ROUTINE_CNTRL_183, SW_DIAG_ROUTINE_CNTRL_184, SW_DIAG_ROUTINE_CNTRL_177"/>
+<property name="Test_Step_0" value="Check Routine Control Status NOT_ACTIVE with Start Request"/>
+<property name="Test_Step_1" value="Check Routine Control Status TERMINATED_BY_ECU"/>
+<property name="Test_Step_2" value="Check Routine Control Status ROUTINE_PENDING with response timeout"/>
+<property name="Test_Step_3" value="Check Routine Control Status ROUTINE_PENDING with negative response"/>
+<property name="Test_Step_4" value="Check Routine Control Status ROUTINE_PENDING with positive response"/>
+<property name="Test_Step_5" value="Check Routine Control Status ACTIVE and Routine stop request"/>
+<property name="Test_Step_6" value="Check Routine Control Status ROUTINE_ABORTED and should be stopped"/>
+<property name="Test_Step_7" value="Routine 0x317 Request Results"/>
+<property name="Test_Step_8" value="Routine 0x317 StartRoutine"/>
+<property name="Test_Step_9" value="Routine 0x317 StopRoutine"/>
+<property name="Expected_10" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x0210_LearPrivateDiagnostics" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine 0x0210 Lear Private Diagnostics"/>
+<property name="Tested_LLD_IDs" value=" "/>
+<property name="Test_Step_0" value=" Check the behaviour of Routine 0x0210 Lear Private Diagnostics Start"/>
+<property name="Test_Step_1" value=" Check the behaviour of Routine 0x0210 Lear Private Diagnostics Stop"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x507_History_Data_Reset" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 0507 Lebenslaufdaten lschen"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_168"/>
+<property name="Test_Step_0" value="Routine 0x507 Request Results"/>
+<property name="Test_Step_1" value="Routine 0x507 StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x507 StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x5C7_CommConAdaption" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 05C7 Kommunikationsbeziehungen testen"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_171"/>
+<property name="Test_Step_0" value="Routine 0x57C Request Results"/>
+<property name="Test_Step_1" value="Routine 0x57C StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x57C StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x57E_Ethernet_Testability_Active" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 057E Ethernet-Testability-Dienst aktivieren"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_170"/>
+<property name="Test_Step_0" value="Routine 0x57E Request Results"/>
+<property name="Test_Step_1" value="Routine 0x57E StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x57E StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x57F_Ethernet_Testability_Deactivated" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 057F Ethernet-Testability-Dienst deaktivieren"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_172"/>
+<property name="Test_Step_0" value="Routine 0x57F Request Results"/>
+<property name="Test_Step_1" value="Routine 0x57F StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x57F StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x5E3_Reset_IPCount_Wrong_VLANS" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 05E3 Rcksetzen des Zhlers mit ungltigen VLANs"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_173"/>
+<property name="Test_Step_0" value="Routine 0x5E3 Request Results"/>
+<property name="Test_Step_1" value="Routine 0x5E3 StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x5E3 StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x5E4_Reset_IPCount_Wrong_IPv6" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 05E3 Rcksetzen des Zhlers mit ungltigen IPv6 Adressen"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_174"/>
+<property name="Test_Step_0" value="Routine 0x5E4 Request Results"/>
+<property name="Test_Step_1" value="Routine 0x5E4 StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x5E4 StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x5E5_Reset_IPCount_Wrong_TCP_Ports" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 05E5 Rcksetzen des Zhlers mit ungltigen TCP Ports"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_175"/>
+<property name="Test_Step_0" value="Routine 0x5E5 Request Results"/>
+<property name="Test_Step_1" value="Routine 0x5E5 StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x5E5 StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x5EB_Reset_IPCount_Wrong_UDP_Ports" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 05EB Rcksetzen des Zhlers mit ungltigen UDP Ports"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_176"/>
+<property name="Test_Step_0" value="Routine 0x5EB Request Results"/>
+<property name="Test_Step_1" value="Routine 0x5EB StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x5EB StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x63E_Reset_DeadReacon_Calib" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 063E Rcksetzen der Dead Reckoning Kalibrierung"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_169"/>
+<property name="Test_Step_0" value="Routine 0x63E Request Results"/>
+<property name="Test_Step_1" value="Routine 0x63E StartRoutine"/>
+<property name="Test_Step_2" value="Routine 0x63E StopRoutine"/>
+<property name="Expected_3" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x651" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 0651 "/>
+<property name="Tested_LLD_IDs" value="_"/>
+<property name="Test_Step_0" value="Check Routine Control Status NOT_ACTIVE with Start Request"/>
+<property name="Test_Step_1" value="Check Routine Control Status TERMINATED_BY_ECU"/>
+<property name="Test_Step_2" value="Check Routine Control Status ROUTINE_PENDING with response timeout"/>
+<property name="Test_Step_3" value="Check Routine Control Status ROUTINE_PENDING with negative response"/>
+<property name="Test_Step_4" value="Check Routine Control Status ROUTINE_PENDING with positive response"/>
+<property name="Test_Step_5" value="Check Routine Control Status ACTIVE and Routine stop request"/>
+<property name="Test_Step_6" value="Check Routine Control Status ROUTINE_ABORTED and should be stopped"/>
+<property name="Test_Step_7" value="Routine 0x0651 Request Results"/>
+<property name="Test_Step_8" value="Routine 0x0651 StartRoutine"/>
+<property name="Test_Step_9" value="Routine 0x0651 StopRoutine"/>
+<property name="Expected_10" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0x656_BackupBattery_ResetStatusOfHealth" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check the behaviour of Routine Control 0656 Backup Batter Reset State of Helath"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_187"/>
+<property name="Test_Step_0" value="Check Routine Control Status NOT_ACTIVE with Start Request"/>
+<property name="Test_Step_1" value="Check Routine Control Status ACTIVE and Routine is ended with an error"/>
+<property name="Test_Step_2" value="Check Routine Control Status ACTIVE and Routine has ended normally"/>
+<property name="Test_Step_3" value="Check Routine Control Status ACTIVE and Routine is pending"/>
+<property name="Test_Step_4" value="Routine 0x63E Request Results"/>
+<property name="Test_Step_5" value="Routine 0x656 StartRoutine"/>
+<property name="Test_Step_6" value="Routine 0x656 StopRoutine"/>
+<property name="Expected_7" value="Routine Control is processed correctly, depending on its Status and demanded Request"/>
+</properties>
+    </testcase>
+    <testcase name="MeasurementData_0x0102_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Test the Measurement Return Value 0x0102 depending on the states of Routine Controls"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_20, SW_DIAG_ROUTINE_CNTRL_160, SW_DIAG_ROUTINE_CNTRL_161, SW_DIAG_ROUTINE_CNTRL_162, SW_DIAG_ROUTINE_CNTRL_163, SW_DIAG_ROUTINE_CNTRL_164, SW_DIAG_ROUTINE_CNTRL_165"/>
+<property name="Test_Step_0" value="Condition check read data"/>
+<property name="Test_Step_1" value="No Routines are active"/>
+<property name="Test_Step_2" value="At least one Routine is active"/>
+<property name="Test_Step_3" value="At least one Routine is aborted by failure"/>
+<property name="Test_Step_4" value="At least one Routine is aborted by safety reasons"/>
+<property name="Test_Step_5" value="At least one Routine cannot be ended"/>
+<property name="Expected_6" value="Measured Values depending of the Stati of the Routines are stored"/>
+</properties>
+    </testcase>
+    <testcase name="Data_Received_from_NAD" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Test Response of Routine Controls from NAD"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_123, SW_DIAG_ROUTINE_CNTRL_150, SW_DIAG_ROUTINE_CNTRL_151, SW_DIAG_ROUTINE_CNTRL_152, SW_DIAG_ROUTINE_CNTRL_153SW_DIAG_ROUTINE_CNTRL_75, SW_DIAG_ROUTINE_CNTRL_134, SW_DIAG_ROUTINE_CNTRL_135, SW_DIAG_ROUTINE_CNTRL_136, SW_DIAG_ROUTINE_CNTRL_143, SW_DIAG_ROUTINE_CNTRL_144, SW_DIAG_ROUTINE_CNTRL_145,SW_DIAG_ROUTINE_CNTRL_147, SW_DIAG_ROUTINE_CNTRL_148, SW_DIAG_ROUTINE_CNTRL_155, SW_DIAG_ROUTINE_CNTRL_157"/>
+<property name="Test_Step_0" value="Routine Control Response is STATUS and Routine Control is ACTIVE and correct result is available"/>
+<property name="Test_Step_1" value="Routine Control Response is STATUS and Routine Control is STOPPED and result is available"/>
+<property name="Test_Step_2" value="Dual Type Routine Control Response is STATUS and Routine Control is STOPPED and result is available"/>
+<property name="Test_Step_3" value="Routine Control Response is STATUS and IOControl is ABORTED"/>
+<property name="Test_Step_4" value="Routine Control Response is STATUS and IOControl is SAFETY ABORTED"/>
+<property name="Test_Step_5" value="Routine Control Response is START and response ACTIVE"/>
+<property name="Test_Step_6" value="Routine Control Response is START and response CONDITIONS NOT CORRECT"/>
+<property name="Test_Step_7" value="Routine Control Response is START and response SEQUENCE ERROR"/>
+<property name="Test_Step_8" value="Routine Control Response is START and response GENERAL PROGRAMMING FAILURE"/>
+<property name="Test_Step_9" value="Routine Control Response is STOP and response STOPPED"/>
+<property name="Test_Step_10" value="Routine Control Response is STOP and response CONDITIONS NOT CORRECT"/>
+<property name="Test_Step_11" value="Routine Control Response is STOP and response SEQUENCE ERROR"/>
+<property name="Test_Step_12" value="Routine Control Response is STOP and response GENERAL PROGRAMMING FAILURE"/>
+<property name="Expected_13" value="Responses from NAD are processed correctly depending on their Type and Status"/>
+</properties>
+    </testcase>
+    <testcase name="CtDiagnosticServices_VTS_Routine_Status" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="CtDiagnosticServices_VTS_Routine_Status function check"/>
+<property name="Tested_LLD_IDs" value="_"/>
+<property name="Test_Step_0" value="CtDiagnosticServices_VTS_Routine_Status called with wrong DID"/>
+<property name="Test_Step_1" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is pending, target status is active, received status is Routine active"/>
+<property name="Test_Step_2" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is pending, target status is active, received status is Routine not active"/>
+<property name="Test_Step_3" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is pending, target status is active, received status is Routine aborted"/>
+<property name="Test_Step_4" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is pending, target status is active, received status is Routine pending"/>
+<property name="Test_Step_5" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status pending, target status is not active, received status is Routine active"/>
+<property name="Test_Step_6" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status pending, target status is not active, received status is Routine not active"/>
+<property name="Test_Step_7" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status pending, target status is not active, received status is Routine aborted"/>
+<property name="Test_Step_8" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status pending, target status is not active, received status is Routine pending"/>
+<property name="Test_Step_9" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is Active,"/>
+<property name="Test_Step_10" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is not Active"/>
+<property name="Test_Step_11" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is aborted"/>
+<property name="Test_Step_12" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is terminated by ECU, received status is Routine active"/>
+<property name="Test_Step_13" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is terminated by ECU, received status is Routine  not active"/>
+<property name="Test_Step_14" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is terminated by ECU, received status is Routine aborted"/>
+<property name="Test_Step_15" value="CtDiagnosticServices_VTS_Routine_Status called with correct DID, Routine status is terminated by ECU, received status is Routine pending"/>
+</properties>
+    </testcase>
+    <testcase name="Routine_0203_Check_Programming_Pre_Condition_Start" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Test the Programming Pre Conditions"/>
+<property name="Tested_LLD_IDs" value="SW_SWDL_353, SW_SWDL_290, SW_SWDL_356, SW_SWDL_288, SW_SWDL_293, SW_SWDL_357, SW_SWDL_298, SW_SWDL_358, SW_SWDL_302, SW_SWDL_307, SW_SWDL_359, SW_SWDL_312, SW_SWDL_360, SW_SWDL_342, SW_SWDL_361,SW_SWDL_345, SW_SWDL_348, SW_SWDL_351, SW_SWDL_318, SW_SWDL_363, SW_SWDL_320, SW_SWDL_324, SW_SWDL_364, SW_SWDL_326SW_DIAG_ROUTINE_CNTRL_38, SW_DIAG_ROUTINE_CNTRL_39 ,SW_DIAG_ROUTINE_CNTRL_40, SW_DIAG_ROUTINE_CNTRL_41, SW_DIAG_ROUTINE_CNTRL_108"/>
+<property name="Test_Step_0" value="All Preconditions are good"/>
+<property name="Test_Step_1" value="Read of Programming Attempts is pending"/>
+<property name="Test_Step_2" value="All Preconditions are bad except Programming Attempts"/>
+<property name="Test_Step_3" value="All Preconditions are bad"/>
+<property name="Expected_4" value="Precondition errors are set with associated Error Codes"/>
+</properties>
+    </testcase>
+    <testcase name="DiagRoutineStart" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Test of the DiagStartRoutine"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_131, SW_DIAG_ROUTINE_CNTRL_133"/>
+<property name="Test_Step_0" value="Control Value is invalid"/>
+<property name="Test_Step_1" value="Diag Routine is already active"/>
+<property name="Test_Step_2" value="Diag Routine has an active Stop Request"/>
+<property name="Test_Step_3" value="Start_Request of Diag Routine is PENDING"/>
+<property name="Test_Step_4" value="Diag Routine Status is NACK"/>
+<property name="Test_Step_5" value="Diag Routine is TERMINATED_BY_ECU"/>
+<property name="Test_Step_6" value="Diag Routine will be started correctly"/>
+<property name="Expected_7" value="Diag Routine Start delivers Error Code depending on its actual state"/>
+</properties>
+    </testcase>
+    <testcase name="DiagRoutineStop" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Test of DiagStopRoutine with all possible preconditions"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ROUTINE_CNTRL_7, SW_DIAG_ROUTINE_CNTRL_140, SW_DIAG_ROUTINE_CNTRL_142"/>
+<property name="Test_Step_0" value="Diag Routine is already not active"/>
+<property name="Test_Step_1" value="Diag Routine has an active Start Routine"/>
+<property name="Test_Step_2" value="Diag Routine has an active Stop Routine"/>
+<property name="Test_Step_3" value="Diag Routine has the Status NACK"/>
+<property name="Test_Step_4" value="Diag Routine has the Status TERMINATED_BY_ECU"/>
+<property name="Test_Step_5" value="Diag Routine will be stopped correctly"/>
+<property name="Expected_6" value="Diag Routine Stop delivers Error Code depending on its actual state"/>
+</properties>
+    </testcase>
+    <testcase name="ConvertRstpRoutineResult" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check RSTP Routine Result "/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+    <testcase name="Not_Supported_Routines" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControl">
+<properties>
+<property name="Description" value="Check all the not supported Routines for CLU1"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Call Routine_0xFF01_ProgDependancies"/>
+<property name="Test_Step_1" value="Call Routine_0x05BA_TrackAssistChkContractDuration"/>
+<property name="Test_Step_2" value="Call Routine_0x05BB_TrackAssistFunctionTest"/>
+<property name="Test_Step_3" value="Call Routine_0x05BC_TrackAssistActivationReq"/>
+<property name="Test_Step_4" value="Call Routine_0x05BD_TrackAssistSendTestMssg"/>
+<property name="Test_Step_5" value="Call Routine_0x05BE_TrackAsssistProgDriverCards"/>
+<property name="Test_Step_6" value="Call Routine_0x05BF_TrackAssistSelfTest"/>
+<property name="Expected_7" value="All not supported Routines deliver a Request out of range Error"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

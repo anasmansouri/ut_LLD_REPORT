@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="33" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:51:21" time="0.004" name="AllTests">
+  <testsuite name="GTestClass_CtBackupBatteryHandlerSwc" tests="33" failures="0" disabled="0" errors="0" time="0.004">
+    <testcase name="Test_CtBackupBatteryHandlerSwc_Init" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test CtBackupBatteryHandlerSwc Init task"/>
+<property name="Test_Step_0" value="Call Init task and expect the default data"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtBackupBatteryHandlerSwc_Cyclic_10ms" status="run" time="0.001" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test CtBackupBatteryHandlerSwc 10ms cyclic task"/>
+<property name="Test_Step_1" value="SOH check is enabled"/>
+<property name="Test_Step_2" value="SOH check is disabled"/>
+<property name="Test_Step_3" value="Update CBOX power source POWER_SOURCE_BUB, Ecall not active"/>
+<property name="Test_Step_4" value="Update CBOX power source POWER_SOURCE_KL30"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtBackupBatteryHandlerSwc_Cyclic_1s" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test CtBackupBatteryHandlerSwc 1s cyclic task"/>
+<property name="Test_Step_5" value="Battery is not connected and charge test is not in progress"/>
+<property name="Test_Step_6" value="Battery is connected and charge test is not in progress"/>
+<property name="Test_Step_7" value="Battery is connected and charge test is in progress"/>
+<property name="Test_Step_8" value="Battery is connected and charge test is done"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtBackupBatteryHandlerSwc_setEcallActive" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_9" value="Ecall state set to TRUE"/>
+<property name="Test_Step_10" value="Ecall state set to FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtBackupBatteryHandler_Cdd_Timer_Callback" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_11" value="rtcTimerExpired status "/>
+</properties>
+    </testcase>
+    <testcase name="Test_Dem_ReportEvent_DemRequestReportEventNotification" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_12" value="Test Dem request report event notification "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_MeasValue_41e6_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_13" value="DidServices_ID_MeasValue_41e6_ConditionCheckRead "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_MeasValue_41e6_ReadData" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_14" value="DidServices ID MeasValue 41e6 ReadData "/>
+</properties>
+    </testcase>
+    <testcase name="Test_GetBackupBatteryConnStatus" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_15" value="Get Backup Battery connection status connected "/>
+<property name="Test_Step_16" value="Get Backup Battery connection status disconnected "/>
+</properties>
+    </testcase>
+    <testcase name="Test_VehicleSetBackupBattery" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_17" value="Request for activate the backup battery "/>
+<property name="Test_Step_18" value="Request for deactivate the backup battery "/>
+</properties>
+    </testcase>
+    <testcase name="Test_BackupBatterieUsageAllowedInStandby" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_19" value="Test for Backup Battery standby allowed "/>
+<property name="Test_Step_20" value="Test for Backup Battery standby not allowed "/>
+</properties>
+    </testcase>
+    <testcase name="Test_SetStateOfHealthCheckEnabled" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Test_Step_21" value="Set state of health checke enable to FALSE "/>
+<property name="Test_Step_22" value="Set state of health checke enable to TRUE "/>
+</properties>
+    </testcase>
+    <testcase name="BatteryStatusSOH" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check Battery States"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_91"/>
+<property name="Test_Step_23" value="Backup Battery is defect"/>
+<property name="Test_Step_24" value="Battery Lifetime exceeded"/>
+<property name="Test_Step_25" value="Battery Critical"/>
+<property name="Test_Step_26" value="Battery o.k."/>
+<property name="Expected_27" value="Battery returns correct status"/>
+</properties>
+    </testcase>
+    <testcase name="BatteryConnectionStatusNotConnected" status="run" time="0.001" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check Battery Connection Status when not connected"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_63, SW_BCK_BATT_HNDLR_65, SW_BCK_BATT_HNDLR_66, SW_BCK_BATT_HNDLR_67, SW_BCK_BATT_HNDLR_69, SW_BCK_BATT_HNDLR_84, SW_BCK_BATT_HNDLR_86"/>
+</properties>
+    </testcase>
+    <testcase name="BatteryConnectionStatusConnected" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check Battery Connection Status when connected"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_63, SW_BCK_BATT_HNDLR_65, SW_BCK_BATT_HNDLR_66, SW_BCK_BATT_HNDLR_67, SW_BCK_BATT_HNDLR_69, SW_BCK_BATT_HNDLR_84, SW_BCK_BATT_HNDLR_86"/>
+<property name="Expected_28" value="Battery sets connection status correct"/>
+</properties>
+    </testcase>
+    <testcase name="BatteryCodingStatus" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check Battery Coding Status"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_29" value="Battery is coded"/>
+<property name="Test_Step_30" value="Battery is coded"/>
+<property name="Expected_31" value="Battery sets coding status correct"/>
+</properties>
+    </testcase>
+    <testcase name="DetermineDTCs" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check DTC Set Values"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_53, SW_BCK_BATT_HNDLR_54, SW_BCK_BATT_HNDLR_61, SW_BCK_BATT_HNDLR_62, SW_BCK_BATT_HNDLR_80, SW_BCK_BATT_HNDLR_81, SW_BCK_BATT_HNDLR_82, SW_BCK_BATT_HNDLR_83, SW_BCK_BATT_HNDLR_84"/>
+<property name="Test_Step_32" value="DTC Battery defect is set"/>
+<property name="Test_Step_33" value="DTC Battery Low is set, Temperature Low is set"/>
+<property name="Test_Step_34" value="DTC Battery Voltage o.k., Temperature High is set"/>
+<property name="Test_Step_35" value="Set voltage to high, to set voltage event error state to prefail "/>
+<property name="Test_Step_36" value="Set current in milli amps and stop charging "/>
+<property name="Expected_37" value="Battery sets DTCs due to conditions"/>
+</properties>
+    </testcase>
+    <testcase name="DetermineStateOfHealthDTC" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Determine the DTC based on state of health percentage "/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+    <testcase name="BatteryTempParameter" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check Battery Temperature Parameters"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_95, SW_BCK_BATT_HNDLR_96, SW_BCK_BATT_HNDLR_97"/>
+<property name="Test_Step_38" value="Temperature is not avaiable"/>
+<property name="Test_Step_39" value="Temperature is not avaiable"/>
+<property name="Test_Step_40" value="Temperature is too high"/>
+<property name="Test_Step_41" value="Temperature is too low"/>
+<property name="Test_Step_42" value="Temperature is normal"/>
+<property name="Expected_43" value="Temperature is returned properly"/>
+</properties>
+    </testcase>
+    <testcase name="DID41e6" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test Values of DID 41e6"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_88, SW_BCK_BATT_HNDLR_89, SW_BCK_BATT_HNDLR_93, SW_BCK_BATT_HNDLR_99"/>
+<property name="Test_Step_44" value="Read DID with some values"/>
+</properties>
+    </testcase>
+    <testcase name="ResetStateOfHealth" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test reset state of health "/>
+<property name="Tested_LLD_IDs" value="-"/>
+</properties>
+    </testcase>
+    <testcase name="GetResetStatusForStateOfHealth" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test reset status for state of health "/>
+<property name="Tested_LLD_IDs" value="-"/>
+</properties>
+    </testcase>
+    <testcase name="IsSystemPoweredByBackupBattery" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test system powered by backup source "/>
+<property name="Tested_LLD_IDs" value="-"/>
+</properties>
+    </testcase>
+    <testcase name="ChargingControl_Task" status="run" time="0.001" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="CANNOT BE TESTED TO DUE PROGRAMMING STYLE - Test the Charging Control"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_17, SW_BCK_BATT_HNDLR_22, SW_BCK_BATT_HNDLR_25, SW_BCK_BATT_HNDLR_36, SW_BCK_BATT_HNDLR_37, SW_BCK_BATT_HNDLR_39 "/>
+<property name="Test_Step_0" value="Start Charging after debounce time 1min"/>
+<property name="Test_Step_1" value="Stop Charging when Destination Voltage is reached"/>
+<property name="Expected_2" value="Battery starts charging and stops charging when certain conditions are fulfilled"/>
+</properties>
+    </testcase>
+    <testcase name="Test_ChargingControl_chargerTestResult" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Test the charger test states - Charging Control"/>
+<property name="Test_Step_3" value="Charger test state - IDLE"/>
+<property name="Test_Step_4" value="Charger test state - BUSY"/>
+<property name="Test_Step_5" value="Charger test state - CONDITIONS_NOT_MET"/>
+<property name="Test_Step_6" value="Charger test state - SUCCESS"/>
+<property name="Test_Step_7" value="Charger test state - default"/>
+</properties>
+    </testcase>
+    <testcase name="Test_ChargingControl_requestChargerTest" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Request charger test - Charging Control"/>
+<property name="Test_Step_8" value="Charger test state - IDLE--&gt;BUSY"/>
+<property name="Test_Step_9" value="Charger test state - BUSY and no change"/>
+</properties>
+    </testcase>
+    <testcase name="Test_ChargingControl_ConditionsNotMet" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Request charger test states - Charging Control"/>
+<property name="Test_Step_10" value="eChargerTestState is BUSY and conditions not met"/>
+</properties>
+    </testcase>
+    <testcase name="Test_ChargingControl_RequestChargerTest_FailureCount" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Request for charger test - Charging Control"/>
+<property name="Test_Step_11" value="eChargerTestState is BUSY, conditions met and start charging"/>
+<property name="Test_Step_12" value="Stop charging when charge current not okay and increase the failure counter"/>
+</properties>
+    </testcase>
+    <testcase name="BatteryMonitoring" status="run" time="0.001" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="CANNOT BE TESTED TO DUE PROGRAMMING STYLE - Test Backup Battery Monitoring"/>
+<property name="Tested_LLD_IDs" value="SW_BCK_BATT_HNDLR_11, SW_BCK_BATT_HNDLR_31, SW_BCK_BATT_HNDLR_32, SW_BCK_BATT_HNDLR_33, SW_BCK_BATT_HNDLR_41, SW_BCK_BATT_HNDLR_44, SW_BCK_BATT_HNDLR_46, SW_BCK_BATT_HNDLR_57, SW_BCK_BATT_HNDLR_58, SW_BCK_BATT_HNDLR_59, SW_BCK_BATT_HNDLR_60"/>
+<property name="Test_Step_0" value="Check the charging percentages"/>
+<property name="Test_Step_1" value="Check Battery Lifetime"/>
+</properties>
+    </testcase>
+    <testcase name="ChargeCurrentOkay" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check charge current is ok "/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+    <testcase name="updateChargeCurrent" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check update charge current "/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+    <testcase name="updateTemperature" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check update charge temperature "/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+    <testcase name="updateRemainingLifeTime" status="run" time="0" classname="GTestClass_CtBackupBatteryHandlerSwc">
+<properties>
+<property name="Description" value="Check update remaining life time "/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

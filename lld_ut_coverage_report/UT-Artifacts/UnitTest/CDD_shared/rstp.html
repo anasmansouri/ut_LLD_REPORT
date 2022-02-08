@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results</title>
+<style type="text/css">
+			td#passed {
+				color: green;
+				font-weight: bold;
+			}
+			td#failed {
+				color: red;
+				font-weight: bold;
+			}
+			
+			body {
+				width: 80%;
+				margin: 40px auto;
+				font-family: 'trebuchet MS', 'Lucida sans', Arial;
+				font-size: 14px;
+				color: #444;
+			}
+			table {
+				*border-collapse: collapse; /* IE7 and lower */
+				border-spacing: 0;
+				width: 100%;
+			}
+			.bordered {
+				border: solid #ccc 1px;
+				-moz-border-radius: 6px;
+				-webkit-border-radius: 6px;
+				border-radius: 6px;
+				-webkit-box-shadow: 0 1px 1px #ccc; 
+				-moz-box-shadow: 0 1px 1px #ccc; 
+				box-shadow: 0 1px 1px #ccc;         
+			}
+			.bordered tr:hover {
+				background: #fbf8e9;
+				-o-transition: all 0.1s ease-in-out;
+				-webkit-transition: all 0.1s ease-in-out;
+				-moz-transition: all 0.1s ease-in-out;
+				-ms-transition: all 0.1s ease-in-out;
+				transition: all 0.1s ease-in-out;     
+			}    
+			.bordered td, .bordered th {
+				border-left: 1px solid #ccc;
+				border-top: 1px solid #ccc;
+				padding: 10px;
+				text-align: left;    
+			}
+			.bordered th {
+				background-color: #dce9f9;
+				background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+				background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+				background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+				background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+				background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+				background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+				-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+				-moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+				box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+				border-top: none;
+				text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+			}
+			.bordered td:first-child, .bordered th:first-child {
+				border-left: none;
+			}
+			.bordered th:first-child {
+				-moz-border-radius: 6px 0 0 0;
+				-webkit-border-radius: 6px 0 0 0;
+				border-radius: 6px 0 0 0;
+			}
+			.bordered th:last-child {
+				-moz-border-radius: 0 6px 0 0;
+				-webkit-border-radius: 0 6px 0 0;
+				border-radius: 0 6px 0 0;
+			}
+			.bordered th:only-child{
+				-moz-border-radius: 6px 6px 0 0;
+				-webkit-border-radius: 6px 6px 0 0;
+				border-radius: 6px 6px 0 0;
+			}
+			.bordered tr:last-child td:first-child {
+				-moz-border-radius: 0 0 0 6px;
+				-webkit-border-radius: 0 0 0 6px;
+				border-radius: 0 0 0 6px;
+			}
+			.bordered tr:last-child td:last-child {
+				-moz-border-radius: 0 0 6px 0;
+				-webkit-border-radius: 0 0 6px 0;
+				border-radius: 0 0 6px 0;
+			}
+		</style>
+</head>
+<body>
+<h1>Unit Test Run 2022-02-04T11:19:38</h1>
+<p>
+		Executed <b>52</b> test cases in 
+		<b>1</b> test suites, 
+		<b>0</b> test cases failed.
+		Execution time <b>0.004</b></p>
+  <h2>GTestClass_rstp</h2>
+<table class="bordered">
+<tr>
+<th style="width:30%">Test (0/52 failed) </th>
+<th>Message</th>
+<th style="width:1%">Result</th>
+</tr>
+<tr>
+<td>RSTP_Init</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_Reset</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_MainFunction</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_CheckValidation</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_TransmitData</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_ReportError0</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_ReportError1</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_ReportError2</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_ReportError3</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_Receive</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>rstp_receive_dispatch</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_LOGCMD_Rstp</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPATFW_Set</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPATFW_Get</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPATFW_Receive</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPATFW_ReportError</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>rstp_atfw_report_atfw_error</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTP_LOGCMD_Atfw</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_AddUINT8</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_AddUINT16</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_AddUINT32</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_AddUINT64</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_AddVarLen</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_TransmitUINT8</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_TransmitUINT16</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_TransmitUINT32</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_TransmitUINT64</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_TransmitVarLen</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_TransmitNoCRC</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_Transmit</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetMessageID</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetMessageID_swc</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetParameterByIdUINT8</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetParameterByIdUINT16</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetParameterByIdUINT32</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetParameterByIdUINT64</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetParameterByIdVarLen</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPMsg_GetParameterByIdVarLen_swc</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>rstp_msg_get_parameter_by_id</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>rstp_msg_release_resource</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_ReceiveTask</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>rstp_data_receive_check</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_TransmitTask</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Receive_RSTP_FRAME_TYPE_DATA_ACK</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Receive_RSTP_FRAME_TYPE_SDATA</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Receive_RSTP_FRAME_TYPE_DATA</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Receive_RSTP_FRAME_TYPE_DATAN</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Receive_RSTP_FRAME_TYPE_CHANNEL_RESET</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Receive_RSTP_FRAME_TYPE_INIT</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_Transmit</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_DisableAckTx</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+<tr>
+<td>RSTPData_isBufferFull</td>
+<td></td>
+<td id="passed">OK</td>
+</tr>
+</table>
+</body>
+</html>

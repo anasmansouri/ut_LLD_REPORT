@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="16" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:05:40" time="0.004" name="AllTests">
+  <testsuite name="GTestClass_CtPowerManagementSwc_CMP" tests="16" failures="0" disabled="0" errors="0" time="0.004">
+    <testcase name="CMP_Initialization" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Initialization of CMP Swc"/>
+<property name="Tested_LLD_IDs" value="SW_PM_CMP_41, SW_PM_CMP_42"/>
+<property name="Test_Step_0" value="Initialization of CMP after Reset updating Reset Counter, no Knockout occured"/>
+<property name="Test_Step_1" value="Initialization of CMP Swc after Reset, Reset counter at limit, Knockout occured"/>
+<property name="Expected_2" value="Swc is initialized"/>
+</properties>
+    </testcase>
+    <testcase name="SetKnockout" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Set Knockout"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Knockout occured value is set"/>
+<property name="Expected_1" value="Value is stored"/>
+</properties>
+    </testcase>
+    <testcase name="NADSwitchOff" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="NAD Switch Off"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Expected_0" value="CAN Communication is switched on/off depending on ECall active, Ecall armed,ROA "/>
+</properties>
+    </testcase>
+    <testcase name="NewState" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check New State"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Check the New state VTSACT_STATE_CBOX_OFF "/>
+<property name="Test_Step_1" value="Check the New state VTSACT_STATE_CBOX_ON "/>
+<property name="Test_Step_2" value="Check the New state VTSACT_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY "/>
+<property name="Test_Step_3" value="Check the New state VTSACT_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY "/>
+<property name="Test_Step_4" value="Check the New state VTSACT_STATE_CBOX_ECALL_ACTIVE "/>
+<property name="Test_Step_5" value="Check the New state VTSACT_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER "/>
+<property name="Test_Step_6" value="Check the New state VTSACT_STATE_CBOX_POWER_SAVE_CAN_OFF "/>
+<property name="Test_Step_7" value="Check the New state VTSACT_STATE_PMODE_CAN_ON "/>
+<property name="Test_Step_8" value="Check the New state VTSACT_STATE_TMODE_CAN_ON "/>
+<property name="Test_Step_9" value="Check the New state VTSTHEFT_STATE_ALARM_THEFT_CL30_ON "/>
+<property name="Test_Step_10" value="Check the New state VTSTHEFT_STATE_ALARM_THEFT_CL30_OFF "/>
+<property name="Test_Step_11" value="Check the New state VTSTHEFT_STATE_ALARM_THEFT_ECALL_CL30_ON "/>
+<property name="Test_Step_12" value="Check the New state VTSTHEFT_STATE_ALARM_THEFT_ECALL_CL30_OFF "/>
+<property name="Test_Step_13" value="Check the New state VTSTHEFT_STATE_ALARM_THEFT_POWER_SAVE "/>
+<property name="Test_Step_14" value="Check the New state NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER "/>
+</properties>
+    </testcase>
+    <testcase name="WakeupReason" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check the wakeup reason"/>
+<property name="Tested_LLD_IDs" value="SW_PM_CMP_50, SW_PM_CMP_19,SW_PM_CMP_20, SW_PM_CMP_58"/>
+<property name="Test_Step_0" value="Power Up with valid wakeupReason MBB_SMS_WAKEUP"/>
+<property name="Test_Step_1" value="Power Up with valid wakeupReason MBB_MQTT_WAKEUP"/>
+<property name="Test_Step_2" value="Power Up with wakeupReason NO_REQUEST"/>
+<property name="Test_Step_3" value="Power Up with wakeupReason read Error"/>
+<property name="Expected_4" value="Wakeup Reason is correctly handled and correct NM_aktiv_Eth_Kom is send"/>
+</properties>
+    </testcase>
+    <testcase name="CyclicTask" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check CAN Communication depending on KL.15"/>
+<property name="Tested_LLD_IDs" value="SW_PM_CMP_14, SW_PM_CMP_15"/>
+<property name="Test_Step_0" value="Switch On Clamp15, CAN Communication required"/>
+<property name="Test_Step_1" value="Switch On Clamp15, CAN Communication required"/>
+<property name="Expected_2" value="CAN Communication switches on/off depending on Clamp 15"/>
+</properties>
+    </testcase>
+    <testcase name="Ecall_Active" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="SW_PM_CMP_55"/>
+<property name="Tested_LLD_IDs" value="Switch CAN Communication when ECall is active"/>
+<property name="Test_Step_0" value="Ecall active is set"/>
+<property name="Test_Step_1" value="Ecall active is not set"/>
+<property name="Expected_2" value="CAN Communication is switched on/off depending on ECall active"/>
+</properties>
+    </testcase>
+    <testcase name="ECall_Armed" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Switch CAN Communication when ECall is armed"/>
+<property name="Tested_LLD_IDs" value="SW_PM_CMP_54"/>
+<property name="Test_Step_0" value="Ecall armed is set"/>
+<property name="Test_Step_1" value="Ecall armed is not set"/>
+<property name="Expected_2" value="CAN Communication is switched on/off depending on ECall armed"/>
+</properties>
+    </testcase>
+    <testcase name="ROA_active" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Switch CAN Communication when ROA is active"/>
+<property name="Tested_LLD_IDs" value="SW_PM_CMP_57"/>
+<property name="Test_Step_0" value="ROA is active"/>
+<property name="Test_Step_1" value="ROA is inactive"/>
+<property name="Expected_2" value="CAN Communication is switched on/off depending on ECall armed"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_CompanionReset_GetCompanionResetReason" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Get Companion Reset Reason"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_POWER "/>
+<property name="Test_Step_1" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_RESET "/>
+<property name="Test_Step_2" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_INTERNAL_RESET "/>
+<property name="Test_Step_3" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_INTERNAL_WDG "/>
+<property name="Test_Step_4" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_EXTERNAL_WDG "/>
+<property name="Test_Step_5" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_CCAN "/>
+<property name="Test_Step_6" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_KL15 "/>
+<property name="Test_Step_7" value="Check with the companion reset reason EcuM_ECUM_WKSOURCE_NAD_RING "/>
+</properties>
+    </testcase>
+    <testcase name="Pi_CompanionReset_GetKl30ResetCount" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Get KL30 Reset Count"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Check the KL30 Reset counter with diffrent values "/>
+</properties>
+    </testcase>
+    <testcase name="UnderOverVoltage_Check" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check Under-/Overvoltage"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="init with normal voltage"/>
+<property name="Test_Step_1" value="measured Undervoltage"/>
+<property name="Test_Step_2" value="measured Overvoltage"/>
+<property name="Test_Step_3" value="measured normal Voltage"/>
+<property name="Test_Step_4" value="measured Voltage in Hysteresis"/>
+<property name="Expected_5" value="Voltage Mode is set depending on measured Voltage"/>
+</properties>
+    </testcase>
+    <testcase name="UpdateDebugLed" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check Update Debug LED"/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Check PWM counting up"/>
+<property name="Test_Step_1" value="Check PWM counting down"/>
+<property name="Test_Step_2" value="Check PWM counting up again"/>
+</properties>
+    </testcase>
+    <testcase name="NadWakeup_TimeoutTimer" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check Nad Wakeup Timeout Timer "/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Wakeup timer active and value set to 12"/>
+<property name="Test_Step_1" value="Wakeup timer active and value set to 5"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_WakeupActive" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check RSTP Wakeup Active "/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Check when the status is NULL_PTR "/>
+<property name="Test_Step_1" value="Check when the status is valid and wakeup timer active "/>
+<property name="Test_Step_2" value="Check when the status is valid and wakeup timer in active "/>
+</properties>
+    </testcase>
+    <testcase name="HandleECallArmed" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_CMP">
+<properties>
+<property name="Description" value="Check Handle ECall Armed "/>
+<property name="Tested_LLD_IDs" value="-"/>
+<property name="Test_Step_0" value="Check when the KL15 ON and m_bECallArmed is TRUE"/>
+<property name="Test_Step_1" value="Check when the KL15 OFF and m_bECallArmed is FALSE "/>
+<property name="Test_Step_2" value="Check when the KL15 OFF and m_bECallArmed is TRUE "/>
+<property name="Test_Step_3" value="Check when the KL15 ON and m_bECallArmed is FALSE "/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="15" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:13:03" time="0.142" name="AllTests">
+  <testsuite name="GTestClass_cdd_EventMemory" tests="15" failures="0" disabled="0" errors="0" time="0.142">
+    <testcase name="GetMeasurementValue_test" status="run" time="0.002" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function GetMeasurementValue"/>
+<property name="Test_Step_0" value="nadResult == RTE_E_OK and Rte_Call_CDD_EventMemoryExtendedFFD_NAD_ConditionCheckRead returns RTE_E_OK"/>
+<property name="Test_Step_1" value="nadResult == RTE_E_INVALID and Rte_Call_CDD_EventMemoryExtendedFFD_NAD_ConditionCheckRead returns RTE_E_OK"/>
+<property name="Test_Step_2" value="nadResult == RTE_E_CDD_EventMemoryExtendedFFD_NAD_E_PENDING and Rte_Call_CDD_EventMemoryExtendedFFD_NAD_ConditionCheckRead returns RTE_E_OK"/>
+</properties>
+    </testcase>
+    <testcase name="FetchMeasurementValuesForDTC_test" status="run" time="0.001" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function GetMeasurementValueIDsForDTC"/>
+<property name="Test_Step_0" value="Provides the MWB IDs for the given DTC ID"/>
+<property name="Test_Step_1" value="Fetches the MWB values for the given DTC ID to the global pending_measurement_values array"/>
+</properties>
+    </testcase>
+    <testcase name="CombineMeasurementValues_pending_measurement_values" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function CombineMeasurementValues"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_ExtendedFreezeFrames_RequestExtendedFreezeFrames_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_ExtendedFreezeFrames_RequestExtendedFreezeFrames_test"/>
+<property name="Test_Step_0" value="Check if : oldDtcId != dtcID =&gt; Reset Buffers"/>
+<property name="Test_Step_1" value="Check if : oldDtcId == dtcID =&gt; fetch buffers"/>
+</properties>
+    </testcase>
+    <testcase name="Dem_ExtendedFFDRead_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Dem_ExtendedFFDRead"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemory_Dummy_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_EventMemory_Dummy : empty function"/>
+</properties>
+    </testcase>
+    <testcase name="APL_DEH_ReadAddFF_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function APL_DEH_ReadAddFF"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0001_V001,LLD_ID_Cdd_EventMemory_0002_V001,LLD_ID_Cdd_EventMemory_0003_V001,LLD_ID_Cdd_EventMemory_0004_V001,LLD_ID_Cdd_EventMemory_0005_V001,LLD_ID_Cdd_EventMemory_0006_V001,LLD_ID_Cdd_EventMemory_0007_V001,LLD_ID_Cdd_EventMemory_0008_V001,LLD_ID_Cdd_EventMemory_0009_V001,LLD_ID_Cdd_EventMemory_0010_V001"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemoryInit_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_EventMemoryInit_test"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0024_V001,LLD_ID_Cdd_EventMemory_0025_V001"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemory_ClearSentDtcStatus_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_EventMemory_ClearSentDtcStatus"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0011_V001,LLD_ID_Cdd_EventMemory_0012_V001"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemory_DemSetEvent_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_EventMemory_DemSetEvent"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0013_V001,LLD_ID_Cdd_EventMemory_0014_V001,LLD_ID_Cdd_EventMemory_0015_V001,LLD_ID_Cdd_EventMemory_0016_V001,LLD_ID_Cdd_EventMemory_0017_V001"/>
+</properties>
+    </testcase>
+    <testcase name="DtcStatusRead_MainFunction_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function DtcStatusRead_MainFunction"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0026_V001,LLD_ID_Cdd_EventMemory_0027_V001,LLD_ID_Cdd_EventMemory_0028_V001"/>
+<property name="Test_Step_0" value="call DtcStatusRead_MainFunction_1sCycle() every 1000ms"/>
+<property name="Test_Step_1" value="Update NM_Sekundaer_F0_KD_Fehler of KN_Sekundaer_F0 CAN message "/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemory_UpdateSentDTCCache_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_EventMemory_UpdateSentDTCCache"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0022_V001,LLD_ID_Cdd_EventMemory_0023_V001"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemory_SendDTCToNAD_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function Cdd_EventMemory_SendDTCToNAD"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0018_V001,LLD_ID_Cdd_EventMemory_0019_V001"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_EventMemory_StoredInNVM_test" status="run" time="0" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Checking the function Cdd_EventMemory_StoredInNVM"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0020_V001,LLD_ID_Cdd_EventMemory_0021_V001"/>
+</properties>
+    </testcase>
+    <testcase name="DtcStatusRead_MainFunction_1sCycle_test" status="run" time="0.138" classname="GTestClass_cdd_EventMemory">
+<properties>
+<property name="Description" value="Test the function DtcStatusRead_MainFunction_1sCycle"/>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_EventMemory_0029_V001,LLD_ID_Cdd_EventMemory_0030_V001,LLD_ID_Cdd_EventMemory_0031_V001"/>
+<property name="Test_Step_0" value="eventStatusReturn is NotOk"/>
+<property name="Test_Step_1" value="eventStatusReturn is Ok"/>
+<property name="Test_Step_2" value="Testing with different switch cases by changing the value of cachedDTCStoredInNVM"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

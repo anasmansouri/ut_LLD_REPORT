@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="34" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:06:52" time="0.005" name="AllTests">
+  <testsuite name="GTestClass_CtPowerManagementSwc_NAD" tests="34" failures="0" disabled="0" errors="0" time="0.005">
+    <testcase name="CtPowerManagementSwc_NAD_ClampStates_10ms_test" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0040_V001,LLD_ID_CtPowerManagementSwc_NAD_0041_V001,LLD_ID_CtPowerManagementSwc_NAD_0042_V001,LLD_ID_CtPowerManagementSwc_NAD_0043_V001,LLD_ID_CtPowerManagementSwc_NAD_0044_V001,LLD_ID_CtPowerManagementSwc_NAD_0045_V001,LLD_ID_CtPowerManagementSwc_NAD_0046_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_ClampStates_10ms_test"/>
+<property name="Test_Step_0" value="Get the KL states, and apdate values if any change"/>
+<property name="Test_Step_1" value="check if KL states are sended"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_Cyclic_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0047_V001,LLD_ID_CtPowerManagementSwc_NAD_0048_V001,LLD_ID_CtPowerManagementSwc_NAD_0049_V001,LLD_ID_CtPowerManagementSwc_NAD_0050_V001,LLD_ID_CtPowerManagementSwc_NAD_0051_V001,LLD_ID_CtPowerManagementSwc_NAD_0052_V001,LLD_ID_CtPowerManagementSwc_NAD_0053_V001,LLD_ID_CtPowerManagementSwc_NAD_0054_V001,LLD_ID_CtPowerManagementSwc_NAD_0056_V001,LLD_ID_CtPowerManagementSwc_NAD_0057_V001,LLD_ID_CtPowerManagementSwc_NAD_0058_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_Cyclic"/>
+<property name="Test_Step_0" value="Check if the NAD is requesting =&gt; the wakeup from sleep should be covered and NAD_WAKE_UC wakeup event should be handled"/>
+<property name="Test_Step_1" value="Once channel-reset is received =&gt; tick the state machine and restart mechanism"/>
+<property name="Test_Step_2" value="Handling of timer : if the timer is expired =&gt; clear RUN request"/>
+</properties>
+    </testcase>
+    <testcase name="sendWakeupReason_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function sendWakeupReason"/>
+</properties>
+    </testcase>
+    <testcase name="convertToJSONdef_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function convertToJSONdef"/>
+</properties>
+    </testcase>
+    <testcase name="powerStateConfirm_triggerRetry_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function powerStateConfirm_triggerRetry"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_CASE_1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on STATE_CBOX_FULL_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_CASE_2" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on NOM_STATE_CBOX_ON"/>
+<property name="Test_Step_0" value="Set the current state on STATE_CBOX_INIT"/>
+<property name="Test_Step_1" value="Set the current state on NOM_STATE_CBOX_OFF"/>
+<property name="Test_Step_2" value="Set the current state on NOM_STATE_CBOX_POWER_SAVE_CAN_OFF"/>
+<property name="Test_Step_3" value="Set the current state on VTSACT_STATE_CBOX_OFF"/>
+<property name="Test_Step_4" value="Set the current state on VTSACT_STATE_CBOX_POWER_SAVE_CAN_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_3" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on NOM_STATE_CBOX_ECALL_ACTIVE"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_4" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on NOM_STATE_CBOX_POWER_SAVE_CAN_OFF_CMP_ON"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_5" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on NOM_STATE_CBOX_POWER_SAVE_CAN_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_CASE_6" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on NOM_STATE_CBOX_TEMP_ON_CL30_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_CASE_7" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on BEM_STATE_CBOX_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_8" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on BEM_STATE_CBOX_ON_BEM"/>
+<property name="Test_Step_0" value="Set the current state on BEM_STATE_CBOX_OFF"/>
+<property name="Test_Step_1" value="Set the current state on TMODE_STATE_CBOX_OFF_TMODE"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_9" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on BEM_STATE_CBOX_BEM_CAN_ON"/>
+<property name="Test_Step_0" value="Set the current state on BEM_STATE_CBOX_OFF"/>
+<property name="Test_Step_1" value="Set the current state on TMODE_STATE_CBOX_OFF_TMODE"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_10" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on TMODE_STATE_CBOX_TMODE_CAN_ON"/>
+<property name="Test_Step_0" value="Set the current state on TMODE_STATE_CBOX_OFF_TMODE"/>
+<property name="Test_Step_1" value="Set the current state on BEM_STATE_CBOX_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_11" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on PQRSMODE_STATE_CBOX_ON"/>
+<property name="Test_Step_0" value="Set the current state on PQRSMODE_STATE_CBOX_OFF"/>
+<property name="Test_Step_1" value="Set the current state on PQRSMODE_STATE_CBOX_ON_PMODE"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_12" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is on PQRSMODE_STATE_CBOX_PMODE_CAN_ON"/>
+<property name="Test_Step_0" value="Set the current state on PQRSMODE_STATE_CBOX_OFF"/>
+<property name="Test_Step_1" value="Set the current state on PQRSMODE_STATE_CBOX_ON_PMODE"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_13" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of target state is equal to current state"/>
+<property name="Test_Step_0" value="if the current transition is finished =&gt; queued another one"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HandleStateMachine_test_CASE_14" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HandleStateMachine in case of state transition is ongoing"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_HardResetPerformed_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0062_V001,LLD_ID_CtPowerManagementSwc_NAD_0063_V001,LLD_ID_CtPowerManagementSwc_NAD_0064_V001,LLD_ID_CtPowerManagementSwc_NAD_0065_V001,LLD_ID_CtPowerManagementSwc_NAD_0066_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_HardResetPerformed"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_NewState_test" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0073_V001,LLD_ID_CtPowerManagementSwc_NAD_0074_V001,LLD_ID_CtPowerManagementSwc_NAD_0075_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_NewState"/>
+<property name="Test_Step_0" value="Set the current state on STATE_CBOX_INIT =&gt; dont wait for the confirmation process to end"/>
+<property name="Test_Step_1" value="Set the current state on STATE_CBOX_FULL_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_RSTP_Channel_Reset_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0079_V001,LLD_ID_CtPowerManagementSwc_NAD_0080_V001,LLD_ID_CtPowerManagementSwc_NAD_0081_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_RSTP_Channel_Reset"/>
+<property name="Test_Step_0" value="Set the current state on STATE_CBOX_INIT"/>
+<property name="Test_Step_1" value="Set the current state on STATE_CBOX_FULL_OFF"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_RSTP_confirmPowerState_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0082_V001,LLD_ID_CtPowerManagementSwc_NAD_0083_V001,LLD_ID_CtPowerManagementSwc_NAD_0084_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_RSTP_confirmPowerState"/>
+<property name="Test_Step_0" value="Reading the confirmation received from the NAD  and checking that we are waiting for confirmation =&gt; we reveived the expected confirmation"/>
+<property name="Expected_1" value="Ending the timeout process"/>
+<property name="Test_Step_2" value="Reading the confirmation received from the NAD  and checking that we are waiting for confirmation =&gt; we reveived the unexpected confirmation"/>
+<property name="Expected_3" value="directly resend the PowerState"/>
+<property name="Test_Step_4" value="Reading the confirmation received from the NAD without waiting for a confirmation"/>
+<property name="Test_Step_5" value="Reading the confirmation received from the NAD using Rte_Read_Pi_PowerManagement_RSTP_confirmPowerState_mode returns NotOK"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_ResetReasonUpdate_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0076_V001,LLD_ID_CtPowerManagementSwc_NAD_0077_V001,LLD_ID_CtPowerManagementSwc_NAD_0078_V001"/>
+<property name="Description" value="Checking the function CtPowerManagementSwc_NAD_ResetReasonUpdate"/>
+<property name="Test_Step_0" value="fNadResetReason is equal to SYSTEM_FAILURE and the counter returns the max value"/>
+<property name="Test_Step_1" value="fNadResetReason is equal to SYSTEM_FAILURE and the counter returns a value less than MAX_UINT16"/>
+<property name="Test_Step_2" value="fNadResetReason is equal to LOW_RESOURCES and the counter returns a value less than MAX_UINT16"/>
+<property name="Test_Step_3" value="fNadResetReason is equal to CMP_NAD_TIMEOUT_ECALL and the counter returns a value less than MAX_UINT16"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_NAD_Watchdog_Response_GetReponse_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0085_V001,LLD_ID_CtPowerManagementSwc_NAD_0086_V001,LLD_ID_CtPowerManagementSwc_NAD_0087_V001,LLD_ID_CtPowerManagementSwc_NAD_0088_V001,LLD_ID_CtPowerManagementSwc_NAD_0089_V001,LLD_ID_CtPowerManagementSwc_NAD_0090_V001,LLD_ID_CtPowerManagementSwc_NAD_0091_V001,LLD_ID_CtPowerManagementSwc_NAD_0092_V001,LLD_ID_CtPowerManagementSwc_NAD_0093_V001,LLD_ID_CtPowerManagementSwc_NAD_0094_V001,LLD_ID_CtPowerManagementSwc_NAD_0095_V001,LLD_ID_CtPowerManagementSwc_NAD_0096_V001,LLD_ID_CtPowerManagementSwc_NAD_0097_V001,LLD_ID_CtPowerManagementSwc_NAD_0098_V001,LLD_ID_CtPowerManagementSwc_NAD_0099_V001,LLD_ID_CtPowerManagementSwc_NAD_0100_V001,LLD_ID_CtPowerManagementSwc_NAD_0101_V001,LLD_ID_CtPowerManagementSwc_NAD_0102_V001,LLD_ID_CtPowerManagementSwc_NAD_0103_V001"/>
+<property name="Description" value="checking the function CtPowerManagementSwc_NAD_Watchdog_Response_GetReponse"/>
+<property name="Test_Step_0" value="NAD response is OK and counter is greater than 0 =&gt; decrement counter"/>
+<property name="Test_Step_1" value="NAD response is OK and counter is equal to 0 =&gt; counter should not be decremented"/>
+<property name="Test_Step_2" value="No response from NAD =&gt; increment counter, if the max number of NoResponses is reached, the NAD should be reset"/>
+</properties>
+    </testcase>
+    <testcase name="powerStateConfirm_updateCounter_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Description" value="Checking the function powerStateConfirm_updateCounter"/>
+<property name="Test_Step_0" value="if PowerState confirmation counter is handled =&gt; decrement counter and check that no underflow is occuring"/>
+<property name="Expected_1" value="NAD is already OFF - cancel exchange sequence"/>
+<property name="Expected_2" value="NAD is ON"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_NadReset_GetNadResetCounter_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0108_V001,LLD_ID_CtPowerManagementSwc_NAD_0109_V001"/>
+<property name="Description" value="Checking the function Pi_NadReset_GetNadResetCounter"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_NadReset_GetNadResetReason_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0110_V001,LLD_ID_CtPowerManagementSwc_NAD_0111_V001"/>
+<property name="Description" value="Checking the function Pi_NadReset_GetNadResetReason"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtPowerManagementSwc_NAD_RecieveCallback_RSTP_Callback_test" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0112_V001,LLD_ID_CtPowerManagementSwc_NAD_0113_V001"/>
+<property name="Description" value="Checking the function RSTP_CtPowerManagementSwc_NAD_RecieveCallback_RSTP_Callback"/>
+<property name="Test_Step_0" value="receiving Not supported or unused message IDs"/>
+<property name="Test_Step_1" value="Timer values are received from NAD"/>
+</properties>
+    </testcase>
+    <testcase name="NAD_RSTP_Watchdog_No_Undesired_NAD_Reset" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0085_V001"/>
+<property name="Description" value="Test the NAD RSTP watchdog"/>
+</properties>
+    </testcase>
+    <testcase name="NAD_RSTP_Watchdog_can_reset_NAD" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0067_V001,LLD_ID_CtPowerManagementSwc_NAD_0085_V001"/>
+<property name="Description" value="Test the NAD RSTP watchdog"/>
+</properties>
+    </testcase>
+    <testcase name="NAD_RSTP_Watchdog_No_Undesired_CMP_Reset" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0067_V001,LLD_ID_CtPowerManagementSwc_NAD_0085_V001"/>
+<property name="Description" value="Test the NAD RSTP watchdog"/>
+</properties>
+    </testcase>
+    <testcase name="NAD_RSTP_Watchdog_can_reset_CMP" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0067_V001,LLD_ID_CtPowerManagementSwc_NAD_0085_V001"/>
+<property name="Description" value="Test the NAD RSTP watchdog"/>
+</properties>
+    </testcase>
+    <testcase name="NAD_RSTP_Watchdog_CMP_reset_counter_can_be_reset" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_NAD">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtPowerManagementSwc_NAD_0067_V001,LLD_ID_CtPowerManagementSwc_NAD_0085_V001"/>
+<property name="Description" value="Test the NAD RSTP watchdog"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

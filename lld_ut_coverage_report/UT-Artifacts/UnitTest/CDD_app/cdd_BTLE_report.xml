@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="16" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:10:57" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_cdd_BTLE" tests="16" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="Cdd_BTLE_Cyclic" status="run" time="0.001" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine "/>
+<property name="Test_Step_0" value="current state and target state are the same =&gt; nothing to be changed in the state machine"/>
+<property name="Test_Step_1" value="current state is IDLE and target state is forcing bootloader"/>
+<property name="Test_Step_2" value="current state is FORCING BOOT_LOADER and target state is forcing bootloader, eStateStep is  0"/>
+<property name="Test_Step_3" value="current state is FORCING BOOT_LOADER and target state is  bootloader, eStateStep is not 0"/>
+<property name="Test_Step_4" value="current state is FORCING BOOT_LOADER and target state is  bootloader, eStateStep is not 0"/>
+<property name="Test_Step_5" value="no response id received from the bootloader : cdd_BTLE state changed to STATE_ERROR"/>
+<property name="Test_Step_6" value="move to state : STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_7" value="move to state : STATE_RUNNING_APP "/>
+<property name="Test_Step_8" value="Go back to IDLE state "/>
+<property name="Test_Step_9" value="move from idle state to ERROR_State: Failed to start application "/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_2" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine_2 "/>
+<property name="Test_Step_0" value="move from current state unlocked to current state error when Failed to start DTM application"/>
+<property name="Test_Step_1" value="move from current state unlocked to current state DTM "/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_3" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine_3 "/>
+<property name="Test_Step_0" value="move from current state DTM to current state error when Failed to send DTM command"/>
+<property name="Test_Step_1" value="move from current state ERROR to current state STATE_DTM_SEND_CMD"/>
+<property name="Test_Step_2" value="move back from current state STATE_DTM_SEND_CMD to current state ERROR"/>
+<property name="Test_Step_3" value="move back from current state ERROR to current state STATE_DTM_SEND_CMD"/>
+<property name="Test_Step_4" value="move  from current state STATE_DTM_SEND_CMD to current state DTM"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_4" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine_4 "/>
+<property name="Test_Step_0" value="move from target state DTM to target state EXIT_DTM and then go back to IDLE state"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_5" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine_5 "/>
+<property name="Test_Step_0" value="From STATE_IDLE to STATE_ERROR"/>
+<property name="Test_Step_1" value="Go back to IDLE State"/>
+<property name="Test_Step_2" value="From STATE_IDLE to STATE_ERROR"/>
+<property name="Test_Step_3" value="Go back to IDLE State"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_6" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine_6: target state is app version read."/>
+<property name="Test_Step_0" value="Go to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_1" value="target state is  STATE_APP_VERSION_READ"/>
+<property name="Test_Step_2" value="read application version."/>
+<property name="Test_Step_3" value="Wait for btle bootloader response, negative test =&gt; response will not be received during the timeout =&gt; state is error."/>
+<property name="Test_Step_4" value="Go back from error state to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_5" value="target state is  STATE_APP_VERSION_READ"/>
+<property name="Test_Step_6" value="read application version."/>
+<property name="Test_Step_7" value="Wait for btle bootloader response, negative test =&gt; response will be received, with negative success code =&gt; Try to read the app version using the legacy read."/>
+<property name="Test_Step_8" value="Wait for btle bootloader response, negative test =&gt; response will not be received during the timeout =&gt; state is error."/>
+<property name="Test_Step_9" value="Go back from error state to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_10" value="target state is  STATE_APP_VERSION_READ"/>
+<property name="Test_Step_11" value="read application version."/>
+<property name="Test_Step_12" value="Wait for btle bootloader response, negative test =&gt; response will be received, with negative success code =&gt; Try to read the app version using the legacy read."/>
+<property name="Test_Step_13" value="Wait for btle bootloader response, negative test =&gt; response will be received with failed success code=&gt; state is error."/>
+<property name="Test_Step_14" value="Go back from error state to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_15" value="target state is  STATE_APP_VERSION_READ"/>
+<property name="Test_Step_16" value="read application version."/>
+<property name="Test_Step_17" value="Wait for btle bootloader response, negative test =&gt; response will be received, with negative success code =&gt; Try to read the app version using the legacy read."/>
+<property name="Test_Step_18" value="Wait for btle bootloader response, positive test =&gt; response will be received with success code=&gt; state is STATE_APP_VERSION_READ."/>
+<property name="Test_Step_19" value="Go back from error state to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_20" value="target state is  STATE_APP_VERSION_READ"/>
+<property name="Test_Step_21" value="read application version."/>
+<property name="Test_Step_22" value="Wait for btle bootloader response, positive test =&gt; response will be received with success code=&gt; state is STATE_APP_VERSION_READ."/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_7" status="run" time="0.001" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Cyclic managing state machine_7: target state is STATE_BL_POWER_DOWN ."/>
+<property name="Test_Step_0" value="Go to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_1" value="target state is  STATE_BL_POWER_DOWN"/>
+<property name="Test_Step_2" value="Enter DSM is OK"/>
+<property name="Test_Step_3" value="Wait for btle bootloader response, negative test =&gt; response will not be received during the timeout =&gt; state is error."/>
+<property name="Test_Step_4" value="Go back to IDLE state."/>
+<property name="Test_Step_5" value="Repeat : Go back to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_6" value="target state is  STATE_BL_POWER_DOWN"/>
+<property name="Test_Step_7" value="Enter DSM is OK"/>
+<property name="Test_Step_8" value="Wait for btle bootloader response, negative test =&gt; response will be received, with negative success code =&gt; Try to read the app version using the legacy read."/>
+<property name="Test_Step_9" value="Go back to IDLE state."/>
+<property name="Test_Step_10" value="Repeat : Go back to STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_11" value="target state is  STATE_BL_POWER_DOWN"/>
+<property name="Test_Step_12" value="Enter DSM is OK"/>
+<property name="Test_Step_13" value="Wait for btle bootloader response, Positive test =&gt; response will be received, with success code =&gt; State is power down."/>
+<property name="Test_Step_14" value="Go back to IDLE state."/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Cyclic_8" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="negative test to check if cyclic function handles the states where a not valid state step is entred."/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_Unlock" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="Cdd_BTLE_Unlock function check."/>
+<property name="Test_Step_0" value="Cdd_BTLE_Unlock function check when current state is STATE_BOOT_LOADER =&gt; target state should be STATE_SECURITY_UNLOCKED"/>
+<property name="Test_Step_1" value="Cdd_BTLE_Unlock function check when current state is STATE_BOOT_LOADER =&gt; target state should be STATE_SECURITY_UNLOCKED"/>
+</properties>
+    </testcase>
+    <testcase name="sendDsmMsgToBtleApp" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value="sendDsmMsgToBtleApp function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_ChipReset_Request" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value=" Cdd_BTLE_ChipReset_Request function check"/>
+<property name="Test_Step_0" value="nothing expected to be changed inside the component."/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_ConfigureSleep" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value=" Cdd_BTLE_ConfigureSleep function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_ConfigureWake" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value=" Cdd_BTLE_ConfigureWake function check"/>
+<property name="Test_Step_0" value="nothing expected to be changed inside the component."/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_BTLE_RequestRandomBytes" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value=" Cdd_BTLE_RequestRandomBytes function check"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_INTF_Init" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value=" CDD_BTLE_INTF_Init function check"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_BTLE_INTF_Cyclic" status="run" time="0" classname="GTestClass_cdd_BTLE">
+<properties>
+<property name="Description" value=" CDD_BTLE_INTF_Cyclic function check"/>
+<property name="Test_Step_0" value="eState is in init state"/>
+<property name="Test_Step_1" value="move eState to Generate State"/>
+<property name="Test_Step_2" value="move eState to Wait State"/>
+<property name="Test_Step_3" value="callback function is called and change eState to ready state."/>
+<property name="Test_Step_4" value="callback function is called and change eState to Error state."/>
+<property name="Test_Step_5" value="Go back to init state after error."/>
+<property name="Test_Step_6" value="persist at Wait state until the callback function change the state."/>
+<property name="Test_Step_7" value="callback function is called with positive result : random number is ready."/>
+<property name="Test_Step_8" value="random generator state is invalid: nothing to be done!"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

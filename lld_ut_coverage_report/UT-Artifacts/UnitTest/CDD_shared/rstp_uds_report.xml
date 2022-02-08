@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="16" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:20:00" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_rstp_uds" tests="16" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="RSTP_UDS_init" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Initialization of the Tx and Rx part of the RSTP_UDS sw component"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_UDS_Tramsmit" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function RSTP_UDS_Tramsmit"/>
+<property name="Test_Step_0" value="Check alt channel initializing state : request was invalid or the channel was busy"/>
+<property name="Test_Step_1" value="Check all the other cases where the function will return E_NOT_OK"/>
+<property name="Test_Step_2" value="Check alt channel initializing state : transmit-request was accepted and will be executed"/>
+<property name="Test_Step_3" value="Check if Sdu is already in use"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_RxRetrieveApplRxBuffer__bReq_returns_BUFREQ_OK_and_buffer_return_NULL" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_RxRetrieveApplRxBuffer : bReq status returns BUFREQ_OK"/>
+<property name="Test_Step_0" value="Got buffer and Save the length of the provided buffer &amp;&amp; tpRxState is NULL"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_RxRetrieveApplRxBuffer__bReq_returns_BUFREQ_OK_or_BUFREQ_E_BUSY" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_RxRetrieveApplRxBuffer : bReq status returns BUFREQ_OK or BUFREQ_E_BUSY"/>
+<property name="Test_Step_0" value="Got buffer and Save the length of the provided buffer"/>
+<property name="Test_Step_1" value="Waiting for getting more buffer or until timeout appears"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_RxRetrieveApplRxBuffer_bReq_returns_BUFREQ_E_NOT_OK_or_BUFREQ_E_OVFL" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_RxRetrieveApplRxBuffer : bReq status returns BUFREQ_E_NOT_OK or BUFREQ_E_OVFL"/>
+<property name="Test_Step_0" value="buffer status not Ok"/>
+<property name="Test_Step_1" value="buffer status not supported"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_TxRetrieveApplTxBuffer_bReq_returns_BUFREQ_OK_and_buffer_return_NULL" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Test_Step_0" value="Got buffer and Save the length of the provided buffer &amp;&amp; tpTxState is NULL"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_TxRetrieveApplTxBuffer_bReq_returns_BUFREQ_OK_and_buffer_not_NULL" status="run" time="0.001" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_TxRetrieveApplTxBuffer :  bReq status returns BUFREQ_OK"/>
+<property name="Test_Step_0" value="Got buffer and Save the length of the provided buffer &amp;&amp; tpTxState is not NULL"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_TxRetrieveApplTxBuffer__bReq_returns_BUFREQ_OK_and_buffer_return__not_NULL_and_rstp_data_transmit_returns_not_ok" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_TxRetrieveApplTxBuffer : bReq status returns BUFREQ_OK"/>
+<property name="Test_Step_0" value="Got buffer and Save the length of the provided buffer &amp;&amp; tpRxState is NULL &amp;&amp; RSTPData_Transmit is not_ok"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_TxRetrieveApplTxBuffer_bReq_returns_BUFREQ_E_BUSY" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_TxRetrieveApplTxBuffer :  bReq status returns BUFREQ_E_BUSY"/>
+<property name="Test_Step_0" value="bReq status returns BUFREQ_E_BUSY"/>
+</properties>
+    </testcase>
+    <testcase name="vRSTP_UDS_TxRetrieveApplTxBuffer_bReq_returns_BUFREQ_E_NOT_OK_or_BUFREQ_E_OVFL" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function vRSTP_UDS_TxRetrieveApplTxBuffer : bReq status returns BUFREQ_E_NOT_OK or BUFREQ_E_OVFL"/>
+<property name="Test_Step_0" value="bReq status returns BUFREQ_E_NOT_OK"/>
+<property name="Test_Step_1" value="bReq status returns BUFREQ_E_OVFL"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_UDS_RSTPApp_Receive" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Handle RSTP_UDS_Receive"/>
+<property name="Test_Step_0" value="RSTPUDS_RxBuffer[UdsRxPduId].length &lt; length"/>
+<property name="Test_Step_1" value="RSTPUDS_RxBuffer[UdsRxPduId].length &lt;= length &amp;&amp; cRxState_Idle == tpRxState[UdsRxPduId].ChannelState"/>
+<property name="Test_Step_2" value="RSTPUDS_RxBuffer[UdsRxPduId].length &lt;= length &amp;&amp; cRxState_Idle != tpRxState[UdsRxPduId].ChannelState"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_UDS_RSTPApp_ReceiveAlt" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Handle RSTP_UDS_ReceiveAlt"/>
+<property name="Test_Step_0" value="length==1"/>
+<property name="Test_Step_1" value="length&gt;1 &amp;&amp; RSTPUDS_RxBuffer[UdsRxPduId].length &lt; length "/>
+<property name="Test_Step_2" value="length&gt;1 &amp;&amp; bufferPtr[0] &amp; RSTP_UDS_PREFIX_COMMAND_MSK!=0 &amp;&amp; bufferPtr[1]==RSTP_UDS_RSP_INIT"/>
+<property name="Test_Step_3" value="length&gt;1 &amp;&amp; bufferPtr[0] &amp; RSTP_UDS_PREFIX_COMMAND_MSK!=0 &amp;&amp; bufferPtr[1]!=RSTP_UDS_RSP_INIT"/>
+<property name="Test_Step_4" value="length&gt;1 &amp;&amp; bufferPtr[0] &amp; RSTP_UDS_PREFIX_COMMAND_MSK==0 &amp;&amp; tpRxState[UdsRxPduId].ChannelState==cRxState_Idle"/>
+<property name="Test_Step_5" value="tpRxState[UdsRxPduId].ChannelState!=cRxState_Idle"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_UDS_RSTPApp_ChannelReset" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function RSTP_UDS_RSTPApp_ChannelReset"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_UDS_MainFunction" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function RSTP_UDS_MainFunction"/>
+<property name="Test_Step_0" value="RSTP_UDS_Initialized=TRUE &amp;&amp; tpRxState[UdsRxPduId].ChannelState=cRxState_Idle"/>
+<property name="Test_Step_1" value="RSTP_UDS_Initialized=TRUE &amp;&amp; tpRxState[UdsRxPduId].ChannelState=cRxState_WaitForRxBuffer"/>
+<property name="Test_Step_2" value="RSTP_UDS_Initialized=TRUE &amp;&amp; tpRxState[UdsRxPduId].ChannelState=2"/>
+<property name="Test_Step_3" value="RSTP_UDS_Initialized=FALSE"/>
+<property name="Test_Step_4" value="TRUE == RSTP_UDS_Initialized &amp;&amp; RSTP_UDS_ALTCHANNEL_INITIALIZING == altchannelState &amp;&amp; RSTP_UDS_ALTCHANNEL_INIT_TIMEOUT &lt;= altchannelInitTimer"/>
+<property name="Test_Step_5" value="TRUE == RSTP_UDS_Initialized &amp;&amp; RSTP_UDS_ALTCHANNEL_INITIALIZING == altchannelState &amp;&amp; RSTP_UDS_ALTCHANNEL_INIT_TIMEOUT &gt; altchannelInitTimer &amp;&amp; RSTP_CH_ISO_TP_TUNNEL_ALT == activeRSTPChannel"/>
+<property name="Test_Step_6" value="TRUE == RSTP_UDS_Initialized &amp;&amp; RSTP_UDS_ALTCHANNEL_INITIALIZING == altchannelState &amp;&amp; RSTP_UDS_ALTCHANNEL_INIT_TIMEOUT &gt; altchannelInitTimer &amp;&amp; RSTP_CH_ISO_TP_TUNNEL_ALT != activeRSTPChannel"/>
+<property name="Test_Step_7" value="TRUE == RSTP_UDS_Initialized &amp;&amp; tpTxState[UdsTxPduId].ChannelState=cTxState_Idle"/>
+<property name="Test_Step_8" value="TRUE == RSTP_UDS_Initialized &amp;&amp; tpTxState[UdsTxPduId].ChannelState=cTxState_WaitForTxBuffer"/>
+<property name="Test_Step_9" value="TRUE == RSTP_UDS_Initialized &amp;&amp; tpTxState[UdsTxPduId].ChannelState=2"/>
+<property name="Test_Step_10" value="RSTP_UDS_Initialized=FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="rstp_uds_transmit_saved_response" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function rstp_uds_transmit_saved_response"/>
+<property name="Test_Step_0" value="Data ptr is not null &amp;&amp; the response is saved"/>
+<property name="Test_Step_1" value="Data ptr is not null &amp;&amp; the response is not saved"/>
+<property name="Test_Step_2" value="Data ptr is null &amp;&amp; the response is saved"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_UDS_printActiveChannel" status="run" time="0" classname="GTestClass_rstp_uds">
+<properties>
+<property name="Description" value="Checking the function RSTP_UDS_printActiveChannel"/>
+<property name="Test_Step_0" value="activeRSTPChannel_prev == activeRSTPChannel"/>
+<property name="Test_Step_1" value="activeRSTPChannel_prev != activeRSTPChannel &amp;&amp; activeRSTPChannel=RSTP_CH_ISO_TP_TUNNEL_ALT"/>
+<property name="Test_Step_2" value="activeRSTPChannel_prev != activeRSTPChannel &amp;&amp; activeRSTPChannel=RSTP_CH_UNUSED"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:59:54" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_RoutineControlNAD" tests="3" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="CtDiagnosticServices_RoutineControlNAD_RSTP_Callback" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_RoutineControlNAD">
+<properties>
+<property name="Description" value="Checking the function CtDiagnosticServices_RoutineControlNAD_RSTP_Callback"/>
+<property name="Test_Step_0" value="RSTP_ROUTINECONTROL_RESPONSE_MSG_LENGTH == length &amp;&amp; the RSTP message ID returns MSG_ID_NAD2CMP_StartRoutineResponse"/>
+<property name="Test_Step_1" value="RSTP_ROUTINECONTROL_RESPONSE_MSG_LENGTH == length &amp;&amp; the RSTP message ID returns MSG_ID_NAD2CMP_StopRoutineResponse"/>
+<property name="Test_Step_2" value="RSTP_ROUTINECONTROL_RESPONSE_MSG_LENGTH == length &amp;&amp; the RSTP message ID returns MSG_ID_NAD2CMP_RoutineStatusAndResult"/>
+<property name="Test_Step_3" value="RSTP_ROUTINECONTROL_STATUS_MSG_LENGTH == length &amp;&amp; the RSTP message ID returns 0x00U"/>
+<property name="Test_Step_4" value="RSTP_ROUTINECONTROL_STATUS_MSG_LENGTH != length &amp;&amp; RSTP_ROUTINECONTROL_RESPONSE_MSG_LENGTH != length"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_RoutineControlDataToNAD_StartRoutineControlNAD" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControlNAD">
+<properties>
+<property name="Description" value="Checking the function Pi_RoutineControlDataToNAD_StartRoutineControlNAD"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_RoutineControlDataToNAD_StopRoutineControlNAD" status="run" time="0" classname="GTestClass_CtDiagnosticServices_RoutineControlNAD">
+<properties>
+<property name="Description" value="Checking the function Pi_RoutineControlDataToNAD_StopRoutineControlNAD"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

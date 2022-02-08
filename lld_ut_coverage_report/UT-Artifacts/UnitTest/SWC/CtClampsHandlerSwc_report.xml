@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="12" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:54:03" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_CtClampsHandlerSwc" tests="12" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="CtClampsHandlerSwc_Cyclic_100ms_DTC" status="run" time="0.001" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0001_V001,LLD_ID_CtClampsHandler_0002_V001,LLD_ID_CtClampsHandler_0003_V001,LLD_ID_CtClampsHandler_0004_V001,LLD_ID_CtClampsHandler_0005_V001,LLD_ID_CtClampsHandler_0006_V001,LLD_ID_CtClampsHandler_0007_V001"/>
+<property name="Description" value="Checking the function CtClampsHandlerSwc_Cyclic_100ms_DTC"/>
+<property name="Test_Step_0" value="Set Clamp15Int in ON and check if the ECU operating time is incremented each 1s (the time that the Clamp15Int has been on) and stored in NVM, it should be executed each 10ms"/>
+<property name="Test_Step_1" value="Check if the 5 measurements kl30Voltage are stored and calculate the kl30VoltageAverage =&gt; Determine the voltage level and KL30 state (Overvoltage or Undervoltage or OK)"/>
+<property name="Test_Step_2" value="Check the case if KL30 state was on overvoltage and kl30Voltage_mv is not in the hysterisis voltage range =&gt; dtc condition should be set"/>
+<property name="Test_Step_3" value="Check the case if KL30 state was on undervoltage and kl30Voltage_mv is not in the hysterisis voltage range =&gt; dtc condition should be set"/>
+<property name="Test_Step_4" value="Check the case if Klemmen_Status_01 is online"/>
+<property name="Test_Step_5" value="Check the case if Klemmen_Status_01 is offline"/>
+</properties>
+    </testcase>
+    <testcase name="CtClampsHandlerSwc_Cyclic_10ms" status="run" time="0.001" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0008_V001,LLD_ID_CtClampsHandler_0009_V001,LLD_ID_CtClampsHandler_0010_V001,LLD_ID_CtClampsHandler_0011_V001,LLD_ID_CtClampsHandler_0012_V001,LLD_ID_CtClampsHandler_0013_V001,LLD_ID_CtClampsHandler_0014_V001,LLD_ID_CtClampsHandler_0015_V001,LLD_ID_CtClampsHandler_0016_V001,LLD_ID_CtClampsHandler_0017_V001,LLD_ID_CtClampsHandler_0018_V001,LLD_ID_CtClampsHandler_0019_V001"/>
+<property name="Description" value="Checking the function CtClampsHandlerSwc_Cyclic_10ms"/>
+<property name="Test_Step_0" value="Check KL30 state in case of system is not powered by backup battery and get the status of the HW KL15 voltage comparator output in case of clamp15Level is equal to 1V and the status of KLS"/>
+<property name="Test_Step_1" value="Check KL30 state in case of system is not powered by backup battery and get the status of the HW KL15 voltage comparator output in case of clamp15Level is equal to 6V and the status of KLS"/>
+<property name="Test_Step_2" value="Check KL30 state in case of system is powered by backup battery but Rte_Call_Pi_SystemPoweringSource_IsSystemPoweredByBackupBattery returns not ok"/>
+<property name="Test_Step_3" value="Check the case if the KL15 voltage is not stored, Rte_Call_IoHwAb_PowerAdc_IoHwAb_PowerAdc_KL15_AD_getVoltage returns NOT OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtClampsHandlerSwc_Init" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0020_V001,LLD_ID_CtClampsHandler_0021_V001,LLD_ID_CtClampsHandler_0022_V001,LLD_ID_CtClampsHandler_0023_V001,LLD_ID_CtClampsHandler_0024_V001,LLD_ID_CtClampsHandler_0025_V001"/>
+<property name="Description" value="Checking the function CtClampsHandlerSwc_Init"/>
+<property name="Test_Step_0" value="Check if the first measurement to fill up the buffer of KL30 ADC voltage is used"/>
+<property name="Test_Step_1" value="Check if kl15 average indexes and buffers are configured and HwAdcBuffer is initialized"/>
+</properties>
+    </testcase>
+    <testcase name="CtClampsHandlerSwc_Rx_Klemmen_Status_01" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0026_V001,LLD_ID_CtClampsHandler_0027_V001,LLD_ID_CtClampsHandler_0028_V001,LLD_ID_CtClampsHandler_0029_V001,LLD_ID_CtClampsHandler_0030_V001"/>
+<property name="Description" value="Checking the function CtClampsHandlerSwc_Rx_Klemmen_Status_01"/>
+<property name="Test_Step_0" value="Check if Clamp S and Clamp 15 values upon message reception are received and stored"/>
+<property name="Test_Step_1" value="Check if Clamp S and Clamp 15 values upon message reception are not received"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_283_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0031_V001,LLD_ID_CtClampsHandler_0032_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_283_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_283_ReadData" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0033_V001,LLD_ID_CtClampsHandler_0034_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_283_ReadData"/>
+<property name="Test_Step_0" value="Check the case if GetBusStatus_KlemmenStatus01 is ONLINE"/>
+<property name="Test_Step_1" value="Check the case if GetBusStatus_KlemmenStatus01 is OFFLINE"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_286_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0035_V001,LLD_ID_CtClampsHandler_0036_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_286_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_286_ReadData" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0037_V001,LLD_ID_CtClampsHandler_0038_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_286_ReadData"/>
+<property name="Test_Step_0" value="Check the case of the voltage of KL30 in MW range"/>
+<property name="Test_Step_1" value="Check the case of the voltage of KL30 not in MW range"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_3a84_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0039_V001,LLD_ID_CtClampsHandler_0040_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_3a84_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_3a84_ReadData" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0041_V001,LLD_ID_CtClampsHandler_0042_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_3a84_ReadData"/>
+<property name="Test_Step_0" value="Check the case if reading Kl15 is allowed and GetBusStatus_KlemmenStatus01 is OFFLINE"/>
+<property name="Test_Step_1" value="Check the case if reading Kl15 is allowed and GetBusStatus_KlemmenStatus01 is ONLINE"/>
+<property name="Test_Step_2" value="Check the case if reading Kl15 is not allowed"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_3bc4_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0043_V001,LLD_ID_CtClampsHandler_0044_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_3bc4_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_3bc4_ReadData" status="run" time="0" classname="GTestClass_CtClampsHandlerSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtClampsHandler_0045_V001,LLD_ID_CtClampsHandler_0046_V001"/>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_3bc4_ReadData"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

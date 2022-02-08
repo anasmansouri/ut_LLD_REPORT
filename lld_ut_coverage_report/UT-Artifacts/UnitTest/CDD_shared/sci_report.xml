@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="15" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:20:43" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_linflex_sci" tests="15" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="linflexsci_Isr_ERR" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Description" value="linflexsci_Isr_ERR"/>
+<property name="Test_Step_0" value="eChannelId is out of boundaries"/>
+<property name="Test_Step_1" value="eChannelId == E_LINFLEX_SCI_CHAN_BTLE"/>
+<property name="Test_Step_2" value="eChannelID == E_LINFLEX_SCI_CHAN_NAD"/>
+<property name="Test_Step_3" value="eChannelID == E_LINFLEX_SCI_CHAN_NAD"/>
+<property name="Test_Step_4" value="stuck at zero , Framming error , Buffer overrun"/>
+<property name="Test_Step_5" value="eChannelId == E_LINFLEX_SCI_CHAN_DBG"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_Isr_Rx" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Description" value="linflexsci_Isr_Rx"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_Isr_Tx" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Description" value="linflexsci_Isr_Tx"/>
+<property name="Test_Step_0" value=" there is more data left in the buffer to read"/>
+<property name="Test_Step_1" value=" there is nothing left in the buffer"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_ReadBuffer" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Description" value="linflexsci_ReadBuffer"/>
+<property name="Test_Step_0" value="Null buffer"/>
+<property name="Test_Step_1" value="error length"/>
+<property name="Test_Step_2" value="uart not available"/>
+<property name="Test_Step_3" value="eChannelID = E_LINFLEX_SCI_CHAN_BTLE"/>
+<property name="Test_Step_4" value="eChannelID = E_LINFLEX_SCI_CHAN_BTLE"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_WriteBuffer" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Description" value="linflexsci_WriteBuffer"/>
+<property name="Test_Step_0" value="UART not available channelID"/>
+<property name="Test_Step_1" value="available UART channelID"/>
+<property name="Test_Step_2" value="available UART channelID"/>
+<property name="Test_Step_3" value="available UART channelID"/>
+<property name="Test_Step_4" value="available UART channelID"/>
+<property name="Test_Step_5" value="available UART channelID"/>
+<property name="Test_Step_6" value="available UART channelID"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_WriteBuffer_eChannelID_equal_to_E_LINFLEX_SCI_CHAN_NAD_or_eChannelID_equal_to_E_LINFLEX_SCI_CHAN_DBG_" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="eChannelID_equal_to_E_LINFLEX_SCI_CHAN_NAD"/>
+<property name="Test_Step_1" value="eChannelID_equal_to_E_LINFLEX_SCI_CHAN_NAD"/>
+<property name="Test_Step_2" value="u16WriteLength  &lt;= 0"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_init" status="run" time="0.001" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+<property name="Test_Step_1" value="Request for an available UART "/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_deinit" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+<property name="Test_Step_1" value="Available UART channel"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_Cyclic" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+<property name="Test_Step_1" value="Request for an available UART Channel"/>
+<property name="Test_Step_2" value="MCL_DMA_NO_ERROR != eDMAError"/>
+<property name="Test_Step_3" value="MCL_DMA_NO_ERROR == eDMAError"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_onDMAComplete_rx" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+<property name="Test_Step_1" value="Request an available UART channel : E_LINFLEX_SCI_CHAN_NAD"/>
+<property name="Test_Step_2" value="Request an available UART channel : E_LINFLEX_SCI_CHAN_DBG"/>
+<property name="Test_Step_3" value="Request an available UART channel : E_LINFLEX_SCI_CHAN_DBG"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_onDMAComplete_tx" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+<property name="Test_Step_1" value="Request an available UART channel : E_LINFLEX_SCI_CHAN_NAD"/>
+<property name="Test_Step_2" value="Request an available UART channel : E_LINFLEX_SCI_CHAN_NAD"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_onDMAComplete_linflexd0_rx" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+</properties>
+    </testcase>
+    <testcase name="linflexsci_onDMAComplete_linflexd1_rx" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Request for a UART that is not available"/>
+</properties>
+    </testcase>
+    <testcase name="LINFLEXSCI_LOGCMD_Sci" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Test_Step_0" value="Handle the logger command sci "/>
+</properties>
+    </testcase>
+    <testcase name="LINFLEXSCI_LOGCMD_Sci_" status="run" time="0" classname="GTestClass_linflex_sci">
+<properties>
+<property name="Description" value="Handle the logger command &apos;sci&apos;"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:00:21" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_SecurityAccess" tests="2" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="CtDiagnosticServices_SecurityAccess_0x03_GetSeed" status="run" time="0" classname="GTestClass_CtDiagnosticServices_SecurityAccess">
+<properties>
+<property name="Description" value="Test that Random Seed is retrieved from the Random generator and copied into given Seed buffer"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_SECURITY_ACCESS_38SW_DIAG_SECURITY_ACCESS_17SW_DIAG_SECURITY_ACCESS_25"/>
+<property name="Test_Step_0" value="1. Call diagnosis service and check the copying of the Seed into the given return buffer"/>
+</properties>
+    </testcase>
+    <testcase name="CtDiagnosticServices_SecurityAccess_0x03_CompareKey" status="run" time="0" classname="GTestClass_CtDiagnosticServices_SecurityAccess" />
+  </testsuite>
+</testsuites>

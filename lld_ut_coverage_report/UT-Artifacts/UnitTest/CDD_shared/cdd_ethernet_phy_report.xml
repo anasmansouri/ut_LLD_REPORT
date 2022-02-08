@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="40" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:18:31" time="0.021" name="AllTests">
+  <testsuite name="GTestClass_cdd_ethernet_phy" tests="40" failures="0" disabled="0" errors="0" time="0.021">
+    <testcase name="Phy_SetModePriority" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_RecieveCallback_RSTP_Callback" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Channel_Reset_Operation" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Determine_StartupState" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Determine_StartupState_changing_the_values_of_communicationStatus" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Cyclic_INIT_to_IDLE" status="run" time="0.001" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Cyclic_10ms_PHY_ST_IDLE_is_assigned_to_phyState" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Cyclic_10ms_test_all_values_for_the_statemachine_for_phy_control" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Interface_Eth_RequestComMode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_ResetLinkLostCounter" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_Cyclic_DTC" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetCircuitStatus" status="run" time="0.017" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetJabberStatus" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetLinkStatus" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetLostLinksCounter" status="run" time="0.001" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_ReleaseReset" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_WriteRegister_test" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetOperationMode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetTemperatureStatus" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetResetReason" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Cdd_Ethernet_Phy_GetResetCounter" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_DTC_handling" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Reset_Handling" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_DTC_handling_CableTest_Ethernet_Phy_In_Normal_Mode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_DTC_handling_CableTest_Ethernet_Phy_Not_In_Normal_Mode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_PrepareAndExecuteCableTest_Ethernet_Phy_In_Normal_Mode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_PrepareAndExecuteCableTest_Ethernet_Phy_Not_In_Normal_Mode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Determince_link_Qualitiy" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_HandleRstpRetryMechanism" status="run" time="0.001" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Interface_Eth_setNadBootMode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Interface_Eth_GetComMode" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_DetermineNexPhyPowerStateRequest" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_PowerOff" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_PowerOn_OTPMemory_HardwareVariantAtLeast_return_TRUE" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_PowerOn_OTPMemory_HardwareVariantAtLeast_return_FALSE" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_Configure" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_HandleNextPhyPowerState" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_HandleNextPhyPowerState_Phy_HandleNextPhyPowerState_PWR_PHY_ON" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_ReadRegisters" status="run" time="0.001" classname="GTestClass_cdd_ethernet_phy" />
+    <testcase name="Phy_UpdateBootModeTimer" status="run" time="0" classname="GTestClass_cdd_ethernet_phy" />
+  </testsuite>
+</testsuites>

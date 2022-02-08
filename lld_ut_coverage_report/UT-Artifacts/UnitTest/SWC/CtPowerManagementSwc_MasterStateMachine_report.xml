@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="73" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:06:13" time="0.012" name="AllTests">
+  <testsuite name="GTestClass_CtPowerManagementSwc_MasterStateMachine" tests="73" failures="0" disabled="0" errors="0" time="0.012">
+    <testcase name="state_CBOX_OFF_0" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_OFF=&gt;(a)=&gt;CBOX_OFF. No transitions happen"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" Transaction_a deactivated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_OFF_a" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_OFF=&gt;(a)=&gt;CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value=" Transaction_a activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_notA1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;CBOX_ON. Invalid transitions signals=&gt; iterate"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" Transaction_A1 deactivated for several reasons"/>
+<property name="Expected_1" value="State unchanged."/>
+<property name="Expected_2" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_notA3" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;CBOX_ON. Invalid transitions signals=&gt; iterate"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" Transaction_A3 deactivated for several reasons"/>
+<property name="Expected_1" value="State unchanged."/>
+<property name="Expected_2" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_notA4" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value="Transaction_A4 deactivated for several reasons"/>
+<property name="Expected_1" value="State unchanged."/>
+<property name="Expected_2" value="State unchanged."/>
+<property name="Expected_3" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_notC1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" Transaction_C1 deactivated for several reasons"/>
+<property name="Expected_1" value="State unchanged."/>
+<property name="Expected_2" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_notC2" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" Transaction_C2 deactivated for several reasons"/>
+<property name="Expected_1" value="State unchanged."/>
+<property name="Expected_2" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_A3" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_48, SW_POW_MGN_62, SW_POW_MGN_66"/>
+<property name="Test_Step_0" value=" Transaction_A3 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_A1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine" />
+    <testcase name="state_CBOX_ON_C1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;CBOX_ECALL_ACTIVE. "/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_60"/>
+<property name="Test_Step_0" value="  Transaction_C1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_CBOX_ON_C2" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CBOX_ON=&gt;NOM_STATE_CBOX_TEMP_ON_CL30_OFF. "/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_48, SW_POW_MGN_60, SW_POW_MGN_52"/>
+<property name="Test_Step_0" value=" Transaction_C2 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY_0" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY=&gt;NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value="  Transaction_L1 and  Transaction_a deactivated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY_a" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY=&gt;NOM_STATE_CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value="  Transaction_a activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY_L1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY=&gt;NOM_STATE_CBOX_POWER_SAVE_CAN_OFF."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value="  Transaction_L1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY_0" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY=&gt;NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" No transactions activated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY_a" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY=&gt;Tr(a)=&gt;NOM_STATE_CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value="  Transaction_a activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY_L1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY=&gt;Tr(L1)=&gt;NOM_STATE_CBOX_POWER_SAVE_CAN_OFF."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value="  Transaction_L1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_POWER_SAVE_CAN_OFF_0" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_POWER_SAVE_CAN_OFF=&gt;NOM_STATE_CBOX_POWER_SAVE_CAN_OFF."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value="  No transactions activated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_POWER_SAVE_CAN_OFF_a" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_POWER_SAVE_CAN_OFF=&gt;NOM_STATE_CBOX_ON."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_50"/>
+<property name="Test_Step_0" value="  Transaction_a activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_POWER_SAVE_CAN_OFF_n1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_POWER_SAVE_CAN_OFF=&gt;NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_41, SW_POW_MGN_72, SW_POW_MGN_73, SW_POW_MGN_74, SW_POW_MGN_75"/>
+<property name="Test_Step_0" value=" Transaction_n1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_POWER_SAVE_CAN_OFF_N1" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_POWER_SAVE_CAN_OFF=&gt;NOM_STATE_CBOX_TEMP_ON_CL30_OFF."/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_41, SW_POW_MGN_495"/>
+<property name="Test_Step_0" value="  Transaction_N1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ECALL_ACTIVE_0" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ECALL_ACTIVE=&gt;NOM_STATE_CBOX_ECALL_ACTIVE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" No transactions activated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ECALL_ACTIVE_a" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ECALL_ACTIVE=&gt;NOM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value="  Transaction_a activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ECALL_ACTIVE_D1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ECALL_ACTIVE=&gt;NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_ONLY"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_44"/>
+<property name="Test_Step_0" value=" Transaction_D1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ECALL_ACTIVE_E1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ECALL_ACTIVE=&gt;NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_52"/>
+<property name="Test_Step_0" value="  Transaction_E1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER_0" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER=&gt;NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" No transactions activated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER_e1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ECALL_ACTIVE_BACKUP_POWER=&gt;NOM_STATE_CBOX_ECALL_ACTIVE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338, SW_POW_MGN_225, SW_POW_MGN_467, SW_POW_MGN_423, SW_POW_MGN_117, SW_POW_MGN_54"/>
+<property name="Test_Step_0" value="  Transaction_e1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_ON_0" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON=&gt;BEM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value="  No transactions activated"/>
+<property name="Expected_1" value="State unchanged."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_ON_AA" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON=&gt;BEM_STATE_CBOX_ON_BEM"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_80"/>
+<property name="Test_Step_0" value="  Transaction_AA activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_ON_BEM_aa" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON_BEM=&gt;BEM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_82"/>
+<property name="Test_Step_0" value="  Transaction_aa activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State machine changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_ON_BEM_aa_AB" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON_BEM=&gt;BEM_STATE_CBOX_BEM_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_114, SW_POW_MGN_117, SW_POW_MGN_48, SW_POW_MGN_82"/>
+<property name="Test_Step_0" value=" Transaction_AB and Transaction_aa activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State machine changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_ON_BEM_AB" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON_BEM=&gt;BEM_STATE_CBOX_BEM_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_48"/>
+<property name="Test_Step_0" value="  Transaction_AB activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_BEM_CAN_ON_ab" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_BEM_CAN_ON=&gt;BEM_STATE_CBOX_ON_BEM"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_50"/>
+<property name="Test_Step_0" value="  Transaction_ab activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_BEM_CAN_ON_AC" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_BEM_CAN_ON=&gt;BEM_STATE_CBOX_OFF"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value="  Transaction_AC activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_BEM_CAN_ON_ab_AC" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_BEM_CAN_ON=&gt;BEM_STATE_CBOX_ON_BEM"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value="  Transaction_ab and  Transaction_AC activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_OFF_ac" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_OFF=&gt;BEM_STATE_CBOX_BEM_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_297, SW_POW_MGN_309, SW_POW_MGN_465, SW_POW_MGN_117, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value="  Transaction_ac activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_ON_0" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_ON=&gt;TMODE_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value=" No transactions activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_ON_TA" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_ON=&gt;TMODE_STATE_CBOX_ON_TMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_182"/>
+<property name="Test_Step_0" value="  Transaction_TA activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_ON_TMODE_ta" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_ON_TMODE=&gt;TMODE_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_183"/>
+<property name="Test_Step_0" value="  Transaction_ta activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State machine changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_ON_TMODE_TB" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_ON_TMODE=&gt;TMODE_STATE_CBOX_TMODE_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_48"/>
+<property name="Test_Step_0" value="   Transaction_TA and Transaction_TB activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_ON_TMODE_ta_TB" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_ON_TMODE=&gt;TMODE_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_48, SW_POW_MGN_183"/>
+<property name="Test_Step_0" value=" Transaction_ta and Transaction_TB activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State machine changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_TMODE_CAN_ON_tb" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_TMODE_CAN_ON=&gt;NOM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_50"/>
+<property name="Test_Step_0" value="Transaction_tb activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_TMODE_CAN_ON_TC" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_TMODE_CAN_ON=&gt;TMODE_STATE_CBOX_OFF_TMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value=" Transaction_TC activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_TMODE_CAN_ON_tb_TC" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_TMODE_CAN_ON=&gt;TMODE_STATE_CBOX_OFF_TMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value=" Transaction_TC and Transaction_tb activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_OFF_TMODE_tc" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_OFF_TMODE=&gt;TMODE_STATE_CBOX_TMODE_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value="Transaction_tc activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_OFF_TMODE_tb" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_OFF_TMODE=&gt;TMODE_STATE_CBOX_TMODE_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_50"/>
+<property name="Test_Step_0" value=" Transaction_tb activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_OFF_TMODE_tb_tc" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_OFF_TMODE=&gt;TMODE_STATE_CBOX_TMODE_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_232, SW_POW_MGN_233, SW_POW_MGN_235, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_56"/>
+<property name="Test_Step_0" value="Transaction_tb and Transaction_tc activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State machine changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_ON_0" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON=&gt;PQRSMODE_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117"/>
+<property name="Test_Step_0" value="Not transactions activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_ON_PA" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_115, SW_POW_MGN_192"/>
+<property name="Test_Step_0" value="Transaction_PA activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_ON_PMODE_pa" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_115, SW_POW_MGN_194"/>
+<property name="Test_Step_0" value=" Transaction_pa activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_ON_PMODE_PB" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON_PMODE=&gt;PQRSMODE_STATE_CBOX_PMODE_CAN_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_48"/>
+<property name="Test_Step_0" value=" Transaction_PB activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_ON_PMODE_PD" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON_PMODE=&gt;PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_207"/>
+<property name="Test_Step_0" value=" Transaction_PD activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_pb" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_PMODE_CAN_ON=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_50"/>
+<property name="Test_Step_0" value="Transaction_pb activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_PC" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_PMODE_CAN_ON=&gt;PQRSMODE_STATE_CBOX_OFF"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value=" Transaction_PC activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_pb_PC" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_PMODE_CAN_ON=&gt;PQRSMODE_STATE_CBOX_OFF"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_58"/>
+<property name="Test_Step_0" value=" Transaction_PC and Transaction_pb activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG_pd1" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_50, SW_POW_MGN_209"/>
+<property name="Test_Step_0" value=" Transaction_pd1 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG_pd2" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_48"/>
+<property name="Test_Step_0" value=" Transaction_pd2 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG_pd1_pd2" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_PMODE_CAN_ON_DIAG=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_48, SW_POW_MGN_50, SW_POW_MGN_209"/>
+<property name="Test_Step_0" value=" Transaction_pd1 and Transaction_pd2 activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_PMODE_CAN_ON_2_NOM_STATE_CBOX_ON" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_261, SW_POW_MGN_262, SW_POW_MGN_466, SW_POW_MGN_117, SW_POW_MGN_115, SW_POW_MGN_194"/>
+<property name="Test_Step_0" value=" Transaction_PC and Transaction_pb activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Test_Step_2" value=" Transaction_pa activated"/>
+<property name="Expected_3" value="State changed."/>
+<property name="Expected_4" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_2_PQRSMODE_STATE_CBOX_ON_PMODE" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON=&gt;PQRSMODE_STATE_CBOX_ON_PMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_115, SW_POW_MGN_192, SW_POW_MGN_194"/>
+<property name="Test_Step_0" value=" Transaction_PA activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_2_TMODE_STATE_CBOX_ON_TMODE" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON=&gt;TMODE_STATE_CBOX_ON_TMODE"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_115, SW_POW_MGN_182"/>
+<property name="Test_Step_0" value=" Transaction_TA activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_2_BEM_STATE_CBOX_ON_BEM" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="NOM_STATE_CBOX_ON=&gt;BEM_STATE_CBOX_ON_BEM"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_115, SW_POW_MGN_80"/>
+<property name="Test_Step_0" value=" Transaction_AA activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_PQRSMODE_STATE_CBOX_ON_PMODE_2_NOM_STATE_CBOX_ON" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="PQRSMODE_STATE_CBOX_ON_PMODE=&gt;NOM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_115, SW_POW_MGN_497, SW_POW_MGN_202, SW_POW_MGN_205"/>
+<property name="Test_Step_0" value=" Transaction_pa activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_TMODE_STATE_CBOX_ON_TMODE_2_NOM_STATE_CBOX_ON" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="TMODE_STATE_CBOX_ON_TMODE=&gt;NOM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_115, SW_POW_MGN_183"/>
+<property name="Test_Step_0" value=" Transaction_ta activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_BEM_STATE_CBOX_ON_BEM_2_NOM_STATE_CBOX_ON" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON_BEM=&gt;NOM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_115, SW_POW_MGN_82"/>
+<property name="Test_Step_0" value=" Transaction_aa activated"/>
+<property name="Expected_1" value="State changed."/>
+<property name="Expected_2" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="state_NOM_STATE_CBOX_ON_CAN_KEEPALIVE_NAD_MIC_ONLY_2_BEM_STATE_CBOX_BEM_CAN_ON" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="BEM_STATE_CBOX_ON_BEM=&gt;NOM_STATE_CBOX_ON"/>
+<property name="Tested_LLD_IDs" value="SW_POW_MGN_338"/>
+<property name="Test_Step_0" value=" Transaction_AD activated"/>
+<property name="Expected_1" value="State changed."/>
+</properties>
+    </testcase>
+    <testcase name="last_State_Mode_valid_saved_and_restore" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine" />
+    <testcase name="last_State_Mode_valid_saved_and_not_restore" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine" />
+    <testcase name="SSM_Interface_SetState" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="SSM_Interface_SetState function check"/>
+</properties>
+    </testcase>
+    <testcase name="SSM_NormalOperationMode_DoActionsForCurrentState" status="run" time="0.001" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="SSM_NormalOperationMode_DoActionsForCurrentState function check"/>
+<property name="Test_Step_0" value="set current state to NOM_STATE_CBOX_ECALL_WAIT_CALLBACK_BACKUP"/>
+<property name="Test_Step_1" value="set current state to NOM_STATE_CBOX_POWER_SAVE_CAN_OFF_CMP_ON"/>
+<property name="Test_Step_2" value="set current state to STATE_CBOX_FULL_OFF"/>
+<property name="Test_Step_3" value="set current state to INACTIVE_STATE"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_MasterStateMachine_RSTP_Callback" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CtPowerManagementSwc_MasterStateMachine_RSTP_Callback function check"/>
+</properties>
+    </testcase>
+    <testcase name="CtPowerManagementSwc_MasterStateMachine_Nad_ResetReason_Update" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine">
+<properties>
+<property name="Description" value="CtPowerManagementSwc_MasterStateMachine_Nad_ResetReason_Update function check"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_AdaptPModesActivation_SetPmodesActivation" status="run" time="0" classname="GTestClass_CtPowerManagementSwc_MasterStateMachine" />
+  </testsuite>
+</testsuites>

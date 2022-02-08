@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:11:18" time="0" name="AllTests">
+  <testsuite name="GTestClass_cdd_CanGlobalTimeout" tests="4" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Cdd_CanGlobalTimeout_init" status="run" time="0" classname="GTestClass_cdd_CanGlobalTimeout">
+<properties>
+<property name="Description" value="Cdd_CanGlobalTimeout_init function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanGlobalTimeout_cyclic_10ms" status="run" time="0" classname="GTestClass_cdd_CanGlobalTimeout">
+<properties>
+<property name="Description" value="Cdd_CanGlobalTimeout_cyclic_10ms function check"/>
+<property name="Test_Step_0" value="Can global timeout is not active."/>
+<property name="Test_Step_1" value="Can global timeout is enabled =&gt; Timer is reseted."/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanGlobalTimeout_reset" status="run" time="0" classname="GTestClass_cdd_CanGlobalTimeout">
+<properties>
+<property name="Description" value="Cdd_CanGlobalTimeout_reset function check"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_CanGlobalTimeout_disable" status="run" time="0" classname="GTestClass_cdd_CanGlobalTimeout">
+<properties>
+<property name="Description" value="Cdd_CanGlobalTimeout_disable function check"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

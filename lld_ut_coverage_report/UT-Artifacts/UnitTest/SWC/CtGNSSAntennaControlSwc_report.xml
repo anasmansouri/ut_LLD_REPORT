@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="18" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:01:22" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_CtGNSSAntennaControlSwc" tests="18" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="CtGNSSAntennaControlSwc_CorrectlyInitializesWithAntennaCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify the correct initialization of the CtGNSSAntennaControlSwc when the GNSS antenna is coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_CorrectlyInitializesWithAntennaNotCoded" status="run" time="0.001" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify the correct initialization of the CtGNSSAntennaControlSwc when the antenna is not coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_BlankingVoltageMeasurementAfterEnablingAntenna" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that the blanking window is functional after enabling the GNSS antenna"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_CorrectlyDetectsBrokenLine" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify the detection of a broken line on the GNSS antenna and disabling of the antenna"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_DoesNotSetDtcBrokenLineWhenAntennaNotCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that the DTC for broken line on the GNSS antenna is not set when the antenna is not coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_CorrectlyDetectsShortToGround" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify the detection of a short to ground on the GNSS antenna and disabling of the antenna"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_DoesNotSetDtcShortToGroundeWhenAntennaNotCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that the DTC for short to ground on the GNSS antenna is not set when the antenna is not coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_CorrectlyDetectsShortToPlus" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify the detection of a short to plus on the GNSS antenna and disabling of the antenna"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_DoesNotSetDtcShortToPlusWhenAntennaNotCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that the DTC for short to plus on the GNSS antenna is not set when the antenna is not coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_RetryAtFiveSecondIntervalWhenInErrorCondition" status="run" time="0.001" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify the retry mechanism that should check the antenna status every 5 seconds when in error condition"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_ReadMeasurementValue0x2438" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that Measurement Value 0x2438 can be read correctly"/>
+<property name="Test_Step_0" value="Read Measurement Value when not enough samples available yet"/>
+<property name="Test_Step_1" value="Read Measurement Value for different voltage conditions"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_AntennaConnectionDetectedWhenCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that connection of the GNSS antenna is correctly detected when coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_AntennaConnectionDetectedWhenNotCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that connection of the GNSS antenna is correctly detected not when coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_AntennaDisconnectedDetectedWhenCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that disconnected GNSS antenna is correctly detected when coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_AntennaDisconnectedDetectedWhenNotCoded" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that disconnected GNSS antenna is correctly detected not when coded"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_AntennaStateInterfaceReturnsCorrectAntennaState" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that Antenna State Interface returns the correct state"/>
+<property name="Test_Step_0" value="Check antenna state directly after init when not enough voltage samples available yet"/>
+<property name="Test_Step_1" value="Check antenna state for different voltage conditions"/>
+</properties>
+    </testcase>
+    <testcase name="CtGNSSAntennaControlSwc_GnssStaysInactiveAfterDeactivation" status="run" time="0" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Verify that the GNSS antenna can be deactivated by the API and stays inactive"/>
+</properties>
+    </testcase>
+    <testcase name="updateAntennaState" status="run" time="0.001" classname="GTestClass_CtGNSSAntennaControlSwc">
+<properties>
+<property name="Description" value="Determine the new GNSS antenna state based on the current state and the measured voltage"/>
+<property name="Test_Step_0" value="antennaState =  GNSS_ANTENNA_STATE_OK and average equals to   UPPER_VOLTAGE_THRESHOLD_OPEN_CIRCUIT"/>
+<property name="Test_Step_1" value="antennaState =  GNSS_ANTENNA_STATE_OK and average is greather than the LOWER_VOLTAGE_THRESHOLD_SHORT_PLUS"/>
+<property name="Test_Step_2" value="antennaState =  GNSS_ANTENNA_STATE_OK and average is greather than the LOWER_VOLTAGE_THRESHOLD_SHORT_TO_GROUND"/>
+<property name="Test_Step_3" value="antennaState =  GNSS_ANTENNA_STATE_OK and average is lower than the LOWER_VOLTAGE_THRESHOLD_SHORT_TO_GROUND"/>
+<property name="Test_Step_4" value="antennaState =  GNSS_ANTENNA_STATE_BROKENLINE and average is greather than the LOWER_VOLTAGE_THRESHOLD_SHORT_PLUS"/>
+<property name="Test_Step_5" value="antennaState =  GNSS_ANTENNA_STATE_OK and average is greather than the LOWER_VOLTAGE_THRESHOLD_SHORT_TO_GROUND"/>
+<property name="Test_Step_6" value="antennaState =  GNSS_ANTENNA_STATE_OK and average is greather than the LOWER_VOLTAGE_THRESHOLD_NORMAL_OPERATION"/>
+<property name="Test_Step_7" value="antennaState =  GNSS_ANTENNA_STATE_OK and average is lower than the LOWER_VOLTAGE_THRESHOLD_NORMAL_OPERATION"/>
+<property name="Test_Step_8" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOGROUND and average is lower than the UPPER_VOLTAGE_THRESHOLD_OPEN_CIRCUIT"/>
+<property name="Test_Step_9" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOGROUND and average is lower than the UPPER_VOLTAGE_THRESHOLD_NORMAL_OPERATION"/>
+<property name="Test_Step_10" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOGROUND and average is greather than the LOWER_VOLTAGE_THRESHOLD_SHORT_PLUS"/>
+<property name="Test_Step_11" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOGROUND and average is lower than the LOWER_VOLTAGE_THRESHOLD_SHORT_PLUS"/>
+<property name="Test_Step_12" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOPOWER and average is lower than the UPPER_VOLTAGE_THRESHOLD_OPEN_CIRCUIT"/>
+<property name="Test_Step_13" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOPOWER and average is lower than the UPPER_VOLTAGE_THRESHOLD_NORMAL_OPERATION"/>
+<property name="Test_Step_14" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOPOWER and average is lower than the UPPER_VOLTAGE_THRESHOLD_SHORT_TO_GROUND"/>
+<property name="Test_Step_15" value="antennaState =  GNSS_ANTENNA_STATE_SHORTTOPOWER and average is greather than the UPPER_VOLTAGE_THRESHOLD_SHORT_TO_GROUND"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

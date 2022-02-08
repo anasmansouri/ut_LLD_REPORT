@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="15" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:00:50" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_CtEthernetPhyMonitorSwc" tests="15" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="CtEthernetPhyMonitorSwc_Cyclic_10ms" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function CtEthernetPhyMonitorSwc_Cyclic_10ms"/>
+</properties>
+    </testcase>
+    <testcase name="CtEthernetPhyMonitorSwc_Init" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function CtEthernetPhyMonitorSwc_Init"/>
+</properties>
+    </testcase>
+    <testcase name="CtEthernetPhyMonitorSwc_SetState" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function CtEthernetPhyMonitorSwc_SetState"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_10d_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_10d_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_10d_ReadData" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_10d_ReadData"/>
+<property name="Test_Step_0" value="retvalGetLinkStatus==RTE_E_OK &amp;&amp; linkStatus.Poor==TRUE"/>
+<property name="Test_Step_1" value="retvalGetLinkStatus==RTE_E_OK &amp;&amp; linkStatus.Medium==TRUE"/>
+<property name="Test_Step_2" value="retvalGetLinkStatus==RTE_E_OK &amp;&amp; linkStatus.Good==TRUE"/>
+<property name="Test_Step_3" value="retvalGetLinkStatus==RTE_E_OK &amp;&amp; linkStatus.Poor==FALSE"/>
+<property name="Test_Step_4" value="retvalGetLinkStatus==RTE_E_OK &amp;&amp; linkStatus.Medium==FALSE"/>
+<property name="Test_Step_5" value="retvalGetLinkStatus==RTE_E_OK &amp;&amp; linkStatus.Good==FALSE"/>
+<property name="Test_Step_6" value="0"/>
+<property name="Test_Step_7" value="0"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_10e_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_10e_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_10e_ReadData" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_10e_ReadData"/>
+<property name="Test_Step_0" value="retvalGetLostLinkCounter==RTE_E_OK"/>
+<property name="Test_Step_1" value="retvalGetLostLinkCounter==RTE_E_EthernetPhy_E_INCORRECT_PHY_STATE"/>
+<property name="Test_Step_2" value="retvalGetLostLinkCounter==RTE_E_EthernetPhy_E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_53b2_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_53b2_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_53b2_ReadData" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_53c7_ReadData"/>
+<property name="Test_Step_0" value="retvalGetCircuitStatus returns RTE_E_OK &amp;&amp; circuitStatus.Ok==TRUE"/>
+<property name="Test_Step_1" value="retvalGetCircuitStatus returns RTE_E_OK &amp;&amp; circuitStatus.Ok==FALSE"/>
+<property name="Test_Step_2" value="retvalGetCircuitStatus returns RTE_E_OK &amp;&amp; circuitStatus.Open==TRUE"/>
+<property name="Test_Step_3" value="retvalGetCircuitStatus returns RTE_E_OK &amp;&amp; circuitStatus.Open==FALSE"/>
+<property name="Test_Step_4" value="retvalGetCircuitStatus returns RTE_E_OK &amp;&amp; circuitStatus.Short==TRUE"/>
+<property name="Test_Step_5" value="retvalGetCircuitStatus returns RTE_E_OK &amp;&amp; circuitStatus.Short==FALSE"/>
+<property name="Test_Step_6" value="retvalGetCircuitStatus returns RTE_E_EthernetPhy_E_INCORRECT_PHY_STATE"/>
+<property name="Test_Step_7" value="retvalGetCircuitStatus returns RTE_E_EthernetPhy_E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_53b3_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_53b3_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_53b3_ReadData" status="run" time="0.001" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_53c7_ReadData"/>
+<property name="Test_Step_0" value="retvalGetTemperatureStatus returns RTE_E_OK &amp;&amp; temperatureStatus.Ok==TRUE"/>
+<property name="Test_Step_1" value="retvalGetTemperatureStatus returns RTE_E_OK &amp;&amp; temperatureStatus.Ok==FALSE"/>
+<property name="Test_Step_2" value="retvalGetTemperatureStatus returns RTE_E_OK &amp;&amp; temperatureStatus.Over==TRUE"/>
+<property name="Test_Step_3" value="retvalGetTemperatureStatus returns RTE_E_OK &amp;&amp; temperatureStatus.Over==FALSE"/>
+<property name="Test_Step_4" value="retvalGetTemperatureStatus returns RTE_E_EthernetPhy_E_INCORRECT_PHY_STATE"/>
+<property name="Test_Step_5" value="retvalGetTemperatureStatus returns RTE_E_EthernetPhy_E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_53c7_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_53c7_ConditionCheckRead"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_53c7_ReadData" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function DidServices_ID_MeasValue_53c7_ReadData"/>
+<property name="Test_Step_0" value="retvalGetJabberStatus returns RTE_E_OK &amp;&amp; jabberStatus.Detected==TRUE"/>
+<property name="Test_Step_1" value="retvalGetJabberStatus returns RTE_E_OK &amp;&amp; jabberStatus.Detected==FALSE"/>
+<property name="Test_Step_2" value="retvalGetJabberStatus returns RTE_E_OK &amp;&amp; jabberStatus.NotDetected==TRUE"/>
+<property name="Test_Step_3" value="retvalGetJabberStatus returns RTE_E_OK &amp;&amp; jabberStatus.NotDetected==FALSE"/>
+<property name="Test_Step_4" value="retvalGetJabberStatus returns RTE_E_EthernetPhy_E_INCORRECT_PHY_STATE"/>
+<property name="Test_Step_5" value="retvalGetJabberStatus returns RTE_E_EthernetPhy_E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_EthernetReset_GetEthPhyResetCounter" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function Pi_EthernetReset_GetEthPhyResetCounter"/>
+<property name="Test_Step_0" value="Status returns RTE_E_EthernetPhy_E_PENDING"/>
+<property name="Test_Step_1" value="Status returns RTE_E_EthernetPhy_E_NOT_OK"/>
+<property name="Test_Step_2" value="Status returns 0U"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_EthernetReset_GetEthPhyResetReason" status="run" time="0" classname="GTestClass_CtEthernetPhyMonitorSwc">
+<properties>
+<property name="Description" value="Checking the function Pi_EthernetReset_GetEthPhyResetReason"/>
+<property name="Test_Step_0" value="Status returns RTE_E_EthernetPhy_E_PENDING"/>
+<property name="Test_Step_1" value="Status returns RTE_E_EthernetPhy_E_NOT_OK"/>
+<property name="Test_Step_2" value="Status returns 0U"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="14" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:53:39" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_CtCarSensorSwc" tests="14" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="CarSensor_Init" status="run" time="0.001" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test of the initialization of CarSensorSwc"/>
+<property name="Tested_LLD_IDs" value="SW_CAR_SENSOR_SWC_28SW_CAR_SENSOR_SWC_33"/>
+<property name="Test_Step_0" value="1. Check that the initial values are properly loaded into globar variables"/>
+</properties>
+    </testcase>
+    <testcase name="Recieve_NavPos_02" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception of the message NavPos_02 and the sending to the NAD"/>
+<property name="Tested_LLD_IDs" value="SW_CAR_SENSOR_SWC_39SW_CAR_SENSOR_SWC_38SW_CAR_SENSOR_SWC_40SW_CAR_SENSOR_SWC_41"/>
+<property name="Test_Step_1" value="1. Check that the NavPos_02 is not sent do the NAD when the conditions are not fulfilled"/>
+<property name="Test_Step_2" value="2. Check that the NavPos_02 is not sent do the NAD when the conditions are not fulfilled"/>
+<property name="Test_Step_3" value="3. Check that the NavPos_02 is sent do the NAD when the conditions are fulfilled. Tested with Lat and Long INIT values"/>
+<property name="Test_Step_4" value="4. Check that the NavPos_02 is sent do the NAD when the conditions are fulfilled. Tested with Lat and Long ERROR values"/>
+<property name="Test_Step_5" value="5. Check that the NavPos_02 is sent do the NAD when the conditions are fulfilled. Tested with Lat and Long with NEGATIVES values"/>
+<property name="Test_Step_6" value="6. Check that the NavPos_02 is sent do the NAD when the conditions are fulfilled. Tested with Lat and Long with NEGATIVES values"/>
+</properties>
+    </testcase>
+    <testcase name="ESP_10_processing_Test1" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception and processing of the message ESP_10 and the forwarding to NAD"/>
+<property name="Expected_7" value="Nothing happens, reception and processing of the ESP_10 not done"/>
+</properties>
+    </testcase>
+    <testcase name="ESP_10_processing_Test2" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception and processing of the message ESP_10 and the forwarding to NAD with invalid data"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_8" value="1. Check that Signals received in ESP_10 are transfered to NAD with all data zero"/>
+<property name="Test_Step_9" value="2. Check that Signals received in ESP_10 are transfered to NAD with invalid data"/>
+<property name="Expected_10" value="Reception and processing of the ESP_10 with invalid data"/>
+</properties>
+    </testcase>
+    <testcase name="ESP_10_processing_Test3" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception and processing of the message ESP_10 and the forwarding to NAD with valid data"/>
+<property name="Tested_LLD_IDs" value="SW_CAR_SENSOR_SWC_5SW_CAR_SENSOR_SWC_26SW_CAR_SENSOR_SWC_6SW_CAR_SENSOR_SWC_7SW_CAR_SENSOR_SWC_8SW_CAR_SENSOR_SWC_9SW_CAR_SENSOR_SWC_10SW_CAR_SENSOR_SWC_11SW_CAR_SENSOR_SWC_12"/>
+<property name="Test_Step_11" value="1. Check that Signals received in ESP_10 are transfered to NAD"/>
+</properties>
+    </testcase>
+    <testcase name="SARA_11_processing_Test1" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception and processing of the message SARA_11 and the forwarding to NAD"/>
+<property name="Expected_12" value="Nothing happens, reception and processing of the SARA_11 not done"/>
+</properties>
+    </testcase>
+    <testcase name="SARA_11_processing_Test2" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception and processing of the message SARA_11 and the forwarding to NAD with invalid data"/>
+<property name="Tested_LLD_IDs" value="_"/>
+<property name="Test_Step_13" value="1. Check that Signals received in SARA_11 are transfered to NAD"/>
+</properties>
+    </testcase>
+    <testcase name="SARA_11_processing_Test3" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the reception and processing of the message SARA_11 and the forwarding to NAD with valid data"/>
+<property name="Tested_LLD_IDs" value="SW_CAR_SENSOR_SWC_16SW_CAR_SENSOR_SWC_31SW_CAR_SENSOR_SWC_32SW_CAR_SENSOR_SWC_17SW_CAR_SENSOR_SWC_35SW_CAR_SENSOR_SWC_18SW_CAR_SENSOR_SWC_19SW_CAR_SENSOR_SWC_20SW_CAR_SENSOR_SWC_21SW_CAR_SENSOR_SWC_22SW_CAR_SENSOR_SWC_23SW_CAR_SENSOR_SWC_24"/>
+<property name="Test_Step_14" value="1. Check that Signals received in SARA_11 are transfered to NAD"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtCarSensorSwc_ReceiveCallback_AsSocketAdapter" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="RSTP_CtCarSensorSwc_ReceiveCallback_AsSocketAdapter function check"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtCarSensorSwc_ReceiveCallback_AsSocketAdapter_2" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="RSTP_CtCarSensorSwc_ReceiveCallback_AsSocketAdapter function check"/>
+</properties>
+    </testcase>
+    <testcase name="convert4BitsSequenceCounterTo16Bits" status="run" time="0.001" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test the conversion of the 4bit sequence counter to 16bit counter"/>
+<property name="Tested_LLD_IDs" value="SW_CAR_SENSOR_SWC_27SW_CAR_SENSOR_SWC_34"/>
+<property name="Test_Step_15" value="1. Check that rstepSentAllowed doesn&apos;t change if Rte return is NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="Map_Matched_Mux_00" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test to check the call back function indicating NavPos Map Matched MUX_00"/>
+</properties>
+    </testcase>
+    <testcase name="Map_Matched_Mux_01" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="Test to check the call back function indicating NavPos Map Matched MUX_01"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_CtCarSensorSwc_Channel_Reset_AsSocketAdapter" status="run" time="0" classname="GTestClass_CtCarSensorSwc">
+<properties>
+<property name="Description" value="RSTP_CtCarSensorSwc_Channel_Reset_AsSocketAdapter function check"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

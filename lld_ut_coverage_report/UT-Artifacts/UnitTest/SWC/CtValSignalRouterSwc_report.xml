@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="25" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:09:34" time="0.004" name="AllTests">
+  <testsuite name="GTestClass_CtValSignalRouterSwc" tests="25" failures="0" disabled="0" errors="0" time="0.004">
+    <testcase name="CtValSignalRouterSwc_Init" status="run" time="0.001" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check CtValSignalRouterSwc_Init"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_663, SW_VALR_694, SW_VALR_697, SW_VALR_727"/>
+<property name="Test_Step_0" value="Initial values with IMO not available"/>
+<property name="Test_Step_1" value="Initial values with IMO available"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_NAD_RSTP_Channel_Reset" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="The reset is done"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_10"/>
+<property name="Test_Step_0" value="The communication is initialized or re-established"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_getLanguageCode" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check getLanguageCode()"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_33+Table"/>
+<property name="Test_Step_0" value="Check if the received VIN is valid"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkLanguageIdValid" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check checkLanguageIdValid()"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_33"/>
+<property name="Test_Step_0" value="Check if the Language ID is valid &lt; SIZEOF_LANGUAGE_ARRAY(44)"/>
+<property name="Test_Step_1" value="Check if the Language ID is invalid &gt; SIZEOF_LANGUAGE_ARRAY(44)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_getFuelTypeArrayID" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check getFuelTypeArrayID()"/>
+<property name="Tested_LLD_IDs" value="Internal function, only for coverage"/>
+<property name="Test_Step_0" value="Check if the Fuel type is valid: mainFuelType == CxF_kein_Verbrunnungskraftstoff(15), output = KEIN_VERBRUNNUNGSKRAFTSTOFF_ARRAY_ID(6)"/>
+<property name="Test_Step_1" value="Check if the Fuel type is valid: mainFuelType &lt;&gt; CxF_kein_Verbrunnungskraftstoff(15), output = mainFuelType"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_updateFuelTypes" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check updateFuelTypes"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_551 (including Table), SW_VALR_553, SW_VALR_554"/>
+<property name="Test_Step_0" value="Vehicle type is invalid (&gt;4) and Fuel type ID is invalid (&gt;7)"/>
+<property name="Test_Step_1" value="Vehicle type is invalid (&gt;4) and Fuel type ID is valid (&lt;=7)"/>
+<property name="Test_Step_2" value="Vehicle type is valid (&lt;=4) and Fuel type ID is invalid (&gt;7)"/>
+<property name="Test_Step_3" value="Row Kraftstoffart = Diesel (0)"/>
+<property name="Test_Step_4" value="Row Kraftstoffart = Diesel (1)"/>
+<property name="Test_Step_5" value="Row Kraftstoffart = CNG (2)"/>
+<property name="Test_Step_6" value="Row Kraftstoffart = LPG (3)"/>
+<property name="Test_Step_7" value="Row Kraftstoffart = Wasserstoff (4)"/>
+<property name="Test_Step_8" value="Row Kraftstoffart = E100_Ethanol (5)"/>
+<property name="Test_Step_9" value="Row Kraftstoffart = kein_Verbrennungkraftstoff (15)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkFuelTypeArrayIDValid" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check the length of FuelTypeArrayID"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_***"/>
+<property name="Test_Step_0" value="Length of FuelTypeArrayID valid &lt; SIZEOF_ENGINE_FUEL_TYPES_ARRAY(7) -&gt; TRUE"/>
+<property name="Test_Step_1" value="Length of FuelTypeArrayID valid &gt;= SIZEOF_ENGINE_FUEL_TYPES_ARRAY(7) -&gt; FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkVehicleTypeValid" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check checkVehicleTypeValid: vehicleType &lt;= Cx4_Brennstoffzellenfahrzeug(4)"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_446"/>
+<property name="Test_Step_0" value="Vehicle type = 0 -&gt; valid"/>
+<property name="Test_Step_1" value="Vehicle type = 2 -&gt; valid"/>
+<property name="Test_Step_2" value="Vehicle type = 4 -&gt; valid"/>
+<property name="Test_Step_3" value="Vehicle type &gt; 4 -&gt; invalid"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_convertVehicleSpeed" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check convertVehicleSpeed."/>
+<property name="Tested_LLD_IDs" value="SW_VALR_26"/>
+<property name="Test_Step_0" value="Check Engine_Vehicle_Speed(1) = Kombi_01:KBI_angez_Geschw * 320"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkVehicleSpeedValid" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check if the vehicle speed is valid =&lt; 325120(raw value)"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_***"/>
+<property name="Test_Step_0" value="speed &lt; 325120(raw value)"/>
+<property name="Test_Step_1" value="speed &gt; 325120(raw value)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkMileageValid" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check if the Mile age is valid"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_27"/>
+<property name="Test_Step_0" value="Check if the Mile age is INIT (= 1048574)"/>
+<property name="Test_Step_1" value="Check if the Mile age is OK (&lt;= 1048573)"/>
+<property name="Test_Step_2" value="Check if the Mile age is ERROR (&gt; 1048574)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_updateVIN" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check VIN Handling functionality: when IMO available, CAN VIN is ignored, when IMO not available VIN retrieved from CAN. When VIN is changed, the new value is stored in NVM"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_749, SW_VALR_750, SW_VALR_752, SW_VALR_753, SW_VALR_754, SW_VALR_756, SW_VALR_696"/>
+<property name="Test_Step_0" value="When IMO is available, VIN is not updated by CAN"/>
+<property name="Test_Step_1" value="When received VIN is invalid, VIN is not updated by CAN"/>
+<property name="Test_Step_2" value="When vinMux0Received, VIN is not updated by CAN"/>
+<property name="Test_Step_3" value="When vinMux1Received, VIN is not updated by CAN"/>
+<property name="Test_Step_4" value="When vinMux2Received, VIN is not updated by CAN"/>
+<property name="Test_Step_5" value="When all conditions are OK, VIN is updated by CAN"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_isValidVINReceived" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check isValidVINReceived()"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_759"/>
+<property name="Test_Step_0" value="Check if the received VIN is valid"/>
+<property name="Test_Step_1" value="I,O and Q are not valid values"/>
+<property name="Test_Step_2" value="Lowcase letters are not valid values"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkOccupation" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check checkOccupation"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_555+Table"/>
+<property name="Test_Step_0" value="Row 1"/>
+<property name="Test_Step_1" value="Row 2"/>
+<property name="Test_Step_2" value="Row 3a INVALID(0)"/>
+<property name="Test_Step_3" value="Row 3b INVALID(1)"/>
+<property name="Test_Step_4" value="Row 4"/>
+<property name="Test_Step_5" value="Row 5"/>
+<property name="Test_Step_6" value="Row 6a INVALID(0)"/>
+<property name="Test_Step_7" value="Row 6a INVALID(1)"/>
+<property name="Test_Step_8" value="Row 7a INVALID(0)"/>
+<property name="Test_Step_9" value="Row 7b INVALID(1)"/>
+<property name="Test_Step_10" value="Row 8a INVALID(0)"/>
+<property name="Test_Step_11" value="Row 8b INVALID(1)"/>
+<property name="Test_Step_12" value="Row 9a1 INVALID(0) INVALID(0)"/>
+<property name="Test_Step_13" value="Row 9b1 INVALID(1) INVALID(0)"/>
+<property name="Test_Step_14" value="Row 9a2 INVALID(0) INVALID(1)"/>
+<property name="Test_Step_15" value="Row 9b2 INVALID(1) INVALID(1)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_getRoadTypeArrayID" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check the Road type ID array"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_***"/>
+<property name="Test_Step_0" value="Check if the Road type ID array is invalid &gt;5"/>
+<property name="Test_Step_1" value="Check if the Road type ID array is valid &lt;=5"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_checkRoadTypeValid" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check the received Road Type"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_32"/>
+<property name="Test_Step_0" value="Check if the received Road Type is valid(&lt;=6)"/>
+<property name="Test_Step_1" value="Check if the received Road Type is valid(&gt;6)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_ConvertECallOperationStateToCanFormat" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check conversion CAN message: eCall2_Funktionsstatus"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_714, SW_VALR_726"/>
+<property name="Test_Step_0" value="eCall2_Funktionsstatus"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_RSTP_CtValSignalRouterSwc_RecieveCallback_RSTP_Callback" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check RSTP_CtValSignalRouterSwc_RecieveCallback_RSTP_Callback"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_715"/>
+<property name="Test_Step_0" value="The received message is a new RSTP_MSG_ID_ECALL_OPERATION_STATES"/>
+<property name="Test_Step_1" value="The received message is a repeated RSTP_MSG_ID_ECALL_OPERATION_STATES"/>
+<property name="Test_Step_2" value="The received message is a new RSTP_MSG_ID_ECALL_CALL_STATES"/>
+<property name="Test_Step_3" value="The received message is a repeated RSTP_MSG_ID_ECALL_CALL_STATES"/>
+<property name="Test_Step_4" value="The received message is a new RSTP_MSG_ID_ECALL_SERVICE_SUBSCRIPTION"/>
+<property name="Test_Step_5" value="The received message is a repeated RSTP_MSG_ID_ECALL_SERVICE_SUBSCRIPTION = ECALL_SUBSCRIPTION_SUBSCIBED"/>
+<property name="Test_Step_6" value="The received message is a new RSTP_MSG_ID_ECALL_SERVICE_SUBSCRIPTION = ECALL_SUBSCRIPTION_UNSUBSCIBED"/>
+<property name="Test_Step_7" value="The received message is a new RSTP_MSG_ID_ECALL_SERVICE_SUBSCRIPTION = ECALL_SUBSCRIPTION_INIT"/>
+<property name="Test_Step_8" value="The received message is a new RSTP_MSG_ID_PMM_SET_TIMER_STATE"/>
+<property name="Test_Step_9" value="The received message is a repeated RSTP_MSG_ID_PMM_SET_TIMER_STATE"/>
+<property name="Test_Step_10" value="The received message is a new and a repeated RSTP_MSG_ID_PMM_SET_TIMER_STATE"/>
+<property name="Test_Step_11" value="The received message is a RSTP_MSG_ID_ECALL_WAKELOCK(not used, nothing happens)"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_Pi_VIN_Notification_ReadVINNotification" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check Pi_VIN_Notification_ReadVINNotification()"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_28"/>
+<property name="Test_Step_0" value="IMO message received is not equal to NVM data, so NVMRAm should be updated"/>
+<property name="Test_Step_1" value="IMO message received is equal to NVM data, so NVMRAm should not be updated"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_VIN_MUX_0_received" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check isValidVINReceived()"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_28, SW_VALR_760"/>
+<property name="Test_Step_0" value="Check if the received VIN is valid"/>
+<property name="Test_Step_1" value="Check if the received VIN is still valid"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_VIN_MUX_1_received" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check isValidVINReceived()"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_28, SW_VALR_760"/>
+<property name="Test_Step_0" value="Check if the received VIN is valid"/>
+<property name="Test_Step_1" value="Check received VIN again"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_CtValSignalRouterSwc_VIN_MUX_2_received" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check CtValSignalRouterSwc_VIN_MUX_2_received"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_28, SW_VALR_760"/>
+<property name="Test_Step_0" value="Check if the received VIN is valid"/>
+<property name="Test_Step_1" value="Check received VIN again"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_cyclic_10ms" status="run" time="0.001" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="RSTP messages are updated and sent when the values changed and NAD is online."/>
+<property name="Tested_LLD_IDs" value="SW_VALR_10, SW_VALR_12, SW_VALR_14, SW_VALR_25, SW_VALR_31, SW_VALR_32, SW_VALR_550, SW_VALR_641, SW_VALR_656, SW_VALR_658, SW_VALR_660, SW_VALR_661, SW_VALR_662, SW_VALR_668, SW_VALR_670, SW_VALR_671, SW_VALR_672, SW_VALR_673, SW_VALR_674, SW_VALR_675, SW_VALR_676, SW_VALR_677, SW_VALR_678, SW_VALR_679, SW_VALR_680, SW_VALR_681, SW_VALR_682, SW_VALR_683, SW_VALR_684, SW_VALR_685, SW_VALR_686, SW_VALR_687, SW_VALR_688, SW_VALR_689, SW_VALR_690, SW_VALR_691, SW_VALR_692, SW_VALR_693, SW_VALR_699, SW_VALR_731, SW_VALR_732, SW_VALR_742"/>
+<property name="Test_Step_0" value="When the NAD is offline and NOT_OK ."/>
+<property name="Test_Step_1" value="When the values changed and NAD is online, RSTP messages are sent ."/>
+<property name="Test_Step_2" value="When the values changed and NAD is online, RSTP messages are updated and sent ."/>
+<property name="Test_Step_3" value="When the values changed and NAD is online, RSTP messages are updated and sent ."/>
+<property name="Test_Step_4" value="RSTP messages are updated and sent when the values changed."/>
+<property name="Test_Step_5" value="Check nothing change because no new data is received"/>
+<property name="Test_Step_6" value="Lenker position unknown, invalid language and Mileage error"/>
+<property name="Test_Step_7" value="Check passenger data are not updated when K15 is OFF"/>
+<property name="Test_Step_8" value="Check eCall data are sent when are changed and NAD is online"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_Pi_VehicleIdentificationNumber_GetVehicleIdentNumber" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc">
+<properties>
+<property name="Description" value="Check Pi_VehicleIdentificationNumber_GetVehicleIdentNumber"/>
+<property name="Tested_LLD_IDs" value="SW_VALR_***"/>
+<property name="Test_Step_0" value="Check if the received VIN is valid"/>
+</properties>
+    </testcase>
+    <testcase name="CtValSignalRouterSwc_RSTP_PowerManagement_CtValSignalRouterSwc_ReceiveCallback_RSTP_Callback" status="run" time="0" classname="GTestClass_CtValSignalRouterSwc" />
+  </testsuite>
+</testsuites>

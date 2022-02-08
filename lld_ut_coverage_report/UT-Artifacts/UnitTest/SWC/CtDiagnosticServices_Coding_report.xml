@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="9" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:55:03" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_Coding" tests="9" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="Test_CtDiagnosticServices_Coding_Init" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value="Test function CtDiagnosticServices_Coding_Init(). This function only set DTC 030218 depending on GPS_source parameter"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_XXX"/>
+<property name="Test_Step_0" value="Call function CtDiagnosticServices_Coding_Init() GPS_Source = 1 or 2. Coding is set to FALSE"/>
+<property name="Test_Step_1" value="Call function CtDiagnosticServices_Coding_Init() GPS_Source = 0 or 3. Coding is set to TRUE"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtDiagnosticServices_CodingSwc_RSTP_ReceiveCallback" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value="Test function Test_CtDiagnosticServices_CodingSwc_RSTP_ReceiveCallback(). When this function is called, the message type is checked. When a SetCoding message is detected (0x02), Coding datas, Coding Fingerprint and ECU Coding Flag are stored in Rte and NVM "/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_136, SW_DIAG_CODING_9, SW_DIAG_CODING_11,SW_DIAG_CODING_12,SW_DIAG_CODING_13,SW_DIAG_CODING_14,SW_DIAG_CODING_15, SW_DIAG_CODING_16, SW_DIAG_CODING_18, SW_DIAG_CODING_19, SW_DIAG_CODING_50, SW_DIAG_CODING_51, SW_DIAG_CODING_52,SW_DIAG_CODING_100, SW_DIAG_CODING_101, SW_DIAG_CODING_102, SW_DIAG_CODING_21, SW_DIAG_CODING_62, SW_DIAG_CODING_63, SW_DIAG_CODING_64,SW_DIAG_CODING_22, SW_DIAG_CODING_23, SW_DIAG_CODING_24, SW_DIAG_CODING_90, SW_DIAG_CODING_92, SW_DIAG_CODING_93, SW_DIAG_CODING_25,SW_DIAG_CODING_26, SW_DIAG_CODING_27, SW_DIAG_CODING_29, SW_DIAG_CODING_56, SW_DIAG_CODING_57,  SW_DIAG_CODING_58,  SW_DIAG_CODING_30,SW_DIAG_CODING_59, SW_DIAG_CODING_60, SW_DIAG_CODING_61, SW_DIAG_CODING_31, SW_DIAG_CODING_32, SW_DIAG_CODING_34, SW_DIAG_CODING_35,SW_DIAG_CODING_36, SW_DIAG_CODING_38, SW_DIAG_CODING_97, SW_DIAG_CODING_98, SW_DIAG_CODING_99, SW_DIAG_CODING_40, SW_DIAG_CODING_41,SW_DIAG_CODING_42, SW_DIAG_CODING_43, SW_DIAG_CODING_44, SW_DIAG_CODING_45,  SW_DIAG_CODING_47, SW_DIAG_CODING_48, SW_DIAG_CODING_49"/>
+<property name="Test_Step_0" value="1. Call function CtDiagnosticServices_CodingSwc_RSTP_ReceiveCallback() Message type wrong, nothing is stored."/>
+<property name="Test_Step_1" value="2 . Call function CtDiagnosticServices_CodingSwc_RSTP_ReceiveCallback() Message type right but length, nothing is stored."/>
+<property name="Test_Step_2" value="Call function CtDiagnosticServices_CodingSwc_RSTP_ReceiveCallback() Message type (0x02), length (9). Coding datas, Coding Fingerprint and ECU Coding Flag are stored"/>
+<property name="Expected_3" value="Copy the data from the dataStartIndex with length dataLength to the corresponding RAM mirror"/>
+<property name="Expected_4" value="Set Flag in NVm"/>
+<property name="Test_Step_5" value="Call function CtDiagnosticServices_CodingSwc_RSTP_ReceiveCallback() Message type (0x02), length (9). Coding datas, Coding Fingerprint and ECU Coding Flag is already stored"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtDiagnosticServices_CodingSwc_ReadCodingParameter_X" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value="Test functions CtDiagnosticServices_CodingSwc_ReadCodingParameter_X. These functions return the corresponding parameter from Rte_Pim_CodingData."/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_4, SW_DIAG_CODING_6"/>
+<property name="Test_Step_0" value="Coding parameter are set to a different value. The test check the values are updated"/>
+</properties>
+    </testcase>
+    <testcase name="Test_CtDiagnosticServices_Coding_Cyclic_100ms" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value=" Test function CtDiagnosticServices_Coding_Cyclic_100ms. These function checks the ECU coding and test possible conflicts between Coding data and connection data from other SWCs "/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_67, SW_DIAG_CODING_71, SW_DIAG_CODING_72, SW_DIAG_CODING_76, SW_DIAG_CODING_77, SW_DIAG_CODING_78, SW_DIAG_CODING_79, SW_DIAG_CODING_84, SW_DIAG_CODING_85, SW_DIAG_CODING_86, SW_DIAG_CODING_87, SW_DIAG_CODING_138"/>
+<property name="Test_Step_0" value="ECU is not coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREFAILED and ECU wrong coding not detected"/>
+<property name="Test_Step_1" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and ECU wrong coding not detected"/>
+<property name="Test_Step_2" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and ECU wrong coding is detected because the battery "/>
+<property name="Test_Step_3" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and ECU wrong coding is detected because the antenna connection "/>
+<property name="Test_Step_4" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and ECU wrong coding is not detected "/>
+<property name="Test_Step_5" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and NAD wrong coding is detected"/>
+<property name="Test_Step_6" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and NAD wrong coding is not detected"/>
+<property name="Test_Step_7" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and Mic1, Mic2 are connected but not coded"/>
+<property name="Test_Step_8" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and Mic1, Mic2 are connected but not coded"/>
+<property name="Test_Step_9" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and key panel is connected but not coded"/>
+<property name="Test_Step_10" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and key panel is connected but coded"/>
+<property name="Test_Step_11" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and airbag crash is vaid"/>
+<property name="Test_Step_12" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and VDA mute connected"/>
+<property name="Test_Step_13" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and ECU wrong coding not detected"/>
+<property name="Test_Step_14" value="ECU is coded. So, Flag Ecu not coded is set to DEM_EVENT_STATUS_PREPASSED. and ECU wrong coding is detected because the WLANBT_ANTENNA "/>
+<property name="Test_Step_15" value="ECU is coded. line out coded "/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_Coding_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value=" Test function DidServices_ID_Coding_ConditionCheckWrite."/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_XXX"/>
+<property name="Test_Step_0" value="Test function DidServices_ID_Coding_ConditionCheckWrite. Fingerprint is not correctly copy in NVMRAM"/>
+<property name="Test_Step_1" value="Test function DidServices_ID_Coding_ConditionCheckWrite. Fingerprint is correctly copy in NVMRAM"/>
+<property name="Test_Step_2" value="Test function DidServices_ID_Coding_ConditionCheckWrite. Fingerprint is not correctly copy in NVMRAM"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_Coding_ConditionCheckRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value=" Test function DidServices_ID_Coding_ConditionCheckRead. Only for coverage proposal"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_XXX"/>
+<property name="Test_Step_0" value="Test function DidServices_ID_Coding_ConditionCheckRead. Only for coverage proposal"/>
+</properties>
+    </testcase>
+    <testcase name="Test_RSTP_CtDiagCodingSWc_Channel_Reset_Operation" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value=" Test function RSTP_CtDiagCodingSWc_Channel_Reset_Operation. Only for coverage proposal"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_XXX"/>
+<property name="Test_Step_0" value="Test function RSTP_CtDiagCodingSWc_Channel_Reset_Operation. Only for coverage proposal"/>
+</properties>
+    </testcase>
+    <testcase name="Test_DidServices_ID_Coding_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding" />
+    <testcase name="Test_DidServices_ID_Coding_WriteData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Coding">
+<properties>
+<property name="Description" value=" Test function DidServices_ID_Coding_WriteData. If NVM is not busy, the NVM Ram buffer, coding datas and fingerprint can be updated.When NvM Ram is busy, wait until the TimeCount is finished. Then, if the job is finished successfully reset the NVM Ram status, the time counter and set the DTC 030218 and the ECU flag."/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_CODING_68, SW_DIAG_CODING_69, SW_DIAG_CODING_89"/>
+<property name="Test_Step_0" value="Test function DidServices_ID_Coding_WriteData. NVM Ram is available, so Nvm Ram Buffer is updated, Coding Data is written in NVM, Nvm Ram Buffer for fingerprint is updated and fingerprint Block is written in Nvm"/>
+<property name="Test_Step_1" value="Test function DidServices_ID_Coding_WriteData. NVM Ram is not available because there is a job pending.The time counter is updated"/>
+<property name="Test_Step_2" value="Test function DidServices_ID_Coding_WriteData. NVM Ram is not available because there is a job successfully finished but the time counter is not finished. The time counter is updated"/>
+<property name="Test_Step_3" value="Test function DidServices_ID_Coding_WriteData. There is a job successfully finished and the time counter is finished, so the DTC 030218 and the ECU flag are set."/>
+<property name="Test_Step_4" value="Test function DidServices_ID_Coding_WriteData. There is a job finished with a fail. so the DTC 030218 and the ECU flag are set."/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

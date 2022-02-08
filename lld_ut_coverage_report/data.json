@@ -1,0 +1,330 @@
+{
+    "Application": {
+        "SWC": [
+            {
+                "name": "CtAirbagHandlerSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtAudioSwitchControlSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtBTLEAntennaControlSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtBackupBatteryHandlerSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtBapRouterSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtBoosterControllerSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtBusMonitorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtCarSensorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtClampsHandlerSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_Adaptations",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_Coding",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_DataSets",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_DiagSessionControl",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_EventMemoryNAD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_FreezeFrames",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_Identifikation",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_IoControl",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_IoControlNAD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_LearExtension",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_MeasurementValues",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_MeasurementValuesNAD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_RoutineControl",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_RoutineControlNAD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtDiagnosticServices_SecurityAccess",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtEthernetPhyMonitorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtGNSSAntennaControlSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtGwSmAdapterSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtImmobilizerSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtKeyPanelSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtKnockoutMonitorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtKsSlaveSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtMicMonitorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtNWDFControlSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtPosRouterTimeMasterSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtPowerManagementSwc_CMP",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtPowerManagementSwc_MasterStateMachine",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtPowerManagementSwc_NAD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtSoftwareDownloadSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtTemperatureMonitorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtUsbUnlockSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtV2XSensorSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtValSignalRouterSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtWLANBTAntennaControlSwc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CtWdgSwc",
+                "coverage_ratio": 0.0
+            }
+        ],
+        "CDD": [
+            {
+                "name": "CDD_CanGlobalTimeout",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_CanMsgUpdateNAD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_EventMemory",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_GNSS",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_KS_Slave",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_KnockoutMonitor",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_RandomGenerator",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_RepairModule",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Reset",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Rstp",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Timer",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_battery_backup_switch",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_car_sensor_handler",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_utc_time",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "Cdd_CanPDUToEthernet",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "Cdd_Ethernet_Rx_PDU",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "Cdd_PadKeepControl",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "cdd_GwSmRteAdapter",
+                "coverage_ratio": 0.0
+            }
+        ],
+        "BSW": [
+            {
+                "name": "BswM_CustomRule_Callout",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "Can_Callout",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "Det_callouts",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "EcuM_Callout_Stubs",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "bap_wrapper",
+                "coverage_ratio": 0.0
+            }
+        ]
+    },
+    "shared": {
+        "CDD": [
+            {
+                "name": "CDD_DioWrapper_LDD",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_EthernetPhy",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_EthernetSwitch",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Ethernet_LwIP",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Mpu",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_NADPowerControl",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Otp",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Rstp",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_RstpUds",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Sbc",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_Sci",
+                "coverage_ratio": 0.0
+            },
+            {
+                "name": "CDD_btle",
+                "coverage_ratio": 0.0
+            }
+        ]
+    }
+}

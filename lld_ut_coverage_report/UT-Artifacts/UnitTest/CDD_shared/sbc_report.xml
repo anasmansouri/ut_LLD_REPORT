@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="41" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:20:23" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_sbc" tests="41" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="SBC_Init" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="SBC Initialization"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_Shutdown" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="SBC Shutdown : Empty function"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_Cyclic" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="SBC Cyclic : Poll the SBC"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_WakeGetReason" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Check the function SBC_WakeGetReason"/>
+<property name="Test_Step_0" value="SBC_TLE9273_WakeGetReason returns E_OK and tle_reason = SBC_TLE9273_WAKE_POWER_ON_RESET"/>
+<property name="Test_Step_1" value="SBC_TLE9273_WakeGetReason returns E_OK and tle_reason = SBC_TLE9273_WAKE_WAKEUP_EVENT"/>
+<property name="Test_Step_2" value="SBC_TLE9273_WakeGetReason returns E_OK and tle_reason = SBC_TLE9273_WAKE_WATCHDOG_FAILURE"/>
+<property name="Test_Step_3" value="SBC_TLE9273_WakeGetReason returns E_OK and tle_reason = SBC_TLE9273_WAKE_VCC1_UNDERVOLTAGE_RESET"/>
+<property name="Test_Step_4" value="SBC_TLE9273_WakeGetReason returns E_OK and tle_reason = SBC_TLE9273_WAKE_VCC1_OVERVOLTAGE_RESET"/>
+<property name="Test_Step_5" value="SBC_TLE9273_WakeGetReason returns E_OK and tle_reason = SBC_TLE9273_WAKE_UNKNOWN"/>
+<property name="Test_Step_6" value="sbc_reason is null"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_WakeupGetEvent" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_WakeupGetEvent"/>
+<property name="Test_Step_0" value="sbc_event is not null"/>
+<property name="Test_Step_1" value="sbc_event is null"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_WdgInit" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_WdgInit"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_WdgSetMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_WdgSetMode"/>
+<property name="Test_Step_0" value="Check the case if watchdog mode is fast =&gt; configure the watchdog via SPI"/>
+<property name="Test_Step_1" value="Check the case if watchdog mode is slow =&gt; configure the watchdog via SPI"/>
+<property name="Test_Step_2" value="Check the case of watchdog is switched off =&gt; invalid mode"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_WdgTrigger" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_WdgTrigger"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_SbcSetMode" status="run" time="0.001" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_SbcSetMode"/>
+<property name="Test_Step_0" value="sbcmode = SBC_SBCMODE_SLEEP"/>
+<property name="Test_Step_1" value="sbcmode = SBC_SBCMODE_STOP"/>
+<property name="Test_Step_2" value="sbcmode = SBC_SBCMODE_RESET"/>
+<property name="Test_Step_3" value="sbcmode = SBC_SBCMODE_NORMAL"/>
+<property name="Test_Step_4" value="Default case"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_SbcGetMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_SbcGetMode"/>
+<property name="Test_Step_0" value="SBC_TLE9273_getSbcMode returns SBC_TLE9273_SBCMODE_SLEEP"/>
+<property name="Test_Step_1" value="SBC_TLE9273_getSbcMode returns SBC_TLE9273_SBCMODE_STOP"/>
+<property name="Test_Step_2" value="SBC_TLE9273_getSbcMode returns SBC_TLE9273_SBCMODE_NORMAL"/>
+</properties>
+    </testcase>
+    <testcase name="sbcPhyToTle9273Phy" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function sbcPhyToTle9273Phy"/>
+<property name="Test_Step_0" value="phy == SBC_PHY_CAN1"/>
+<property name="Test_Step_1" value="phy == SBC_PHY_LIN1"/>
+<property name="Test_Step_2" value="phy == SBC_PHY_LIN2"/>
+<property name="Test_Step_3" value="phy == SBC_PHY_LIN3"/>
+<property name="Test_Step_4" value="phy == SBC_PHY_LIN4"/>
+<property name="Test_Step_5" value="phy == 5"/>
+</properties>
+    </testcase>
+    <testcase name="sbcPhyModeToTle9273PhyMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function sbcPhyToTle9273Phy"/>
+<property name="Test_Step_0" value="phymode == SBC_TRCVMODE_OFF"/>
+<property name="Test_Step_1" value="phymode == SBC_TRCVMODE_WAKEABLE"/>
+<property name="Test_Step_2" value="phymode == SBC_TRCVMODE_MUTED"/>
+<property name="Test_Step_3" value="phymode == SBC_TRCVMODE_NORMAL"/>
+<property name="Test_Step_4" value="phymode == 5"/>
+</properties>
+    </testcase>
+    <testcase name="sbcTle9273PhyModeToPhyMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function sbcTle9273PhyModeToPhyMode"/>
+<property name="Test_Step_0" value="tle9273_phymode == SBC_TLE9273_COMMUNICATIONOFF"/>
+<property name="Test_Step_1" value="tle9273_phymode == SBC_TLE9273_COMMUNICATIONISWAKECAPABLE"/>
+<property name="Test_Step_2" value="tle9273_phymode == SBC_TLE9273_COMMUNICATIONRXONLY"/>
+<property name="Test_Step_3" value="tle9273_phymode == SBC_TLE9273_COMMUNICATIONNORMAL"/>
+<property name="Test_Step_4" value="tle9273_phymode == 4"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_PhySetMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_PhySetMode"/>
+<property name="Test_Step_0" value="(phy == SBC_TLE9273_PHY_CAN1) and (trcvmode == SBC_TRCVMODE_NORMAL)"/>
+<property name="Test_Step_1" value="(phy is invalid) and (trcvmode == SBC_TRCVMODE_NORMAL)"/>
+<property name="Test_Step_2" value="(phy == SBC_PHY_LIN3) and (trcvmode is invalid)"/>
+<property name="Test_Step_3" value="Change Phy mode during sleep mode"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_PhyGetMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_PhyGetMode"/>
+<property name="Test_Step_0" value="trcvmode is not null and phy == SBC_PHY_LIN4"/>
+<property name="Test_Step_1" value="trcvmode is not null and phy is invalid"/>
+<property name="Test_Step_2" value="trcvmode is null and phy == SBC_PHY_LIN4"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_GetVcc2" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_GetVcc2"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_EnableVcc2" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_EnableVcc2"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_DisableVcc2" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_DisableVcc2"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_readAllRegistersIntoCache" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_readAllRegistersIntoCache"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_PrintRegisters" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_PrintRegisters"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_SetWatchDogSyncedCall" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_SetWatchDogSyncedCall"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_ExtractChange_DevStat" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_ExtractChange_DevStat"/>
+<property name="Test_Step_0" value="Restart after a wake from FAIL SAFE mode"/>
+<property name="Test_Step_1" value="Device status before restart mode came from sleep mode"/>
+<property name="Test_Step_2" value="Device status before restart mode is not changed"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_readAllRegistersIntoCache" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the funtion SBC_TLE9273_readAllRegistersIntoCache"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_activateSbcConfiguration" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the funtion SBC_TLE9273_activateSbcConfiguration"/>
+<property name="Test_Step_0" value="Activate SBC configuration via SPI"/>
+<property name="Test_Step_1" value="config == SBC_CONFIG_MAX"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_pollStatusRegisters" status="run" time="0.001" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="checking the function SBC_TLE9273_pollStatusRegisters"/>
+<property name="Test_Step_0" value="The status information field indicate that the register has to be read"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_triggerWatchdog" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_triggerWatchdog"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_configWatchdog" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_configWatchdog"/>
+<property name="Test_Step_0" value="if Watchdog timer period is available : it is in the range of 10 to 1000 ms =&gt; set register via SPI"/>
+<property name="Test_Step_1" value="Watchdog timer period is OFF"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_setSbcMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_setSbcMode"/>
+<property name="Test_Step_0" value="mode value in range &amp;&amp; switch directly from SBC_TLE9273_SBCMODE_SLEEP to SBC_TLE9273_SBCMODE_STOP"/>
+<property name="Test_Step_1" value="mode value in range &amp;&amp; switch from SBC_TLE9273_SBCMODE_STOP to SBC_TLE9273_SBCMODE_SLEEP"/>
+<property name="Test_Step_2" value="mode value not in range"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_getSbcMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_getSbcMode"/>
+<property name="Test_Step_0" value="Development mode is available =&gt; Set the satatus of SBC operating mode on 0 and 1"/>
+<property name="Test_Step_1" value="Development mode is not available"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_setPhyMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_setPhyMode"/>
+<property name="Test_Step_0" value="Change phy mode during normal mode and phy is set on SBC_TLE9273_PHY_CAN1 and phymode is in SBC_TLE9273_COMMUNICATIONNORMAL"/>
+<property name="Test_Step_1" value="Change phy mode during normal mode and set phy on SBC_TLE9273_PHY_LIN1 and set phymode on SBC_TLE9273_COMMUNICATIONNORMAL"/>
+<property name="Test_Step_2" value="Change phy mode during normal mode and set phy on SBC_TLE9273_PHY_LIN3 and set phy mode on SBC_TLE9273_COMMUNICATIONOFF"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_getPhyMode" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_getPhyMode"/>
+<property name="Test_Step_0" value="Verify phy mode in case of phy is equal to SBC_TLE9273_PHY_CAN1"/>
+<property name="Test_Step_1" value="Verify phy mode in case of phy is equal to SBC_TLE9273_PHY_LIN1"/>
+<property name="Test_Step_2" value="Verify phy mode in case of phy is equal to SBC_TLE9273_PHY_LIN2"/>
+<property name="Test_Step_3" value="Verify phy mode in case of phy is equal to SBC_TLE9273_PHY_LIN3"/>
+<property name="Test_Step_4" value="Verify phy mode in case of phy is equal to SBC_TLE9273_PHY_LIN3"/>
+<property name="Test_Step_5" value="Verify if phy mode is equal to SBC_TLE9273_SBCMODE_NORMAL in other cases"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_getPhyStatus" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_getPhyStatus"/>
+<property name="Test_Step_0" value="Verify phy status in case of phy is equal to SBC_TLE9273_PHY_CAN1"/>
+<property name="Test_Step_1" value="Verify phy status in case of phy is equal to SBC_TLE9273_PHY_LIN1"/>
+<property name="Test_Step_2" value="Verify phy status in case of phy is equal toSBC_TLE9273_PHY_LIN2"/>
+<property name="Test_Step_3" value="Verify phy status in case of phy is equal to SBC_TLE9273_PHY_LIN3"/>
+<property name="Test_Step_4" value="Verify phy status in case of phy is equal to SBC_TLE9273_PHY_LIN4"/>
+<property name="Test_Step_5" value="Verify if phy status is equal to SBC_TLE9273_BUSFAIL_NONE in other cases"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_setCyclicWakeup" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_setCyclicWakeup"/>
+<property name="Test_Step_0" value="Verify if PHY mode is changed only in the normal mode and check if the input parameter &apos;interval&apos; is valid"/>
+<property name="Test_Step_1" value="Verify if PHY mode is changed only in the normal mode and check the case if the input parameter &apos;interval&apos; is not valid"/>
+<property name="Test_Step_2" value="Check the case if PHY mode is changed in the sleep mode"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_WakeGetReason" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_WakeGetReason"/>
+<property name="Test_Step_0" value="reason is not null"/>
+<property name="Test_Step_1" value="reason is null"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_WakeupGetEvent" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_WakeupGetEvent"/>
+<property name="Test_Step_0" value="Set Wake flag as 1 and verify if all the wake source signialization from WK_STAT_1 and WK_STAT_2 are cleared =&gt; recalculate new wakeup event"/>
+<property name="Test_Step_1" value="Set Wake flag as null"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_GetVcc2" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_GetVcc2"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_DisableVcc2" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_DisableVcc2"/>
+<property name="Test_Step_0" value="Verify if VCC2 is switched from on to off via SPI mode"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_EnableVcc2" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Check the function SBC_TLE9273_EnableVcc2"/>
+<property name="Test_Step_0" value="Verify if VCC2 is enabled in SBC normal mode via SPI"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_PrintRegisters" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_PrintRegisters"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_getRegister" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_getRegister"/>
+<property name="Test_Step_0" value="SPI sequence can not be transmitted"/>
+<property name="Test_Step_1" value="Get SPI mutex returns not ok"/>
+<property name="Test_Step_2" value="Status registers is maximal"/>
+</properties>
+    </testcase>
+    <testcase name="SBC_TLE9273_ExtractChange_SupStat" status="run" time="0" classname="GTestClass_sbc">
+<properties>
+<property name="Description" value="Checking the function SBC_TLE9273_ExtractChange_SupStat"/>
+<property name="Test_Step_0" value="Power on reset detection"/>
+<property name="Test_Step_1" value="Power on reset no detected"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

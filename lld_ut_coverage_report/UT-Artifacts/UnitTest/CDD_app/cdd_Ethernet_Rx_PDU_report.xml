@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:12:39" time="0" name="AllTests">
+  <testsuite name="GTestClass_cdd_Ethernet_Rx_PDU" tests="2" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Dummy" status="run" time="0" classname="GTestClass_cdd_Ethernet_Rx_PDU">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_Ethernet_Rx_PDU_0001_V001,LLD_ID_Cdd_Ethernet_Rx_PDU_0002_V001"/>
+<property name="Description" value="Dummy"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_Ethernet_Rx_PDU_Cyclic" status="run" time="0" classname="GTestClass_cdd_Ethernet_Rx_PDU">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_Cdd_Ethernet_Rx_PDU_0003_V001,LLD_ID_Cdd_Ethernet_Rx_PDU_0004_V001"/>
+<property name="Description" value="Cdd_Ethernet_Rx_PDU_Cyclic "/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

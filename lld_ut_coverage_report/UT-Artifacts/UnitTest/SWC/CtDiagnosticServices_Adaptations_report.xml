@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="17" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:54:36" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_Adaptations" tests="17" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="Productions_Mode" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Check the Production Mode"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ADAPTIONS_86, SW_DIAG_ADAPTIONS_36, SW_DIAG_ADAPTIONS_93, SW_DIAG_ADAPTIONS_113, SW_DIAG_ADAPTIONS_117, SW_DIAG_ADAPTIONS_112"/>
+<property name="Test_Step_0" value="PMode is not set"/>
+<property name="Expected_1" value="Production Mode DTC is cleared"/>
+<property name="Test_Step_2" value="Pmode is set and within 80km limit"/>
+<property name="Expected_3" value="Production Mode DTC is set"/>
+<property name="Test_Step_4" value="Pmode is set and out of 80km limit"/>
+<property name="Expected_5" value="Production mode is disabled and DTC is cleared"/>
+<property name="Test_Step_6" value="Diasabling Pmode fails"/>
+<property name="Expected_7" value="Production mode DTC is set"/>
+<property name="Test_Step_8" value="Invalid mileage read"/>
+<property name="Expected_9" value="Production mode DTC is set"/>
+</properties>
+    </testcase>
+    <testcase name="Initialization" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Initialization of SWC"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ADAPTIONS_115, SW_DIAG_ADAPTIONS_98, SW_DIAG_ADAPTIONS_97, SW_DIAG_ADAPTIONS_99"/>
+<property name="Test_Step_0" value="Initialization sequence, development mode active"/>
+<property name="Expected_1" value="SWC initialized and Dev Mode DTC set"/>
+<property name="Test_Step_2" value="Initialization sequence, development mode inactive"/>
+<property name="Expected_3" value="SWC initialized and Dev Mode DTC cleared"/>
+</properties>
+    </testcase>
+    <testcase name="Reset_Adaptations" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Reset all Adaptions"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ADAPTIONS_55, SW_DIAG_ADAPTIONS_56, SW_DIAG_ADAPTIONS_57, SW_DIAG_ADAPTIONS_85, SW_DIAG_ADAPTIONS_62, SW_DIAG_ADAPTIONS_91, SW_DIAG_ADAPTIONS_87, SW_DIAG_ADAPTIONS_95, SW_DIAG_ADAPTIONS_57, SW_DIAG_ADAPTIONS_63, SW_DIAG_ADAPTIONS_63, SW_DIAG_ADAPTIONS_88, SW_DIAG_ADAPTIONS_89, SW_DIAG_ADAPTIONS_38, SW_DIAG_ADAPTIONS_52, SW_DIAG_ADAPTIONS_53, SW_DIAG_ADAPTIONS_67-SW_DIAG_ADAPTIONS_83, SW_DIAG_ADAPTIONS_37"/>
+<property name="Test_Step_0" value="Call the Adaption Reset Function"/>
+<property name="Expected_1" value="All Adaption Values are deleted"/>
+<property name="Test_Step_2" value="Adaption Reset Function fails"/>
+<property name="Expected_3" value="Deletion failed, results not transmitted"/>
+<property name="Test_Step_4" value="Call Channel Reset Operation"/>
+<property name="Expected_5" value="All Adaption Values are sent"/>
+</properties>
+    </testcase>
+    <testcase name="Reset_Adaptations_RSTPMsg_TransmitVarLen_return_RTE_E_OK" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="RSTPMsg_TransmitVarLen return RTE_E_OK"/>
+<property name="Test_Step_0" value="did_to_push is an invalid DID"/>
+</properties>
+    </testcase>
+    <testcase name="WriteData" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Write Data of Adaption Jobs to NAD"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ADAPTIONS_5, SW_DIAG_ADAPTIONS_49, SW_DIAG_ADAPTIONS_50, SW_DIAG_ADAPTIONS_51"/>
+<property name="Test_Step_0" value="Job not started yet"/>
+<property name="Expected_1" value="Store Values in nvm"/>
+<property name="Test_Step_2" value="Job is pending"/>
+<property name="Expected_3" value="Nothing Happens, Job is still pending, if timeout expires JOB_FAILED is set"/>
+<property name="Test_Step_4" value="Job failed"/>
+<property name="Expected_5" value="Job fails, cancel Job"/>
+<property name="Test_Step_6" value="Job is successful"/>
+<property name="Expected_7" value="Job is successful"/>
+<property name="Test_Step_8" value="Writing in NVM fails"/>
+<property name="Expected_9" value="Job is stopped, returns error"/>
+<property name="Test_Step_10" value="Writing of Knockout Timer"/>
+<property name="Expected_11" value="datas is directly stored in nvm"/>
+</properties>
+    </testcase>
+    <testcase name="writeData_510" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_510_WriteData functio check"/>
+<property name="Tested_LLD_IDs" value="_"/>
+</properties>
+    </testcase>
+    <testcase name="writeData_511" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="DidServices_ID_Adaptation_511_WriteData"/>
+<property name="Tested_LLD_IDs" value="_"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_GwSm_Play_Protection_Adaption_GetValue" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Pi_GwSm_Play_Protection_Adaption_GetValue function check"/>
+<property name="Tested_LLD_IDs" value="_"/>
+</properties>
+    </testcase>
+    <testcase name="Pi_Adaptations_BTLE_GetEnabled" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Pi_Adaptations_BTLE_GetEnabled function check"/>
+<property name="Tested_LLD_IDs" value="_"/>
+<property name="Expected_0" value="noting : empty function"/>
+</properties>
+    </testcase>
+    <testcase name="Receive_RSTP_Callback" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Check Callback reception"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_ADAPTIONS_15"/>
+<property name="Test_Step_0" value="Receive valid RSTP Message"/>
+<property name="Expected_1" value="RSTP message is received and data stored to nvm"/>
+<property name="Test_Step_2" value="status_not_ok"/>
+<property name="Test_Step_3" value="Receive not valid RST Message"/>
+<property name="Expected_4" value="Write &quot;[ADAP_RX] Unexpected message!&quot; in log file "/>
+</properties>
+    </testcase>
+    <testcase name="ResetOperationStatus" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Check Reset Status"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Reset not Requested yet"/>
+<property name="Expected_1" value="Operation Result is an error"/>
+<property name="Test_Step_2" value="Reset successful for all adaptions"/>
+<property name="Expected_3" value="Operation Result is succesfully"/>
+<property name="Test_Step_4" value="Reset pending"/>
+<property name="Expected_5" value="Operation Result is unknown"/>
+</properties>
+    </testcase>
+    <testcase name="CheckWriteCondition" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Testing Write Condition Checks"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Write condition is o.k."/>
+<property name="Expected_1" value="Write condition returns ok"/>
+<property name="Test_Step_2" value="Fingerprint is invalid"/>
+<property name="Expected_3" value="Condition not ok, NRC is send back"/>
+<property name="Test_Step_4" value="Write operation ongoing"/>
+<property name="Expected_5" value="Write condition returns pending"/>
+</properties>
+    </testcase>
+    <testcase name="JobEndNotify" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Test Notification at finishing Diagnose Jobs"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="End a pending Adaption Job"/>
+<property name="Expected_1" value="Job successfully finished"/>
+<property name="Test_Step_2" value="Fails to end a pending Adaption Job"/>
+<property name="Expected_3" value="Job not finished"/>
+<property name="Test_Step_4" value="End a pending Reset Job"/>
+<property name="Expected_5" value="Reset successfully finished"/>
+<property name="Test_Step_6" value="End a pending Reset Job"/>
+<property name="Expected_7" value="Reset not finished"/>
+<property name="Test_Step_8" value="No NAD Request"/>
+<property name="Expected_9" value="Flag is cleared"/>
+<property name="Test_Step_10" value="Jobs without End Notification"/>
+<property name="Expected_11" value="nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Test the Read Data Functions"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Read Data from nvm"/>
+<property name="Expected_1" value="Data is copied from nvm to Diag Service Request"/>
+<property name="Test_Step_2" value="Read Data from unimplemeented service"/>
+<property name="Expected_3" value="Reply with not activated"/>
+</properties>
+    </testcase>
+    <testcase name="FlightModeRead" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="Read Flight mode from nvm"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Mode active stored"/>
+<property name="Expected_1" value="Data is copied from nvm to Diag Service Request"/>
+<property name="Test_Step_2" value="Mode not active stored"/>
+<property name="Expected_3" value="Data is copied from nvm to Diag Service Request"/>
+</properties>
+    </testcase>
+    <testcase name="ReadMileage" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="get actual mileage from RTE"/>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Test_Step_0" value="Call function"/>
+<property name="Expected_1" value="Cannot be verified"/>
+</properties>
+    </testcase>
+    <testcase name="writeDataInNvm" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Adaptations">
+<properties>
+<property name="Description" value="writeDataInNvm"/>
+<property name="Tested_LLD_IDs" value=""/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

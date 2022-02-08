@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="23" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:10:16" time="0" name="AllTests">
+  <testsuite name="GTestClass_GwSm_Crypto_SWC" tests="23" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="RNB_CS_GwSm_Crypto_Crypto_Init" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_Crypto_Init"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_Bin2Hex" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_Bin2Hex"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_IsCorrectAuthenticator" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_IsCorrectAuthenticator"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_IsMemoryZero" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_IsMemoryZero"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_MemCmp" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_MemCmp"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_TriggerKeypairCurve25519" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_TriggerKeypairCurve25519"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_TriggerKeypairEd25519" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_TriggerKeypairEd25519"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_TriggerSharedSecretCurve25519" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_TriggerSharedSecretCurve25519"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_TriggerSignDetachedEd25519" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_TriggerSignDetachedEd25519"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_b_TriggerVerifyDetachedEd25519" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_b_TriggerVerifyDetachedEd25519"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_ChaCha20Poly1305Decrypt" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_ChaCha20Poly1305Decrypt"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_ChaCha20Poly1305Encrypt" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_ChaCha20Poly1305Encrypt"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_HashSha256" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_HashSha256"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_Poly1305" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_Poly1305"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_Poly1305OnetimeKey" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_Poly1305OnetimeKey"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_Poly1305_Nonce" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_Poly1305_Nonce"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_StreamChaCha20IetfXor" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_StreamChaCha20IetfXor"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_StreamChaCha20Xor" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_StreamChaCha20Xor"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_VerifyPoly1305" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_VerifyPoly1305"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_e_VerifyPoly1305_Nonce" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_e_VerifyPoly1305_Nonce"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_v_AddBigNumbers" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_v_AddBigNumbers"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_v_IncrementBigNumber" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_v_IncrementBigNumber"/>
+</properties>
+    </testcase>
+    <testcase name="RNB_CS_GwSm_Crypto_v_MemZero" status="run" time="0" classname="GTestClass_GwSm_Crypto_SWC">
+<properties>
+<property name="Description" value="RNB_CS_GwSm_Crypto_v_MemZero"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

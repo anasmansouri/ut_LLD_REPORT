@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:58:37" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_MeasurementValues" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="CtDiagnosticServices_MeasurementValues_test" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_MeasurementValues">
+<properties>
+<property name="Description" value="CtDiagnosticServices_MeasurementValues"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_MEAS_VAL_107, SW_DIAG_MEAS_VAL_108, SW_DIAG_MEAS_VAL_109"/>
+<property name="Test_Step_0" value="Diagnostic 0xF179: ECU Supplier Number"/>
+<property name="Test_Step_1" value="Diagnostic 0xF17D: ECU Production Test System Number"/>
+<property name="Test_Step_2" value="Diagnostic 0xF17F: VW Supplier Number"/>
+<property name="Test_Step_3" value="Diagnostic 0xF18A: System Supplier Identifier"/>
+<property name="Test_Step_4" value="Diagnostic 0xF18B: ECU Manufacturing Date "/>
+<property name="Test_Step_5" value="Diagnostic 0xF18C: ECU Manufacturing Date "/>
+<property name="Test_Step_6" value="Diagnostic 0x1001: Softwareversionen Teilsysteme "/>
+<property name="Test_Step_7" value=" diagnostic code 0x5724: ECU Identification "/>
+<property name="Test_Step_8" value="Diagnostic 0x1002: GwSm version "/>
+<property name="Test_Step_9" value="diagnostic code 0x1809: Gyro Sensor 2D "/>
+<property name="Test_Step_10" value="diagnostic code 0x010f: Ethernet_CRC_error_counter "/>
+<property name="Test_Step_11" value="diagnostic code 0x013d: Ip_ipv6_addresses_list "/>
+<property name="Test_Step_12" value="diagnostic code 0x013e: Ip_ipv6_multicast_addresses_list "/>
+<property name="Test_Step_13" value="diagnostic code 0x0140: Ip_vlans_list "/>
+<property name="Test_Step_14" value="diagnostic code 0x014e:  Ip_counter_dropped_messages"/>
+<property name="Test_Step_15" value="diagnostic code 0x248E: Audio_Line_Out "/>
+<property name="Test_Step_16" value="diagnostic code 0x2a55:  "/>
+<property name="Test_Step_17" value="diagnostic code 0x0a2b:  Ip_counter_wrong_vlans"/>
+<property name="Test_Step_18" value="diagnostic code 0x02ac:  Ip_counter_wrong_ipv6_addresses"/>
+<property name="Test_Step_19" value="diagnostic code 0x02ae:  Ip_counter_wrong_tcp_ports"/>
+<property name="Test_Step_20" value="diagnostic code 0x02af:  Ip_counter_wrong_udp_ports"/>
+<property name="Test_Step_21" value="Not implemented diagnostic codes "/>
+<property name="Test_Step_22" value="Not implemented diagnostic codes: 0x41e7 "/>
+<property name="Test_Step_23" value="Not implemented diagnostic codes: 0x5244 "/>
+<property name="Test_Step_24" value="Not implemented diagnostic codes: 0x53ce "/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

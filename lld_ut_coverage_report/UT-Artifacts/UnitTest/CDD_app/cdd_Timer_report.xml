@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:16:28" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_cdd_Timer" tests="8" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="Cdd_Timer_Init" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_Init"/>
+<property name="Test_Step_0" value="Cdd_Timer_Initialized == CDD_TIMER_INIT"/>
+<property name="Test_Step_1" value="Cdd_Timer_Initialized != CDD_TIMER_INIT"/>
+</properties>
+    </testcase>
+    <testcase name="ms_to_ticks" status="run" time="0" classname="GTestClass_cdd_Timer" />
+    <testcase name="CDD_Timer_MainFunction_Cdd_Timer_Sync_Required" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_Sync_Required branches"/>
+<property name="Test_Step_0" value="Cdd_Timer_Sync_Required == TRUE"/>
+<property name="Test_Step_1" value="Cdd_Timer_Sync_Required == FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="CDD_Timer_MainFunction_Cdd_Timer_Tick_Required" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_Tick_Required branches"/>
+<property name="Test_Step_0" value="Cdd_Timer_Tick_Required == FALSE"/>
+<property name="Test_Step_1" value="Cdd_Timer_Tick_Required == TRUE"/>
+<property name="Test_Step_2" value="Cdd_Timer_Tick_Required == TRUE and cdd_timer_current[i].active == TRUE "/>
+<property name="Test_Step_3" value="Cdd_Timer_Tick_Required == TRUE and cdd_timer_current[i].active == TRUE and cdd_timer_current[i].next_tick &gt; current_RTC_count "/>
+<property name="Test_Step_4" value="Cdd_Timer_Sync_Required == TRUE and cdd_timer_current[i].active == TRUE and cdd_timer_current[i].next_tick &lt;= current_RTC_count and cdd_timer_current[i].repeat= TRUE"/>
+<property name="Test_Step_5" value="Cdd_Timer_Sync_Required == TRUE and cdd_timer_current[i].active == TRUE and cdd_timer_current[i].next_tick &lt;= current_RTC_count and cdd_timer_current[i].repeat= FALSE"/>
+<property name="Test_Step_6" value="Cdd_Timer_Sync_Required == TRUE and cdd_timer_current[i].active == TRUE and  next_interrupt_value &lt;= cdd_timer_current[i].next_tick"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_Timer_Start" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_Start"/>
+<property name="Test_Step_0" value="timer_id &gt;= CDD_TIMER_NR_OF_TIMER_IDS"/>
+<property name="Test_Step_1" value="timer_id &lt; CDD_TIMER_NR_OF_TIMER_IDS"/>
+<property name="Test_Step_2" value="timer_id &lt; CDD_TIMER_NR_OF_TIMER_IDS :  MAX_TIMER_MS &lt; time_ms"/>
+<property name="Test_Step_3" value="timer_id &lt; CDD_TIMER_NR_OF_TIMER_IDS :  cdd_timer_current[i].active == FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_Timer_Stop" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_Stop"/>
+<property name="Test_Step_0" value="timer_id &gt;= CDD_TIMER_NR_OF_TIMER_IDS"/>
+<property name="Test_Step_1" value="timer_id &lt; CDD_TIMER_NR_OF_TIMER_IDS"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_Timer_GetActive" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_GetActive"/>
+<property name="Test_Step_0" value="timer_id &gt;= CDD_TIMER_NR_OF_TIMER_IDS"/>
+<property name="Test_Step_1" value="timer_id &lt; CDD_TIMER_NR_OF_TIMER_IDS"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_Timer_Read_RTC" status="run" time="0" classname="GTestClass_cdd_Timer">
+<properties>
+<property name="Description" value="Cdd_Timer_Read_RTC"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

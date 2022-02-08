@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="12" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:49:12" time="0.002" name="AllTests">
+  <testsuite name="GTestClass_BswM_CustomRule_Callout" tests="12" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="BswM_Dcm_RequestEcuReset_Bootloader" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if the shutdown target is selected,all run requests are killed"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_Dcm_RequestEcuReset_KeyOffOn" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if the request EcuReset_KeyOffOn is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_EnableDatasetDownload" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if EnableDatasetDownload is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_DisableDatasetDownload" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if DisableDatasetDownload is handled"/>
+</properties>
+    </testcase>
+    <testcase name="EnableBackupPowerUsage" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if EnableBackupPowerUsage is handled"/>
+</properties>
+    </testcase>
+    <testcase name="DisableBackupPowerUsage" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if DisableBackupPowerUsage is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_CCanFullCommCallout" status="run" time="0.001" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if CCanFullCommunication is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_CCanNoCommCallout" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if BswM_CCanNoCommCallout is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_CCanSilentCommCallout" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if CCanSilentCommunication is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_CCan_EnTx_Callout" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if CCan enable Tx is handled"/>
+</properties>
+    </testcase>
+    <testcase name="BswM_CCan_DisTx_Callout" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if CCan disable Tx is handled"/>
+</properties>
+    </testcase>
+    <testcase name="Handling_Kl30NormalVoltage_Kl30OverVoltage_Kl30UnderVoltage" status="run" time="0" classname="GTestClass_BswM_CustomRule_Callout">
+<properties>
+<property name="Description" value="Verify if Kl30NormalVoltage and Kl30OverVoltage and BswM_App_Kl30UnderVoltageCallout are handled"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

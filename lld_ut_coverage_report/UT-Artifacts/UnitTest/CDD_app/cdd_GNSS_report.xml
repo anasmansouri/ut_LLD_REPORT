@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:13:23" time="0" name="AllTests">
+  <testsuite name="GTestClass_cdd_GNSS" tests="3" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Cdd_GNSS_timestamp_Init" status="run" time="0" classname="GTestClass_cdd_GNSS">
+<properties>
+<property name="Description" value="Test the initialisation of the cdd GNSS timestamp"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GnssTimeStamp_setGnssTimestamp" status="run" time="0" classname="GTestClass_cdd_GNSS">
+<properties>
+<property name="Description" value="Set Gnss Timestamp Test"/>
+<property name="Test_Step_0" value="ID &lt; MAX_NACHRICHTENPAKET_ID2 branch"/>
+<property name="Test_Step_1" value="ID &gt;= MAX_NACHRICHTENPAKET_ID2 branch"/>
+</properties>
+    </testcase>
+    <testcase name="Cdd_GNSS_timestamp_Modify_GNSS_02" status="run" time="0" classname="GTestClass_cdd_GNSS">
+<properties>
+<property name="Description" value="modify Gnss Timestamp Test"/>
+<property name="Test_Step_0" value="DataPtr = 0 branch"/>
+<property name="Test_Step_1" value="DataPtr != 0 branch and currentSystemtime &lt; timestampNAD"/>
+<property name="Test_Step_2" value="DataPtr != 0 branch and currentSystemtime &gt;= timestampNAD branch"/>
+<property name="Test_Step_3" value="timestampNAD = INIT_GNSS_02 branch"/>
+<property name="Test_Step_4" value="timestampNAD = FEHLER_GNSS_02 branch"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:03:54" time="0" name="AllTests">
+  <testsuite name="GTestClass_CtKsSlaveSwc" tests="8" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="CtKsSalveSwc_Init" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0001_V001,LLD_ID_CtKsSlaveSwc_0002_V001"/>
+<property name="Description" value="Checking the function CtKsSalveSwc_Init"/>
+</properties>
+    </testcase>
+    <testcase name="CtKsSlaveSwc_Cyclic_10ms" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0003_V001,LLD_ID_CtKsSlaveSwc_0004_V001"/>
+<property name="Description" value="Checking the function CtKsSlaveSwc_Cyclic_10ms"/>
+<property name="Test_Step_0" value="Ks_sf0x81XcpStateReceived == FALSE and Ks_SfCurrentStatus returns KS_E_BUSY"/>
+<property name="Test_Step_1" value="Ks_sf0x81XcpStateReceived == FALSE and Ks_SfCurrentStatus returns KS_E_OK"/>
+<property name="Test_Step_2" value="Ks_sf0x81XcpStateReceived == FALSE and Ks_SfCurrentStatus returns KS_E_NOT_OK"/>
+<property name="Test_Step_3" value="Ks_sf0x81XcpStateReceived == TRUE"/>
+</properties>
+    </testcase>
+    <testcase name="GetData_GetFazitString" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0005_V001,LLD_ID_CtKsSlaveSwc_0006_V001"/>
+<property name="Description" value="Checking the function GetData_GetFazitString"/>
+</properties>
+    </testcase>
+    <testcase name="GetData_GetStartKeyCheck" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0009_V001,LLD_ID_CtKsSlaveSwc_0010_V001"/>
+<property name="Description" value="Checking the function GetData_GetStartKeyCheck"/>
+</properties>
+    </testcase>
+    <testcase name="GetData_GetStartKeyVerify" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0007_V001,LLD_ID_CtKsSlaveSwc_0008_V001"/>
+<property name="Description" value="Checking the function GetData_GetStartKeyVerify"/>
+</properties>
+    </testcase>
+    <testcase name="KeyDownloadCallback_KeyDownloadCallback" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0011_V001,LLD_ID_CtKsSlaveSwc_0012_V001"/>
+<property name="Description" value="Checking the function KeyDownloadCallback_KeyDownloadCallback"/>
+</properties>
+    </testcase>
+    <testcase name="SpecialFunction0x80Callback_SpecialFunctionCallback" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0013_V001,LLD_ID_CtKsSlaveSwc_0014_V001"/>
+<property name="Description" value="Checking the function SpecialFunction0x80Callback_SpecialFunctionCallback"/>
+</properties>
+    </testcase>
+    <testcase name="SpecialFunction0x81Callback_SpecialFunctionCallback" status="run" time="0" classname="GTestClass_CtKsSlaveSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtKsSlaveSwc_0015_V001,LLD_ID_CtKsSlaveSwc_0016_V001"/>
+<property name="Description" value="Checking the function SpecialFunction0x81Callback_SpecialFunctionCallback"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

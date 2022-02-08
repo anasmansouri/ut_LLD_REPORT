@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:50:55" time="0.001" name="AllTests">
+  <testsuite name="GTestClass_CtAudioSwitchControlSwc" tests="7" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="CtAudioSwitchControlSwc_Init" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0008_V001,LLD_ID_CtAudioSwitchControlSwc_0009_V001,LLD_ID_CtAudioSwitchControlSwc_0010_V001,LLD_ID_CtAudioSwitchControlSwc_0011_V001,LLD_ID_CtAudioSwitchControlSwc_0012_V001,LLD_ID_CtAudioSwitchControlSwc_0013_V001,LLD_ID_CtAudioSwitchControlSwc_0014_V001,LLD_ID_CtAudioSwitchControlSwc_0015_V001,LLD_ID_CtAudioSwitchControlSwc_0016_V001"/>
+<property name="Description" value="CtAudioSwitchControlSwc_Init function check."/>
+</properties>
+    </testcase>
+    <testcase name="CtAudioSwitchControlSwc_Cyclic" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0047_V001,LLD_ID_CtAudioSwitchControlSwc_0048_V001"/>
+<property name="Description" value="CtAudioSwitchControlSwc_Cyclic function check."/>
+<property name="Test_Step_0" value="Mute audio line: mute out is ON."/>
+<property name="Test_Step_1" value="read measurement data: make sure audio line is ON"/>
+<property name="Test_Step_2" value="main cyclic function is executed cyclically, and measuremet is done every 100ms. mute out voltage is lower than DTC short to plus limit =&gt; dem status prepassed."/>
+<property name="Test_Step_3" value="main cyclic function is executed cyclically, and measuremet is done every 100ms. mute out voltage is bigger than DTC short to plus limit =&gt; dem status prefailed."/>
+<property name="Test_Step_4" value="release audio line: mute out is OFF."/>
+<property name="Test_Step_5" value="read measurement data: make sure audio line is OFF"/>
+<property name="Test_Step_6" value="main cyclic function is executed cyclically, and measuremet is done every 100ms. mute out voltage is bigger than DTC interuption limit =&gt; dem status prepassed."/>
+<property name="Test_Step_7" value="main cyclic function is executed cyclically, and measuremet is done every 100ms. mute out voltage is below interuption_DTC  limit =&gt; dem status prefailed."/>
+</properties>
+    </testcase>
+    <testcase name="Pi_AudioModePeriority_SetModePriority" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0041_V001,LLD_ID_CtAudioSwitchControlSwc_0042_V001,LLD_ID_CtAudioSwitchControlSwc_0043_V001,LLD_ID_CtAudioSwitchControlSwc_0044_V001,LLD_ID_CtAudioSwitchControlSwc_0045_V001,LLD_ID_CtAudioSwitchControlSwc_0046_V001"/>
+<property name="Description" value="Pi_AudioModePeriority_SetModePriority function check."/>
+<property name="Test_Step_0" value="set override state to enabled =&gt; U8V0 will be enabled automatically and can not be disabled until override state is disabled."/>
+<property name="Test_Step_1" value="FULL communication is disabled. but U8V0 should not be disabled."/>
+<property name="Test_Step_2" value="override state is disabled =&gt; U8V0 can be disabled."/>
+<property name="Test_Step_3" value="FULL communication is enabled."/>
+<property name="Test_Step_4" value="invalid input is received =&gt; nothing to be changed."/>
+</properties>
+    </testcase>
+    <testcase name="CtAudioSwitchControlSwc_SetState" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0021_V001,LLD_ID_CtAudioSwitchControlSwc_0022_V001"/>
+<property name="Description" value="CtAudioSwitchControlSwc_SetState function check."/>
+<property name="Expected_0" value="empty function, nothing expected."/>
+</properties>
+    </testcase>
+    <testcase name="CtAudioSwitchControllerSwc_RSTP_ReceiveCallBack" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0001_V001,LLD_ID_CtAudioSwitchControlSwc_0002_V001,LLD_ID_CtAudioSwitchControlSwc_0003_V001,LLD_ID_CtAudioSwitchControlSwc_0004_V001,LLD_ID_CtAudioSwitchControlSwc_0005_V001,LLD_ID_CtAudioSwitchControlSwc_0006_V001,LLD_ID_CtAudioSwitchControlSwc_0007_V001"/>
+<property name="Description" value="CtAudioSwitchControllerSwc_RSTP_ReceiveCallBack function check."/>
+<property name="Test_Step_0" value="set audio power to OFF."/>
+<property name="Test_Step_1" value="Audio switch control callback function is called with audio power request = ON, AND THE PRIORITY IS NOT FULL COMUNICATION =&gt; U8V0 WILL BE DIABLED."/>
+<property name="Test_Step_2" value="Audio switch control callback function is called with audio power request = OFF, AND THE PRIORITY NOT FULL COMUNICATION =&gt; U8V0 Status will not be changed ."/>
+<property name="Test_Step_3" value="Audio switch control callback function is called with audio power request = ON, AND THE PRIORITY NOT FULL COMUNICATION =&gt; U8V0 Status will not be changed ."/>
+<property name="Test_Step_4" value="Audio switch control callback function is called with audio power STATUS = ON."/>
+<property name="Test_Step_5" value="Audio switch control callback function is called with VDA mute request."/>
+<property name="Test_Step_6" value="Audio switch control callback function is invalid input parameter"/>
+</properties>
+    </testcase>
+    <testcase name="CtAudioSwitchControlSwc_Init_2" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0008_V001,LLD_ID_CtAudioSwitchControlSwc_0009_V001,LLD_ID_CtAudioSwitchControlSwc_0010_V001,LLD_ID_CtAudioSwitchControlSwc_0011_V001,LLD_ID_CtAudioSwitchControlSwc_0012_V001,LLD_ID_CtAudioSwitchControlSwc_0013_V001,LLD_ID_CtAudioSwitchControlSwc_0014_V001,LLD_ID_CtAudioSwitchControlSwc_0015_V001,LLD_ID_CtAudioSwitchControlSwc_0016_V001"/>
+<property name="Description" value="CtAudioSwitchControlSwc_Init function check with mute line not installed."/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_MeasValue_241a_ReadData" status="run" time="0" classname="GTestClass_CtAudioSwitchControlSwc">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtAudioSwitchControlSwc_0025_V001,LLD_ID_CtAudioSwitchControlSwc_0026_V001,LLD_ID_CtAudioSwitchControlSwc_0027_V001,LLD_ID_CtAudioSwitchControlSwc_0028_V001,LLD_ID_CtAudioSwitchControlSwc_0029_V001,LLD_ID_CtAudioSwitchControlSwc_0030_V001,LLD_ID_CtAudioSwitchControlSwc_0031_V001"/>
+<property name="Description" value="DidServices_ID_MeasValue_241a_ReadData function check when mule line i snot configured."/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

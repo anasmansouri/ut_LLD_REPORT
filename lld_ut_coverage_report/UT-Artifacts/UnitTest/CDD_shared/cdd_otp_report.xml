@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" timestamp="2022-02-04T11:19:12" time="0" name="AllTests">
+  <testsuite name="GTestClass_cdd_otp" tests="6" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="OTPMemory_ReadBlock" status="run" time="0" classname="GTestClass_cdd_otp">
+<properties>
+<property name="Description" value="Read a block from the OTP memory by its ID"/>
+<property name="Test_Step_0" value="ID out of range"/>
+<property name="Test_Step_1" value="ID equal to zero"/>
+</properties>
+    </testcase>
+    <testcase name="OTPMemory_ReadBlock_buffer_ptr_is_NULL" status="run" time="0" classname="GTestClass_cdd_otp">
+<properties>
+<property name="Test_Step_0" value="Buffer ptr is NULL"/>
+</properties>
+    </testcase>
+    <testcase name="OTPMemory_ReadBlock_length_is_greather_than_otpPayloadSize_id_" status="run" time="0" classname="GTestClass_cdd_otp">
+<properties>
+<property name="Test_Step_0" value="Buffer length &gt;= otpPayloadSize[id]"/>
+</properties>
+    </testcase>
+    <testcase name="OTPMemory_HardwareVariantAtLeast" status="run" time="0" classname="GTestClass_cdd_otp">
+<properties>
+<property name="Description" value="TEST Hardware Variant"/>
+<property name="Test_Step_0" value="The actual hardware variant is at least u8HardwareVariant"/>
+<property name="Test_Step_1" value="Invalid &apos;hardware variant&apos; payload"/>
+</properties>
+    </testcase>
+    <testcase name="OTPMemory_Report" status="run" time="0" classname="GTestClass_cdd_otp">
+<properties>
+<property name="Description" value="Test reporting the OTP items found"/>
+</properties>
+    </testcase>
+    <testcase name="OTPMemory_setDefaults" status="run" time="0" classname="GTestClass_cdd_otp">
+<properties>
+<property name="Description" value="TEST the initialisation of the OTP Memory"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

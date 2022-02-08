@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:56:36" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_FreezeFrames" tests="4" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="CtDiagnosticServices_FreezeFrames_Init" status="run" time="0" classname="GTestClass_CtDiagnosticServices_FreezeFrames">
+<properties>
+<property name="Description" value="The NVM blocks for the freeze frames (FF) are read when the tester requesting the FF."/>
+<property name="Test_Step_0" value="Initialized FreezeFrames "/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_FREEZE_FRAME_***"/>
+</properties>
+    </testcase>
+    <testcase name="CtDiagnosticServices_StandardFreezeFrames" status="run" time="0" classname="GTestClass_CtDiagnosticServices_FreezeFrames">
+<properties>
+<property name="Description" value="When Diagnose_01 is received, the CtDiagnosticServices_FreezeFrames component will extract the unlearn counter, date, time and kilometrage from the message and (if successful) converts those&#x09;values into an 8-byte Standard Freeze Frame, which it then writes to the NVM RAM mirror, marking it &apos;changed&apos;"/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_FREEZE_FRAME_13, SW_DIAG_FREEZE_FRAME_27, SW_DIAG_FREEZE_FRAME_29, SW_DIAG_FREEZE_FRAME_30, SW_DIAG_FREEZE_FRAME_31, SW_DIAG_FREEZE_FRAME_32, SW_DIAG_FREEZE_FRAME_34"/>
+<property name="Test_Step_0" value="Read Standard FreezeFrames from RTE"/>
+<property name="Test_Step_1" value="Read Standard FreezeFrames from RTE"/>
+<property name="Test_Step_2" value="ConditionCheckRead for Standard Freeze Frame"/>
+<property name="Test_Step_3" value="Read Standard Freeze Frame from NVM"/>
+</properties>
+    </testcase>
+    <testcase name="CtDiagnosticServices_ExtendedFreezeFrames_Write" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_FreezeFrames">
+<properties>
+<property name="Description" value="When called by DEM (see SW_DIAG_FREEZE_FRAME_9) the component should write the Extended Freeze Frame to NVM."/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_FREEZE_FRAME_7, SW_DIAG_FREEZE_FRAME_8, SW_DIAG_FREEZE_FRAME_9, SW_DIAG_FREEZE_FRAME_11, &#x09;&#x09;SW_DIAG_FREEZE_FRAME_12, SW_DIAG_FREEZE_FRAME_13, SW_DIAG_FREEZE_FRAME_18, SW_DIAG_FREEZE_FRAME_19, SW_DIAG_FREEZE_FRAME_35"/>
+<property name="Test_Step_0" value="Check function IsMemoryInitOk: Index is not in range. Not possible to be checked, this check is done before calling the function"/>
+<property name="Test_Step_1" value="Check function IsMemoryInitOk: Check that the memory block, corresponding to the received event, has an error. (for every EFF less number 46). Check function IsMemoryInitOk: Check that the memory block, corresponding to the received event, is OK (for EFF 46). The buffer is properly written in NVMRAM: memory block 46 is OK, the event is valid and exists in block 46 "/>
+<property name="Test_Step_2" value="The buffer is not copy in NVMRAM because the Event number is not found."/>
+<property name="Test_Step_3" value="The buffer is not copy in NVMRAM because the Event number exists but is invalid."/>
+<property name="Test_Step_4" value="The buffer is  copy in NVMRAM because the Event number does not exist but is valid. (Nvm_ExtFreezeFrameType)"/>
+<property name="Test_Step_5" value="The buffer is  copy in NVMRAM because the Event number does not exist but is valid. (Nvm_ExtFreezeFrameBigType)"/>
+<property name="Test_Step_6" value="The buffer is  copy in NVMRAM because the Event number does not exist but is valid. (Nvm_ExtFreezeFrameLargeType)"/>
+<property name="Test_Step_7" value="The buffer is  copy in NVMRAM because the Event number does not exist, is valid but there are any block available to store it. (Nvm_ExtFreezeFrameType)"/>
+<property name="Test_Step_8" value="The buffer is  copy in NVMRAM because the Event number does not exist, is valid but there are any block available to store it. (Nvm_ExtFreezeFrameBigType)"/>
+<property name="Test_Step_9" value="The buffer is  copy in NVMRAM because the Event number does not exist, is valid but there are any block available to store it.  (Nvm_ExtFreezeFrameLargeType)"/>
+</properties>
+    </testcase>
+    <testcase name="CtDiagnosticServices_ExtendedFreezeFrames_Read" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_FreezeFrames">
+<properties>
+<property name="Description" value="When an application wants to read out the Extended Freeze Frames this request goes through the DEM module. DEM will call CtDiagnosticServices_FreezeFrames to read the Extended Freeze Frames from NVM."/>
+<property name="Tested_LLD_IDs" value="SW_DIAG_FREEZE_FRAME_12, SW_DIAG_FREEZE_FRAME_13, SW_DIAG_FREEZE_FRAME_18, SW_DIAG_FREEZE_FRAME_33"/>
+<property name="Test_Step_0" value="This function look for the NVMRAM block with the indicated EventID. If memory block status are OK, it is not copied in the referenced buffer"/>
+<property name="Test_Step_1" value="This function look for the NVMRAM block with the indicated EventID. If found and memory block status are OK, it is copied in the referenced buffer"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

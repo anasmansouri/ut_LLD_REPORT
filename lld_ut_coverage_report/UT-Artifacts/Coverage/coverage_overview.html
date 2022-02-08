@@ -1,0 +1,1873 @@
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Head</title>
+  <style media="screen" type="text/css">
+
+    body
+    {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    /* Link formats: use maroon w/underlines */
+    a:link
+    {
+      color: navy;
+      text-decoration: underline;
+    }
+    a:visited
+    {
+      color: maroon;
+      text-decoration: underline;
+    }
+    a:active
+    {
+      color: navy;
+      text-decoration: underline;
+    }
+
+    /*** TD formats ***/
+    td
+    {
+      font-family: sans-serif;
+    }
+    td.title
+    {
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 20pt;
+      font-weight: bold;
+    }
+
+    /* TD Header Information */
+    td.headerName
+    {
+      text-align: right;
+      color: black;
+      padding-right: 6px;
+      font-weight: bold;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    td.headerValue
+    {
+      text-align: left;
+      color: blue;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    td.headerTableEntry
+    {
+      text-align: right;
+      color: black;
+      font-weight: bold;
+      white-space: nowrap;
+      padding-left: 12px;
+      padding-right: 4px;
+      background-color: LightBlue;
+    }
+    td.headerValueLeg
+    {
+      text-align: left;
+      color: black;
+      font-size: 80%;
+      white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 2px;
+    }
+
+    /* Color of horizontal ruler */
+    td.hr
+    {
+      background-color: navy;
+      height:3px;
+    }
+    /* Footer format */
+    td.footer
+    {
+      text-align: center;
+      padding-top: 3px;
+      font-family: sans-serif;
+    }
+
+    /* Coverage Table */
+
+    td.coverTableHead
+    {
+      text-align: center;
+      color: white;
+      background-color: SteelBlue;
+      font-family: sans-serif;
+      font-size: 120%;
+      white-space: nowrap;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    td.coverFile
+    {
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 20px;
+      color: black;
+      background-color: LightBlue;
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 110%;
+    }
+    td.coverBar
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: LightBlue;
+    }
+    td.coverBarOutline
+    {
+      background-color: white;
+    }
+    td.coverValue
+    {
+      padding-top: 2px;
+      text-align: right;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: sans-serif;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    /* Link Details */
+    a.detail:link
+    {
+      color: #B8D0FF;
+      font-size:80%;
+    }
+    a.detail:visited
+    {
+      color: #B8D0FF;
+      font-size:80%;
+    }
+    a.detail:active
+    {
+      color: #FFFFFF;
+      font-size:80%;
+    }
+
+    .graphcont{
+        color:#000;
+        font-weight:700;
+        float:left
+    }
+
+    .graph{
+        float:left;
+        background-color: white;
+        position:relative;
+        width:280px;
+        padding:0
+    }
+
+    .graph .bar{
+        display:block;
+        position:relative;
+        border:black 1px solid;
+        text-align:center;
+        color:#fff;
+        height:10px;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:12px;
+        line-height:1.9em
+    }
+
+    .graph .bar span{
+        position:absolute;
+        left:1em
+    }
+
+    td.coveredLine,
+    span.coveredLine
+    {
+        background-color: LightGreen!important;
+    }
+
+    td.uncoveredLine,
+    span.uncoveredLine
+    {
+        background-color: LightPink!important;
+    }
+
+    .linebranch, .linecount
+    {
+        border-right: 1px gray solid;
+        background-color: lightgray;
+    }
+
+    span.takenBranch
+    {
+        color: Green!important;
+        cursor: help;
+    }
+
+    span.notTakenBranch
+    {
+        color: Red!important;
+        cursor: help;
+    }
+
+    .src
+    {
+        padding-left: 12px;
+    }
+
+    .srcHeader,
+    span.takenBranch,
+    span.notTakenBranch
+    {
+        font-family: monospace;
+        font-weight: bold;
+    }
+
+    pre
+    {
+        height : 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .lineno
+    {
+        background-color: #EFE383;
+        border-right: 1px solid #BBB15F;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">GCC Code Coverage Report</td></tr>
+    <tr><td class="hr"></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerName">Directory:</td>
+            <td width="35%" class="headerValue">./</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerValue" style="text-align:right;">Exec</td>
+            <td width="10%" class="headerValue" style="text-align:right;">Total</td>
+            <td width="15%" class="headerValue" style="text-align:right;">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerName">Date:</td>
+            <td class="headerValue">2022-02-04 11:20:58</td>
+            <td></td>
+            <td class="headerName">Lines:</td>
+            <td class="headerTableEntry">19423</td>
+            <td class="headerTableEntry">20477</td>
+            <td class="headerTableEntry" style="background-color:LightGreen">94.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerName">Legend:</td>
+            <td class="headerValueLeg">
+              <span style="background-color:LightPink">low: &lt; 75.0 %</span>
+              <span style="background-color:#FFFF55">medium: &gt;= 75.0 %</span>
+              <span style="background-color:LightGreen">high: &gt;= 90.0 %</span>
+            </td>
+            <td></td>
+            <td class="headerName">Branches:</td>
+            <td class="headerTableEntry">8024</td>
+            <td class="headerTableEntry">9940</td>
+            <td class="headerTableEntry" style="background-color:#FFFF55">80.7 %</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="hr"></td></tr>
+  </table>
+
+  <center>
+  <table width="80%" cellpadding=1 cellspacing=1 border=0>
+    <tr>
+      <td width="44%"><br></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+    </tr>
+    <tr>
+      <td class="coverTableHead">File</td>
+      <td class="coverTableHead" colspan=3>Lines</td>
+      <td class="coverTableHead" colspan=2>Branches</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\BSW\BswM_CustomRule_Callout.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97 / 97</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">34 / 34</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\BSW\Can\Can_Callout.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">61 / 62</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">82.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">19 / 23</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\BSW\EcuM_Callout_Stubs.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">155 / 155</td>
+      <td class="CoverValue" style="background-color:LightGreen;">97.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">74 / 76</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\BSW\bap_wrapper.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">337 / 339</td>
+      <td class="CoverValue" style="background-color:LightGreen;">90.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">168 / 186</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\Cdd_CarSensorHandler\Cdd_CarSensorHandler.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">9 / 9</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">6 / 6</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_BTLE\Cdd_BTLE.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:95.7%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.7&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">448 / 468</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">86.2&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">193 / 224</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_BTLE\cdd_btle_intf.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">69 / 69</td>
+      <td class="CoverValue" style="background-color:LightGreen;">95.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">19 / 20</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_CanGlobalTimeout\Cdd_CanGlobalTimeout.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">27 / 27</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">8 / 8</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_CanMsgUpdateNAD\Cdd_CanMsgUpdateNAD.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">121 / 121</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">24 / 24</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_CanPDUToEthernet\Cdd_CanPDUToEthernet.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">67 / 67</td>
+      <td class="CoverValue" style="background-color:LightGreen;">92.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">26 / 28</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_Ethernet_Rx_PDU\Cdd_Ethernet_Rx_PDU.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_EventMemory\Cdd_EventMemory.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:92.2%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">92.2&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95 / 103</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">88.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">31 / 35</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_EventMemory\ExtendedFFDHandler.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.6%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.6&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">86 / 89</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">83.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">52 / 62</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_GNSS\Cdd_GNSS.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">36 / 36</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">14 / 14</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_GwSmRteAdapter\Cdd_GwSmBtle.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">45 / 45</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">81.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">18 / 22</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_GwSmRteAdapter\Cdd_GwSmCom.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">63 / 63</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">14 / 14</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_GwSmRteAdapter\Cdd_GwSmDiag.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">10 / 10</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">6 / 6</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_GwSmRteAdapter\Cdd_GwSmRstp.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">8 / 8</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">2 / 2</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_GwSmRteAdapter\Cdd_GwSmRteAdapter.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.2%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.2&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">121 / 122</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">80.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">16 / 20</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_KS_Slave\Cdd_KS_Slave.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">74 / 74</td>
+      <td class="CoverValue" style="background-color:LightGreen;">93.5&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">29 / 31</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_KS_Slave\cbox_NvM.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">14 / 14</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_KS_Slave\ks_Nad_Service.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">87 / 87</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">66 / 66</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_KS_Slave\ks_imo_she.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">236 / 236</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">62 / 62</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_KnockoutMonitor\Cdd_KnockoutMonitor.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">70 / 70</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">23 / 23</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_PadKeepControl\Cdd_PadKeepControl.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">14 / 14</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">83.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">5 / 6</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_Random_Generator\Cdd_Random_Generator.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">22 / 22</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">8 / 8</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_RepairModule\cdd_RepairModule.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:91.7%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">91.7&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99 / 108</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">78.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">45 / 57</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_Reset\Cdd_Reset.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">58 / 58</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">23 / 23</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_Timer\Cdd_Timer.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:91.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">91.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">85 / 93</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">81.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">36 / 44</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_Timer\Cdd_Timer_App.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">3 / 3</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\cdd_UtcTime\Cdd_UtcTime.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.2%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.2&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">121 / 122</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">84.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">44 / 52</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\cdd_battery_backup_switch\Cdd_battery_backup_switch.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">41 / 41</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">2 / 2</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\CDD\rstp\rstp_app.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">269 / 269</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">98 / 98</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\CDD\rstp\rstp_service.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">51 / 51</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">24 / 24</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtAirbagHandlerSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">318 / 318</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">84.5&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">256 / 303</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtAudioSwitchControlSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">150 / 150</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">80.7&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">46 / 57</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtBTLEAntennaControlSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">131 / 131</td>
+      <td class="CoverValue" style="background-color:LightGreen;">97.1&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">67 / 69</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtBackupBatteryHandlerSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:94.3%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">94.3&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">247 / 262</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">86.1&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">105 / 122</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtBackupBatteryHandlerSwc\BackupBatteryMonitor.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:97.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">94 / 96</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">86.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">33 / 38</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtBackupBatteryHandlerSwc\BackupBatteryNvmData.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">8 / 8</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtBackupBatteryHandlerSwc\ChargingControl.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">116 / 116</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">88.1&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">59 / 67</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtBackupBatteryHandlerSwc\ExternalSignalsMonitor.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">18 / 18</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">83.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">5 / 6</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtBackupBatteryHandlerSwc\LookUp.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:94.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">94.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">37 / 39</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">85.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">17 / 20</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtBapRouterSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">240 / 249</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">81.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">180 / 221</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtBoosterControllerSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">30 / 30</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">6 / 6</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtBusMonitorSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">143 / 143</td>
+      <td class="CoverValue" style="background-color:LightGreen;">98.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">59 / 60</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtCarSensorSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">189 / 190</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">82.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">76 / 92</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtClampsHandlerSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.6%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.6&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">258 / 259</td>
+      <td class="CoverValue" style="background-color:LightGreen;">91.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">117 / 128</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_Adaptations.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.6%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.6&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">676 / 679</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">79.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">162 / 203</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_Coding.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:97.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">229 / 235</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">76.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">95 / 124</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_DataSets.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.8%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.8&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">666 / 688</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">85.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">232 / 273</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_DiagSessionControl.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">10 / 10</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">2 / 2</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_EventMemoryNAD.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">57 / 57</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">84.1&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">37 / 44</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_FreezeFrames.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:97.8%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.8&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">307 / 314</td>
+      <td class="CoverValue" style="background-color:LightPink;">70.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">156 / 222</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_Identifikation.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.2%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.2&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">844 / 877</td>
+      <td class="CoverValue" style="background-color:LightGreen;">90.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">184 / 203</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_IoControl.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">413 / 417</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">81.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">163 / 199</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_IoControlNAD.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">29 / 29</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">84.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">22 / 26</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_LearExtension.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">410 / 414</td>
+      <td class="CoverValue" style="background-color:LightGreen;">96.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">168 / 174</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_MeasurementValues.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:95.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">317 / 332</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">87.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">83 / 95</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_MeasurementValuesNAD.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.6%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.6&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">825 / 828</td>
+      <td class="CoverValue" style="background-color:LightGreen;">93.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">365 / 390</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_RoutineControl.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:93.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">93.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">874 / 935</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">77.7&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">282 / 363</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtDiagnosticServices_RoutineControlNAD.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">35 / 35</td>
+      <td class="CoverValue" style="background-color:LightGreen;">96.2&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">25 / 26</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtDiagnosticServices_SecurityAccess.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:27.3%; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">27.3&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">6 / 22</td>
+      <td class="CoverValue" style="background-color:LightPink;">12.5&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">1 / 8</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtEthernetPhyMonitorSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">108 / 108</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">50 / 50</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtGNSSAntennaControlSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">187 / 189</td>
+      <td class="CoverValue" style="background-color:LightGreen;">92.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">104 / 113</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtGwSmAdapterSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:94.3%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">94.3&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">314 / 333</td>
+      <td class="CoverValue" style="background-color:LightPink;">74.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">141 / 189</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtImmobilizerSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">115 / 115</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">10 / 10</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtImmobilizerSwc\dummy.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:0.0%; border:white; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0 / 12</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtKeyPanelSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">44 / 44</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">12 / 12</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtKeyPanelSwc\keyHandling.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">53 / 53</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">21 / 21</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtKeyPanelSwc\keyHandlingCan.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">23 / 23</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">12 / 12</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtKeyPanelSwc\keyRouting.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">65 / 65</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">84.2&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">32 / 38</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtKeyPanelSwc\ledControlCan.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:97.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">113 / 116</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">89.7&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">35 / 39</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtKnockoutMonitorSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.7%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.7&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">223 / 226</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">85.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">102 / 120</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtKsSlaveSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">30 / 30</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">6 / 6</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtMicMonitorSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">291 / 291</td>
+      <td class="CoverValue" style="background-color:LightGreen;">91.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">180 / 196</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtNWDFControlSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">192 / 199</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">83.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">104 / 124</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtPosRouterTimeMasterSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">498 / 503</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">76.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">57 / 75</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtPowerManagementSwc_CMP.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.7%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.7&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">178 / 184</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">80.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">84 / 105</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtPowerManagementSwc_MasterStateMachine.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:47.8%; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">47.8&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">85 / 178</td>
+      <td class="CoverValue" style="background-color:LightPink;">21.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">34 / 159</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtPowerManagementSwc_MasterStateMachine\SSM_BEM.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:0.0%; border:white; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0 / 49</td>
+      <td class="CoverValue" style="background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">0 / 23</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtPowerManagementSwc_MasterStateMachine\SSM_Interface.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">23 / 23</td>
+      <td class="CoverValue" style="background-color:LightPink;">60.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">6 / 10</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtPowerManagementSwc_MasterStateMachine\SSM_NormalOperationMode.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:63.9%; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">63.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">101 / 158</td>
+      <td class="CoverValue" style="background-color:LightPink;">37.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">40 / 107</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtPowerManagementSwc_MasterStateMachine\SSM_P_Mode_QRS_Mode.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:0.0%; border:white; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0 / 72</td>
+      <td class="CoverValue" style="background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">0 / 33</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtPowerManagementSwc_MasterStateMachine\SSM_T_Mode.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:0.0%; border:white; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0 / 55</td>
+      <td class="CoverValue" style="background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">0 / 16</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtPowerManagementSwc_MasterStateMachine\SignalHandler.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:43.5%; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">43.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">114 / 262</td>
+      <td class="CoverValue" style="background-color:LightPink;">24.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">81 / 334</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtPowerManagementSwc_NAD.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:90.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">90.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">460 / 506</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">79.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">196 / 247</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtSoftwareDownloadSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:95.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">292 / 306</td>
+      <td class="CoverValue" style="background-color:LightPink;">73.1&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">106 / 145</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtTemperatureMonitorSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">146 / 146</td>
+      <td class="CoverValue" style="background-color:LightGreen;">95.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">47 / 49</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtUsbUnlockSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:94.7%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">94.7&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">71 / 75</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">88.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">38 / 43</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtV2XSensorSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:95.8%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.8&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">411 / 429</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">81.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">240 / 293</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\CtValSignalRouterSwc.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.8%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.8&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">537 / 555</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">75.6&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">338 / 447</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >application\source\SWC\CtWLANBTAntennaControlSwc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">192 / 192</td>
+      <td class="CoverValue" style="background-color:LightGreen;">97.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">95 / 97</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">application\source\SWC\GwSm_Crypto_SWC.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">46 / 46</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\cdd_BTLE\btle_bootloader.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:93.1%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">93.1&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">430 / 462</td>
+      <td class="CoverValue" style="background-color:LightPink;">65.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">157 / 240</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\cdd_BTLE\cdd_btle_ctrl.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:91.4%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">91.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">171 / 187</td>
+      <td class="CoverValue" style="background-color:LightPink;">73.7&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">84 / 114</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\cdd_BTLE\cdd_btle_utp.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:95.2%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.2&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">179 / 188</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">88.4&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">76 / 86</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\cdd_DioWrapper\DioWrapper.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">18 / 18</td>
+      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">16 / 16</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\cdd_NAD_PowerControl\Cdd_NAD_PowerControl.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:96.2%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.2&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">281 / 292</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">77.5&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">110 / 142</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\cdd_ethernet_phy\Phy.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.8%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.8&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">487 / 493</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">88.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">198 / 223</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\cdd_otp\Cdd_otp.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:59.4%; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">59.4&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">38 / 64</td>
+      <td class="CoverValue" style="background-color:LightPink;">58.8&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightPink;">40 / 68</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\rstp\rstp.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">276 / 279</td>
+      <td class="CoverValue" style="background-color:LightGreen;">97.7&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">127 / 130</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\rstp\rstp_atfw.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.0%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96 / 98</td>
+      <td class="CoverValue" style="background-color:LightGreen;">93.0&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">53 / 57</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\rstp\rstp_data.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">331 / 336</td>
+      <td class="CoverValue" style="background-color:LightGreen;">90.5&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">201 / 222</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\rstp\rstp_msg.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:98.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">174 / 176</td>
+      <td class="CoverValue" style="background-color:LightGreen;">95.9&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">71 / 74</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\rstp_uds\rstp_uds.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:99.6%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">99.6&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">242 / 243</td>
+      <td class="CoverValue" style="background-color:LightGreen;">92.7&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">115 / 124</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\sbc\Sbc.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:93.9%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">93.9&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">200 / 213</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">83.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">65 / 78</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\sbc\Sbc_Tle9273.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:95.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">423 / 443</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">79.1&nbsp;%</td>
+      <td class="CoverValue" style="background-color:#FFFF55;">193 / 244</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" >shared\source\source\CDD\sci\linflex_sci.c</td>
+      <td class="coverBar" align="center" >
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:97.5%; background-color:green"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.5&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">385 / 395</td>
+      <td class="CoverValue" style="background-color:LightGreen;">92.3&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGreen;">155 / 168</td>
+    </tr>
+
+
+    <tr>
+      <td class="coverFile" style="background-color:LightSteelBlue">shared\source\source\CDD\sci\linflex_sci_irq.c</td>
+      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
+                <div class="graph"><strong class="bar" style="width:0.0%; border:white; background-color:red"></strong></div>
+                </td></tr></table>
+      </td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0.0&nbsp;%</td>
+      <td class="CoverValue" style="font-weight:bold; background-color:LightPink;">0 / 10</td>
+      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
+      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
+    </tr>
+
+
+    <tr>
+      <td width="44%"><br></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+      <td width="8%"></td>
+    </tr>
+  </table>
+  </center>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="hr"><td></tr>
+    <tr><td class="footer">Generated by: <a href="http://gcovr.com">GCOVR (Version 4.2)</a></td></tr>
+  </table>
+  <br>
+
+</body>
+
+</html>
+

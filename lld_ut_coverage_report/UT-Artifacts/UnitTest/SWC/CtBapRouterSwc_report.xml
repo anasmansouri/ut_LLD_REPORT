@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="76" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:52:02" time="0.006" name="AllTests">
+  <testsuite name="GTestClass_CtBapRouterSwc" tests="76" failures="0" disabled="0" errors="0" time="0.006">
+    <testcase name="CtBapRouterSwc_BAP_Acknowledge_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a not supported LsgId"/>
+<property name="Test_Step_0" value="1. Execute CtBapRouterSwc_BAP_Acknowledge()"/>
+<property name="Expected_1" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_Acknowledge_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is higher than the max(&gt;28) of FctIds"/>
+<property name="Test_Step_2" value="1. Execute CtBapRouterSwc_BAP_Acknowledge()"/>
+<property name="Test_Step_3" value="2. Verify result"/>
+<property name="Expected_4" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_5" value="LsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_Acknowledge_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is in the valid range,but don&apos;t exist in the message catalog"/>
+<property name="Test_Step_6" value="1. Execute CtBapRouterSwc_BAP_Acknowledge()"/>
+<property name="Test_Step_7" value="2. Verify result"/>
+<property name="Expected_8" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_9" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_Acknowledge_TC4" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is ready"/>
+<property name="Test_Step_10" value="1. Execute CtBapRouterSwc_BAP_Acknowledge()"/>
+<property name="Test_Step_11" value="2. Verify result"/>
+<property name="Expected_12" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_13" value="PARAMETER_ID_1  and FctId"/>
+<property name="Expected_14" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitUINT8() is called with parameters:"/>
+<property name="Expected_15" value="RSTP_CH_ECALL_BAP, MSG_ID_BAP_Acknowledge, PARAMETER_ID_2 and aeAcknowledge"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_Acknowledge_TC5" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is not yet ready"/>
+<property name="Test_Step_16" value="1. Execute CtBapRouterSwc_BAP_Acknowledge()"/>
+<property name="Expected_17" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with not supported LsgId"/>
+<property name="Test_Step_18" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence() with invalid LsgId"/>
+<property name="Expected_19" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with invalid FctId"/>
+<property name="Test_Step_20" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence() with invalid FctId"/>
+<property name="Test_Step_21" value="2. Verify result"/>
+<property name="Expected_22" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_23" value="lsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a valid FctId, but FctId don&apos;t exist in the message catalogs"/>
+<property name="Test_Step_24" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_25" value="2. Verify result"/>
+<property name="Expected_26" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_27" value="lsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC4" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is ready"/>
+<property name="Test_Step_28" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_29" value="2. Verify results"/>
+<property name="Expected_30" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_31" value="PARAMETER_ID_1 and FctId"/>
+<property name="Expected_32" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_33" value="PARAMETER_ID_2 and BapInd_DataSetGet"/>
+<property name="Expected_34" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitVarLen() is called with parameters:"/>
+<property name="Expected_35" value="BAP RSTP channel, MSG_ID_BAP_IndicationByteSequence, PARAMETER_ID_3"/>
+<property name="Expected_36" value=", data from function parameter, length of passed data"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC5" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is not yet ready. The function type of FctId is property andthe related OP_CODE is BapInd_DataSetGet"/>
+<property name="Test_Step_37" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_38" value="2. Verify result"/>
+<property name="Expected_39" value="Function Rte_Call_BAP_Request_BAP_RequestByteSequence() is called with parameters:"/>
+<property name="Expected_40" value="LsgId, FctId, BapReq_Data, array with default data(0), length of array "/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC6" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when NAD is not yet ready. The function type of FctId is property andthe related OP_CODE is invalid"/>
+<property name="Test_Step_41" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_42" value="2. Verify result"/>
+<property name="Expected_43" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_44" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC7" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when NAD is not yet ready. The function type of FctId is not supportedin this function (unequal to property)"/>
+<property name="Test_Step_45" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_46" value="2. Verify result"/>
+<property name="Expected_47" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_48" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC8" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is not yet ready. The function type of FctId is method andthe related OP_CODE is BapInd_StartResult"/>
+<property name="Test_Step_49" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_50" value="2. Verify result"/>
+<property name="Expected_51" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_52" value="LsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC9" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is not yet ready. The function type of FctId is method andthe related OP_CODE is invalid"/>
+<property name="Test_Step_53" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_54" value="2. Verify result"/>
+<property name="Expected_55" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_56" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC10" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is not yet ready. The function type of FctId is array andthe related OP_CODE is BapInd_DataSetGet"/>
+<property name="Test_Step_57" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_58" value="2. Verify result"/>
+<property name="Expected_59" value="Function Rte_Call_BAP_Request_BAP_RequestByteSequence() is called with parameters:"/>
+<property name="Expected_60" value="LsgId, FctId, BapReq_Data, array with default data(0), length of array "/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC11" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is not yet ready. The function type of FctId is array andthe related OP_CODE is BapInd_DataGet"/>
+<property name="Test_Step_61" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_62" value="2. Verify result"/>
+<property name="Expected_63" value="Function Rte_Call_BAP_Request_BAP_RequestByteSequence() is called with parameters:"/>
+<property name="Expected_64" value="LsgId, FctId, BapReq_Data, array with default data(0), length of array "/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationByteSequence_TC12" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function when the NAD is not yet ready. The function type of FctId is array andthe related OP_CODE is invalid"/>
+<property name="Test_Step_65" value="1. Execute CtBapRouterSwc_BAP_IndicationByteSequence()"/>
+<property name="Test_Step_66" value="2. Verify result"/>
+<property name="Expected_67" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_68" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationError_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a not supported LsgId"/>
+<property name="Test_Step_69" value="1. Execute CtBapRouterSwc_BAP_IndicationError()"/>
+<property name="Expected_70" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationError_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is higher than the max(&gt;28) of FctIds"/>
+<property name="Test_Step_71" value="1. Execute CtBapRouterSwc_BAP_IndicationError()"/>
+<property name="Test_Step_72" value="2. Verify result"/>
+<property name="Expected_73" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_74" value="LsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationError_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is in the valid range,but don&apos;t exist in the message catalog"/>
+<property name="Test_Step_75" value="1. Execute CtBapRouterSwc_BAP_IndicationError()"/>
+<property name="Test_Step_76" value="2. Verify result"/>
+<property name="Expected_77" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_78" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationError_TC4" status="run" time="0.001" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is ready"/>
+<property name="Test_Step_79" value="1. Execute CtBapRouterSwc_BAP_IndicationError()"/>
+<property name="Test_Step_80" value="2. Verify result"/>
+<property name="Expected_81" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_82" value="PARAMETER_ID_1 and FctId"/>
+<property name="Expected_83" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitUINT8() is called with parameters:"/>
+<property name="Expected_84" value="RSTP_CH_ECALL_BAP, MSG_ID_BAP_IndicationError, PARAMETER_ID_2 and errorCode"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationError_TC5" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is not yet ready"/>
+<property name="Test_Step_85" value="1. Execute CtBapRouterSwc_BAP_IndicationError()"/>
+<property name="Expected_86" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt16_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a supported LsgId"/>
+<property name="Test_Step_87" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt16"/>
+<property name="Expected_88" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt16_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a supported LsgId"/>
+<property name="Test_Step_89" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt16"/>
+<property name="Test_Step_90" value="2. Verify result"/>
+<property name="Expected_91" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_92" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a not supported LsgId"/>
+<property name="Test_Step_93" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Expected_94" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is higher than the max(&gt;28) of FctIds"/>
+<property name="Test_Step_95" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Test_Step_96" value="2. Verify result"/>
+<property name="Expected_97" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_98" value="LsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is in the valid range,but don&apos;t exist in the message catalog"/>
+<property name="Test_Step_99" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Test_Step_100" value="2. Verify result"/>
+<property name="Expected_101" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_102" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC4" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is ready"/>
+<property name="Test_Step_103" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Test_Step_104" value="2. Verify result"/>
+<property name="Expected_105" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_106" value="PARAMETER_ID_1 and FctId"/>
+<property name="Expected_107" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_108" value="PARAMETER_ID_2 and aeIndication"/>
+<property name="Expected_109" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitUINT32() is called with parameters:"/>
+<property name="Expected_110" value="RSTP_CH_ECALL_BAP, MSG_ID_CMP2NAD_BAP_IndicationInt32, PARAMETER_ID_3, data"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC5" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith a not supported function type and when the NAD is not ready"/>
+<property name="Test_Step_111" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Test_Step_112" value="2. Verify result"/>
+<property name="Expected_113" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_114" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC6" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: property, but a not supported OP_CODEwhen the NAD is not ready"/>
+<property name="Test_Step_115" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Test_Step_116" value="2. Verify result"/>
+<property name="Expected_117" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_118" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt32_TC7" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: property and a supported OP_CODE(BapInd_DataSetGet)when the NAD is not ready"/>
+<property name="Test_Step_119" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt32()"/>
+<property name="Test_Step_120" value="2. Verify result"/>
+<property name="Expected_121" value="Function Rte_Call_BAP_Request_BAP_RequestUInt32() is called with parameters: "/>
+<property name="Expected_122" value="LsgId, FctId, BapReq_Data, default data(0)"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a not supported LsgId"/>
+<property name="Test_Step_123" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Expected_124" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is higher than the max(&gt;28) of FctIds"/>
+<property name="Test_Step_125" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_126" value="2. Verify result"/>
+<property name="Expected_127" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_128" value="LsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is in the valid range,but don&apos;t exist in the message catalog"/>
+<property name="Test_Step_129" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_130" value="2. Verify result"/>
+<property name="Expected_131" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_132" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC4" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is ready"/>
+<property name="Test_Step_133" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_134" value="2. Verify result"/>
+<property name="Expected_135" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_136" value="PARAMETER_ID_1 and FctId"/>
+<property name="Expected_137" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_138" value="PARAMETER_ID_2 and aeIndication"/>
+<property name="Expected_139" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitUINT8() is called with parameters:"/>
+<property name="Expected_140" value="RSTP_CH_ECALL_BAP, MSG_ID_CMP2NAD_BAP_IndicationInt8, PARAMETER_ID_3, data"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC5" status="run" time="0.001" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: property, but a not supported OP_CODEwhen the NAD is not ready"/>
+<property name="Test_Step_141" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_142" value="2. Verify result"/>
+<property name="Expected_143" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_144" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC6" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: property and a supported OP_CODE(BapInd_DataSetGet)when the NAD is not ready"/>
+<property name="Test_Step_145" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_146" value="2. Verify result"/>
+<property name="Expected_147" value="Function Rte_Call_BAP_Request_BAP_RequestUInt8() is called with parameters:"/>
+<property name="Expected_148" value="BAP_ECALL_LSG_ID, FctId, BapReq_Data, default data(0)"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC7" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: method, but a not supported OP_CODEwhen the NAD is not ready"/>
+<property name="Test_Step_149" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_150" value="2. Verify result"/>
+<property name="Expected_151" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_152" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationUInt8_TC8" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: method and a supported OP_CODE(BapInd_StartResult)when the NAD is not ready"/>
+<property name="Test_Step_153" value="1. Execute CtBapRouterSwc_BAP_IndicationUInt8()"/>
+<property name="Test_Step_154" value="2. Verify result"/>
+<property name="Expected_155" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters:"/>
+<property name="Expected_156" value="BAP_ECALL_LSG_ID, FctId, AppErr_TemporaryNotAvailable"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify behavior when function is called with a not supported LsgId"/>
+<property name="Test_Step_157" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Expected_158" value="Nothing happens"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is higher than the max(&gt;28) of FctIds"/>
+<property name="Test_Step_159" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_160" value="2. Verify result"/>
+<property name="Expected_161" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_162" value="LsgId, FctId, AppErr_OutOfRange"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with FctId which is in the valid range,but don&apos;t exist in the message catalog"/>
+<property name="Test_Step_163" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_164" value="2. Verify result"/>
+<property name="Expected_165" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_166" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC4" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogsand when the NAD is ready"/>
+<property name="Test_Step_167" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_168" value="2. Verify result"/>
+<property name="Expected_169" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters:"/>
+<property name="Expected_170" value="PARAMETER_ID_1 and FctId"/>
+<property name="Expected_171" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitUINT8() is called with parameters:"/>
+<property name="Expected_172" value="RSTP_CH_ECALL_BAP, MSG_ID_CMP2NAD_BAP_IndicationVoid, PARAMETER_ID_2, indication"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC5" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: property, but a not supported OP_CODEwhen the NAD is not ready"/>
+<property name="Test_Step_173" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_174" value="2. Verify result"/>
+<property name="Expected_175" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_176" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC6" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: property and a supported OP_CODE(BapInd_DataSetGet)when the NAD is not ready"/>
+<property name="Test_Step_177" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_178" value="2. Verify result"/>
+<property name="Expected_179" value="Function Rte_Call_BAP_Request_BAP_RequestVoid() is called with parameters:"/>
+<property name="Expected_180" value="BAP_ECALL_LSG_ID, FctId and BapReq_Data"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC7" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: method, but a not supported OP_CODEwhen the NAD is not ready"/>
+<property name="Test_Step_181" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_182" value="2. Verify result"/>
+<property name="Expected_183" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters: "/>
+<property name="Expected_184" value="LsgId, FctId, BapErr_InvalidArg"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_BAP_IndicationVoid_TC8" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Call function with a FctId that exist in the message catalogswith the function type: method and a supported OP_CODE(BapInd_StartResult)when the NAD is not ready"/>
+<property name="Test_Step_185" value="1. Execute CtBapRouterSwc_BAP_IndicationVoid()"/>
+<property name="Test_Step_186" value="2. Verify result"/>
+<property name="Expected_187" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters:"/>
+<property name="Expected_188" value="BAP_ECALL_LSG_ID, FctId and AppErr_TemporaryNotAvailable"/>
+</properties>
+    </testcase>
+    <testcase name="GetCodingState" status="run" time="0" classname="GTestClass_CtBapRouterSwc" />
+    <testcase name="CtBapRouterSwc_Init_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify all the send buffers initialized succesfully"/>
+<property name="Expected_189" value="All send buffers not initialized properly"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_Init_TC2" status="run" time="0.001" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify all the send buffers initialized succesfully"/>
+<property name="Expected_190" value="All sendbuffer inits are called"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_RSTP_Callback" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify the RSTP call back response"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_RSTP_Channel_Reset" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify the RSTP channel reset"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_SendRequestResult_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify when the NAD is enabled, the RSTP message are sendwith the FctId and the related errorCode"/>
+<property name="Test_Step_191" value="1. Variable nadStateNormalOp is true"/>
+<property name="Test_Step_192" value="2. Call CtBapRouterSwc_SendRequestResult()"/>
+<property name="Test_Step_193" value="3. Verify result"/>
+<property name="Expected_194" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_AddUINT8() is called with parameters"/>
+<property name="Expected_195" value="PARAMETER_ID_1 and FctId"/>
+<property name="Expected_196" value="Function Rte_Call_RSTP_TransmitData_RSTPMsg_TransmitUINT8() is called with parameters"/>
+<property name="Expected_197" value="RSTP_CH_ECALL_BAP, MSG_ID_CMP2NAD_BAP_Request_Result, PARAMETER_ID_2, Errorcode"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC1" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestError,but the payload decoding of parameter 1 fails "/>
+<property name="Test_Step_198" value="1. Input buffer contains BAP_RequestError"/>
+<property name="Test_Step_199" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_200" value="3. Verify result"/>
+<property name="Expected_201" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC2" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestError,the payload decoding of parameter 1 succeed, but parameter 2 fails."/>
+<property name="Test_Step_202" value="1. Input buffer contains BAP_RequestError"/>
+<property name="Test_Step_203" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_204" value="3. Verify result"/>
+<property name="Expected_205" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC3" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestError,the payload decoding for parameter 1 and 2 succeed."/>
+<property name="Test_Step_206" value="1. Input buffer contains BAP_RequestError"/>
+<property name="Test_Step_207" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_208" value="3. Verify result"/>
+<property name="Expected_209" value="Function returns E_OK"/>
+<property name="Expected_210" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters:"/>
+<property name="Expected_211" value="Rte_Call_BAP_Request_BAP_RequestError, FctId, ErrorCode(opcode)"/>
+<property name="Expected_212" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC4" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestVoid,but the payload decoding of parameter 1 fails "/>
+<property name="Test_Step_213" value="1. Input buffer contains BAP_RequestVoid"/>
+<property name="Test_Step_214" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_215" value="3. Verify result"/>
+<property name="Expected_216" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC5" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestVoid,the payload decoding of parameter 1 succeed, but parameter 2 fails."/>
+<property name="Test_Step_217" value="1. Input buffer contains BAP_RequestVoid"/>
+<property name="Test_Step_218" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_219" value="3. Verify result"/>
+<property name="Expected_220" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC6" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestVoid,the payload decoding for parameter 1 and 2 succeed."/>
+<property name="Test_Step_221" value="1. Input buffer contains BAP_RequestVoid"/>
+<property name="Test_Step_222" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_223" value="3. Verify result"/>
+<property name="Expected_224" value="Function returns E_OK"/>
+<property name="Expected_225" value="Function Rte_Call_BAP_Request_BAP_RequestError() is called with parameters:"/>
+<property name="Expected_226" value="Rte_Call_BAP_Request_BAP_RequestError, FctId, ErrorCode(opcode)"/>
+<property name="Expected_227" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC7" status="run" time="0.001" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,but the payload decoding of parameter 1 fails "/>
+<property name="Test_Step_228" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_229" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_230" value="3. Verify result"/>
+<property name="Expected_231" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC8" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding of parameter 1 succeed, but parameter 2 fails."/>
+<property name="Test_Step_232" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_233" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_234" value="3. Verify result"/>
+<property name="Expected_235" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC9" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding of parameter 1 and 2 succeed, but parameter 3 fails."/>
+<property name="Test_Step_236" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_237" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_238" value="3. Verify result"/>
+<property name="Expected_239" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC10" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding for parameter 1, 2 and 3 succeed."/>
+<property name="Test_Step_240" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_241" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_242" value="3. Verify result"/>
+<property name="Expected_243" value="Function returns E_OK"/>
+<property name="Expected_244" value="Function Rte_Call_BAP_Request_BAP_RequestUInt8() is called with parameters:"/>
+<property name="Expected_245" value="Rte_Call_BAP_Request_BAP_RequestUInt8, FctId, Request(opcode), data"/>
+<property name="Expected_246" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC12" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding for parameter 1, 2 and 3 succeed. The decoded data is valid forenable the NAD (operationState is NORMAL_OPERATION)."/>
+<property name="Test_Step_247" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_248" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_249" value="3. Verify result"/>
+<property name="Expected_250" value="Function returns E_OK"/>
+<property name="Expected_251" value="Function Rte_Call_BAP_Request_BAP_RequestUInt8() is called with parameters:"/>
+<property name="Expected_252" value="Rte_Call_BAP_Request_BAP_RequestUInt8, FctId, Request(opcode), data"/>
+<property name="Expected_253" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+<property name="Expected_254" value="Variable nadStateNormalOp is true"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC13" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding for parameter 1, 2 and 3 succeed. The decoded data is not valid forenable the NAD."/>
+<property name="Test_Step_255" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_256" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_257" value="3. Verify result"/>
+<property name="Expected_258" value="Function returns E_OK"/>
+<property name="Expected_259" value="Function Rte_Call_BAP_Request_BAP_RequestUInt8() is called with parameters:"/>
+<property name="Expected_260" value="Rte_Call_BAP_Request_BAP_RequestUInt8, FctId, Request(opcode), data"/>
+<property name="Expected_261" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+<property name="Expected_262" value="Variable nadStateNormalOp is false"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC14" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt32,but the payload decoding of parameter 1 fails "/>
+<property name="Test_Step_263" value="1. Input buffer contains BAP_RequestInt32"/>
+<property name="Test_Step_264" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_265" value="3. Verify result"/>
+<property name="Expected_266" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC15" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt32,the payload decoding of parameter 1 succeed, but parameter 2 fails."/>
+<property name="Test_Step_267" value="1. Input buffer contains BAP_RequestInt32"/>
+<property name="Test_Step_268" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_269" value="3. Verify result"/>
+<property name="Expected_270" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC16" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding of parameter 1 and 2 succeed, but parameter 3 fails."/>
+<property name="Test_Step_271" value="1. Input buffer contains BAP_RequestInt8"/>
+<property name="Test_Step_272" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_273" value="3. Verify result"/>
+<property name="Expected_274" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC17" status="run" time="0.001" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt32,the payload decoding for parameter 1, 2 and 3 succeed."/>
+<property name="Test_Step_275" value="1. Input buffer contains BAP_RequestInt32"/>
+<property name="Test_Step_276" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_277" value="3. Verify result"/>
+<property name="Expected_278" value="Function returns E_OK"/>
+<property name="Expected_279" value="Function Rte_Call_BAP_Request_BAP_RequestUInt32() is called with parameters:"/>
+<property name="Expected_280" value="BAP_ECALL_LSG_ID, FctId, Request(opcode), data"/>
+<property name="Expected_281" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC18" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestByteSequence,but the payload decoding of parameter 1 fails "/>
+<property name="Test_Step_282" value="1. Input buffer contains MSG_ID_NAD2CMP_BAP_RequestByteSequence"/>
+<property name="Test_Step_283" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_284" value="3. Verify result"/>
+<property name="Expected_285" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC19" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestByteSequence,the payload decoding of parameter 1 succeed, but parameter 2 fails."/>
+<property name="Test_Step_286" value="1. Input buffer contains BAP_RequestByteSequence"/>
+<property name="Test_Step_287" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_288" value="3. Verify result"/>
+<property name="Expected_289" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC20" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding of parameter 1 and 2 succeed, but parameter 3 fails."/>
+<property name="Test_Step_290" value="1. Input buffer contains BAP_RequestByteSequence"/>
+<property name="Test_Step_291" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_292" value="3. Verify result"/>
+<property name="Expected_293" value="Function returns E_NOT_OK"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC21" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function return when input buffer contains BAP_RequestInt8,the payload decoding for parameter 1, 2 and 3 succeed."/>
+<property name="Test_Step_294" value="1. Input buffer contains BAP_RequestByteSequence"/>
+<property name="Test_Step_295" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+<property name="Test_Step_296" value="3. Verify result"/>
+<property name="Expected_297" value="Function returns E_OK"/>
+<property name="Expected_298" value="Function Rte_Call_BAP_Request_BAP_RequestByteSequence() is called with parameters:"/>
+<property name="Expected_299" value="BAP_ECALL_LSG_ID, FctId, Indication(opcode), data array, length"/>
+<property name="Expected_300" value="Function CtBapRouterSwc_SendRequestResult() is called"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC22" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function does nothing when input buffer contain MSG_ID_NAD2CMP_BAP_RequestInt16,"/>
+<property name="Test_Step_301" value="1. Input buffer contains MSG_ID_NAD2CMP_BAP_RequestInt16"/>
+<property name="Test_Step_302" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_ReceiveRSTPMessage_TC23" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="Verify function does nothing when input buffer contain invalid input,"/>
+<property name="Test_Step_303" value="1. Input buffer contains invalid input"/>
+<property name="Test_Step_304" value="2. Call CtBapRouterSwc_ReceiveRSTPMessage()"/>
+</properties>
+    </testcase>
+    <testcase name="CtBapRouterSwc_Cyclic" status="run" time="0" classname="GTestClass_CtBapRouterSwc">
+<properties>
+<property name="Description" value="CtBapRouterSwc_Cyclic function check "/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

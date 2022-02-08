@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="19" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:55:31" time="0.003" name="AllTests">
+  <testsuite name="GTestClass_CtDiagnosticServices_Datasets" tests="19" failures="0" disabled="0" errors="0" time="0.003">
+    <testcase name="CtDiagnosticServices_DataSets_DataSet_3_SetPlausible" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Description" value="CtDiagnosticServices_DataSets_DataSet_3_SetPlausible function check"/>
+</properties>
+    </testcase>
+    <testcase name="CtDiagnosticServices_DataSets_DataSet_3_SetValid" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Description" value="CtDiagnosticServices_DataSets_DataSet_3_SetValid function check"/>
+</properties>
+    </testcase>
+    <testcase name="Initialization" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_233"/>
+<property name="Description" value="Initialization of Data Set Module"/>
+<property name="Test_Step_0" value="Startup with valid DataSetHeaders"/>
+<property name="Expected_1" value="Module starts up with valid Data Set Headers"/>
+<property name="Test_Step_2" value="Startup with empty DataSet Headers"/>
+<property name="Expected_3" value="Module starts up with valid Data Set Headers"/>
+</properties>
+    </testcase>
+    <testcase name="AsyncDataSetRead" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_223, SW_DIAG_DATASET_225, SW_DIAG_DATASET_228, SW_DIAG_DATASET_226, SW_DIAG_DATASET_194 SW_DIAG_DATASET_195 SW_DIAG_DATASET_196, SW_DIAG_DATASET_197, SW_DIAG_DATASET_24, SW_DIAG_DATASET_25, SW_DIAG_DATASET_28, SW_DIAG_DATASET_39"/>
+<property name="Description" value="Asynchronus Reading of DataSet"/>
+<property name="Test_Step_0" value="Successful asynchronic Read of Audio Dataset logical block information"/>
+<property name="Expected_1" value="Dataset read, all o.k. no DTC set"/>
+<property name="Test_Step_2" value="Audio Dataset logical block information in state programmed"/>
+<property name="Expected_3" value="Dataset read, Implausible Dataset DTC set"/>
+<property name="Test_Step_4" value="Audio Dataset logical block information erased/invalid "/>
+<property name="Expected_5" value="Dataset read, Implausible Dataset DTC set"/>
+</properties>
+    </testcase>
+    <testcase name="100msCyclic_StateMachine" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_81"/>
+<property name="Description" value="Check DataSet State Machine"/>
+<property name="Test_Step_0" value="DataSet Idle State, NVM_WRITE_IDLE"/>
+<property name="Expected_1" value="nothing happen"/>
+<property name="Test_Step_2" value="DataSet Idle State, nvm writing is demanded and successfully written"/>
+<property name="Expected_3" value="nvm writing is finished"/>
+<property name="Test_Step_4" value="DataSet Idle State, nvm writing is demanded and has a write failure"/>
+<property name="Expected_5" value="nvm is finished with error"/>
+<property name="Test_Step_6" value="NVM_WRITE_START and move to NVM_WRITE_FAILED"/>
+<property name="Expected_7" value="nvm is finished with error"/>
+<property name="Test_Step_8" value="DataSet Start Download Sequence and run into NAD timeout"/>
+<property name="Expected_9" value="NAD Timeout - State Machine is in state: Error"/>
+<property name="Test_Step_10" value="DataSet Start Download Sequence and run into CMP"/>
+<property name="Expected_11" value="State Machine is in state: Finished"/>
+</properties>
+    </testcase>
+    <testcase name="DataSet1_WriteData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_81, SW_DIAG_DATASET_85, SW_DIAG_DATASET_198, SW_DIAG_DATASET_73, SW_DIAG_DATASET_76, SW_DIAG_DATASET_77, SW_DIAG_DATASET_71"/>
+<property name="Description" value="Writing of DataSet1"/>
+<property name="Test_Step_0" value="Start Dataset Download for Data Set 1 Sequence"/>
+<property name="Expected_1" value="Dataset Download Sequence for Data Set 1 is started"/>
+<property name="Test_Step_2" value="Invalid length at Dataset Download for Data Set 1"/>
+<property name="Expected_3" value="Dataset Download Sequence for Data Set 1 failed with incorrect length"/>
+<property name="Test_Step_4" value="Invalid preconditions at Dataset Download for Data Set 1"/>
+<property name="Expected_5" value="Dataset Download Sequence for Data Set 1 failed with wrong preconditions"/>
+<property name="Test_Step_6" value="Data Set 1 writing successfully finished"/>
+<property name="Expected_7" value="Dataset Download Sequence for Data Set 1 finished"/>
+<property name="Test_Step_8" value="Data Set 1 writing finished with error"/>
+<property name="Expected_9" value="Dataset Download Sequence for Data Set 1 finished"/>
+<property name="Test_Step_10" value="Data Set 1 writing finished with error, default current state"/>
+<property name="Expected_11" value="Dataset Download Sequence for Data Set 1 finished"/>
+</properties>
+    </testcase>
+    <testcase name="DataSet2_WriteData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_81, SW_DIAG_DATASET_85, SW_DIAG_DATASET_198, SW_DIAG_DATASET_73, SW_DIAG_DATASET_78, SW_DIAG_DATASET_79, SW_DIAG_DATASET_71"/>
+<property name="Description" value="Writing of DataSet2"/>
+<property name="Test_Step_0" value="Start Dataset Download for Data Set 2 Sequence"/>
+<property name="Expected_1" value="Dataset Download Sequence for Data Set 2 is started"/>
+<property name="Test_Step_2" value="Invalid length at Dataset Download for Data Set 2"/>
+<property name="Expected_3" value="Dataset Download Sequence for Data Set 2 failed with incorrect length"/>
+<property name="Test_Step_4" value="Invalid preconditions at Dataset Download for Data Set 2"/>
+<property name="Expected_5" value="Dataset Download Sequence for Data Set 2 failed with wrong preconditions"/>
+<property name="Test_Step_6" value="Data Set 2 writing successfully finished"/>
+<property name="Expected_7" value="Dataset Download Sequence for Data Set 2 finished"/>
+<property name="Test_Step_8" value="Data Set 2 writing finished with error"/>
+<property name="Expected_9" value="Dataset Download Sequence for Data Set 2 finished"/>
+<property name="Test_Step_10" value="Data Set 2 writing finished with error, default current state"/>
+</properties>
+    </testcase>
+    <testcase name="DataSet3_WriteData" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_81, SW_DIAG_DATASET_85, SW_DIAG_DATASET_198, SW_DIAG_DATASET_73, SW_DIAG_DATASET_78, SW_DIAG_DATASET_79, SW_DIAG_DATASET_71"/>
+<property name="Description" value="Writing of DataSet3"/>
+<property name="Test_Step_0" value="Start Dataset Download for Data Set 3 Sequence"/>
+<property name="Expected_1" value="Dataset Download Sequence for Data Set 3 is started"/>
+<property name="Test_Step_2" value="Invalid length at Dataset Download for Data Set 3"/>
+<property name="Expected_3" value="Dataset Download Sequence for Data Set 3 failed with incorrect length"/>
+<property name="Test_Step_4" value="Invalid preconditions at Dataset Download for Data Set 3"/>
+<property name="Expected_5" value="Dataset Download Sequence for Data Set 3 failed with wrong preconditions"/>
+<property name="Expected_6" value=""/>
+<property name="Test_Step_7" value="Data Set 3 writing successfully finished"/>
+<property name="Expected_8" value="Dataset Download Sequence for Data Set 3 finished"/>
+<property name="Test_Step_9" value="Data Set 3 writing finished with error"/>
+<property name="Expected_10" value="Dataset Download Sequence for Data Set 3 finished"/>
+<property name="Test_Step_11" value="Data Set 3 writing finished with error, default current state"/>
+</properties>
+    </testcase>
+    <testcase name="DataSetName_ReadData" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_233, SW_DIAG_DATASET_235"/>
+<property name="Description" value="Read Names of Data Sets"/>
+<property name="Test_Step_0" value=""/>
+<property name="Expected_1" value="Data from local copy is read back correctly"/>
+</properties>
+    </testcase>
+    <testcase name="RSTP_Callback" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_91, SW_DIAG_DATASET_117, SW_DIAG_DATASET_120, SW_DIAG_DATASET_154, SW_DIAG_DATASET_231, SW_DIAG_DATASET_235"/>
+<property name="Description" value="Test the RSTP from the NAD"/>
+<property name="Test_Step_0" value="WriteDatabyId positive Response"/>
+<property name="Expected_1" value="NAD sent data to CMP successful"/>
+<property name="Test_Step_2" value="WriteDatabyId negative Response"/>
+<property name="Expected_3" value="NAD sent data to CMP failed"/>
+<property name="Test_Step_4" value="Update F1B1 positive Response"/>
+<property name="Expected_5" value="NAD sent data to CMP successful"/>
+<property name="Test_Step_6" value="Update F1B1 negative Response"/>
+<property name="Expected_7" value="NAD sent data to CMP failed"/>
+<property name="Test_Step_8" value="Update F1B3 positive Response"/>
+<property name="Expected_9" value="NAD sent data to CMP successful"/>
+<property name="Test_Step_10" value="Update F1B3 negative Response"/>
+<property name="Expected_11" value="NAD sent data to CMP failed"/>
+<property name="Test_Step_12" value="Invalid Message"/>
+<property name="Expected_13" value="Invalid Message received"/>
+</properties>
+    </testcase>
+    <testcase name="WriteData_Version_Number" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_63, SW_DIAG_DATASET_64, SW_DIAG_DATASET_67, SW_DIAG_DATASET_65, SW_DIAG_DATASET_66, SW_DIAG_DATASET_69, SW_DIAG_DATASET_210, SW_DIAG_DATASET_211, SW_DIAG_DATASET_83"/>
+<property name="Description" value="Dataset Write Identification Process"/>
+<property name="Test_Step_0" value="Write DataSetName and DataSetVersion successfully"/>
+<property name="Expected_1" value="DAtaSetVersion and DataSetName were successfully written"/>
+<property name="Test_Step_2" value="Write DataSetName and DataSetVersion - NVM write fails"/>
+<property name="Expected_3" value="DataSetVersion and DataSetName were not written - negative response"/>
+<property name="Test_Step_4" value="Try to write with invalid Fingerprint"/>
+<property name="Expected_5" value="DataSetVersion and DataSetName were not written - negative response"/>
+<property name="Test_Step_6" value="Reading Fingerprint Fails"/>
+<property name="Expected_7" value="DataSetVersion and DataSetName were not written - negative response"/>
+</properties>
+    </testcase>
+    <testcase name="ConditionChecksandReadData" status="run" time="0.001" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Description" value="Calling Condition Check and Read Data Callbacks"/>
+<property name="Test_Step_0" value="Condition Check Read for DataSet1"/>
+<property name="Expected_1" value="Subfunction not supported"/>
+<property name="Test_Step_2" value="Condition Check Write for DataSet1, which is not okay when not following the entire sequence"/>
+<property name="Expected_3" value="no function"/>
+<property name="Test_Step_4" value="Read Data for DataSet1"/>
+<property name="Expected_5" value="reading not allowed"/>
+<property name="Test_Step_6" value="Read DataLength for DataSet1"/>
+<property name="Expected_7" value="no function"/>
+<property name="Test_Step_8" value="Condition Check Read for DataSet2"/>
+<property name="Expected_9" value="Subfunction not supported"/>
+<property name="Test_Step_10" value="Condition Check Write for DataSet2, which is not okay when not following the entire sequence"/>
+<property name="Expected_11" value="no function"/>
+<property name="Test_Step_12" value="Read Data for DataSet2"/>
+<property name="Expected_13" value="reading not allowed"/>
+<property name="Test_Step_14" value="Read DataLength for DataSet2"/>
+<property name="Expected_15" value="no function"/>
+<property name="Test_Step_16" value="Condition Check Read for DataSet3"/>
+<property name="Expected_17" value="no function"/>
+<property name="Test_Step_18" value="Condition Check Write for DataSet3, which is not okay when not following the entire sequence"/>
+<property name="Expected_19" value="write is not possible"/>
+<property name="Test_Step_20" value="Condition Check Write for DataSet3"/>
+<property name="Expected_21" value="write is possible"/>
+<property name="Test_Step_22" value="Read Data for DataSet3"/>
+<property name="Expected_23" value="reading not allowed"/>
+<property name="Test_Step_24" value="Read DataLength for DataSet3"/>
+<property name="Expected_25" value="no function"/>
+<property name="Test_Step_26" value="Condition Check Read for Number of DataSets"/>
+<property name="Expected_27" value="no function"/>
+<property name="Test_Step_28" value="Condition Check Write for Number of DataSets"/>
+<property name="Expected_29" value="no function"/>
+<property name="Test_Step_30" value="Read Data for Number of DataSets"/>
+<property name="Expected_31" value="reading out DataSet Number"/>
+<property name="Test_Step_32" value="Condition Check Read for DataSet Version Number"/>
+<property name="Expected_33" value="no function"/>
+<property name="Test_Step_34" value="Condition Check Write for DataSet Version Number"/>
+<property name="Expected_35" value="no function"/>
+<property name="Test_Step_36" value="Read Data for DataSet Version Number"/>
+<property name="Expected_37" value="reading out DataSet Version Number"/>
+<property name="Test_Step_38" value="Condition Check Read for DataSet IdentStatus"/>
+<property name="Expected_39" value="o.k. when async read has finished"/>
+<property name="Test_Step_40" value="Read Data for DataSet IdentStatus"/>
+<property name="Expected_41" value="reading out DataSet IdentStatus"/>
+<property name="Test_Step_42" value="Condition Check Read for DataSetName"/>
+<property name="Expected_43" value="no function"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_DataSet_1_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtDiagnosticServices_DataSets_0038_V001,LLD_ID_CtDiagnosticServices_DataSets_0039_V001"/>
+<property name="Test_Step_0" value="the writing is finished, but the state machine has not yet made the transition to idle"/>
+<property name="Test_Step_1" value="we are ready to start a new sequence"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Dataset_2_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtDiagnosticServices_DataSets_0038_V001,LLD_ID_CtDiagnosticServices_DataSets_0039_V001"/>
+<property name="Test_Step_0" value="the writing is finished, but the state machine has not yet made the transition to idle"/>
+<property name="Test_Step_1" value="we are ready to start a new sequence"/>
+</properties>
+    </testcase>
+    <testcase name="DidServices_ID_Dataset_3_ConditionCheckWrite" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="LLD_ID_CtDiagnosticServices_DataSets_0062_V001,LLD_ID_CtDiagnosticServices_DataSets_0063_V001,LLD_ID_CtDiagnosticServices_DataSets_0064_V001,LLD_ID_CtDiagnosticServices_DataSets_0065_V001,LLD_ID_CtDiagnosticServices_DataSets_0066_V001,LLD_ID_CtDiagnosticServices_DataSets_0067_V001,LLD_ID_CtDiagnosticServices_DataSets_0068_V001,LLD_ID_CtDiagnosticServices_DataSets_0069_V001,LLD_ID_CtDiagnosticServices_DataSets_0070_V001,LLD_ID_CtDiagnosticServices_DataSets_0071_V001,LLD_ID_CtDiagnosticServices_DataSets_0072_V001,LLD_ID_CtDiagnosticServices_DataSets_0073_V001,LLD_ID_CtDiagnosticServices_DataSets_0074_V001,LLD_ID_CtDiagnosticServices_DataSets_0075_V001,LLD_ID_CtDiagnosticServices_DataSets_0076_V001,LLD_ID_CtDiagnosticServices_DataSets_0077_V001,LLD_ID_CtDiagnosticServices_DataSets_0078_V001,LLD_ID_CtDiagnosticServices_DataSets_0079_V001,LLD_ID_CtDiagnosticServices_DataSets_0080_V001"/>
+<property name="Test_Step_0" value="the writing is finished, but the state machine has not yet made the transition to idle"/>
+<property name="Test_Step_1" value="we are ready to start a new sequence"/>
+</properties>
+    </testcase>
+    <testcase name="NvM_RpNotifyJobEnd_Rte_NvmBlock_CtDiagnosticServices_DataSets_7202_GwSmData_JobFinished" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Test_Step_0" value="GwSmDataSet is being processed and  JobResult  = NVM_REQ_OK"/>
+<property name="Test_Step_1" value="GwSmDataSet is being processed and  JobResult  != NVM_REQ_OK"/>
+<property name="Test_Step_2" value="GwSmDataSet is being processed and  NVM_WRITE_BLOCK != ServiceId"/>
+<property name="Expected_3" value="nothing to expect"/>
+<property name="Test_Step_4" value="GwSmDataSet is being processed and  DATASET_STATE_WAITING_CMP_1 != datasetCurrentState"/>
+<property name="Expected_5" value="nothing to expect"/>
+<property name="Test_Step_6" value=" handle Ram mirror update during DATASET_STATE_WAITING_CMP_2 state "/>
+<property name="Test_Step_7" value=" handle Ram mirror update during DATASET_STATE_WAITING_CMP_2 state  and NVM_REQ_OK != JobResult"/>
+</properties>
+    </testcase>
+    <testcase name="datasetWriteStateMachineTask" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Test_Step_0" value="datasetCurrentState =  DATASET_STATE_WAITING_CMP_1 "/>
+<property name="Test_Step_1" value="State machine: DATASET_STATE_WAITING_CMP_1 to DATASET_STATE_ERROR"/>
+<property name="Test_Step_2" value="State machine: DATASET_STATE_WAITING_CMP_1 to DATASET_STATE_ERROR (errorFlag)"/>
+<property name="Test_Step_3" value="State machine: DATASET_STATE_WAITING_CMP_1 to DATASET_STATE_ERROR (timeout)"/>
+<property name="Test_Step_4" value=" State machine: GwSm DatasetUpdated dataset valid "/>
+<property name="Test_Step_5" value=" State machine: GwSm DatasetUpdated dataset invalid, return NRC "/>
+<property name="Test_Step_6" value=" State machine: DATASET_STATE_WAITING_CMP_2 to DATASET_STATE_ERROR  "/>
+<property name="Test_Step_7" value=" State machine: DATASET_STATE_WAITING_CMP_2 to DATASET_STATE_ERROR  "/>
+<property name="Expected_8" value=" nothing to expect "/>
+</properties>
+    </testcase>
+    <testcase name="SetAudioDatasetParamInfo" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value="SW_DIAG_DATASET_241, SW_DIAG_DATASET_229"/>
+<property name="Description" value="Write BL Dataset Name"/>
+<property name="Test_Step_0" value="Write BL datasetName"/>
+<property name="Expected_1" value="AudioDataSet BL Name is written"/>
+</properties>
+    </testcase>
+    <testcase name="NvM_RpNotifyJobEnd_Rte_NvmBlock_CtDiagnosticServices_DataSets_F1B1_ApplDatasetsIdentStatus_JobFinished" status="run" time="0" classname="GTestClass_CtDiagnosticServices_Datasets">
+<properties>
+<property name="Tested_LLD_IDs" value=""/>
+<property name="Description" value="NvM_RpNotifyJobEnd_Rte_NvmBlock_CtDiagnosticServices_DataSets_F1B1_ApplDatasetsIdentStatus_JobFinished function check"/>
+<property name="Expected_0" value="no function"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

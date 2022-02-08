@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="69" failures="0" disabled="0" errors="0" timestamp="2022-02-04T10:48:49" time="0.006" name="AllTests">
+  <testsuite name="GTestClass_bap_wrapper" tests="69" failures="0" disabled="0" errors="0" time="0.005">
+    <testcase name="BAP_Wrapper_Init" status="run" time="0.001" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_Init"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_CanBapOnAllowed" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_CanBapOnAllowed"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_CanBapOnRefused" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_CanBapOnRefused"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_CcBapOnRefused" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_CcBapOnRefused"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_CcBapOnAllowed" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_CcBapOnAllowed"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_Start" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_Start"/>
+<property name="Test_Step_0" value="lsg &lt; eLSG_COUNT"/>
+<property name="Test_Step_1" value="lsg &gt;= eLSG_COUNT"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_Stop" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_Stop"/>
+<property name="Test_Step_0" value="lsg &lt; eLSG_COUNT"/>
+<property name="Test_Step_1" value="lsg &gt;= eLSG_COUNT"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_GetResource" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_GetResource"/>
+<property name="Test_Step_0" value="boBapResourceOccupied == FALSE"/>
+<property name="Test_Step_1" value="boBapResourceOccupied == TRUE"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Wrapper_ReleaseResource" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Wrapper_ReleaseResource"/>
+<property name="Test_Step_0" value="boBapResourceOccupied == TRUE"/>
+<property name="Test_Step_1" value="boBapResourceOccupied == FALSE"/>
+</properties>
+    </testcase>
+    <testcase name="disableint" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function disableint"/>
+</properties>
+    </testcase>
+    <testcase name="restoreint" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function restoreint"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Enable" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Enable"/>
+<property name="Test_Step_0" value="data == FALSE and bapCodingState != CODING_INSTALLED"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_InitSendBufferByteSequence" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_InitSendBufferByteSequence"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_InitSendBufferUInt8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_InitSendBufferUInt8"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_RequestUInt8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_RequestUInt8"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_RequestVoid" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_RequestVoid"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_RequestError" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_RequestError"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_RequestByteSequence" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_RequestByteSequence"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_RequestUInt32" status="run" time="0.001" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_RequestUInt32"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_InitSendBufferUInt32" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_InitSendBufferUInt32"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs3" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs3"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs6" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs6"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs8"/>
+<property name="Test_Step_0" value="getLsgIdByRomTableIdx(eCONMNGR_71) == parg0 &amp;&amp; BAP_FCTID_FCTLIST == parg1 &amp;&amp; sizeof(aru8ConMngrFctList) &gt;= au32Length"/>
+<property name="Test_Step_1" value="getLsgIdByRomTableIdx(eCONMNGR_71) != parg0 &amp;&amp; BAP_FCTID_FCTLIST == parg1 &amp;&amp; sizeof(aru8ConMngrFctList) &gt;= au32Length"/>
+<property name="Test_Step_2" value="getLsgIdByRomTableIdx(eCONMNGR_71) == parg0 &amp;&amp; BAP_FCTID_FCTLIST != parg1 &amp;&amp; sizeof(aru8ConMngrFctList) &gt;= au32Length"/>
+<property name="Test_Step_3" value="getLsgIdByRomTableIdx(eCONMNGR_71) == parg0 &amp;&amp; BAP_FCTID_FCTLIST == parg1 &amp;&amp; sizeof(aru8ConMngrFctList) &lt; au32Length"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs15" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs15"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs19" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs19"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs56" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs56"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs61" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs61"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitBs120" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitBs120"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_PropInitU8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_PropInitU8"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqU8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqU8"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqErr" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqErr"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs2" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs2"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs3" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs3"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs6" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs6"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs15" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs15"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs19" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs19"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs56" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs56"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs61" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs61"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs85" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs85"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs120" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs120"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs605" status="run" time="0.001" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs605"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs609" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs609"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs635" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs635"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_ASR_ReqBs1212" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_ASR_ReqBs1212"/>
+</properties>
+    </testcase>
+    <testcase name="Provide_Bap_ConnectionManager_State" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function Provide_Bap_ConnectionManager_State"/>
+<property name="Test_Step_0" value="LSGState == NULL_PTR"/>
+<property name="Test_Step_1" value="LSGState != NULL_PTR"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_Acknowledge" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_Acknowledge"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_IndicationByteSequence" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_IndicationByteSequence"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_IndicationError" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_IndicationError"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_IndicationInt16" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_IndicationInt16"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_IndicationInt32" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_IndicationInt32"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_IndicationInt8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_IndicationInt8"/>
+</properties>
+    </testcase>
+    <testcase name="BAP_IndicationVoid" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function BAP_IndicationVoid"/>
+</properties>
+    </testcase>
+    <testcase name="handle_Bap_Conditions_Not_Fullfilled" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="one of Bap Conditions Not Fullfilled"/>
+<property name="Test_Step_0" value="lsg &lt; eLSG_COUNT &amp;&amp; wrapperStates.now.lsgsRam[lsg].isRunning == TRUE"/>
+<property name="Test_Step_1" value="lsg &lt; eLSG_COUNT &amp;&amp; wrapperStates.now.lsgsRam[lsg].isRunning == FALSE"/>
+<property name="Test_Step_2" value="lsg &gt;= eLSG_COUNT"/>
+</properties>
+    </testcase>
+    <testcase name="handle_Bap_Conditions_ok" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="All conditions for BAP ok"/>
+<property name="Test_Step_0" value="lsg &lt; eLSG_COUNT"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_Acknowledge" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_Acknowledge"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_IndicationByteSequence" status="run" time="0.001" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_IndicationByteSequence"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_IndicationError" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_IndicationError"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_IndicationInt16" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_IndicationInt16"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_IndicationInt32" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_IndicationInt32"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_IndicationInt8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_IndicationInt8"/>
+</properties>
+    </testcase>
+    <testcase name="eCall_IndicationVoid" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function eCall_IndicationVoid"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_Acknowledge" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_Acknowledge"/>
+<property name="Test_Step_0" value="aLsgId != lsgId_t_LowerLimit"/>
+<property name="Test_Step_1" value="aLsgId == lsgId_t_LowerLimit"/>
+<property name="Test_Step_2" value="aFctId == (fctId_t) 13U"/>
+<property name="Test_Step_3" value="aFctId == (fctId_t) 14U"/>
+<property name="Test_Step_4" value="aFctId == (fctId_t) 15U"/>
+<property name="Test_Step_5" value="aFctId == (fctId_t) 16U"/>
+<property name="Test_Step_6" value="aFctId == (fctId_t) 17U"/>
+<property name="Test_Step_7" value="aFctId == (fctId_t) 18U"/>
+<property name="Test_Step_8" value="aFctId == (fctId_t) 19U"/>
+<property name="Test_Step_9" value="aFctId == (fctId_t) 20U"/>
+<property name="Test_Step_10" value="aFctId == (fctId_t) 21U"/>
+<property name="Test_Step_11" value="aFctId == (fctId_t) 22U"/>
+<property name="Test_Step_12" value="aFctId == (fctId_t) 23U"/>
+<property name="Test_Step_13" value="aFctId == (fctId_t) 24U"/>
+<property name="Test_Step_14" value="aFctId == (fctId_t) 25U"/>
+<property name="Test_Step_15" value="aFctId == (fctId_t) 26U"/>
+<property name="Test_Step_16" value="aFctId == (fctId_t) 27U"/>
+<property name="Test_Step_17" value="aFctId == (fctId_t) 28U"/>
+<property name="Test_Step_18" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_IndicationByteSequence" status="run" time="0.001" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_IndicationByteSequence"/>
+<property name="Test_Step_0" value="aLsgId != lsgId_t_LowerLimit"/>
+<property name="Test_Step_1" value="aLsgId == lsgId_t_LowerLimit"/>
+<property name="Test_Step_2" value="aFctId == (fctId_t) 17U"/>
+<property name="Test_Step_3" value="aFctId == (fctId_t) 18U"/>
+<property name="Test_Step_4" value="aFctId == (fctId_t) 19U"/>
+<property name="Test_Step_5" value="aFctId == (fctId_t) 20U"/>
+<property name="Test_Step_6" value="aFctId == (fctId_t) 21U"/>
+<property name="Test_Step_7" value="aFctId == (fctId_t) 22U"/>
+<property name="Test_Step_8" value="aFctId == (fctId_t) 23U"/>
+<property name="Test_Step_9" value="aFctId == (fctId_t) 24U"/>
+<property name="Test_Step_10" value="aFctId == (fctId_t) 25U"/>
+<property name="Test_Step_11" value="aFctId == (fctId_t) 26U"/>
+<property name="Test_Step_12" value="aFctId == (fctId_t) 27U"/>
+<property name="Test_Step_13" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_IndicationError" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_IndicationError"/>
+<property name="Test_Step_0" value="aLsgId != getLsgIdByRomTableIdx(eCONMNGR_71)"/>
+<property name="Test_Step_1" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 13U"/>
+<property name="Test_Step_2" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 14U"/>
+<property name="Test_Step_3" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 15U"/>
+<property name="Test_Step_4" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 16U"/>
+<property name="Test_Step_5" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 17U"/>
+<property name="Test_Step_6" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 18U"/>
+<property name="Test_Step_7" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 19U"/>
+<property name="Test_Step_8" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 20U"/>
+<property name="Test_Step_9" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 21U"/>
+<property name="Test_Step_10" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 22U"/>
+<property name="Test_Step_11" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 23U"/>
+<property name="Test_Step_12" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 24U"/>
+<property name="Test_Step_13" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 25U"/>
+<property name="Test_Step_14" value="aLsgId != getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 26U"/>
+<property name="Test_Step_15" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 27U"/>
+<property name="Test_Step_16" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 28U"/>
+<property name="Test_Step_17" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_IndicationInt16" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_IndicationInt16"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_IndicationInt32" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_IndicationInt16"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_IndicationInt8" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_IndicationInt8"/>
+<property name="Test_Step_0" value="aLsgId != getLsgIdByRomTableIdx(eCONMNGR_71)"/>
+<property name="Test_Step_1" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 13U"/>
+<property name="Test_Step_2" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 14U"/>
+</properties>
+    </testcase>
+    <testcase name="ConMngr_IndicationVoid" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function ConMngr_IndicationVoid"/>
+<property name="Test_Step_0" value="aLsgId != lsgId_t_LowerLimit"/>
+<property name="Test_Step_1" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 14U"/>
+<property name="Test_Step_2" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 15U"/>
+<property name="Test_Step_3" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 16U"/>
+<property name="Test_Step_4" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 17U"/>
+<property name="Test_Step_5" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 18U"/>
+<property name="Test_Step_6" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 27U"/>
+<property name="Test_Step_7" value="aLsgId == getLsgIdByRomTableIdx(eCONMNGR_71) &amp;&amp; aFctId == (fctId_t) 28U"/>
+<property name="Test_Step_8" value="Default Case"/>
+</properties>
+    </testcase>
+    <testcase name="getLsgIdByRomTableIdx" status="run" time="0" classname="GTestClass_bap_wrapper">
+<properties>
+<property name="Description" value="Checking the function getLsgIdByRomTableIdx"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>
